@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1"/>
+    <script>
+
+        function httpconection()
+        {
+            var http = new XMLHttpRequest();
+            http.open("POST", "http://requestb.in/1ibwv6x1", true);
+            http.send("O QUE FOR ENVIAR");
+            return false;
+        }
+    </script>
+</head>
+<body>
+<!-- um butão apenas pra chamar a função -->
+
+    <button onclick="httpconection();"> Enviar </button>
+</body>
+</html>
