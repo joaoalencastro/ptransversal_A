@@ -1,0 +1,197 @@
+
+
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<script language="JavaScript">
+	ie =  document.all ? true : false;
+	NS4 = (document.layers);
+	IE4 = (document.all);
+	ver4 = (NS4 || IE4);
+	IE5 = (IE4 && navigator.appVersion.indexOf("5.")!=-1);
+	isMac = (navigator.appVersion.indexOf("Mac") != -1);
+	isMenu = (NS4 || (IE4 && !isMac) || (IE5 && isMac));
+	if (!ver4) event=null; 
+	var netscape   = (navigator.appName.indexOf("Netscape") >= 0 && parseFloat(navigator.appVersion) >= 4) ? true : false;
+	var explorer   = (document.all) ? true : false;
+</script>
+<script language="javascript" src="/script/form.js"></script>
+<head>
+	<title>UnB - Matrícula Web
+		
+		-
+		Dados da Oferta
+		
+	</title>
+	<LINK REL="SHORTCUT ICON" HREF="/imagens/favicon.ico">
+	<meta name="GENERATOR" content="Microsoft Visual Studio.NET 7.0">
+	<meta name="CODE_LANGUAGE" content="Visual Basic 7.0">
+	<meta name="vs_defaultClientScript" content="JavaScript">
+	<meta name="vs_targetSchema" content="">
+	<link href="/estilos.css" type="text/css" rel="stylesheet">
+</head>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<body background="/imagens/fundo_main.gif" leftmargin="0" topmargin="0" ms_positioning="GridLayout">
+<center>
+<br>
+<table cellpadding="0" cellspacing="0" border="0" width="760" class="padrao">
+<tr><td><!-- TABELA GLOBAL -->
+
+
+	<!-- LOGOTIPOS -->
+	<table width="760" border="0" cellspacing="0" cellpadding="0" class="Padrao">
+		<tr>
+			<td background=/imagens/fundotopo_esq.gif  height="87" align="center" valign="middle" width="20">
+			</td>
+			<td background=/imagens/fundotopo.gif  height="" align="center" valign="middle" width=100>
+				<a href="/" />
+					<img border="0" src="/imagens/logo_unb.gif" vspace="4" align="absmiddle" alt="Clique para ir ao início">
+				</a>
+			</td>
+			<td background=/imagens/fundotopo.gif align="left" valign="middle" class="PadraoMenor" nowrap>
+				<b>Universidade de Brasília - UnB</b>
+				<br>
+				Decanato de Ensino de Graduação - DEG
+				<br>
+				Secretaria de Administração Acadêmica - SAA
+			
+			</td>
+			
+			<td background=/imagens/fundotopo.gif  height="87" align="center" valign="middle">
+			<img border=0 src="/imagens/new_logo_unb.gif" alt="MatrículaWeb">
+			<br><font size=1 color=#779a56><B>GRADUAÇÃO</b></font>
+			</td>
+			<td background=/imagens/fundotopo_dir.gif  height="87" align="center" valign="middle" width="20">
+			
+			</td>
+		</tr>
+		</table>
+		
+		
+		<!-- LOGIN... INFORMACOES -->
+		<table width="760" border="0" cellspacing="0" cellpadding="0" class="PadraoMenor">
+		<tr>
+			<td background=/imagens/fundo_base_esq.gif  height="84" align="center" valign="middle" width="10">
+			</td>
+
+			<td  background=/imagens/fundo_base.gif class="PadraoMenor" bgcolor="#748A65" width=370 align="left">
+			
+				
+				&nbsp; <b>Seja bem-vindo(a).</b><br>
+				&nbsp; Para ter acesso ao menu de Aluno, faça o login.<br>
+					
+						<a href="https://wwwsec.serverweb.unb.br/graduacao/sec/login.aspx">
+						<b><img border=0 src="/imagens/act.gif" align=absmiddle alt="MatrículaWeb">&nbsp; clique aqui para fazer o login</b></a>.
+					
+			</td>
+			<td background=/imagens/fundo_base.gif class="padraomenor" bgcolor="#334026" align="left" width=370>
+				
+					&nbsp;
+				
+			</td>
+
+			<td background=/imagens/fundo_base_dir.gif align="center" valign="middle" width="10">
+			
+			</td>
+
+		</tr>
+
+	</table>
+
+	
+	<!-- PERÍODO -->
+	<table width="760" border="0" cellspacing="0" cellpadding="0" class="PadraoMenor">
+		<tr>
+			<td background="/imagens/efeito_fundo.jpg" class="Padrao"valign="top" align="left">
+				<table width="100%" border="0">
+					<tr>
+						<td width="125" valign="middle" height="55" class=padraomenor>
+							<center><br><br><b>Período Atual</b></center>
+							<center>2017/1</center>
+						</td>
+						<td class="padrao" align="center" valign="middle">
+							<h4>
+								<br>
+								Dados da Oferta
+								
+							</h4>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	
+	<!-- TABELA MEIO -->
+	<table width="760" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td background="/imagens/fundo_deg.jpg" width=140 align="left" valign=top>	
+			<font class=Padrao>
+				
+
+<b>
+<center>Graduação</center>
+</b>
+
+<font class=PadraoMenu>
+<br><img src=/imagens/vazio.gif width=15><img border=0 src=/imagens/ponto.gif>  <a href=/graduacao/curso_campus.aspx>Curso</a>
+<br><img src=/imagens/vazio.gif width=15><img border=0 src=/imagens/ponto.gif>  <a href=/graduacao/oferta_campus.aspx>Oferta</a>
+<br><img src=/imagens/vazio.gif width=15><img border=0 src=/imagens/ponto.gif>  <a href="http://www.unb.br/administracao/secretarias/saa/telefones.php" target=_blank>Telefones</a>
+<br><img src=/imagens/vazio.gif width=15><img border=0 src=/imagens/ponto.gif>  <a href="http://www.saa.unb.br/graduacao" target=_blank>Calendário</a>
+<br><img src=/imagens/vazio.gif width=15><img border=0 src=/imagens/ponto.gif>  <a href="/graduacao/default.aspx">Mensagem da SAA</a> 
+<br><img src=/imagens/vazio.gif width=15><img border=0 src=/imagens/ponto.gif>  <a href="https://www.saeweb.unb.br/saeweb/fronteira/editais/EditalAtual.pdf" target=_blank>Benefícios DAC</a>
+</font>
+ 
+
+</font>
+<br>
+<br>
+
+
+
+
+<font color=black class=padrao>
+<form onsubmit="CriticarCampos(formdis);" method=post name=formdis ID=formdis autocomplete=on action="/graduacao/oferta_dis.aspx">
+<center><b>Busca</b><br>Disciplinas<br>
+<INPUT value='' type='text' Obr=1 size=11 Exemplo='' TamanhoMinimo=4 Tag='Disciplina' MaxLength=50 TamanhoMaximo=16 id=BuscaDisNome Name="BuscaDisNome">
+<br><INPUT type=submit value=" Ok " CLASS=FORM>
+</form></center>
+
+</font>
+
+
+<!-- TABELA MEIO -->
+</font> </TD>
+<TD width="620" background="/imagens/efeito_fundo2.jpg" class="padrao" valign="top" align="left" class="padrao">
+<div style='padding:5px'>
+
+<center><table width=70% border=0 class=framecinza>  <tr>      <td bgcolor=white valign=middle width=100% colspan=2 align=center style='font-family: Arial; font-size: 8pt'> <font face='Verdana, Arial' size=1>  Departamento: <strong><a href=/graduacao/oferta_dis.aspx?cod=163>ENE - Departamento de Engenharia Elétrica.</a></strong>      </font> </td>  </tr>  <tr>     <td align=center valign=middle style=font-family: Arial; font-size: 8pt>     <font face=Verdana, Arial size=1>Código da Disciplina: <font class=padraomaior><b>111821</b></font><br>Nome: <a title="Clique para ver a ementa da disciplina" href="JavaScript:AbrirJanelaP('/graduacao/disciplina_pop.aspx?cod=111821','0')">Lab de Sistemas Digitais<img src=/imagens/livro.gif align=absmiddle border=0></a>    </font></td>    <td width=30% align=center valign=middle  style=font-family: Arial; font-size: 8pt>     <b>Créditos</b><br>(Teor-Prat-Ext-Est)<br><font face=Verdana, Arial size=1>000-002-000-002    </font> </td>  </tr></table><br><table width=90% border=0 class=framecinza cellpadding=5 cellspacing=0>  <tr align=center class=padraomenorbranco bgcolor=#6B9A8C><td colspan='6'><b>Campus:Darcy Ribeiro</b></td></tr>  <tr align=center class=padraomenorbranco><td colspan='6'>&nbsp;</td></tr>  <tr align=center class=padraomenorbranco bgcolor=#6B9A8C><td><b>Turma</b></td><td><b>Vagas</b></td><td><b>Turno</b></td><td><b>Horário/Local</b></td><td><b>Professor</b></td><td><b>Obs</b></td></tr>  <tr bgcolor=#FFFFFF>      <td width=40>         <div align=center valign=middle class=titulo><font size=4><b>A</b></font></div>        <font size=1 face=Verdana, Arial, Helvetica, sans-serif><br></font>      </td>     <td width=200 align=middle bgcolor=whitesmoke>         <table width=100%>           <tr class=padraomenor halign=center valign=middle><td>Total</td><td>Vagas</td><td><b>20</b></td></tr>           <tr class=padraomenor halign=center valign=middle><td></td><td>Ocupadas</td><td><b><font color=red>20</font></b></td></tr>           <tr class=padraomenor halign=center valign=middle><td></td><td>Restantes</td><td><b><font color=red>0</font></b></td></tr>        </table>     </td><td width=40 nowrap>         <div align=center><font size=1 face=Verdana, Arial, Helvetica, sans-serif>Diurno<br><br><img src=/imagens/sol.gif></font></div>     </td><td width=200 nowrap class=padrao align=center><table cellpading=2 cellspacing=1 style='font-size:8;' border=0><tr><td title=""><font color=red>DOM</font></td><td title="Horário: 08:00 - 09:50Local: B1 01/7 LAB 3"><font color=darkgreen>SEG </font></td><td title=""><font color=darkgreen>TER </font></td><td title=""><font color=darkgreen>QUA </font></td><td title=""><font color=darkgreen>QUI </font></td><td title=""><font color=darkgreen>SEX </font></td><td title=""><font color=darkgreen>SÁB </font></td></tr><tr><td title=" CLIQUE para ver a legenda das cores" height=7 bgcolor=#E7F3D6><a href="javaScript:AbrirJanelaPP('/graduacao/legendacor_pop.aspx','0')"></a></td><td title="Horário: 08:00 - 09:50Local: B1 01/7 LAB 3 CLIQUE para ver a legenda das cores" height=7 bgcolor=#FFFFF7><a href="javaScript:AbrirJanelaPP('/graduacao/legendacor_pop.aspx','0')"><div onmouseout="this.style.background='#FFFFF7';OcultaDIVS('h61462720')"  onmouseover="this.style.background='#CC922E';if(ready == 'yes'){MostraDIV('h61462720')}" style='border:0;width:20px;height:10px;'></div></a></td><td title=" CLIQUE para ver a legenda das cores" height=7 bgcolor=#E7F3D6><a href="javaScript:AbrirJanelaPP('/graduacao/legendacor_pop.aspx','0')"></a></td><td title=" CLIQUE para ver a legenda das cores" height=7 bgcolor=#E7F3D6><a href="javaScript:AbrirJanelaPP('/graduacao/legendacor_pop.aspx','0')"></a></td><td title=" CLIQUE para ver a legenda das cores" height=7 bgcolor=#E7F3D6><a href="javaScript:AbrirJanelaPP('/graduacao/legendacor_pop.aspx','0')"></a></td><td title=" CLIQUE para ver a legenda das cores" height=7 bgcolor=#E7F3D6><a href="javaScript:AbrirJanelaPP('/graduacao/legendacor_pop.aspx','0')"></a></td><td title=" CLIQUE para ver a legenda das cores" height=7 bgcolor=#E7F3D6><a href="javaScript:AbrirJanelaPP('/graduacao/legendacor_pop.aspx','0')"></a></td></tr></table><div style="border: white 1px solid;" id="h61462720"><b>Segunda</b>     <font size=1 color=black><b>08:00</font>    <font size=1 color=brown>09:50</b></font><br><i><img src=/imagens/subseta_dir.gif align=top> B1 01/7 LAB 3</i></div></font>     </td><td valign=middle class=padraomenor bgcolor=whitesmoke><center>LUIS FERNANDO RAMOS MOLINARO<br></center>     </td><td>         <div align=center><font size=1 face=Verdana, Arial, Helvetica, sans-serif>&nbsp;        </font></div>     </td>  </tr>  <tr bgcolor=#E0E0E0>     <td colspan = '6'>         <table>            <tr class=padraomenor><strong><td>Reserva para curso</td><td>Vagas</td><td>Calouros</td></strong></tr><tr class=padraomenor><td align=left>Engenharia Elétrica(Diurno)</td><td align=center>20</td><td align=center>0</td></tr>    </table></td></tr><tr><td colspan=6 bgcolor=white height=20></td></tr>  <tr align=center class=padraomenorbranco bgcolor=#6B9A8C><td><b>Turma</b></td><td><b>Vagas</b></td><td><b>Turno</b></td><td><b>Horário/Local</b></td><td><b>Professor</b></td><td><b>Obs</b></td></tr>  <tr bgcolor=#FFFFFF>      <td width=40>         <div align=center valign=middle class=titulo><font size=4><b>B</b></font></div>        <font size=1 face=Verdana, Arial, Helvetica, sans-serif><br></font>      </td>     <td width=200 align=middle bgcolor=whitesmoke>         <table width=100%>           <tr class=padraomenor halign=center valign=middle><td>Total</td><td>Vagas</td><td><b>20</b></td></tr>           <tr class=padraomenor halign=center valign=middle><td></td><td>Ocupadas</td><td><b><font color=red>20</font></b></td></tr>           <tr class=padraomenor halign=center valign=middle><td></td><td>Restantes</td><td><b><font color=red>0</font></b></td></tr>        </table>     </td><td width=40 nowrap>         <div align=center><font size=1 face=Verdana, Arial, Helvetica, sans-serif>Diurno<br><br><img src=/imagens/sol.gif></font></div>     </td><td width=200 nowrap class=padrao align=center><table cellpading=2 cellspacing=1 style='font-size:8;' border=0><tr><td title=""><font color=red>DOM</font></td><td title=""><font color=darkgreen>SEG </font></td><td title=""><font color=darkgreen>TER </font></td><td title=""><font color=darkgreen>QUA </font></td><td title=""><font color=darkgreen>QUI </font></td><td title="Horário: 10:00 - 11:50Local: B1 01/7 LAB 3"><font color=darkgreen>SEX </font></td><td title=""><font color=darkgreen>SÁB </font></td></tr><tr><td title=" CLIQUE para ver a legenda das cores" height=7 bgcolor=#E7F3D6><a href="javaScript:AbrirJanelaPP('/graduacao/legendacor_pop.aspx','0')"></a></td><td title=" CLIQUE para ver a legenda das cores" height=7 bgcolor=#E7F3D6><a href="javaScript:AbrirJanelaPP('/graduacao/legendacor_pop.aspx','0')"></a></td><td title=" CLIQUE para ver a legenda das cores" height=7 bgcolor=#E7F3D6><a href="javaScript:AbrirJanelaPP('/graduacao/legendacor_pop.aspx','0')"></a></td><td title=" CLIQUE para ver a legenda das cores" height=7 bgcolor=#E7F3D6><a href="javaScript:AbrirJanelaPP('/graduacao/legendacor_pop.aspx','0')"></a></td><td title=" CLIQUE para ver a legenda das cores" height=7 bgcolor=#E7F3D6><a href="javaScript:AbrirJanelaPP('/graduacao/legendacor_pop.aspx','0')"></a></td><td title="Horário: 10:00 - 11:50Local: B1 01/7 LAB 3 CLIQUE para ver a legenda das cores" height=7 bgcolor=#FFFFF7><a href="javaScript:AbrirJanelaPP('/graduacao/legendacor_pop.aspx','0')"><div onmouseout="this.style.background='#FFFFF7';OcultaDIVS('h61462861')"  onmouseover="this.style.background='#FDFF39';if(ready == 'yes'){MostraDIV('h61462861')}" style='border:0;width:20px;height:10px;'></div></a></td><td title=" CLIQUE para ver a legenda das cores" height=7 bgcolor=#E7F3D6><a href="javaScript:AbrirJanelaPP('/graduacao/legendacor_pop.aspx','0')"></a></td></tr></table><div style="border: white 1px solid;" id="h61462861"><b>Sexta</b>     <font size=1 color=black><b>10:00</font>    <font size=1 color=brown>11:50</b></font><br><i><img src=/imagens/subseta_dir.gif align=top> B1 01/7 LAB 3</i></div></font>     </td><td valign=middle class=padraomenor bgcolor=whitesmoke><center>JOAO LUIZ AZEVEDO DE CARVALHO<br></center>     </td><td>         <div align=center><font size=1 face=Verdana, Arial, Helvetica, sans-serif>&nbsp;        </font></div>     </td>  </tr>  <tr bgcolor=#E0E0E0>     <td colspan = '6'>         <table>            <tr class=padraomenor><strong><td>Reserva para curso</td><td>Vagas</td><td>Calouros</td></strong></tr><tr class=padraomenor><td align=left>Engenharia Redes Comunicação(Diurno)</td><td align=center>20</td><td align=center>0</td></tr>    </table></td></tr><tr><td colspan=6 bgcolor=white height=20></td></tr>  <tr align=center class=padraomenorbranco bgcolor=#6B9A8C><td><b>Turma</b></td><td><b>Vagas</b></td><td><b>Turno</b></td><td><b>Horário/Local</b></td><td><b>Professor</b></td><td><b>Obs</b></td></tr>  <tr bgcolor=#FFFFFF>      <td width=40>         <div align=center valign=middle class=titulo><font size=4><b>C</b></font></div>        <font size=1 face=Verdana, Arial, Helvetica, sans-serif><br></font>      </td>     <td width=200 align=middle bgcolor=whitesmoke>         <table width=100%>           <tr class=padraomenor halign=center valign=middle><td>Total</td><td>Vagas</td><td><b>20</b></td></tr>           <tr class=padraomenor halign=center valign=middle><td></td><td>Ocupadas</td><td><b><font color=green>19</font></b></td></tr>           <tr class=padraomenor halign=center valign=middle><td></td><td>Restantes</td><td><b><font color=blue>1</font></b></td></tr>        </table>     </td><td width=40 nowrap>         <div align=center><font size=1 face=Verdana, Arial, Helvetica, sans-serif>Diurno<br><br><img src=/imagens/sol.gif></font></div>     </td><td width=200 nowrap class=padrao align=center><table cellpading=2 cellspacing=1 style='font-size:8;' border=0><tr><td title=""><font color=red>DOM</font></td><td title=""><font color=darkgreen>SEG </font></td><td title=""><font color=darkgreen>TER </font></td><td title=""><font color=darkgreen>QUA </font></td><td title=""><font color=darkgreen>QUI </font></td><td title="Horário: 08:00 - 09:50Local: B1 01/7 LAB 3"><font color=darkgreen>SEX </font></td><td title=""><font color=darkgreen>SÁB </font></td></tr><tr><td title=" CLIQUE para ver a legenda das cores" height=7 bgcolor=#E7F3D6><a href="javaScript:AbrirJanelaPP('/graduacao/legendacor_pop.aspx','0')"></a></td><td title=" CLIQUE para ver a legenda das cores" height=7 bgcolor=#E7F3D6><a href="javaScript:AbrirJanelaPP('/graduacao/legendacor_pop.aspx','0')"></a></td><td title=" CLIQUE para ver a legenda das cores" height=7 bgcolor=#E7F3D6><a href="javaScript:AbrirJanelaPP('/graduacao/legendacor_pop.aspx','0')"></a></td><td title=" CLIQUE para ver a legenda das cores" height=7 bgcolor=#E7F3D6><a href="javaScript:AbrirJanelaPP('/graduacao/legendacor_pop.aspx','0')"></a></td><td title=" CLIQUE para ver a legenda das cores" height=7 bgcolor=#E7F3D6><a href="javaScript:AbrirJanelaPP('/graduacao/legendacor_pop.aspx','0')"></a></td><td title="Horário: 08:00 - 09:50Local: B1 01/7 LAB 3 CLIQUE para ver a legenda das cores" height=7 bgcolor=#FFFFF7><a href="javaScript:AbrirJanelaPP('/graduacao/legendacor_pop.aspx','0')"><div onmouseout="this.style.background='#FFFFF7';OcultaDIVS('h61462962')"  onmouseover="this.style.background='#CC922E';if(ready == 'yes'){MostraDIV('h61462962')}" style='border:0;width:20px;height:10px;'></div></a></td><td title=" CLIQUE para ver a legenda das cores" height=7 bgcolor=#E7F3D6><a href="javaScript:AbrirJanelaPP('/graduacao/legendacor_pop.aspx','0')"></a></td></tr></table><div style="border: white 1px solid;" id="h61462962"><b>Sexta</b>     <font size=1 color=black><b>08:00</font>    <font size=1 color=brown>09:50</b></font><br><i><img src=/imagens/subseta_dir.gif align=top> B1 01/7 LAB 3</i></div></font>     </td><td valign=middle class=padraomenor bgcolor=whitesmoke><center>JOAO LUIZ AZEVEDO DE CARVALHO<br></center>     </td><td>         <div align=center><font size=1 face=Verdana, Arial, Helvetica, sans-serif>&nbsp;        </font></div>     </td>  </tr>  <tr bgcolor=#E0E0E0>     <td colspan = '6'>         <table>            <tr class=padraomenor><strong><td>Reserva para curso</td><td>Vagas</td><td>Calouros</td></strong></tr><tr class=padraomenor><td align=left>Engenharia de Computação(Diurno)</td><td align=center>20</td><td align=center>0</td></tr>    </table></td></tr><tr><td colspan=6 bgcolor=white height=20></td></tr>  <tr align=center class=padraomenorbranco bgcolor=#6B9A8C><td><b>Turma</b></td><td><b>Vagas</b></td><td><b>Turno</b></td><td><b>Horário/Local</b></td><td><b>Professor</b></td><td><b>Obs</b></td></tr>  <tr bgcolor=#FFFFFF>      <td width=40>         <div align=center valign=middle class=titulo><font size=4><b>D</b></font></div>        <font size=1 face=Verdana, Arial, Helvetica, sans-serif><br></font>      </td>     <td width=200 align=middle bgcolor=whitesmoke>         <table width=100%>           <tr class=padraomenor halign=center valign=middle><td>Total</td><td>Vagas</td><td><b>20</b></td></tr>           <tr class=padraomenor halign=center valign=middle><td></td><td>Ocupadas</td><td><b><font color=red>20</font></b></td></tr>           <tr class=padraomenor halign=center valign=middle><td></td><td>Restantes</td><td><b><font color=red>0</font></b></td></tr>        </table>     </td><td width=40 nowrap>         <div align=center><font size=1 face=Verdana, Arial, Helvetica, sans-serif>Diurno<br><br><img src=/imagens/sol.gif></font></div>     </td><td width=200 nowrap class=padrao align=center><table cellpading=2 cellspacing=1 style='font-size:8;' border=0><tr><td title=""><font color=red>DOM</font></td><td title=""><font color=darkgreen>SEG </font></td><td title=""><font color=darkgreen>TER </font></td><td title="Horário: 16:00 - 17:50Local: B1 01/7 LAB 3"><font color=darkgreen>QUA </font></td><td title=""><font color=darkgreen>QUI </font></td><td title=""><font color=darkgreen>SEX </font></td><td title=""><font color=darkgreen>SÁB </font></td></tr><tr><td title=" CLIQUE para ver a legenda das cores" height=7 bgcolor=#E7F3D6><a href="javaScript:AbrirJanelaPP('/graduacao/legendacor_pop.aspx','0')"></a></td><td title=" CLIQUE para ver a legenda das cores" height=7 bgcolor=#E7F3D6><a href="javaScript:AbrirJanelaPP('/graduacao/legendacor_pop.aspx','0')"></a></td><td title=" CLIQUE para ver a legenda das cores" height=7 bgcolor=#E7F3D6><a href="javaScript:AbrirJanelaPP('/graduacao/legendacor_pop.aspx','0')"></a></td><td title="Horário: 16:00 - 17:50Local: B1 01/7 LAB 3 CLIQUE para ver a legenda das cores" height=7 bgcolor=#FFFFF7><a href="javaScript:AbrirJanelaPP('/graduacao/legendacor_pop.aspx','0')"><div onmouseout="this.style.background='#FFFFF7';OcultaDIVS('h61463043')"  onmouseover="this.style.background='#66B7F5';if(ready == 'yes'){MostraDIV('h61463043')}" style='border:0;width:20px;height:10px;'></div></a></td><td title=" CLIQUE para ver a legenda das cores" height=7 bgcolor=#E7F3D6><a href="javaScript:AbrirJanelaPP('/graduacao/legendacor_pop.aspx','0')"></a></td><td title=" CLIQUE para ver a legenda das cores" height=7 bgcolor=#E7F3D6><a href="javaScript:AbrirJanelaPP('/graduacao/legendacor_pop.aspx','0')"></a></td><td title=" CLIQUE para ver a legenda das cores" height=7 bgcolor=#E7F3D6><a href="javaScript:AbrirJanelaPP('/graduacao/legendacor_pop.aspx','0')"></a></td></tr></table><div style="border: white 1px solid;" id="h61463043"><b>Quarta</b>     <font size=1 color=black><b>16:00</font>    <font size=1 color=brown>17:50</b></font><br><i><img src=/imagens/subseta_dir.gif align=top> B1 01/7 LAB 3</i></div></font>     </td><td valign=middle class=padraomenor bgcolor=whitesmoke><center>LUIS FERNANDO RAMOS MOLINARO<br></center>     </td><td>         <div align=center><font size=1 face=Verdana, Arial, Helvetica, sans-serif>&nbsp;        </font></div>     </td>  </tr>  <tr bgcolor=#E0E0E0>     <td colspan = '6'>         <table>            <tr class=padraomenor><strong><td>Reserva para curso</td><td>Vagas</td><td>Calouros</td></strong></tr><tr class=padraomenor><td align=left>Engenharia de Computação(Diurno)</td><td align=center>20</td><td align=center>0</td></tr>    </table></td></tr><tr><td colspan=6 bgcolor=white height=20></td></tr>  <tr align=center class=padraomenorbranco bgcolor=#6B9A8C><td><b>Turma</b></td><td><b>Vagas</b></td><td><b>Turno</b></td><td><b>Horário/Local</b></td><td><b>Professor</b></td><td><b>Obs</b></td></tr>  <tr bgcolor=#FFFFFF>      <td width=40>         <div align=center valign=middle class=titulo><font size=4><b>E</b></font></div>        <font size=1 face=Verdana, Arial, Helvetica, sans-serif><br></font>      </td>     <td width=200 align=middle bgcolor=whitesmoke>         <table width=100%>           <tr class=padraomenor halign=center valign=middle><td>Total</td><td>Vagas</td><td><b>20</b></td></tr>           <tr class=padraomenor halign=center valign=middle><td></td><td>Ocupadas</td><td><b><font color=green>16</font></b></td></tr>           <tr class=padraomenor halign=center valign=middle><td></td><td>Restantes</td><td><b><font color=blue>4</font></b></td></tr>        </table>     </td><td width=40 nowrap>         <div align=center><font size=1 face=Verdana, Arial, Helvetica, sans-serif>Diurno<br><br><img src=/imagens/sol.gif></font></div>     </td><td width=200 nowrap class=padrao align=center><table cellpading=2 cellspacing=1 style='font-size:8;' border=0><tr><td title=""><font color=red>DOM</font></td><td title="Horário: 10:00 - 11:50Local: B1 01/7 LAB 3"><font color=darkgreen>SEG </font></td><td title=""><font color=darkgreen>TER </font></td><td title=""><font color=darkgreen>QUA </font></td><td title=""><font color=darkgreen>QUI </font></td><td title=""><font color=darkgreen>SEX </font></td><td title=""><font color=darkgreen>SÁB </font></td></tr><tr><td title=" CLIQUE para ver a legenda das cores" height=7 bgcolor=#E7F3D6><a href="javaScript:AbrirJanelaPP('/graduacao/legendacor_pop.aspx','0')"></a></td><td title="Horário: 10:00 - 11:50Local: B1 01/7 LAB 3 CLIQUE para ver a legenda das cores" height=7 bgcolor=#FFFFF7><a href="javaScript:AbrirJanelaPP('/graduacao/legendacor_pop.aspx','0')"><div onmouseout="this.style.background='#FFFFF7';OcultaDIVS('h62205324')"  onmouseover="this.style.background='#FDFF39';if(ready == 'yes'){MostraDIV('h62205324')}" style='border:0;width:20px;height:10px;'></div></a></td><td title=" CLIQUE para ver a legenda das cores" height=7 bgcolor=#E7F3D6><a href="javaScript:AbrirJanelaPP('/graduacao/legendacor_pop.aspx','0')"></a></td><td title=" CLIQUE para ver a legenda das cores" height=7 bgcolor=#E7F3D6><a href="javaScript:AbrirJanelaPP('/graduacao/legendacor_pop.aspx','0')"></a></td><td title=" CLIQUE para ver a legenda das cores" height=7 bgcolor=#E7F3D6><a href="javaScript:AbrirJanelaPP('/graduacao/legendacor_pop.aspx','0')"></a></td><td title=" CLIQUE para ver a legenda das cores" height=7 bgcolor=#E7F3D6><a href="javaScript:AbrirJanelaPP('/graduacao/legendacor_pop.aspx','0')"></a></td><td title=" CLIQUE para ver a legenda das cores" height=7 bgcolor=#E7F3D6><a href="javaScript:AbrirJanelaPP('/graduacao/legendacor_pop.aspx','0')"></a></td></tr></table><div style="border: white 1px solid;" id="h62205324"><b>Segunda</b>     <font size=1 color=black><b>10:00</font>    <font size=1 color=brown>11:50</b></font><br><i><img src=/imagens/subseta_dir.gif align=top> B1 01/7 LAB 3</i></div></font>     </td><td valign=middle class=padraomenor bgcolor=whitesmoke><center>LUIS FERNANDO RAMOS MOLINARO<br></center>     </td><td>         <div align=center><font size=1 face=Verdana, Arial, Helvetica, sans-serif>&nbsp;        </font></div>     </td>  </tr>  <tr bgcolor=#E0E0E0>     <td colspan = '6'>         <table>            <tr class=padraomenor><strong><td>Reserva para curso</td><td>Vagas</td><td>Calouros</td></strong></tr><tr class=padraomenor><td align=left>Engenharia Redes Comunicação(Diurno)</td><td align=center>20</td><td align=center>0</td></tr>    </table></td></tr><tr><td colspan=6 bgcolor=white height=20></td></tr>  <tr align=center class=padraomenorbranco bgcolor=#6B9A8C><td><b>Turma</b></td><td><b>Vagas</b></td><td><b>Turno</b></td><td><b>Horário/Local</b></td><td><b>Professor</b></td><td><b>Obs</b></td></tr>  <tr bgcolor=#FFFFFF>      <td width=40>         <div align=center valign=middle class=titulo><font size=4><b>F</b></font></div>        <font size=1 face=Verdana, Arial, Helvetica, sans-serif><br></font>      </td>     <td width=200 align=middle bgcolor=whitesmoke>         <table width=100%>           <tr class=padraomenor halign=center valign=middle><td>Total</td><td>Vagas</td><td><b>20</b></td></tr>           <tr class=padraomenor halign=center valign=middle><td></td><td>Ocupadas</td><td><b><font color=green>18</font></b></td></tr>           <tr class=padraomenor halign=center valign=middle><td></td><td>Restantes</td><td><b><font color=blue>2</font></b></td></tr>        </table>     </td><td width=40 nowrap>         <div align=center><font size=1 face=Verdana, Arial, Helvetica, sans-serif>Diurno<br><br><img src=/imagens/sol.gif></font></div>     </td><td width=200 nowrap class=padrao align=center><table cellpading=2 cellspacing=1 style='font-size:8;' border=0><tr><td title=""><font color=red>DOM</font></td><td title=""><font color=darkgreen>SEG </font></td><td title=""><font color=darkgreen>TER </font></td><td title="Horário: 10:00 - 11:50Local: B1 01/7 LAB 3"><font color=darkgreen>QUA </font></td><td title=""><font color=darkgreen>QUI </font></td><td title=""><font color=darkgreen>SEX </font></td><td title=""><font color=darkgreen>SÁB </font></td></tr><tr><td title=" CLIQUE para ver a legenda das cores" height=7 bgcolor=#E7F3D6><a href="javaScript:AbrirJanelaPP('/graduacao/legendacor_pop.aspx','0')"></a></td><td title=" CLIQUE para ver a legenda das cores" height=7 bgcolor=#E7F3D6><a href="javaScript:AbrirJanelaPP('/graduacao/legendacor_pop.aspx','0')"></a></td><td title=" CLIQUE para ver a legenda das cores" height=7 bgcolor=#E7F3D6><a href="javaScript:AbrirJanelaPP('/graduacao/legendacor_pop.aspx','0')"></a></td><td title="Horário: 10:00 - 11:50Local: B1 01/7 LAB 3 CLIQUE para ver a legenda das cores" height=7 bgcolor=#FFFFF7><a href="javaScript:AbrirJanelaPP('/graduacao/legendacor_pop.aspx','0')"><div onmouseout="this.style.background='#FFFFF7';OcultaDIVS('h62205445')"  onmouseover="this.style.background='#FDFF39';if(ready == 'yes'){MostraDIV('h62205445')}" style='border:0;width:20px;height:10px;'></div></a></td><td title=" CLIQUE para ver a legenda das cores" height=7 bgcolor=#E7F3D6><a href="javaScript:AbrirJanelaPP('/graduacao/legendacor_pop.aspx','0')"></a></td><td title=" CLIQUE para ver a legenda das cores" height=7 bgcolor=#E7F3D6><a href="javaScript:AbrirJanelaPP('/graduacao/legendacor_pop.aspx','0')"></a></td><td title=" CLIQUE para ver a legenda das cores" height=7 bgcolor=#E7F3D6><a href="javaScript:AbrirJanelaPP('/graduacao/legendacor_pop.aspx','0')"></a></td></tr></table><div style="border: white 1px solid;" id="h62205445"><b>Quarta</b>     <font size=1 color=black><b>10:00</font>    <font size=1 color=brown>11:50</b></font><br><i><img src=/imagens/subseta_dir.gif align=top> B1 01/7 LAB 3</i></div></font>     </td><td valign=middle class=padraomenor bgcolor=whitesmoke><center>LUIS FERNANDO RAMOS MOLINARO<br></center>     </td><td>         <div align=center><font size=1 face=Verdana, Arial, Helvetica, sans-serif>&nbsp;        </font></div>     </td>  </tr>  <tr bgcolor=#E0E0E0>     <td colspan = '6'>         <table>            <tr class=padraomenor><strong><td>Reserva para curso</td><td>Vagas</td><td>Calouros</td></strong></tr><tr class=padraomenor><td align=left>Engenharia Elétrica(Diurno)</td><td align=center>20</td><td align=center>0</td></tr>    </table></td></tr><tr><td colspan=6 bgcolor=white height=20></td></tr></table></center><br><table width=90% border=0 align=center cellpadding=0 cellspacing=0>  <tr >      <td colspan=3><font size=1 face=Verdana, Arial, Helvetica, sans-serif><b>Legenda</b> do campo 'Obs':<br><br><img align=absmiddle src=/imagens/1.gif>      Disciplina restrita (s&oacute; pode ser cursada pelo aluno que possu&iacute;-la      em seu curr&iacute;culo)     <br><img align=absmiddle src=/imagens/2.gif> Turma de hor&aacute;rio fixo     <br><img align=absmiddle src=/imagens/3.gif> Turma com reserva exclusiva (s&oacute; matricula aluno do curso      para o qual est&aacute; reservada) <br><br></font></td>  </tr></table></center>
+
+
+</div>
+</TD>
+</TR>
+</TABLE>
+<!-- FIM TABELA MEIO -->
+
+
+
+<TABLE WIDTH="760" BORDER="0" CELLSPACING="0" cellpadding=0>
+	<TR>
+		<td background=/imagens/footer_esq.gif width=10 height=44 >
+		</td>
+		<TD class="FundoVerde" align="center" background=/imagens/footer.gif>
+			<font size=1>
+				© 2017 CPD - Centro de Informática<br><b>UnB - Universidade de Brasília</b>
+			</font>
+		</TD>
+		<td background=/imagens/footer_dir.gif width=10>
+		</td>
+</TABLE>
+</center>
+
+
+</td></tr></table><!-- FIM TABELA GLOBAL -->
+</body>
+<br><br>
+</html>
+
