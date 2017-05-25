@@ -56,22 +56,22 @@ hr.star-light {
   border-color: white;
 }
 hr.star-light:after {
-  background-color: #18BC9C;
+  background-color: #008B8B;
   color: white;
 }
 hr.star-primary {
-  border-color: #2C3E50;
+  border-color: black;
 }
 hr.star-primary:after {
   background-color: white;
-  color: #2C3E50;
+  color: black;
 }
 .img-centered {
   margin: 0 auto;
 }
 header {
   text-align: center;
-  background: #18BC9C;
+  background: #008B8B;
   color: white;
 }
 header .container {
@@ -106,7 +106,7 @@ header .intro-text .skills {
   }
 }
 .navbar-custom {
-  background: #2C3E50;
+  background: black;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
@@ -129,7 +129,7 @@ header .intro-text .skills {
   color: white;
 }
 .navbar-custom .navbar-nav li a:hover {
-  color: #18BC9C;
+  color: #008B8B;
 }
 .navbar-custom .navbar-nav li a:focus,
 .navbar-custom .navbar-nav li a:active {
@@ -137,13 +137,13 @@ header .intro-text .skills {
 }
 .navbar-custom .navbar-nav li.active a {
   color: white;
-  background: #18BC9C;
+  background: #008B8B;
 }
 .navbar-custom .navbar-nav li.active a:hover,
 .navbar-custom .navbar-nav li.active a:focus,
 .navbar-custom .navbar-nav li.active a:active {
   color: white;
-  background: #18BC9C;
+  background: #20B2AA;
 }
 .navbar-custom .navbar-toggle {
   color: white;
@@ -186,7 +186,7 @@ section h2 {
   font-size: 3em;
 }
 section.success {
-  background: #18BC9C;
+  background: #008B8B;
   color: white;
 }
 @media (max-width: 767px) {
@@ -251,19 +251,7 @@ section.success {
   padding-bottom: 0.5em;
   border-bottom: 1px solid #eeeeee;
 }
-.floating-label-form-group input,
-.floating-label-form-group textarea {
-  z-index: 1;
-  position: relative;
-  padding-right: 0;
-  padding-left: 0;
-  border: none;
-  border-radius: 0;
-  font-size: 1.5em;
-  background: none;
-  box-shadow: none !important;
-  resize: none;
-}
+
 .floating-label-form-group label {
   display: block;
   z-index: 0;
@@ -302,14 +290,14 @@ footer h3 {
 }
 footer .footer-above {
   padding-top: 50px;
-  background-color: #2C3E50;
+  background-color: black;
 }
 footer .footer-col {
   margin-bottom: 50px;
 }
 footer .footer-below {
   padding: 25px 0;
-  background-color: #233140;
+  background-color: #696969;
 }
 .btn-outline {
   color: white;
@@ -384,7 +372,7 @@ fieldset[disabled] .btn-primary.active {
   background-color: #128f76;
   border-color: #11866f;
 }
-.btn-success:active,
+.btn-success:active,asdasdasdada
 .btn-success.active,
 .open .dropdown-toggle.btn-success {
   background-image: none;
@@ -791,7 +779,7 @@ div.info {
 }
 .coluna-agenda
 {
-  background: #18BC9C;
+  background: #008B8B;
   text-align: right;
   font-weight: bold;
   white-space: nowrap;
@@ -830,13 +818,13 @@ div.info {
 #datapicker
 {
   background: #2C3E50;
-  
   position: relative;
   top: 55px;
   border-style: solid; 
   border-width: 1px;
-  width: 18.36%;
+  width: 130px;
   border-radius: 5%;
+  box-shadow: 2px 2px 4px gray;
 }
 #barra-pesquisa
 {

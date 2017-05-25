@@ -36,7 +36,7 @@
 
 </head>
 
-<body id="Inicio" class="index" onload="init()">
+<body id="Inicio" class="index">
 <div id="skipnav"><a href="#maincontent">Skip to main content</a></div>
     <!-- Navigation -->
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
@@ -144,7 +144,9 @@
     <header>
     <div class="container" id="maincontent" tabindex="-1">
         <div class="row">
-	            <div id="datapicker"><input type="hidden" id="my_hidden_input"></div>
+	            <div id="datapicker" align="center" class="input-group date">
+                        <input type="hidden" id="my_hidden_input">
+                </div>
             <div id="agenda">
                 <h2 id="Title"></h2>
                 <div class="table-responsive">
@@ -347,7 +349,7 @@
         <div class="container">
         	<div class="row">
 	            <div class="col-lg-12 text-center">
-	                <h2>Pesquisa</h2>
+	                <h2 style="color: black">Pesquisa</h2>
 	                <hr class="star-primary">
 	            </div>
 	        </div>
@@ -400,7 +402,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Sobre</h2>
+                    <h2 style="color: black">Sobre</h2>
                     <hr class="star-light">
                 </div>
             </div>
@@ -421,12 +423,12 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="Contatos" >
+    <section id="Contato" class="success" >
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2>Contate-me</h2>
-                    <hr class="star-primary">
+                    <hr class="star-light">
                 </div>
             </div>
             <div class="row">
@@ -466,7 +468,7 @@
                         <div id="success"></div>
                         <div class="row">
                             <div class="form-group col-xs-12">
-                                <button type="submit" class="btn btn-success btn-lg">Send</button>
+                                <button type="submit" class="btn btn-success btn-lg">Enviar</button>
                             </div>
                         </div>
                     </form>
@@ -542,7 +544,6 @@
     
     <!-- Theme JavaScript -->
     <script src="js/freelancer.js"></script>
-
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="js/bootstrap-datepicker.min.js"></script>
@@ -551,6 +552,7 @@
     <script src="/openseadragon/openseadragon.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGKrN2La36taC8h4UYW2r_522iEJYdO3U&callback=initMap"></script>
+    <script>init();</script>
 </body>
 
 </html>

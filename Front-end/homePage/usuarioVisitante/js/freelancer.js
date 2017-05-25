@@ -201,7 +201,8 @@ function init()
         language: "pt-BR",
         keyboardNavigation: true,
         forceParse: true,
-        todayHighlight: true
+        todayHighlight: true,
+        clearBtn : false  
         }).on('changeDate', function (e) {
         setDate();
         });
