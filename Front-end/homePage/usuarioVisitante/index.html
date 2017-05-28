@@ -67,7 +67,7 @@
                         <a href="#Contato">Contato</a>
                     </li>
                         <li>
-                            <a id="logBar" onclick="toggleNavPanel('sections_panel'); backgroundBar();" style="cursor: pointer;">ACESSAR<span id="navarrow">&#9662</span></a>
+                            <a onclick="toggleNavPanel('sections_panel'); backgroundBar();" style="cursor: pointer;">ACESSAR<span id="navarrow">&#9662</span></a>
                                 <div>
                                     <div id="sections_panel">
                                         <div>
@@ -364,37 +364,40 @@
         </div>
     </section>
     <section id="Mapa" class="success">
-    	<div class="container">
-    		<div class="row">
-    			<div class="col-lg-12 text-center" id="tituloMapa">
-    				<h2>Mapa de sala</h2>
-    				<hr class="star-light">
-    			</div>
-    		</div>
-    	</div>
-        <div class="row">
-            <!-- Trigger the Modal -->
-            <img id="myImg" src="img/mapaFT.png" alt="Trolltunga, Norway" width="300" height="200">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 style="color: white">Mapa de Sala</h2>
+                    <hr class="star-light">
+            </div>
+            </div>
+            <div class="row" style="position: relative; left: 25%; margin-top: 50px;">
+              <div class="column">
+                <h3 align="center">Mapa da FT</h3>
+                <img style="max-width: 100%" src="img/mapaFT.png" onclick="openModal();currentSlide(1)" class="hover-shadow">
+              </div>
+              <div class="column">
+              <h3 align="center">Mapa do SG</h3>
+                <img style="max-width: 100%" src="img/mapaSG.png" onclick="openModal();currentSlide(2)" class="hover-shadow">
+              </div>
+            </div>
 
-            <!-- The Modal -->
             <div id="myModal" class="modal">
+              <span style="position: relative; color: white" class="close cursor" onclick="closeModal()">&times;</span>
+              <div class="modal-content">
 
-              <!-- The Close Button -->
-            <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+                <div class="mySlides">
+                  <div class="numbertext">1 / 2</div>
+                    <img src="img/mapaFT.png" style="width:100%">
+                </div>
 
-              <!-- Modal Content (The Image) -->
-            <img class="modal-content" id="img01">
-
-              <!-- Modal Caption (Image Text) -->
-            <div id="caption"></div>
-            </div>            
-        </div>
-        <div class="row">
-        	<p align="center"><input id="submitFT" class="btn btn-default" type="submit" name="" value="Faculdade de Tecnologia" onclick="showImage('FT')"><input onclick="showImage('SG')" id="submitSG" class="btn btn-default" type="submit" name="" value="SG - 11"></p>
-        </div>
-        <div class="row">
-            <h2></h2>
-        </div>
+                <div class="mySlides">
+                  <div class="numbertext">2 / 2</div>
+                    <img src="img/mapaSG.png" style="width:100%">
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+              </div>
+            </div>
     </section>
     <!-- About Section -->
     <section  id="Sobre">
@@ -486,28 +489,35 @@
                         <div id="map"></div>
                     </div>
                     <div class="footer-col col-md-4">
-                        <h3>Around the Web</h3>
-                        <ul class="list-inline">
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><span class="sr-only">Facebook</span><i class="fa fa-fw fa-facebook"></i></a>
+                        <h3>Palestras</h3>
+                        <ul>
+                            <li>20/07/17 - 12:00: Sala At-11 professor Zelenovisk palestra de Sistemas Industriais 
                             </li>
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><span class="sr-only">Google Plus</span><i class="fa fa-fw fa-google-plus"></i></a>
+                            <li>19/07/17 - 14:00: Sala At-66 professor Flávio palestra de Cyber Ataques 
                             </li>
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><span class="sr-only">Twitter</span><i class="fa fa-fw fa-twitter"></i></a>
+                            <li>12/07/17 - 12:00: Sala At-11 professor Georges palestra de Arquitetura Linux 
                             </li>
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><span class="sr-only">Linked In</span><i class="fa fa-fw fa-linkedin"></i></a>
+                            <li>20/07/17 - 12:00: Sala At-11 professor Zelenovisk palestra de Sistemas Industriais 
                             </li>
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><span class="sr-only">Dribble</span><i class="fa fa-fw fa-dribbble"></i></a>
+                            <li>19/07/17 - 14:00: Sala At-66 professor Flávio palestra de Cyber Ataques 
                             </li>
                         </ul>
                     </div>
                     <div class="footer-col col-md-4">
-                        <h3>About Freelancer</h3>
-                        <p>Freelance is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
+                        <h3>Requisições</h3>
+
+                            <li>AT-11 20/07/17 12:00 Pedido por aluno, Aprovada.  
+                            </li>
+                            <li>AT-11 20/07/17 12:00 Pedido por aluno, Pendente.  
+                            </li>
+                            <li>AT-11 19/07/17 12:00 Pedido por monitor, Aprovada.  
+                            </li>
+                            <li>AT-11 19/07/17 12:00 Pedido por monitor, Pendente.  
+                            </li>     
+                            <li>AT-11 19/07/17 12:00 Pedido por aluno, reprovada.  
+                            </li>    
+                            <li>AT-11 19/07/17 12:00 Pedido por aluno, pendente.  
+                            </li>                                                      
                     </div>
                 </div>
             </div>
@@ -551,7 +561,16 @@
     <script src="/openseadragon/openseadragon.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGKrN2La36taC8h4UYW2r_522iEJYdO3U&callback=initMap"></script>
-    <script>init();</script>
+    <script>
+        init();
+        $(document).ready(function(){
+        $(document).keypress(function(e){
+        if(e.keyCode == 13){
+        closeModal();
+            }
+        })
+    })
+    </script>
 </body>
 
 </html>

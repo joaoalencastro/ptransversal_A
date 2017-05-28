@@ -25,8 +25,6 @@ function init(x)
     //                      POPULA A TABELA
     if(x == 0)          //  TABELA DE PENDÊNCIAS X == 0 -
     {   
-
-
         //              A REQUISIÇÃO DEVE SER FEITA AQUI 
         var sala = ["AT-11","BT-16/15","AT-13","BT-25/15 ","AT-15","AT-19","Lab-Redes","LCCC","SG-11","Auditório"];
         var nome = ["André","Beatriz","Carlos","Daiana","Ernandes","Fábio","Gabriela","Iago","Joesley","Lampião"];

@@ -134,6 +134,9 @@ function Status(status)
         else if(status[i] == 1)
         {
                 document.getElementById(id_str).style.background = "#F0F03E";
+                document.getElementById(id_str).style.cursor = "cursor";
+                $(id_str).hover(function(){ $(this).css("background-color", "#008B8B");}, function(){
+                $(this).css("background-color", "#008B8B");});
         }
         else if(status[i] == 2)
         {
@@ -179,53 +182,15 @@ function setDate(x)
 }
 function init()
 {
-        /*                  IMAGEM              */
-        // Get the modal
-        var modal = document.getElementById('myModal');
-
-        // Get the image and insert it inside the modal - use its "alt" text as a caption
-        var img = document.getElementById('myImg');
-        var modalImg = document.getElementById("img01");
-        var captionText = document.getElementById("caption");
-        img.onclick = function(){
-            modal.style.display = "block";
-            modalImg.src = this.src;
-            captionText.innerHTML = this.alt;
-        }
-
         /*              CALENDARIO              */
         setDate('inicio');
         $('#datapicker').datepicker({
         format: "dd/mm/yyyy",
-        maxViewMode: 3,
         language: "pt-BR",
-        keyboardNavigation: true,
-        forceParse: true,
-        todayHighlight: true,
-        clearBtn : false  
+        keyboardNavigation: true
         }).on('changeDate', function (e) {
         setDate();
         });
-}
-function showImage(x)
-{
-    if(x == 'FT')
-        document.getElementById("myImg").src = "img/mapaFT.png";
-    else if(x == 'SG')
-        document.getElementById("myImg").src = "img/mapaSG.png";
-
-            /*                  IMAGEM              */
-    // Get the modal
-    var modal = document.getElementById('myModal');
-    // Get the image and insert it inside the modal - use its "alt" text as a caption
-    var img = document.getElementById('myImg');
-    var modalImg = document.getElementById("img01");
-    var captionText = document.getElementById("caption");
-    img.onclick = function(){
-        modal.style.display = "block";
-        modalImg.src = this.src;
-        captionText.innerHTML = this.alt;
-    }
 }
 function initMap() {
         var uluru = {lng: -47.872535, lat: -15.763555};
@@ -237,4 +202,40 @@ function initMap() {
           position: uluru,
           map: map
     });
+}
+function openModal() {
+  document.getElementById('myModal').style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById('myModal').style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
 }
