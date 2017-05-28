@@ -3,7 +3,7 @@ import urllib2
 import re
 
 
-""" Recebe uma URL como parametro, a funcao retorna o HTML da URL """
+""" Recebe uma URL como parametro, a funcao retorna o codigo HTML da URL """
 def htmlSourceCode(page):
     sock = urllib2.urlopen(page)
     htmlSource = sock.read()
@@ -41,9 +41,21 @@ def read_txt(file_name):
 
 file_object = open("HREFs.txt", "r")
 label = 0
+url = ""
 for line in file_object:
     print line,
     if line[0] == 'o':
         label = label + 1
-        write_on_txt("teste" + str(label) + ".txt", htmlSourceCode("https://matriculaweb.unb.br/graduacao/" + line))
+        url = htmlSourceCode("https://matriculaweb.unb.br/graduacao/" + line)
+        soup = BeautifulSoup(url)
+
+        write_on_txt("teste" + str(label) + ".txt", url)
+
+        #tag = soup.find_all("b")
+        #print tag.string
+
+        for string in soup.stripped_strings:
+            write_on_txt("infoTeste" + str(label) + ".txt", repr(string))
+
+        #print(soup.prettify())
 file_object.close()
