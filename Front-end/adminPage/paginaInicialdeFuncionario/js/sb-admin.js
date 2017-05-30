@@ -32,7 +32,7 @@ function init(x)
         var hora = ["10:30","10:32","10:33","10:34","10:35","10:36","10:37","10:38","10:39","10:40"];
         var dia = ["23/05/17","23/05/17","23/05/17","23/05/17","23/05/17","23/05/17","23/05/17","23/05/17","23/05/17","23/05/17",]
         var status = "Aprovada";
-        var input = "<input type='submit' value='Verificar' name='' class='btn btn-primary'>";
+        var input = "<input type='submit' onclick='newTab()' value='Verificar' name='' class='btn btn-primary'>";
         for(var i = 0; i < sala.length; i++) $("#bodyTable").append("<tr style='margin-right= 20px' ><td>"+sala[i]+"</td><td>"+nome[i]+"</td><td>"+tipo[i]+"</td><td>"+hora[i]+"</td><td>"+dia[i]+"</td><td align='center'>"+input+"</td></tr>");
         //
         
@@ -51,19 +51,19 @@ function init(x)
     }
     else if(x == 2)
     {
+        $("#bodyTable").append("<tr><td>Identificador da Sala</td><td> AT - 11</td></tr>");
         $("#bodyTable").append("<tr><td>Nome do Solicitante</td><td> Lucas Garcia</td></tr>");
-        $("#bodyTable").append("<tr><td>Identificador da Sala</td><td> Lucas Garcia</td></tr>");
-        $("#bodyTable").append("<tr><td>Horário de Reserva</td><td> Lucas Garcia</td></tr>");
+        $("#bodyTable").append("<tr><td>Tipo de Solicitante</td><td> Aluno</td></tr>");
+        $("#bodyTable").append("<tr><td>Horário de Reserva</td><td>08:00 - 30/05/17</td></tr>");
+        $("#bodyTable").append("<tr><td>Hora da Solicitação</td><td>19:39 28/05/17</td></tr>");
+        $("#bodyTable").append("<tr><td>Motivo</td><td>Palestra</td></tr>");
         $("#bodyTable").append("<tr><td>Hora da Solicitação</td><td> Lucas Garcia</td></tr>");
-        $("#bodyTable").append("<tr><td>Hora da Solicitação</td><td> Lucas Garcia</td></tr>");
-        $("#bodyTable").append("<tr><td>Hora da Solicitação</td><td> Lucas Garcia</td></tr>");
-        
-
-
-
-
     }
    
 
    
+}
+function newTab()
+{
+    window.open('newTab.html','mywin','width=500,height=500');
 }
