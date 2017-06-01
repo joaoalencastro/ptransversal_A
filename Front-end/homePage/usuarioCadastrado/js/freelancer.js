@@ -125,27 +125,36 @@ function date()
 }   
 function Status(status) 
 {
-    for(var i = 0; i < 150;i++)
+    //REQUISITA CHAR COM OS NOMES DAS SALAS
+    var nomeSala = ["AT-11","BT-16/15","AT-13","BT-25/15","AT-15","AT-19","Lab-Redes","LCCC","SG-11","Auditório"];
+    //
+    var k = 0;
+    for(var i = 0; i < nomeSala.length;i++)
     {
-        var id_str = "q";
-        id_str = id_str.concat(100+i);
-        if(status[i] == 0)
-            var x;
-        else if(status[i] == 1)
-        {
-                document.getElementById(id_str).style.background = "#F0F03E";
-                document.getElementById(id_str).style.cursor = "cursor";
-                $("#"+id_str).hover(function(){ $(this).css("background-color", "#008B8B");}, function(){
-                $(this).css("background-color", "#F0F03E");});
-        }
-        else if(status[i] == 2)
-        {
-            document.getElementById(id_str).style.background = "#E03A3A";
-            document.getElementById(id_str).style.cursor = "auto";
-        }
+            for(var j = 8; j < 22;j++)
+            {
+                var id_str = nomeSala[i] + ":" + j;
+                if(status[k] == 0)
+                {
+                    document.getElementById(id_str).onclick = function() {clickSolic(id_str);};
+                }
+                else if(status[k] == 1)
+                {
+                    document.getElementById(id_str).onclick = function() {clickSolic(id_str);};
+                    document.getElementById(id_str).style.background = "#F0F03E";
 
+                }
+                else if(status[k] == 2)
+                {
+                    document.getElementById(id_str).style.background = "#E03A3A";
+                    document.getElementById(id_str).style.cursor = "auto";
+                }
+
+                k++;
+            }
     }
 }
+
 function setDate(x)
 {
             $('#datepicker').on('changeDate', function() {
@@ -180,6 +189,10 @@ function setDate(x)
             }
             
 }
+function clickSolic(id_str)
+{
+    id_str = "#" + id_str + ":F";
+}
 function init()
 {
  /*              CRIANDO TABELAS           */
@@ -193,12 +206,10 @@ function init()
             $("#tabela-agenda").append(" <tr style='background: green;'> ");
             $("#tabela-agenda").append(" <td class='coluna-agenda'>" + nomeSala[i] + "&nbsp;<i class='fa fa-info-circle'></i>&nbsp;&nbsp;</td> ");
   
-            for(var j = 0; j < 14;j++)
+            for(var j = 8; j < 22;j++)
             {
-                cont++;
-                var id_str = "q";
-                id_str = id_str.concat(cont);
-                $("#tabela-agenda").append("<td class='botao-agenda' id='"+ id_str + "'></td> ");
+                var id_str = nomeSala[i] + ":" + j;
+                $("#tabela-agenda").append("<td class='botao-agenda' id="+ id_str +"><div class='dropdown'><a id_str="+id_str+':F'+" class='dropdown-toggle' data-toggle='dropdown'>Ñ click</a><ul class='dropdown-menu dropdown-user'><p style='color: black'>oi</p></ul></div></td>");
 
 
             }
@@ -214,6 +225,7 @@ function init()
         }).on('changeDate', function (e) {
         setDate();
         });
+
 }
 function initMap() {
         var uluru = {lng: -47.872535, lat: -15.763555};
