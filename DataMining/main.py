@@ -76,17 +76,22 @@ for line in file_object:
     if line[0] == 'o':
         label = label + 1
         url = htmlSourceCode("https://matriculaweb.unb.br/graduacao/" + line)
-        #soup = BeautifulSoup(url)
-
-        #write_on_txt("teste" + str(label) + ".txt", url)
-
 
         marquers = re.findall(r'<b>(.+?)</b>', url)
+
         f = open("infoTeste" + str(label) + ".txt", 'a')
 
         for marquer in marquers:
-            f.write(marquer + '\n')
-            print marquer + '\n'
+            if marquer == 'Obs':
+                obs_index = marquers.index(marquer)
+            if marquer == 'Legenda':
+                leg_index = marquers.index(marquer)
+                vii = marquers[obs_index + 1:leg_index]     # Passa as informacoes necessarias de marquers p/ vii
+                for info in vii:
+                    f.write(info + '\n')
+                    print info + '\n'
+            #f.write(marquer + '\n')
+            #print marquer + '\n'
 
         f.close()
 file_object.close()
