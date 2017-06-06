@@ -1,1 +1,24 @@
-u'ie =  document.all ? true : false;\r\n\tNS4 = (document.layers);\r\n\tIE4 = (document.all);\r\n\tver4 = (NS4 || IE4);\r\n\tIE5 = (IE4 && navigator.appVersion.indexOf("5.")!=-1);\r\n\tisMac = (navigator.appVersion.indexOf("Mac") != -1);\r\n\tisMenu = (NS4 || (IE4 && !isMac) || (IE5 && isMac));\r\n\tif (!ver4) event=null; \r\n\tvar netscape   = (navigator.appName.indexOf("Netscape") >= 0 && parseFloat(navigator.appVersion) >= 4) ? true : false;\r\n\tvar explorer   = (document.all) ? true : false;'u'UnB - Matr\xedcula Web\r\n\t\t\r\n\t\t-\r\n\t\tDados da Oferta'u'Universidade de Bras\xedlia - UnB'u'Decanato de Ensino de Gradua\xe7\xe3o - DEG'u'Secretaria de Administra\xe7\xe3o Acad\xeamica - SAA'u'GRADUA\xc7\xc3O'u'Seja bem-vindo(a).'u'Para ter acesso ao menu de Aluno, fa\xe7a o login.'u'clique aqui para fazer o login'u'.'u'Per\xedodo Atual'u'2017/1'u'Dados da Oferta'u'Gradua\xe7\xe3o'u'Curso'u'Oferta'u'Telefones'u'Calend\xe1rio'u'Mensagem da SAA'u'Benef\xedcios DAC'u'Busca'u'Disciplinas'u'Departamento:'u'ENE - Departamento de Engenharia El\xe9trica.'u'C\xf3digo da Disciplina:'u'164887'u'Nome:'u'CONTROLE DIGITAL'u'Cr\xe9ditos'u'(Teor-Prat-Ext-Est)'u'003-001-000-004'u'Campus:Darcy Ribeiro'u'Turma'u'Vagas'u'Turno'u'Hor\xe1rio/Local'u'Professor'u'Obs'u'A'u'Total'u'Vagas'u'50'u'Ocupadas'u'40'u'Restantes'u'10'u'Diurno'u'DOM'u'SEG'u'TER'u'QUA'u'QUI'u'SEX'u'S\xc1B'u'Ter\xe7a'u'08:00'u'09:50'u'ENE AT 11'u'Quinta'u'08:00'u'09:50'u'ENE AT 11'u'HENRIQUE CEZAR FERREIRA'u'Reserva para curso'u'Vagas'u'Calouros'u'Engenharia Mecatr\xf4nica(Diurno)'u'40'u'0'u'Engenharia Qu\xedmica(Diurno)'u'10'u'0'u'Legenda'u"do campo 'Obs':"u'Disciplina restrita (s\xf3 pode ser cursada pelo aluno que possu\xed-la      em seu curr\xedculo)'u'Turma de hor\xe1rio fixo'u'Turma com reserva exclusiva (s\xf3 matricula aluno do curso      para o qual est\xe1 reservada)'u'\xa9 2017 CPD - Centro de Inform\xe1tica'u'UnB - Universidade de Bras\xedlia'
+Universidade de Brasília - UnB
+Seja bem-vindo(a).
+<img border=0 src="/imagens/act.gif" align=absmiddle alt="MatrículaWeb">&nbsp; clique aqui para fazer o login
+Período Atual
+Busca
+164887
+Créditos
+Campus:Darcy Ribeiro
+Turma
+Vagas
+Turno
+Horário/Local
+Professor
+Obs
+A
+50
+<font color=green>40</font>
+<font color=blue>10</font>
+Terça
+08:00</font>    <font size=1 color=brown>09:50
+Quinta
+08:00</font>    <font size=1 color=brown>09:50
+Legenda
+UnB - Universidade de Brasília
