@@ -135,8 +135,8 @@ function Status(status)
         {
                 document.getElementById(id_str).style.background = "#F0F03E";
                 document.getElementById(id_str).style.cursor = "cursor";
-                $(id_str).hover(function(){ $(this).css("background-color", "#008B8B");}, function(){
-                $(this).css("background-color", "#008B8B");});
+                $("#"+id_str).hover(function(){ $(this).css("background-color", "#008B8B");}, function(){
+                $(this).css("background-color", "#F0F03E");});
         }
         else if(status[i] == 2)
         {
@@ -182,12 +182,35 @@ function setDate(x)
 }
 function init()
 {
+ /*              CRIANDO TABELAS           */
+           //REQUISITA CHAR COM OS NOMES DAS SALAS
+        var nomeSala = ["AT-11","BT-16/15","AT-13","BT-25/15","AT-15","AT-19","Lab-Redes","LCCC","SG-11","Auditório"];
+           //
+        var cont = 100;
+        for(var i = 0; i < nomeSala.length;i++)
+        {
+
+            $("#tabela-agenda").append(" <tr style='background: green;'> ");
+            $("#tabela-agenda").append(" <td class='coluna-agenda'>" + nomeSala[i] + "&nbsp;<i class='fa fa-info-circle'></i>&nbsp;&nbsp;</td> ");
+  
+            for(var j = 0; j < 14;j++)
+            {
+                cont++;
+                var id_str = "q";
+                id_str = id_str.concat(cont);
+                $("#tabela-agenda").append("<td class='botao-agenda' id='"+ id_str + "'></td> ");
+
+
+            }
+            $("#tabela-agenda").append(" </tr> ");
+        }    
+        setDate('inicio'); 
+
+
         /*              CALENDARIO              */
-        setDate('inicio');
         $('#datapicker').datepicker({
         format: "dd/mm/yyyy",
-        language: "pt-BR",
-        keyboardNavigation: true
+        language: "pt-BR"
         }).on('changeDate', function (e) {
         setDate();
         });
@@ -202,40 +225,4 @@ function initMap() {
           position: uluru,
           map: map
     });
-}
-function openModal() {
-  document.getElementById('myModal').style.display = "block";
-}
-
-function closeModal() {
-  document.getElementById('myModal').style.display = "none";
-}
-
-var slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
-  var captionText = document.getElementById("caption");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-  captionText.innerHTML = dots[slideIndex-1].alt;
 }

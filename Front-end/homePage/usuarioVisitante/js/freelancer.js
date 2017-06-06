@@ -129,20 +129,20 @@ function Status(status)
     {
         var id_str = "q";
         id_str = id_str.concat(100+i);
-        if(status[i] == 0)
-            var x;
-        else if(status[i] == 1)
+        if(status[i] == 1)
         {
                 document.getElementById(id_str).style.background = "#F0F03E";
                 document.getElementById(id_str).style.cursor = "cursor";
-                $(id_str).hover(function(){ $(this).css("background-color", "#008B8B");}, function(){
-                $(this).css("background-color", "#008B8B");});
+                $("#"+id_str).hover(function(){ $(this).css("background-color", "#008B8B");}, function(){
+                $(this).css("background-color", "#F0F03E");});
         }
         else if(status[i] == 2)
         {
             document.getElementById(id_str).style.background = "#E03A3A";
             document.getElementById(id_str).style.cursor = "auto";
         }
+
+
 
     }
 }
@@ -160,7 +160,7 @@ function setDate(x)
             if(x == 'inicio')
             {
                 document.getElementById("Title").innerHTML = date();
-                //requisita CHAR de status da tabela
+                //requisita CHAR de status da tabela do dia atual
 
 
 
@@ -182,15 +182,41 @@ function setDate(x)
 }
 function init()
 {
+        /*              CRIANDO TABELAS           */
+           //REQUISITA CHAR COM OS NOMES DAS SALAS
+        var nomeSala = ["AT-11","BT-16/15","AT-13","BT-25/15","AT-15","AT-19","Lab-Redes","LCCC","SG-11","Auditório"];
+           //
+        var cont = 100;
+        for(var i = 0; i < nomeSala.length;i++)
+        {
+
+            $("#tabela-agenda").append(" <tr style='background: green;'> ");
+            $("#tabela-agenda").append(" <td class='coluna-agenda'>" + nomeSala[i] + "&nbsp;<i class='fa fa-info-circle'></i>&nbsp;&nbsp;</td> ");
+  
+            for(var j = 0; j < 14;j++)
+            {
+                cont++;
+                var id_str = "q";
+                id_str = id_str.concat(cont);
+                $("#tabela-agenda").append("<td class='botao-agenda' id='"+ id_str + "'></td> ");
+
+
+            }
+            $("#tabela-agenda").append(" </tr> ");
+        }    
+        setDate('inicio'); 
+
+
         /*              CALENDARIO              */
-        setDate('inicio');
         $('#datapicker').datepicker({
         format: "dd/mm/yyyy",
-        language: "pt-BR",
-        keyboardNavigation: true
+        language: "pt-BR"
         }).on('changeDate', function (e) {
         setDate();
         });
+
+
+      
 }
 function initMap() {
         var uluru = {lng: -47.872535, lat: -15.763555};
