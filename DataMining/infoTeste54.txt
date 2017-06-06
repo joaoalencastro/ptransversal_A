@@ -1,1 +1,58 @@
-u'ie =  document.all ? true : false;\r\n\tNS4 = (document.layers);\r\n\tIE4 = (document.all);\r\n\tver4 = (NS4 || IE4);\r\n\tIE5 = (IE4 && navigator.appVersion.indexOf("5.")!=-1);\r\n\tisMac = (navigator.appVersion.indexOf("Mac") != -1);\r\n\tisMenu = (NS4 || (IE4 && !isMac) || (IE5 && isMac));\r\n\tif (!ver4) event=null; \r\n\tvar netscape   = (navigator.appName.indexOf("Netscape") >= 0 && parseFloat(navigator.appVersion) >= 4) ? true : false;\r\n\tvar explorer   = (document.all) ? true : false;'u'UnB - Matr\xedcula Web\r\n\t\t\r\n\t\t-\r\n\t\tDados da Oferta'u'Universidade de Bras\xedlia - UnB'u'Decanato de Ensino de Gradua\xe7\xe3o - DEG'u'Secretaria de Administra\xe7\xe3o Acad\xeamica - SAA'u'GRADUA\xc7\xc3O'u'Seja bem-vindo(a).'u'Para ter acesso ao menu de Aluno, fa\xe7a o login.'u'clique aqui para fazer o login'u'.'u'Per\xedodo Atual'u'2017/1'u'Dados da Oferta'u'Gradua\xe7\xe3o'u'Curso'u'Oferta'u'Telefones'u'Calend\xe1rio'u'Mensagem da SAA'u'Benef\xedcios DAC'u'Busca'u'Disciplinas'u'Departamento:'u'ENE - Departamento de Engenharia El\xe9trica.'u'C\xf3digo da Disciplina:'u'111767'u'Nome:'u'Lab Sistemas Microprocessados'u'Cr\xe9ditos'u'(Teor-Prat-Ext-Est)'u'000-002-000-002'u'Campus:Darcy Ribeiro'u'Turma'u'Vagas'u'Turno'u'Hor\xe1rio/Local'u'Professor'u'Obs'u'A'u'Total'u'Vagas'u'20'u'Ocupadas'u'15'u'Restantes'u'5'u'Diurno'u'DOM'u'SEG'u'TER'u'QUA'u'QUI'u'SEX'u'S\xc1B'u'Segunda'u'14:00'u'15:50'u'Local a Designar'u'EDSON MINTSU HUNG'u'Reserva para curso'u'Vagas'u'Calouros'u'Engenharia de Computa\xe7\xe3o(Diurno)'u'18'u'0'u'Engenharia El\xe9trica(Diurno)'u'2'u'0'u'Turma'u'Vagas'u'Turno'u'Hor\xe1rio/Local'u'Professor'u'Obs'u'D'u'Total'u'Vagas'u'20'u'Ocupadas'u'20'u'Restantes'u'0'u'Diurno'u'DOM'u'SEG'u'TER'u'QUA'u'QUI'u'SEX'u'S\xc1B'u'Ter\xe7a'u'16:00'u'17:50'u'Local a Designar'u'EDUARDO PEIXOTO FERNANDES DA SILVA'u'Reserva para curso'u'Vagas'u'Calouros'u'Engenharia de Computa\xe7\xe3o(Diurno)'u'2'u'0'u'Engenharia El\xe9trica(Diurno)'u'18'u'0'u'Turma'u'Vagas'u'Turno'u'Hor\xe1rio/Local'u'Professor'u'Obs'u'E'u'Total'u'Vagas'u'20'u'Ocupadas'u'18'u'Restantes'u'2'u'Diurno'u'DOM'u'SEG'u'TER'u'QUA'u'QUI'u'SEX'u'S\xc1B'u'Quinta'u'14:00'u'15:50'u'Local a Designar'u'RICARDO ZELENOVSKY'u'Reserva para curso'u'Vagas'u'Calouros'u'Engenharia de Computa\xe7\xe3o(Diurno)'u'2'u'0'u'Engenharia El\xe9trica(Diurno)'u'18'u'0'u'Turma'u'Vagas'u'Turno'u'Hor\xe1rio/Local'u'Professor'u'Obs'u'F'u'Total'u'Vagas'u'20'u'Ocupadas'u'21'u'Restantes'u'0'u'Diurno'u'DOM'u'SEG'u'TER'u'QUA'u'QUI'u'SEX'u'S\xc1B'u'Quinta'u'16:00'u'17:50'u'Local a Designar'u'RICARDO ZELENOVSKY'u'Reserva para curso'u'Vagas'u'Calouros'u'Engenharia de Computa\xe7\xe3o(Diurno)'u'18'u'0'u'Engenharia El\xe9trica(Diurno)'u'2'u'0'u'Legenda'u"do campo 'Obs':"u'Disciplina restrita (s\xf3 pode ser cursada pelo aluno que possu\xed-la      em seu curr\xedculo)'u'Turma de hor\xe1rio fixo'u'Turma com reserva exclusiva (s\xf3 matricula aluno do curso      para o qual est\xe1 reservada)'u'\xa9 2017 CPD - Centro de Inform\xe1tica'u'UnB - Universidade de Bras\xedlia'
+Universidade de Brasília - UnB
+Seja bem-vindo(a).
+<img border=0 src="/imagens/act.gif" align=absmiddle alt="MatrículaWeb">&nbsp; clique aqui para fazer o login
+Período Atual
+Busca
+111767
+Créditos
+Campus:Darcy Ribeiro
+Turma
+Vagas
+Turno
+Horário/Local
+Professor
+Obs
+A
+20
+<font color=green>15</font>
+<font color=blue>5</font>
+Segunda
+14:00</font>    <font size=1 color=brown>15:50
+Turma
+Vagas
+Turno
+Horário/Local
+Professor
+Obs
+D
+20
+<font color=red>20</font>
+<font color=red>0</font>
+Terça
+16:00</font>    <font size=1 color=brown>17:50
+Turma
+Vagas
+Turno
+Horário/Local
+Professor
+Obs
+E
+20
+<font color=green>18</font>
+<font color=blue>2</font>
+Quinta
+14:00</font>    <font size=1 color=brown>15:50
+Turma
+Vagas
+Turno
+Horário/Local
+Professor
+Obs
+F
+20
+<font color=red>21</font>
+<font color=red>0</font>
+Quinta
+16:00</font>    <font size=1 color=brown>17:50
+Legenda
+UnB - Universidade de Brasília
