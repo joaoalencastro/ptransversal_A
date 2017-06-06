@@ -125,6 +125,7 @@ function date()
 }   
 function Status(status) 
 {
+
     for(var i = 0; i < 150;i++)
     {
         var id_str = "q";
@@ -146,9 +147,15 @@ function Status(status)
 
     }
 }
+
+function myFunc(myObj) {
+    status_test = myObj;
+    console.log(status_test);
+}
 function setDate(x)
 {
             $('#datepicker').on('changeDate', function() {
+                var data_escolhida = new Date();
                 $('#my_hidden_input').val($('#datepicker').datepicker('getFormattedDate'));
              });
 
@@ -157,16 +164,18 @@ function setDate(x)
             var arr = data.split("/").reverse();
             var teste = new Date(arr[0], arr[1] - 1, arr[2]);
             var dia = teste.getDay();
+            var hoje = new Date();
+
             if(x == 'inicio')
             {
                 document.getElementById("Title").innerHTML = date();
                 //requisita CHAR de status da tabela
 
 
-
-                var status = [0,2,1,2,2,2,2,0,0,2,2,1,0,2,1,2,1,2,2,1,2,1,2,2,0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
-                2,2,2,2,0,0,2,0,2,0,2,2,2,2,2,2,2,0,2,0,2,2,2,2,0,0,0,0,2,2,2,1,2,2,2,2,0,0,1,0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
-                2,2,2,2,2,2,0,2,0,2,2,0,2,2,2,1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,1,1,2,2,2,2,0,2,1];
+                GetDataFromServer();
+                var status = [0,0,1,2,2,2,2,0,0,2,2,1,0,2,1,2,1,2,2,1,2,1,2,2,0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
+                    2,2,2,2,0,0,2,0,2,0,2,2,2,2,2,2,2,0,2,0,2,2,2,2,0,0,0,0,2,2,2,1,2,2,2,2,0,0,1,0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
+                    2,2,2,2,2,2,0,2,0,2,2,0,2,2,2,1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,1,1,2,2,2,2,0,2,1];
                 Status(status);
             }
             else
