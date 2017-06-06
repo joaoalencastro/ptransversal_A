@@ -1,7 +1,7 @@
 <?php
 $host = "localhost";
-$user = "root";
-$pass = "";
-$db = "sistema_de_reserva";
+$user = "projeto";
+$pass = "grupoass123";
+$db = "sistemareservadodb";
 $conexao = mysqli_connect($host, $user, $pass, $db);
 ?>
