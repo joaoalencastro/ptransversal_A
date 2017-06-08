@@ -1,6 +1,3 @@
-<!---------------------------------------------------------------------------
-Example client script for JQUERY:AJAX -> PHP:MYSQL example
----------------------------------------------------------------------------->
 
 <html>
 <head>
@@ -12,7 +9,7 @@ Example client script for JQUERY:AJAX -> PHP:MYSQL example
     <input type="submit" value="Enviar">
 </form>
 <script>
-/*    var status;
+    var status;
 
     $(function ()
     {
@@ -20,7 +17,7 @@ Example client script for JQUERY:AJAX -> PHP:MYSQL example
         //envia uma requisição HTTP para o "url". Caso receba um arquivo no formato JSON, ele entra no caso do SUCCESS
 
         $.ajax({
-            url: 'api.php',                  //the script to call to get data
+            url: 'search.php',                  //the script to call to get data
             data: "",                        //you can insert url argumnets here to pass to api.php
                                              //for example "id=5&parent=6"
             dataType: 'json',                //data format
@@ -50,13 +47,6 @@ Example client script for JQUERY:AJAX -> PHP:MYSQL example
         });
     });
 
-    function test1(){
-        var status_aux = status;
-        for(var i=0;i<status_aux.length;i+=2) {
-            alert(status_aux[i]);
-        }
-    }
-*/
 </script>
 </body>
 </html>
