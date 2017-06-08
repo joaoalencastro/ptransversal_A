@@ -1,7 +1,13 @@
 <?php
 $host = "localhost";
-$user = "root";
-$pass = "";
-$db = "sistema_de_reserva";
-$conexao = mysqli_connect($host, $user, $pass, $db);
+$user = "projeto";
+$pass = "senhadobanco";
+$db = "sistemareservadodb";
+$conexao = new mysqli ($host, $user, $pass, $db);
+
+// Caso a conexo tenha dado errado, exibe uma mensagem de erro.
+if (mysqli_connect_errno()) {
+    die('Não foi possível conectar-se ao banco de dados: ' . mysqli_connect_error());
+    exit();
+}
 ?>
