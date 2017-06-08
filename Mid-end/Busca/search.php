@@ -4,7 +4,7 @@
 $pesquisa = $_POST["pesquisa"];
 $db = new mysqli('localhost', 'root', '', 'blabla');
 //Vendo o Status da sala de acordo com o nome digitado
-$sql= mysqli_query($db, "select status,sala,cadeiras,null as nome from diatabela where sala like '$pesquisa' UNION SELECT nome,turma,diasemana,horario FROM materias WHERE nome like '$pesquisa'");
+$sql= mysqli_query($db, "select status,sala,cadeiras,id from diatabela where sala like '$pesquisa' UNION SELECT nome,turma,diasemana,horario FROM materias WHERE nome like '$pesquisa'");
 if($sql === FALSE) {
     echo mysqli_error($db);
 }
