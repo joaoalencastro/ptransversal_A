@@ -125,7 +125,6 @@ function date()
 }   
 function Status(status) 
 {
-
     for(var i = 0; i < 150;i++)
     {
         var id_str = "q";
@@ -147,15 +146,9 @@ function Status(status)
 
     }
 }
-
-function myFunc(myObj) {
-    status_test = myObj;
-    console.log(status_test);
-}
 function setDate(x)
 {
             $('#datepicker').on('changeDate', function() {
-                var data_escolhida = new Date();
                 $('#my_hidden_input').val($('#datepicker').datepicker('getFormattedDate'));
              });
 
@@ -164,18 +157,16 @@ function setDate(x)
             var arr = data.split("/").reverse();
             var teste = new Date(arr[0], arr[1] - 1, arr[2]);
             var dia = teste.getDay();
-            var hoje = new Date();
-
             if(x == 'inicio')
             {
                 document.getElementById("Title").innerHTML = date();
                 //requisita CHAR de status da tabela do dia atual
 
 
-                GetDataFromServer();
-                var status = [0,0,1,2,2,2,2,0,0,2,2,1,0,2,1,2,1,2,2,1,2,1,2,2,0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
-                    2,2,2,2,0,0,2,0,2,0,2,2,2,2,2,2,2,0,2,0,2,2,2,2,0,0,0,0,2,2,2,1,2,2,2,2,0,0,1,0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
-                    2,2,2,2,2,2,0,2,0,2,2,0,2,2,2,1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,1,1,2,2,2,2,0,2,1];
+
+                var status = [0,2,1,2,2,2,2,0,0,2,2,1,0,2,1,2,1,2,2,1,2,1,2,2,0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
+                2,2,2,2,0,0,2,0,2,0,2,2,2,2,2,2,2,0,2,0,2,2,2,2,0,0,0,0,2,2,2,1,2,2,2,2,0,0,1,0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
+                2,2,2,2,2,2,0,2,0,2,2,0,2,2,2,1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,1,1,2,2,2,2,0,2,1];
                 Status(status);
             }
             else
@@ -237,40 +228,4 @@ function initMap() {
           position: uluru,
           map: map
     });
-}
-function openModal() {
-  document.getElementById('myModal').style.display = "block";
-}
-
-function closeModal() {
-  document.getElementById('myModal').style.display = "none";
-}
-
-var slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
-  var captionText = document.getElementById("caption");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-  captionText.innerHTML = dots[slideIndex-1].alt;
 }
