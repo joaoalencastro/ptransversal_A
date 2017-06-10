@@ -627,7 +627,7 @@ div#maincontent {
 
 
 .req{
-    color: #1ab188;
+    color: white;
     font-weight: bold;
 }
 
@@ -705,7 +705,7 @@ div.info {
 
 .field-wrap {
   position: relative;
-  margin-bottom: 40px;
+  padding-bottom: 1%;
 }
 
 .top-row:after {
