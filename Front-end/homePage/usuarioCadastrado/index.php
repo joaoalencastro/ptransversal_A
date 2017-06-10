@@ -1,7 +1,3 @@
-<?php
-  require('../php/user_logado.php');
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Reservado | Sistema de Reserva</title>
-
+    
     <!-- Calendario         -->
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <!--<link rel="stylesheet" href="/resources/demos/style.css"> -->
@@ -41,7 +37,6 @@
 </head>
 
 <body id="Inicio" class="index">
-
 <div id="skipnav"><a href="#maincontent">Skip to main content</a></div>
     <!-- Navigation -->
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
@@ -63,7 +58,7 @@
                         <a href="#Pesquisa">Pesquisa</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#Mapa">Mapa de sala</a>
+                        <a href="#portfolio">Mapa de sala</a>
                     </li>
                     <li class="page-scroll">
                         <a href="#Sobre">Sobre</a>
@@ -74,18 +69,19 @@
                     <li>
                         <ul class="nav navbar-top-links navbar-right">
                             <li class="dropdown">
+
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                    <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                                   <i class="fa fa-user fa-fw"></i> Bruno Putinho <i class="fa fa-caret-down"></i>
                                 </a>
-                            <ul class="dropdown-menu dropdown-user">
-                                <li><a href="#"><i class="fa fa-user fa-fw"></i> Perfil do Usuário</a>
-                                </li>
-                                <li><a href="#"><i class="fa fa-gear fa-fw"></i> Configurações</a>
-                                </li>
-                                <li class="divider"></li>
-                                <li><a href="../php/logout.php"><i class="fa fa-sign-out fa-fw"></i>Sair</a>
-                                </li>
-                            </ul>
+                                <ul class="dropdown-menu dropdown-user">
+                                    <li>
+                                        <a style="color: black;" href="#"><i class="fa fa-user fa-fw"></i> Perfil do Usuário</a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li>
+                                        <a style="color: black;" href="../php/logout.php"><i class="fa fa-sign-out fa-fw"></i>Sair</a>
+                                    </li>
+                                </ul>
                             </li>
                         </ul>
                     </li>
@@ -100,16 +96,16 @@
     <header>
     <div class="container" id="maincontent" tabindex="-1">
         <div class="row">
-	            <div id="datapicker" align="center" class="input-group date">
+                <div id="datapicker" align="center" class="input-group date">
                         <input type="hidden" id="my_hidden_input">
                 </div>
             <div id="agenda">
                 <h2 id="Title"></h2>
                 <div class="table-responsive">
-                    <table class="tabela-agenda" >
+                    <table id="tabela-agenda" >
                       <tr>
                         <th></th>
-                        <th class="coluna-horario">08:00</th>
+                        <th class="coluna-horario">08:00</th>    
                         <th class="coluna-horario">09:00</th>
                         <th class="coluna-horario">10:00</th>
                         <th class="coluna-horario">11:00</th>
@@ -133,57 +129,55 @@
     <!-- Portfolio Grid Section -->
     <section id="Pesquisa">
         <div class="container">
-        	<div class="row">
-	            <div class="col-lg-12 text-center">
-	                <h2 style="color: black">Pesquisa</h2>
-	                <hr class="star-primary">
-	            </div>
-	        </div>
-	        <div class="row">
-	        	<h3 align="center">Faça a sua pesquisa por disciplina,<br> nome da sala ou monitoria.</h3>
-	            <div class="input-group nav navbar-nav" id="inputPesquisa">
-	                <p><input  type="textarea" name="" placeholder="Ex.: APR, AT-11 ou Monitoria de SD" class="form-control" id="barra-pesquisa">
-	                	<button type="submit" class="btn btn-default">Pesquisar</button>
-	                </p>
-	                </div>
-	            </div>
-	        </div>
-        </div>
-    </section>
-    <section id="Mapa" class="success">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 style="color: white">Mapa de Sala</h2>
-                    <hr class="star-light">
-            </div>
-            </div>
-            <div class="row" style="position: relative; left: 25%; margin-top: 50px;">
-              <div class="column">
-                <h3 align="center">Mapa da FT</h3>
-                <img style="max-width: 100%" src="img/mapaFT.png" onclick="openModal();currentSlide(1)" class="hover-shadow">
-              </div>
-              <div class="column">
-              <h3 align="center">Mapa do SG</h3>
-                <img style="max-width: 100%" src="img/mapaSG.png" onclick="openModal();currentSlide(2)" class="hover-shadow">
-              </div>
-            </div>
-
-            <div id="myModal" class="modal">
-              <span style="position: relative; color: white" class="close cursor" onclick="closeModal()">&times;</span>
-              <div class="modal-content">
-
-                <div class="mySlides">
-                  <div class="numbertext">1 / 2</div>
-                    <img src="img/mapaFT.png" style="width:100%">
+                    <h2 style="color: black">Pesquisa</h2>
+                    <hr class="star-primary">
                 </div>
-
-                <div class="mySlides">
-                  <div class="numbertext">2 / 2</div>
-                    <img src="img/mapaSG.png" style="width:100%">
+            </div>
+            <div class="row">
+                <h3 align="center">Faça a sua pesquisa por disciplina,<br> nome da sala ou monitoria.</h3>
+                <div class="input-group nav navbar-nav" id="inputPesquisa">
+                    <p><input  type="textarea" name="" placeholder="Ex.: APR, AT-11 ou Monitoria de SD" class="form-control" id="barra-pesquisa">
+                        <button type="submit" class="btn btn-default">Pesquisar</button>
+                    </p>
+                    </div>
                 </div>
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-              </div>
+            </div>
+        </div>
+    </section>
+    <section  id="portfolio" class="success">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2>Mapa de Salas</h2>
+                        <hr class="star-light">
+                    </div>
+                </div>
+                <div class="row" style="position: relative; left: 17%">
+                    <div class="col-sm-4 portfolio-item">
+                            <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                                <div class="caption">
+                                    <div class="caption-content">
+                                        <i class="fa fa-search-plus fa-3x"></i>
+                                    </div>
+                                </div>
+                                <img src="img/mapaFT.png" class="img-responsive" alt="Slice of cake">
+                            </a>
+                            <h3 align="center" style="color: white ">Mapa da FT</h3>
+                    </div>
+                    <div class="col-sm-4 portfolio-item">
+                        <a  href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                            <div class="caption">
+                                <div class="caption-content">
+                                    <i class="fa fa-search-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img src="img/mapaSG.png" class="img-responsive" alt="Cabin">
+                        </a>
+                            <h3 align="center" style="color: white ">Mapa dos SG's</h3>
+                    </div>
+                </div>
             </div>
     </section>
     <!-- About Section -->
@@ -278,33 +272,33 @@
                     <div class="footer-col col-md-4">
                         <h3>Palestras</h3>
                         <ul>
-                            <li>20/07/17 - 12:00: Sala At-11 professor Zelenovisk palestra de Sistemas Industriais
+                            <li>20/07/17 - 12:00: Sala At-11 professor Zelenovisk palestra de Sistemas Industriais 
                             </li>
-                            <li>19/07/17 - 14:00: Sala At-66 professor Flávio palestra de Cyber Ataques
+                            <li>19/07/17 - 14:00: Sala At-66 professor Flávio palestra de Cyber Ataques 
                             </li>
-                            <li>12/07/17 - 12:00: Sala At-11 professor Georges palestra de Arquitetura Linux
+                            <li>12/07/17 - 12:00: Sala At-11 professor Georges palestra de Arquitetura Linux 
                             </li>
-                            <li>20/07/17 - 12:00: Sala At-11 professor Zelenovisk palestra de Sistemas Industriais
+                            <li>20/07/17 - 12:00: Sala At-11 professor Zelenovisk palestra de Sistemas Industriais 
                             </li>
-                            <li>19/07/17 - 14:00: Sala At-66 professor Flávio palestra de Cyber Ataques
+                            <li>19/07/17 - 14:00: Sala At-66 professor Flávio palestra de Cyber Ataques 
                             </li>
                         </ul>
                     </div>
                     <div class="footer-col col-md-4">
                         <h3>Requisições</h3>
 
-                            <li>AT-11 20/07/17 12:00 Pedido por aluno, Aprovada.
+                            <li>AT-11 20/07/17 12:00 Pedido por aluno, Aprovada.  
                             </li>
-                            <li>AT-11 20/07/17 12:00 Pedido por aluno, Pendente.
+                            <li>AT-11 20/07/17 12:00 Pedido por aluno, Pendente.  
                             </li>
-                            <li>AT-11 19/07/17 12:00 Pedido por monitor, Aprovada.
+                            <li>AT-11 19/07/17 12:00 Pedido por monitor, Aprovada.  
                             </li>
-                            <li>AT-11 19/07/17 12:00 Pedido por monitor, Pendente.
-                            </li>
-                            <li>AT-11 19/07/17 12:00 Pedido por aluno, reprovada.
-                            </li>
-                            <li>AT-11 19/07/17 12:00 Pedido por aluno, pendente.
-                            </li>
+                            <li>AT-11 19/07/17 12:00 Pedido por monitor, Pendente.  
+                            </li>     
+                            <li>AT-11 19/07/17 12:00 Pedido por aluno, reprovada.  
+                            </li>    
+                            <li>AT-11 19/07/17 12:00 Pedido por aluno, pendente.  
+                            </li>                                                      
                     </div>
                 </div>
             </div>
@@ -320,13 +314,59 @@
         </div>
 
     </footer>
+     <!-- Portfolio Modals -->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>SG</h2>
+                            <hr class="star-primary">
+                            <img src="img/mapaSG.png" class="img-responsive img-centered" alt="">
+                            <p>Clique em alguma sala para ver o seu itinerário.</p>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Faculdade de Tecnologia</h2>
+                            <hr class="star-primary">
+                            <img src="img/mapaFT.png" class="img-responsive img-centered" alt="">
+                            <p>Clique em alguma sala para ver o seu itinerário.</p>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
     <div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
         <a class="btn btn-primary" href="#page-top">
             <i class="fa fa-chevron-up"></i>
         </a>
     </div>
-    <!-- jQuery -->
     <script src="vendor/jquery/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
@@ -344,19 +384,11 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="js/bootstrap-datepicker.min.js"></script>
     <script src="js/bootstrap-datepicker.pt-BR.min.js"></script>
-    <script src="/openseadragon/openseadragon.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGKrN2La36taC8h4UYW2r_522iEJYdO3U&callback=initMap"></script>
     <script>
         init();
-        $(document).ready(function(){
-        $(document).keypress(function(e){
-        if(e.keyCode == 13){
-        closeModal();
-            }
-        })
-    })
     </script>
 </body>
 
