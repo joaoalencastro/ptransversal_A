@@ -19,10 +19,11 @@ echo "aqui0";
 
 
       $mensagem = '<p>Recebemos uma tentativa de recuperação de senha para este e-mail. Caso não tenha solicitado,
-      porfavor, desconsidere este e-mail. Caso contrário clique no link abaixo para alterar a senha.<br /> <a href="http://localhost/ptransversal_A/Mid-end/recuperar/recuperar.php?codigo=
-      '.$codigo.'">Recuperar Senha</a></p>';
+      por favor, desconsidere este e-mail. Caso contrário clique no link abaixo para alterar a senha.<br />
+      <a href="http://localhost/ptransversal_A/Mid-end/recuperar/recuperar.php?codigo='.$codigo.'">Recuperar Senha</a></p>';
 
       $email_remetente = '//email servidor';
+      $assunto = 'Recuperação de Senha - Reservado';
 
       $headers = "MINE-Version: 1.1\n";
       $headers = "Content-type: text/html; charset=iso-8859-1\n";
