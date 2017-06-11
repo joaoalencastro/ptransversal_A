@@ -21,7 +21,6 @@
       <a href="http://localhost/ptransversal_A/Mid-end/recuperar/recuperar.php?codigo='.$codigo.'">Recuperar Senha</a></p>';
 
       $email_remetente = '//email servidor';
-      $assunto = 'Recuperação de Senha - Reservado';
 
       $headers = "MINE-Version: 1.1\n";
       $headers = "Content-type: text/html; charset=iso-8859-1\n";
