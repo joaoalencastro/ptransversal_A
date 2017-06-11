@@ -1,7 +1,5 @@
 <?php
-echo "aqui0";
   include('conexao.php');
-
 
   date_default_timezone_get("America/Sao_Paulo");
   ini_set('smtp_port', '587');
