@@ -9,7 +9,6 @@
     $sql = "SELECT * FROM codigos WHERE codigo = '$codigo' AND data > NOW()";
     $selecionar = mysqli_query($conexao, $sql);
     $row = mysqli_num_rows($selecionar);
-    echo $row;
 
     if ($row >= 1) {
      header("Location: alterar_senha.html");
