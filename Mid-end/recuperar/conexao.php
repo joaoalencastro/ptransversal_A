@@ -1,7 +1,7 @@
 <?php
   $host = "localhost";
   $user = "root";
-  $pass = "cebola123";
+  $pass = "";
   $db = "sistemareservadodb";
   $conexao = new mysqli ($host, $user, $pass, $db);
 
