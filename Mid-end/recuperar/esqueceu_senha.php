@@ -18,10 +18,11 @@
 
       $mensagem = '<p>Recebemos uma tentativa de recuperação de senha para este e-mail. Caso não tenha solicitado,
       por favor, desconsidere este e-mail. Caso contrário clique no link abaixo para alterar a senha.<br />
-      <a href="http://localhost/ptransversal_A/Mid-end/recuperar/recuperar.php?codigo='.$codigo.'">Recuperar Senha</a></p>';
+      <a href="http://var/www/html/recuperar/recuperar.php?codigo='.$codigo.'">Recuperar Senha</a></p>';
 
-      $email_remetente = '//email servidor';
+      $email_remetente = '172.16.24.16';
 
+      $assunto = 'recuperacao de senha';
       $headers = "MINE-Version: 1.1\n";
       $headers = "Content-type: text/html; charset=iso-8859-1\n";
       $headers = "From: $email_remetente\n";
