@@ -148,11 +148,13 @@ function Status(status)
                 {
                     document.getElementById(id_str).style.background = "#E03A3A";
                     document.getElementById(id_str).style.cursor = "auto";
+                    
                 }
 
                 k++;
             }
     }
+
 }
 
 function setDate(x)
@@ -192,6 +194,7 @@ function setDate(x)
 function clickSolic(id_str)
 {
     id_str = "#" + id_str + ":F";
+    alert('oi');
 }
 function init()
 {
@@ -209,7 +212,7 @@ function init()
             for(var j = 8; j < 22;j++)
             {
                 var id_str = nomeSala[i] + ":" + j;
-                $("#tabela-agenda").append("<td class='botao-agenda' id="+ id_str +"><div class='dropdown'><a id_str="+id_str+':F'+" class='dropdown-toggle' data-toggle='dropdown'>Ñ click</a><ul class='dropdown-menu dropdown-user'><p style='color: black'>oi</p></ul></div></td>");
+                $("#tabela-agenda").append("<td class='botao-agenda' id="+ id_str +"><div class='dropdown'><button style='opacity: 1;' id_str="+id_str+':F'+" class='dropdown-toggle' data-toggle='dropdown'>Ñ click</button><ul class='dropdown-menu dropdown-user'><p style='color: black'>oi</p></ul></div></td>");
 
 
             }
