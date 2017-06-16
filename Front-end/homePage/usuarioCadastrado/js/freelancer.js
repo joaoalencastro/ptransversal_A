@@ -102,9 +102,12 @@ $('.tab a').on('click', function (e) {
   $(target).fadeIn(600);
   
 });
-function date()
-{
-    var now = new Date;
+function date(x)     //RETORNA O DIA ATUAL + 1
+{   
+    var aux = new Date();
+    var now = new Date();
+    now.setDate(aux.getDate() + 1); 
+
     var day = now.getDate();
     var month = now.getMonth();
     var year = now.getFullYear();
@@ -119,11 +122,15 @@ function date()
         var zero = '0';
         month = zero.concat(month);
     }
-    var d = new Date();
-     days = ["Domingo","Segunda-feira","Terça-feira","Quarta-feira","Quinta-feira","Sexta-feira","Sábado"];
-    return days[d.getDay()] + ', ' + day + '/' + month + '/'+ year;
-}   
-function Status(status) 
+    days = ["Domingo","Segunda-feira","Terça-feira","Quarta-feira","Quinta-feira","Sexta-feira","Sábado"];
+    if(x != 'inicio')
+        return day + '/' + month + '/'+ year;
+    else
+        return days[now.getDay()] + ', ' + day + '/' + month + '/'+ year;
+    
+}
+
+function Status(status) //ATUALIZA O STATUS
 {
     //REQUISITA CHAR COM OS NOMES DAS SALAS
     var nomeSala = ["AT-11","BT-16/15","AT-13","BT-25/15","AT-15","AT-19","Lab-Redes","LCCC","SG-11","Auditório"];
@@ -137,6 +144,7 @@ function Status(status)
                 if(status[k] == 0)
                 {
                     document.getElementById(id_str).onclick = function() {clickSolic(id_str);};
+                    document.getElementById(id_str).style.background = "green";
                 }
                 else if(status[k] == 1)
                 {
@@ -148,16 +156,32 @@ function Status(status)
                 {
                     document.getElementById(id_str).style.background = "#E03A3A";
                     document.getElementById(id_str).style.cursor = "auto";
-                    
+                    document.getElementById(id_str + ":F").disabled = true;
                 }
-
                 k++;
             }
     }
 
 }
-
-function setDate(x)
+function requestStatus(stateReq)
+{
+    if(stateReq != 'inicio')
+    {
+        return statusChar;
+    }
+    else  //REQUISIÇÃO DE DADOS É FEITA AQUI   OBS: FAZER DE UM JEITO QUE EU POSSA  REQUISITAR SEMPRE, SEM TER QUE FAZER CONEXÃO COM O SERVIDOR
+    {
+        var status = [0,2,1,2,2,2,2,0,0,2,2,1,0,2,1,2,1,2,2,1,2,1,2,2,0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
+                2,2,2,2,0,0,2,0,2,0,2,2,2,2,2,2,2,0,2,0,2,2,2,2,0,0,0,0,2,2,2,1,2,2,2,2,0,0,1,0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
+                2,2,2,2,2,2,0,2,0,2,2,0,2,2,2,1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,1,1,2,2,2,2,0,1,1]; 
+        var status1  = [0,2,1,2,2,2,2,0,0,2,2,1,0,2,1,2,1,2,2,1,2,1,2,2,0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
+                2,2,2,2,0,0,2,0,2,0,2,2,2,2,2,2,2,0,2,0,2,0,2,2,0,0,0,0,2,2,2,1,0,2,2,2,0,0,1,0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
+                2,2,2,2,2,2,0,0,0,2,2,0,2,2,2,1,1,2,2,0,2,2,2,2,2,2,2,2,2,2,1,1,0,2,2,2,1,0,0]; 
+        var statusChar = [status,status1,status,status,status,status1,status,status,status,status,status,status,status,status,status1];
+        return statusChar;
+    }
+}
+function setdate(x)
 {
             $('#datepicker').on('changeDate', function() {
                 $('#my_hidden_input').val($('#datepicker').datepicker('getFormattedDate'));
@@ -170,23 +194,24 @@ function setDate(x)
             var dia = teste.getDay();
             if(x == 'inicio')
             {
-                document.getElementById("Title").innerHTML = date();
-                //requisita CHAR de status da tabela
-
-
-
-                var status = [0,2,1,2,2,2,2,0,0,2,2,1,0,2,1,2,1,2,2,1,2,1,2,2,0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
-                2,2,2,2,0,0,2,0,2,0,2,2,2,2,2,2,2,0,2,0,2,2,2,2,0,0,0,0,2,2,2,1,2,2,2,2,0,0,1,0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
-                2,2,2,2,2,2,0,2,0,2,2,0,2,2,2,1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,1,1,2,2,2,2,0,2,1];
-                Status(status);
+                document.getElementById("Title").innerHTML = date('inicio');
+                var statusChar = requestStatus('inicio');
+                Status(statusChar[0]);
             }
             else
             {
                 document.getElementById("Title").innerHTML = semana[dia] + ', ' + data;
-                //requisita CHAR de status da tabela
-                var status = [1,2,1,2,2,2,2,0,0,2,2,1,0,2,1,2,1,2,2,1,2,1,2,2,0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
-                2,2,2,2,0,0,2,0,2,0,2,2,2,2,2,2,2,0,2,0,2,2,2,2,0,0,0,0,2,2,2,1,2,2,2,2,0,0,1,0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
-                2,2,2,2,2,2,0,2,0,2,2,0,2,2,2,1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,1,1,2,2,2,2,0,2,1];
+                var statusChar = requestStatus('inicio');
+                var aux = date('0');
+                var arr1 = aux.split("/").reverse();
+  
+                var newDate = (arr[1]) +'/' + arr[2] + '/' + arr[0]; 
+                var oldDate = (arr1[1]) +'/' + arr1[2] + '/' + arr1[0]; 
+                var date1 = new Date(oldDate);
+                var date2 = new Date(newDate);
+                var timeDiff = Math.abs(date2.getTime() - date1.getTime());
+                var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));                 
+                var status = statusChar[diffDays];
                 Status(status);
             }
             
@@ -194,7 +219,6 @@ function setDate(x)
 function clickSolic(id_str)
 {
     id_str = "#" + id_str + ":F";
-    alert('oi');
 }
 function init()
 {
@@ -212,21 +236,63 @@ function init()
             for(var j = 8; j < 22;j++)
             {
                 var id_str = nomeSala[i] + ":" + j;
-                $("#tabela-agenda").append("<td class='botao-agenda' id="+ id_str +"><div class='dropdown'><button style='opacity: 1;' id_str="+id_str+':F'+" class='dropdown-toggle' data-toggle='dropdown'>Ñ click</button><ul class='dropdown-menu dropdown-user'><p style='color: black'>oi</p></ul></div></td>");
+                var html = " " +
+                "<td class='botao-agenda' id="+ id_str +"> " +
+                "   <div class='oi dropdown'>" +
+                "        <button style='opacity:0;' id="+id_str+':F'+" class='dropdown-toggle' data-toggle='dropdown'>Ñ click</button> "+ 
+                "           <ul class='nodrop dropdown-menu dropdown-user'  style='height: 280px;'>" +
+                "               <div class='row' style='color:black'>" +
+                "                   <h5 style='font-size:11px; position:relative; left: 22px;'>Motivo da Solicitação </h5> " +
+                "                    <div style='position: relative; left: 25px' class='radio'> " +
+                "                       <label><input type='radio' name='optradio'>Monitoria</label> "+
+                "                   </div> "+
+                "                    <div style='position: relative; left: 25px' class='radio'> " +
+                "                       <label><input type='radio' name='optradio'>Aula</label> "+
+                "                   </div> "+
+                "                    <div style='position: relative; left: 25px' class='radio'> " +
+                "                       <label><input type='radio' name='optradio'>Palestra</label> "+
+                "                   </div> "+
+                "                    <div style='position: relative; left: 25px' class='radio'> " +
+                "                       <label><input type='radio' name='optradio'>Sala de estudos</label> "+
+                "                   </div> "+
+                "                   <li style='max-width:150px;position: relative; left: 20px' class='divider' ></li>           "+
+                "                   <div style='position: relative; left: 25px' class='radio'> " +
+                "                       <label><input type='radio' name='optradio'>Outro:</label> "+
+                "                   </div> "+
+                "                   <input style='position:relative; left: 20px; max-width:145px; max-height: 200px;' placeholder='Seja breve' type='text' class='form-control' rows='2' >"+
+                "                   <li><button style='position: relative; left: 60px; top:10px' class='btn btn-default'>Enviar</button></li>                                    "+
+                "               </div>"+        
+                "           </ul>"+
+                "   </div>"+
+                "</td>";
+                $("#tabela-agenda").append(html);
+                $('.table-responsive').on('show.bs.dropdown', function () {
+                $('.table-responsive').css( "overflow", "inherit" );});
+                $('.table-responsive').on('hide.bs.dropdown', function () {
+                $('.table-responsive').css( "overflow", "auto" );})
+
+                $('.nodrop').click(function(e) {
+                    e.stopPropagation();
+                });
 
 
+                /*$('.oi').on('hide.bs.dropdown', function () {
+                    return false;
+                });*/
             }
             $("#tabela-agenda").append(" </tr> ");
-        }    
-        setDate('inicio'); 
-
+        }       
+        setdate('inicio');
 
         /*              CALENDARIO              */
         $('#datapicker').datepicker({
-        format: "dd/mm/yyyy",
-        language: "pt-BR"
+            format: "dd/mm/yyyy",
+            language: "pt-BR",
+            startDate: '+1d',
+            endDate : '+15d',
+            daysOfWeekDisabled: [0]
         }).on('changeDate', function (e) {
-        setDate();
+            setdate();
         });
 
 }

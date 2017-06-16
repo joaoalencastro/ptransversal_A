@@ -66,70 +66,9 @@
                     <li class="page-scroll">
                         <a href="#Contato">Contato</a>
                     </li>
-                        <li>
-                            <a onclick="toggleNavPanel('sections_panel'); backgroundBar();" style="cursor: pointer;">ACESSAR<span id="navarrow">&#9662</span></a>
-                                <div>
-                                    <div id="sections_panel">
-                                        <div>
-                                            <div class="form">
-                                                <ul class="tab-group">
-                                                    <li class="tab"><a href="#signup">Inscrever</a></li>
-                                                    <li class="tab active"><a href="#login">Entrar</a></li>
-                                                </ul>
-                                                <div class="tab-content">
-                                                    <div id="login">
-                                                        <h2 class="H1">Bem-vindo de volta</h>
-                                                        <form action="../php/user_authentication.php" method="post" autocomplete="off">
-                                                            <div class="field-wrap" style="padding-top: 15%;padding-bottom: 20%;">
-                                                                <label class="Label">
-                                                                    E-mail<span class="req">*</span>
-                                                                </label>
-                                                                <input class="Input" type="email" required autocomplete="off" name="email"/>
-                                                            </div>
-                                                            <div class="field-wrap" style="padding-bottom: 20%;">
-                                                                <label class="Label">
-                                                                    Senha<span class="req">*</span>
-                                                                </label>
-                                                                <input class="Input" type="password" required autocomplete="off" name="senha"/>
-                                                            </div>
-                                                            <p class="forgot"><a class="A" href="forgot.php">Esqueceu a senha?</a></p>
-                                                            <button class="button button-block" name="login" />Entrar</button>
-                                                        </form>
-                                                    </div>
-                                                        <div id="signup">
-                                                          <form action="../php/post_cadastro_user.php" method="post" autocomplete="off">
-                                                            <div class="field-wrap" >
-                                                                <span class="req">NOME *</span>
-                                                                <input class="Input TextArea" type="text"required autocomplete="off" name='nome' />
-                                                            </div>
-                                                            <div class="field-wrap">
-                                                                    <span class="req">Matrícula *</span>
-                                                                <input class="Input TextArea" type="text"required autocomplete="off" name='matricula' />
-                                                            </div>
-                                                          <div class="field-wrap">
-                                                              <span class="req">E-mail *</span>
-                                                            <input class="Input TextArea" type="email"required autocomplete="off" name='email' />
-                                                          </div>
-                                                          <div class="field-wrap">
-                                                              <span class="req">RG *</span>
-                                                            <input class="Input TextArea" type="text"required autocomplete="off" name='rg' />
-                                                          </div>
-                                                          <div class="field-wrap">
-                                                              <span class="req">Defina sua senha *</span>
-                                                            <input class="Input TextArea" type="password"required autocomplete="off" name='senhatxt' maxlength="8"/>
-                                                          </div>
-                                                          <div class="field-wrap" style="padding-bottom: 5%;">
-                                                              <span class="req">Confirme sua senha *</span>
-                                                            <input class="Input TextArea" type="password"required autocomplete="off" name='senha2txt' maxlength="8"/>
-                                                          </div>
-                                                          <button type="submit" class="button button-block" name="register" />registrar</button>
-                                                          </form>
-                                                        </div>
-                                                </div><!-- tab-content -->
-                                            </div>
-                                        </div>
-                                </div>
-                        </li>
+                    <li>
+                        <a href="#"  id='bnt-acessar'data-toggle="modal" data-target="#login-modal">Acessar &nbsp;<i class="glyphicon glyphicon-lock"></i></a>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -357,8 +296,109 @@
                 </div>
             </div>
         </div>
-
     </footer>
+
+    <!-- Modal Login -->
+    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" align="center">
+                    <img class="img-circle" id="img_logo" src="http://bootsnipp.com/img/logo.jpg">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                    </button>
+                </div>
+                
+                <!-- Begin # DIV Form -->
+                <div id="div-forms">
+                
+                    <!-- Begin # Login Form -->
+                    <form action="../php/user_authentication.php" method="post" autocomplete="off" id="login-form">
+                        <div class="modal-body">
+                            <div id="div-login-msg">
+                                <div id="icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                <span id="text-login-msg">Digite seu nome de usuário e senha.</span>
+                            </div>
+                            <input id="login_username" class="form-control" type="text" name="email" placeholder="E-mail" required>
+                            <input id="login_password" class="form-control" type="password" name="senha" placeholder="Senha" autocomplete="off" required>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox"> Lembre-me
+                                </label>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <div>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block">Entrar</button>
+                            </div>
+                            <div>
+                                <button id="login_lost_btn" type="button" class="btn btn-link">Esqueceu a senha?</button>
+                                <button id="login_register_btn" type="button" class="btn btn-link">Increva-se</button>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- End # Login Form -->
+                    
+                    <!-- Begin | Lost Password Form -->
+                    <form id="lost-form" style="display:none;">
+                        <div class="modal-body">
+                            <div id="div-lost-msg">
+                                <div id="icon-lost-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                <span id="text-lost-msg">Digite o seu e-mail de cadastro</span>
+                            </div>
+                            <input id="lost_email" class="form-control" type="text" placeholder="E-Mail" required>
+                        </div>
+                        <div class="modal-footer">
+                            <div>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block">Enviar</button>
+                            </div>
+                            <div>
+                                <button id="lost_login_btn" type="button" class="btn btn-link">Entrar</button>
+                                <button id="lost_register_btn" type="button" class="btn btn-link">Registrar</button>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- End | Lost Password Form -->
+                    
+                    <!-- Begin | Register Form -->
+                    <form id="register-form" action="../php/post_cadastro_user.php" method="post" autocomplete="off" style="display:none;">
+                        <div class="modal-body">
+                            <div id="div-register-msg">
+                                <div id="icon-register-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                <span id="text-register-msg">Registre sua conta</span>
+                            </div>
+                            <input class="form-control" type="text" placeholder="Nome *" name='nome' required>
+                            <input class="form-control" type="text" placeholder="Matrícula *" name='matricula' required>
+                            <input class="form-control" type="text" placeholder="E-Mail *" name="email" required>   
+                            <input class="form-control" type="text" placeholder="RG *" name="rg" required>     
+                            <input class="form-control" type="text" placeholder="Data de nascimento: Ex:. DD/MM/AAAA *" name="idade" required>     
+                            <input class="form-control" type="password" placeholder="Digite sua senha *" name="senhatxt" required>
+                            <input class="form-control" type="password" placeholder="Confirme sua senha *" name="senha2txt" required>
+                        </div>
+                        <div class="modal-footer">
+                            <div>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block" name="register">Registrar</button>
+                            </div>
+                            <div>
+                                <button id="register_login_btn" type="button" class="btn btn-link">Entrar</button>
+                                <button id="register_lost_btn" type="button" class="btn btn-link">Esqueceu a senha?</button>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- End | Register Form -->
+                    
+                </div>
+                <!-- End # DIV Form -->
+                
+            </div>
+        </div>
+    </div>
+    <!-- END # MODAL LOGIN -->
+
+
+
+
+
      <!-- Portfolio Modals -->
     <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
@@ -432,7 +472,6 @@
     <script src="js/bootstrap-datepicker.min.js"></script>
     <script src="js/bootstrap-datepicker.pt-BR.min.js"></script>
    
-    <script src="/openseadragon/openseadragon.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGKrN2La36taC8h4UYW2r_522iEJYdO3U&callback=initMap"></script>
     <script>

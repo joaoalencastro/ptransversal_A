@@ -557,194 +557,6 @@ div#maincontent {
   margin: 10px;
   color: #FC0;
 }
-*, *:before, *:after {
-  box-sizing: border-box;
-}
-.A{
-  text-decoration: none;
-  font-size: 70%;
-  color: #1ab188;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
-}
-.A:hover {
-  color: #179b77;
-}
-
-.form {
-  background: rgba(19, 35, 47, 0.9); 
-  padding: 3%;
-  max-width: 55%;
-  margin: 0px 0;
-  border-radius: 2%;
-  box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
-}
-
-.tab-group {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 10% 0;
-}
-.tab-group:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.tab-group li a 
-{
-  background: #004770;
-  display: block;
-  text-decoration: none;
-  padding: 15px;
-  color: #a0b3b0;
-  font-size: 95%;
-  float: left;
-  width: 50%;
-  text-align: center;
-  cursor: pointer;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
-}
-.tab-group .active a {
-  background: #004770; 
-  color: #ffffff;
-}
-
-.tab-content > div:last-child {
-  display: none;
-}
-
-.H1{
-  text-align: center;
-  color: #ffffff;
-  font-weight: 10%;
-  margin: 0 0 10%;
-}
-#H1L
-{
-  padding-top: 5%;
-}
-
-
-.req{
-    color: white;
-    font-weight: bold;
-}
-
-.forgot{
-    text-align: center;
-    color: #ffffff;
-    margin: 0px 0px 50px 0px;
-}
-
-div.info {
-    color: pink;
-    display: box;
-    text-align: center;
-    padding: 5px;
-    margin-top: -20px;
-    margin-bottom: 15px;
-    border: 1px solid red;
-    background: #66131c;
-}
-
-.Label{
-  position: absolute;
-  -webkit-transform: translateY(6px);
-          transform: translateY(6px);
-  left: 13px;
-  color: rgba(255, 255, 255, 0.5);
-  -webkit-transition: all 0.25s ease;
-  transition: all 0.25s ease;
-  -webkit-backface-visibility: hidden;
-  pointer-events: none;
-  font-size: 80%;
-}
-.Label .req {
-  margin: 2px;
-  color: gray;      
-}
-
-.Label.active {
-  -webkit-transform: translateY(50px);
-          transform: translateY(50px);
-  left: 2px;
-  font-size: 14px;
-}
-.Label.active .req {
-  opacity: 0;
-}
-
-.Label.highlight {
-  color: white;
-}
-
-.Input, .TextArea {
-  font-size: 22px;
-  display: block;
-  width: 100%;
-  height: 100%;
-  padding: 5px 10px;
-  background: none;
-  background-image: none;
-  border: 1px solid #a0b3b0;
-  color: #ffffff;
-  border-radius: 0;
-  -webkit-transition: border-color .25s ease, box-shadow .25s ease;
-  transition: border-color .25s ease, box-shadow .25s ease;
-}
-.Input:focus, .TextArea:focus {
-  outline: 0;
-  border-color: gray;
-}
-
-.TextArea {
-  border: 2px solid #a0b3b0;
-  resize: vertical;
-}
-
-.field-wrap {
-  position: relative;
-  padding-bottom: 1%;
-}
-
-.top-row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.top-row > div {
-  float: left;
-  width: 48%;
-  margin-right: 4%;
-}
-.top-row > div:last-child {
-  margin: 0;
-}
-
-.button {
-  border: 0;
-  outline: none;
-  border-radius: 0;
-  padding: 15px 0;
-  font-size: 2rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: .1em;
-  background: #004770;
-  color: #ffffff;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-  -webkit-appearance: none;
-}
-.button:hover, .button:focus {
-  background: #179b77;
-}
-
-.button-block {
-  display: block;
-  width: 100%;
-}
 
 .forgot {
   margin-top: -20px;
@@ -841,4 +653,135 @@ div.info {
 #map {
   height: 250px;
   width: 100%;
+}
+#login-modal .modal-dialog {
+    width: 350px;
+}
+
+#login-modal input[type=text], input[type=password] {
+  margin-top: 10px;
+}
+
+#div-login-msg,
+#div-lost-msg,
+#div-register-msg {
+    border: 1px solid #dadfe1;
+    height: 30px;
+    line-height: 28px;
+    transition: all ease-in-out 500ms;
+}
+
+#div-login-msg.success,
+#div-lost-msg.success,
+#div-register-msg.success {
+    border: 1px solid #68c3a3;
+    background-color: #c8f7c5;
+}
+
+#div-login-msg.error,
+#div-lost-msg.error,
+#div-register-msg.error {
+    border: 1px solid #eb575b;
+    background-color: #ffcad1;
+}
+
+#icon-login-msg,
+#icon-lost-msg,
+#icon-register-msg {
+    width: 30px;
+    float: left;
+    line-height: 28px;
+    text-align: center;
+    background-color: #dadfe1;
+    margin-right: 5px;
+    transition: all ease-in-out 500ms;
+}
+
+#icon-login-msg.success,
+#icon-lost-msg.success,
+#icon-register-msg.success {
+    background-color: #68c3a3 !important;
+}
+
+#icon-login-msg.error,
+#icon-lost-msg.error,
+#icon-register-msg.error {
+    background-color: #eb575b !important;
+}
+
+#img_logo {
+    max-height: 100px;
+    max-width: 100px;
+}
+
+/* #########################################
+   #    override the bootstrap configs     #
+   ######################################### */
+
+.modal-backdrop.in {
+    filter: alpha(opacity=50);
+    opacity: .8;
+}
+
+.modal-content {
+    background-color: #ececec;
+    border: 1px solid #bdc3c7;
+    border-radius: 0px;
+    outline: 0;
+}
+
+.modal-header {
+    min-height: 16.43px;
+    padding: 15px 15px 15px 15px;
+    border-bottom: 0px;
+}
+
+.modal-body {
+    position: relative;
+    padding: 5px 15px 5px 15px;
+}
+
+.modal-footer {
+    padding: 15px 15px 15px 15px;
+    text-align: left;
+    border-top: 0px;
+}
+
+.checkbox {
+    margin-bottom: 0px;
+}
+
+.btn {
+    border-radius: 0px;
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+    outline: none;
+}
+
+.btn-lg, .btn-group-lg>.btn {
+    border-radius: 0px;
+}
+
+.btn-link {
+    padding: 5px 10px 0px 0px;
+    color: #95a5a6;
+}
+
+.btn-link:hover, .btn-link:focus {
+    color: #2c3e50;
+    text-decoration: none;
+}
+
+.glyphicon {
+    top: 0px;
+}
+
+.form-control {
+  border-radius: 0px;
 }

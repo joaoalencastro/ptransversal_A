@@ -100,7 +100,7 @@
                         <input type="hidden" id="my_hidden_input">
                 </div>
             <div id="agenda">
-                <h2 id="Title"></h2>
+                <h2 id="Title" style="position: relative;left: 10%"></h2>
                 <div class="table-responsive">
                     <table id="tabela-agenda" >
                       <tr>
@@ -126,7 +126,6 @@
         </div>
     </div>
     </header>
-    <!-- Portfolio Grid Section -->
     <section id="Pesquisa">
         <div class="container">
             <div class="row">
@@ -258,8 +257,7 @@
                 </div>
             </div>
         </div>
-    </section>
-
+    </section>  
     <!-- Footer -->
     <footer class="text-center">
         <div class="footer-above">

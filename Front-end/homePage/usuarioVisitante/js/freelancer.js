@@ -43,65 +43,94 @@
 
 })(jQuery); // End of use strict
 
-/*                                  LOGIN                       */
-function toggleNavPanel(x)
-{
-    var panel = document.getElementById(x), navarrow = document.getElementById("navarrow"), maxH="600px";
-    if(panel.style.height == maxH){
-        panel.style.height = "0px";
-        navarrow.innerHTML = "&#9662;";
-        document.getElementById('logBar').style.background = "#2C3E50";
-    }else{
-        panel.style.height = maxH;
-        navarrow.innerHTML = "&#9652;";
-        document.getElementById('logBar').style.background = "#18BC9C";
-        document.getElementById('logBar').style.color = 'white';
-    }
-}
-/*                          MODULO DE LOGIN                                 */
-$('.form').find('input, textarea').on('keyup blur focus', function (e) {
-  
-  var $this = $(this),
-      label = $this.prev('label');
+//LOGIN
+$(function() {
+    
+    var $formLogin = $('#login-form');
+    var $formLost = $('#lost-form');
+    var $formRegister = $('#register-form');
+    var $divForms = $('#div-forms');
+    var $modalAnimateTime = 300;
+    var $msgAnimateTime = 150;
+    var $msgShowTime = 2000;
 
-      if (e.type === 'keyup') {
-            if ($this.val() === '') {
-          label.removeClass('active highlight');
-        } else {
-          label.addClass('active highlight');
+    $("form").submit(function () {
+        switch(this.id) {
+            case "login-form":
+                var $lg_username=$('#login_username').val();
+                var $lg_password=$('#login_password').val();
+                if ($lg_username == "ERROR") {
+                    msgChange($('#div-login-msg'), $('#icon-login-msg'), $('#text-login-msg'), "error", "glyphicon-remove", "Login error");
+                } else {
+                    msgChange($('#div-login-msg'), $('#icon-login-msg'), $('#text-login-msg'), "success", "glyphicon-ok", "Login OK");
+                }
+                return false;
+                break;
+            case "lost-form":
+                var $ls_email=$('#lost_email').val();
+                if ($ls_email == "ERROR") {
+                    msgChange($('#div-lost-msg'), $('#icon-lost-msg'), $('#text-lost-msg'), "error", "glyphicon-remove", "Send error");
+                } else {
+                    msgChange($('#div-lost-msg'), $('#icon-lost-msg'), $('#text-lost-msg'), "success", "glyphicon-ok", "Send OK");
+                }
+                return false;
+                break;
+            case "register-form":
+                var $rg_username=$('#register_username').val();
+                var $rg_email=$('#register_email').val();
+                var $rg_password=$('#register_password').val();
+                if ($rg_username == "ERROR") {
+                    msgChange($('#div-register-msg'), $('#icon-register-msg'), $('#text-register-msg'), "error", "glyphicon-remove", "Register error");
+                } else {
+                    msgChange($('#div-register-msg'), $('#icon-register-msg'), $('#text-register-msg'), "success", "glyphicon-ok", "Register OK");
+                }
+                return false;
+                break;
+            default:
+                return false;
         }
-    } else if (e.type === 'blur') {
-        if( $this.val() === '' ) {
-            label.removeClass('active highlight'); 
-            } else {
-            label.removeClass('highlight');   
-            }   
-    } else if (e.type === 'focus') {
-      
-      if( $this.val() === '' ) {
-            label.removeClass('highlight'); 
-            } 
-      else if( $this.val() !== '' ) {
-            label.addClass('highlight');
-            }
+        return false;
+    });
+    
+    $('#login_register_btn').click( function () { modalAnimate($formLogin, $formRegister) });
+    $('#register_login_btn').click( function () { modalAnimate($formRegister, $formLogin); });
+    $('#login_lost_btn').click( function () { modalAnimate($formLogin, $formLost); });
+    $('#lost_login_btn').click( function () { modalAnimate($formLost, $formLogin); });
+    $('#lost_register_btn').click( function () { modalAnimate($formLost, $formRegister); });
+    $('#register_lost_btn').click( function () { modalAnimate($formRegister, $formLost); });
+    
+    function modalAnimate ($oldForm, $newForm) {
+        var $oldH = $oldForm.height();
+        var $newH = $newForm.height();
+        $divForms.css("height",$oldH);
+        $oldForm.fadeToggle($modalAnimateTime, function(){
+            $divForms.animate({height: $newH}, $modalAnimateTime, function(){
+                $newForm.fadeToggle($modalAnimateTime);
+            });
+        });
     }
-
+    
+    function msgFade ($msgId, $msgText) {
+        $msgId.fadeOut($msgAnimateTime, function() {
+            $(this).text($msgText).fadeIn($msgAnimateTime);
+        });
+    }
+    
+    function msgChange($divTag, $iconTag, $textTag, $divClass, $iconClass, $msgText) {
+        var $msgOld = $divTag.text();
+        msgFade($textTag, $msgText);
+        $divTag.addClass($divClass);
+        $iconTag.removeClass("glyphicon-chevron-right");
+        $iconTag.addClass($iconClass + " " + $divClass);
+        setTimeout(function() {
+            msgFade($textTag, $msgOld);
+            $divTag.removeClass($divClass);
+            $iconTag.addClass("glyphicon-chevron-right");
+            $iconTag.removeClass($iconClass + " " + $divClass);
+        }, $msgShowTime);
+    }
 });
 
-$('.tab a').on('click', function (e) {
-  
-  e.preventDefault();
-  
-  $(this).parent().addClass('active');
-  $(this).parent().siblings().removeClass('active');
-  
-  target = $(this).attr('href');
-
-  $('.tab-content > div').not(target).hide();
-  
-  $(target).fadeIn(600);
-  
-});
 function date()
 {
     var now = new Date;
@@ -182,6 +211,11 @@ function setDate(x)
 }
 function init()
 {
+
+
+
+
+
         /*              CRIANDO TABELAS           */
            //REQUISITA CHAR COM OS NOMES DAS SALAS
         var nomeSala = ["AT-11","BT-16/15","AT-13","BT-25/15","AT-15","AT-19","Lab-Redes","LCCC","SG-11","Auditório"];
@@ -209,12 +243,15 @@ function init()
 
         /*              CALENDARIO              */
         $('#datapicker').datepicker({
-        format: "dd/mm/yyyy",
-        language: "pt-BR"
+            format: "dd/mm/yyyy",
+            language: "pt-BR",
+            daysOfWeekDisabled: [0]
+            //endDate: '+15d',
+            //startDate: '+2d'
+
         }).on('changeDate', function (e) {
         setDate();
         });
-
 
       
 }
