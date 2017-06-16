@@ -5,7 +5,7 @@ import webbrowser
 import re
 
 url = "https://aluno.unb.br/alunoweb/default/sca/solicitarsenha"
-data = urllib.urlencode({'nome': 'Gabriel Einsiedel Ribeiro', 'matricula': '150035217', 'identidade': '2897593','data_nascimento': '09/03/1997'})
+data = urllib.urlencode({'nome': '*****', '***': '***', '***': '**','**': '**/**/****'})
 results = urllib2.urlopen(url, data)
 conteudo_html = str(results.read())
 
