@@ -159,7 +159,8 @@ function Status(status)
         var id_str = "q";
         id_str = id_str.concat(100+i);
         if(status[i] == 1)
-        {
+        {       
+                document.getElementById(id_str).onclick = function(){$("#login-modal").modal("show");};
                 document.getElementById(id_str).style.background = "#F0F03E";
                 document.getElementById(id_str).style.cursor = "cursor";
                 $("#"+id_str).hover(function(){ $(this).css("background-color", "#008B8B");}, function(){
@@ -170,9 +171,6 @@ function Status(status)
             document.getElementById(id_str).style.background = "#E03A3A";
             document.getElementById(id_str).style.cursor = "auto";
         }
-
-
-
     }
 }
 function setDate(x)
