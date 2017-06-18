@@ -5,18 +5,13 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <title>Reservado | Sistema de Reserva</title>
-    
-    <!-- Calendario         -->
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <!--<link rel="stylesheet" href="/resources/demos/style.css"> -->
 
     <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap-datepicker.min.css">
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Theme CSS -->
@@ -26,6 +21,8 @@
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <!--            Bootstrap Calendário     -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-datepicker.min.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -36,8 +33,9 @@
 
 </head>
 
-<body id="Inicio" class="index">
+<body id="page-top" class="index">
 <div id="skipnav"><a href="#maincontent">Skip to main content</a></div>
+
     <!-- Navigation -->
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
         <div class="container">
@@ -46,28 +44,29 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="#page-top" style="color: white;">Reservado</a>
+                <a class="navbar-brand" href="#page-top">Reservado</a>
             </div>
+
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="page-scroll">
-                        <a href="#Inicio">Início</a>
+                        <a href="#page-top">Início</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#Pesquisa">Pesquisa</a>
+                        <a href="#about">Pesquisa</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#portfolio">Mapa de sala</a>
+                        <a href="#mapa">Mapa de Salas</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#Sobre">Sobre</a>
+                        <a href="#sobre">Sobre</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#Contato">Contato</a>
+                        <a href="#contact">Contato</a>
                     </li>
                     <li>
-                        <a href="#"  id='bnt-acessar'data-toggle="modal" data-target="#login-modal">Acessar &nbsp;<i class="glyphicon glyphicon-lock"></i></a>
+                        <a href="#"  id='bnt-acessar' data-toggle="modal" data-target="#login-modal">Acessar &nbsp;<i class="glyphicon glyphicon-lock"></i></a>
                     </li>
                 </ul>
             </div>
@@ -78,94 +77,94 @@
 
     <!-- Header -->
     <header>
-    <div class="container" id="maincontent" tabindex="-1">
-        <div class="row">
-                <div id="datapicker" align="center" class="input-group date">
+        <div class="container" id="maincontent" tabindex="-1">
+            <div class="row">
+                <div class="col-md-3">
+                    <div id="datapicker"  class="input-group date">
                         <input type="hidden" id="my_hidden_input">
+                    </div> 
                 </div>
-            <div id="agenda">
-                <h2 id="Title"></h2>
-                <div class="table-responsive">
-                    <table id="tabela-agenda" >
-                      <tr>
-                        <th></th>
-                        <th class="coluna-horario">08:00</th>    
-                        <th class="coluna-horario">09:00</th>
-                        <th class="coluna-horario">10:00</th>
-                        <th class="coluna-horario">11:00</th>
-                        <th class="coluna-horario">12:00</th>
-                        <th class="coluna-horario">13:00</th>
-                        <th class="coluna-horario">14:00</th>
-                        <th class="coluna-horario">15:00</th>
-                        <th class="coluna-horario">16:00</th>
-                        <th class="coluna-horario">17:00</th>
-                        <th class="coluna-horario">18:00</th>
-                        <th class="coluna-horario">19:00</th>
-                        <th class="coluna-horario">20:00</th>
-                        <th class="coluna-horario">21:00</th>
-                      </tr>
-                    </table>
-                </div>
+                <div id="agenda" class="col-md-9">
+                    <h2 id="Title">Exemplo</h2>
+                        <div class="table-responsive">
+                            <table id="tabela-agenda">
+                              <tr>
+                                <th></th>
+                                <th class="coluna-horario">08:00</th>    
+                                <th class="coluna-horario">09:00</th>
+                                <th class="coluna-horario">10:00</th>
+                                <th class="coluna-horario">11:00</th>
+                                <th class="coluna-horario">12:00</th>
+                                <th class="coluna-horario">13:00</th>
+                                <th class="coluna-horario">14:00</th>
+                                <th class="coluna-horario">15:00</th>
+                                <th class="coluna-horario">16:00</th>
+                                <th class="coluna-horario">17:00</th>
+                                <th class="coluna-horario">18:00</th>
+                                <th class="coluna-horario">19:00</th>
+                                <th class="coluna-horario">20:00</th>
+                                <th class="coluna-horario">21:00</th>
+                              </tr>
+                            </table>
+                        </div>
+                </div>        
             </div>
         </div>
-    </div>
     </header>
-    <!-- Portfolio Grid Section -->
-    <section id="Pesquisa">
-        <div class="container">
+    <!-- Sessão de Pesquisa -->
+    <section id="about">
+        <div class="portfolio">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 style="color: black">Pesquisa</h2>
-                    <hr class="star-primary">
+                    <hr style="" class="star-primary">
                 </div>
             </div>
             <div class="row">
-                <h3 align="center">Faça a sua pesquisa por disciplina,<br> nome da sala ou monitoria.</h3>
-                <div class="input-group nav navbar-nav" id="inputPesquisa">
-                    <p><input  type="textarea" name="" placeholder="Ex.: APR, AT-11 ou Monitoria de SD" class="form-control" id="barra-pesquisa">
-                        <button type="submit" class="btn btn-default">Pesquisar</button>
-                    </p>
+                    <div class="col-lg-12 text-center">
+                        <h3 align="center">Faça a sua pesquisa por disciplina ou  sala.</h3>
                     </div>
+            </div>
+            <div class="row" id="space">
+                <div class="col-lg-4">
+                    
+                </div>
+                <div class="col-lg-4">
+                    <input  type="textarea" name="" placeholder="Ex.: APR, AT-11 ou Monitoria de SD" class="form-control" id="barra-pesquisa">
+
+                </div>
+                <div class="col-lg-2">
+                    <a type="submit" class="btn btn-default">Pesquisar</a>
                 </div>
             </div>
         </div>
     </section>
-    <section  id="portfolio" class="success">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <h2>Mapa de Salas</h2>
-                        <hr class="star-light">
-                    </div>
-                </div>
-                <div class="row" style="position: relative; left: 17%">
-                    <div class="col-sm-4 portfolio-item">
-                            <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
-                                <div class="caption">
-                                    <div class="caption-content">
-                                        <i class="fa fa-search-plus fa-3x"></i>
-                                    </div>
-                                </div>
-                                <img src="img/mapaFT.png" class="img-responsive" alt="Slice of cake">
-                            </a>
-                            <h3 align="center" style="color: white ">Mapa da FT</h3>
-                    </div>
-                    <div class="col-sm-4 portfolio-item">
-                        <a  href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <i class="fa fa-search-plus fa-3x"></i>
-                                </div>
-                            </div>
-                            <img src="img/mapaSG.png" class="img-responsive" alt="Cabin">
-                        </a>
-                            <h3 align="center" style="color: white ">Mapa dos SG's</h3>
-                    </div>
+    <!-- Portfolio Grid Section -->
+    <section class="success" id="mapa">
+        <div class="container" >
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Mapa de Salas</h2>
+                    <hr class="star-light">
                 </div>
             </div>
+            <div class="row" style="padding-top: 20px;">
+                <div class="col-sm-6 portfolio-item">
+                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                        <img src="img/mapaFT.png" class="img-responsive" alt="FT">
+                    </a>
+                   <h3 align="center">Mapa FT</h3>
+                </div>
+                <div class="col-sm-6 portfolio-item">
+                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                        <img src="img/mapaSG.png" class="img-responsive" alt="Slice of cake">
+                    </a>
+                    <h3 align="center">Mapa SG</h3>
+                </div>
+            </div>
+        </div>
     </section>
-    <!-- About Section -->
-    <section  id="Sobre">
+    <section id="sobre">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -188,14 +187,13 @@
             </div>
         </div>
     </section>
-
     <!-- Contact Section -->
-    <section id="Contato" class="success" >
+    <section id="contact" class="success" style="background-color: #008B8B">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Contate-me</h2>
-                    <hr class="star-light">
+                    <h2>Contato</h2>
+                    <hr  class="star-light">
                 </div>
             </div>
             <div class="row">
@@ -206,28 +204,28 @@
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label for="name">Nome</label>
-                                <input type="text" class="form-control" placeholder="Nome" id="name" required data-validation-required-message="Please enter your name.">
+                                <input type="text" class="form-control" placeholder="Nome" id="name" required data-validation-required-message="Por favor digite o seu nome">
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label for="email">E-mail</label>
-                                <input type="email" class="form-control" placeholder="E-mail" id="email" required data-validation-required-message="Please enter your email address.">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" placeholder="Email" id="email" required data-validation-required-message="Digite o seu endereço de email">
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label for="phone">Telefone</label>
-                                <input type="tel" class="form-control" placeholder="Telefone" id="phone" required data-validation-required-message="Please enter your phone number.">
+                                <label for="phone">Número de Telefone</label>
+                                <input type="tel" class="form-control" placeholder="Número de Telefone" id="phone" required data-validation-required-message="Digite o seu número">
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label for="message">Mensagem</label>
-                                <textarea rows="5" class="form-control" placeholder="Mensagem" id="message" required data-validation-required-message="Please enter a message."></textarea>
+                                <textarea rows="5" class="form-control" placeholder="Mensagem" id="message" required data-validation-required-message="Digite sua mensagem."></textarea>
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
@@ -250,39 +248,33 @@
             <div class="container">
                 <div class="row">
                     <div class="footer-col col-md-4">
-                        <h3>Localização</h3>
-                        <div id="map"></div>
+                        <h3>Location</h3>
+                        <p>3481 Melrose Place
+                            <br>Beverly Hills, CA 90210</p>
                     </div>
                     <div class="footer-col col-md-4">
-                        <h3>Palestras</h3>
-                        <ul>
-                            <li>20/07/17 - 12:00: Sala At-11 professor Zelenovisk palestra de Sistemas Industriais 
+                        <h3>Around the Web</h3>
+                        <ul class="list-inline">
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><span class="sr-only">Facebook</span><i class="fa fa-fw fa-facebook"></i></a>
                             </li>
-                            <li>19/07/17 - 14:00: Sala At-66 professor Flávio palestra de Cyber Ataques 
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><span class="sr-only">Google Plus</span><i class="fa fa-fw fa-google-plus"></i></a>
                             </li>
-                            <li>12/07/17 - 12:00: Sala At-11 professor Georges palestra de Arquitetura Linux 
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><span class="sr-only">Twitter</span><i class="fa fa-fw fa-twitter"></i></a>
                             </li>
-                            <li>20/07/17 - 12:00: Sala At-11 professor Zelenovisk palestra de Sistemas Industriais 
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><span class="sr-only">Linked In</span><i class="fa fa-fw fa-linkedin"></i></a>
                             </li>
-                            <li>19/07/17 - 14:00: Sala At-66 professor Flávio palestra de Cyber Ataques 
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><span class="sr-only">Dribble</span><i class="fa fa-fw fa-dribbble"></i></a>
                             </li>
                         </ul>
                     </div>
                     <div class="footer-col col-md-4">
-                        <h3>Requisições</h3>
-
-                            <li>AT-11 20/07/17 12:00 Pedido por aluno, Aprovada.  
-                            </li>
-                            <li>AT-11 20/07/17 12:00 Pedido por aluno, Pendente.  
-                            </li>
-                            <li>AT-11 19/07/17 12:00 Pedido por monitor, Aprovada.  
-                            </li>
-                            <li>AT-11 19/07/17 12:00 Pedido por monitor, Pendente.  
-                            </li>     
-                            <li>AT-11 19/07/17 12:00 Pedido por aluno, reprovada.  
-                            </li>    
-                            <li>AT-11 19/07/17 12:00 Pedido por aluno, pendente.  
-                            </li>                                                      
+                        <h3>About Freelancer</h3>
+                        <p>Freelance is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
                     </div>
                 </div>
             </div>
@@ -291,13 +283,19 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        Copyright &copy; Latitude 2017
+                        Copyright &copy; Your Website 2016
                     </div>
                 </div>
             </div>
         </div>
     </footer>
 
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
     <!-- Modal Login -->
     <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
         <div class="modal-dialog">
@@ -412,8 +410,7 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>SG</h2>
-                            <hr class="star-primary">
+                            <h2 style="padding-bottom: 40px;">SG</h2>
                             <img src="img/mapaSG.png" class="img-responsive img-centered" alt="">
                             <p>Clique em alguma sala para ver o seu itinerário.</p>
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Fechar</button>
@@ -435,8 +432,8 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Faculdade de Tecnologia</h2>
-                            <hr class="star-primary">
+                            <h2 style="padding-bottom: 40px;">Faculdade de Tecnologia</h2>
+                            
                             <img src="img/mapaFT.png" class="img-responsive img-centered" alt="">
                             <p>Clique em alguma sala para ver o seu itinerário.</p>
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Fechar</button>
@@ -446,14 +443,8 @@
             </div>
         </div>
     </div>
-    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
-    <div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
-        <a class="btn btn-primary" href="#page-top">
-            <i class="fa fa-chevron-up"></i>
-        </a>
-    </div>
     <!-- jQuery -->
-    <script src="vendor/jquery/jquery.js"></script>
+    <script src="vendor/jquery/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
@@ -463,20 +454,20 @@
 
     <!-- Contact Form JavaScript -->
     <script src="js/jqBootstrapValidation.js"></script>
-    
+    <script src="js/contact_me.js"></script>
+
     <!-- Theme JavaScript -->
     <script src="js/freelancer.js"></script>
-    <script language="javascript" type="text/javascript" src="jquery-1.4.4.js"></script>
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <!-- CALENDÁRIO     -->
     <script src="js/bootstrap-datepicker.min.js"></script>
     <script src="js/bootstrap-datepicker.pt-BR.min.js"></script>
-   
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGKrN2La36taC8h4UYW2r_522iEJYdO3U&callback=initMap"></script>
-    <script>
+
+
+    <script type="text/javascript">
         init();
     </script>
+
 </body>
 
 </html>
