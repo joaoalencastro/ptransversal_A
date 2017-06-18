@@ -57,7 +57,7 @@ function init(x)
         $("#bodyTable").append("<tr><td>Horário de Reserva</td><td>08:00 - 30/05/17</td></tr>");
         $("#bodyTable").append("<tr><td>Hora da Solicitação</td><td>19:39 28/05/17</td></tr>");
         $("#bodyTable").append("<tr><td>Motivo</td><td>Palestra</td></tr>");
-        $("#bodyTable").append("<tr><td>Hora da Solicitação</td><td> Lucas Garcia</td></tr>");
+        $("#bodyTable").append("<tr><td>Hora da Solicitação</td><td>Rodrigo Jhoa</td></tr>");
     }
    
 

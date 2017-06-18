@@ -141,15 +141,16 @@ function Status(status) //ATUALIZA O STATUS
             for(var j = 8; j < 22;j++)
             {
                 var id_str = nomeSala[i] + ":" + j;
+                let iD = id_str;
                 if(status[k] == 0)
                 {
                    
-                    document.getElementById(id_str + ':B').onclick = function() {clickSolic(id_str);};
+                    document.getElementById(id_str + ':B').onclick = function() {clickSolic(iD);};
                     document.getElementById(id_str).style.background = "green";
                 }
                 else if(status[k] == 1)
                 {
-                    document.getElementById(id_str + ':B').onclick = function() {clickSolic(id_str);};
+                    document.getElementById(id_str + ':B').onclick = function() {clickSolic(iD);};
                     document.getElementById(id_str).style.background = "#F0F03E";
 
                 }
@@ -250,24 +251,24 @@ function init()
                 "           <ul class='nodrop dropdown-menu dropdown-user'  style='height: 280px;'>" +
                 "               <div class='row' style='color:black'>" +
                 "                   <h5 style='font-size:11px; position:relative; left: 22px;'>Motivo da Solicitação </h5> " +
-                "                    <div style='position: relative; left: 25px' class='radio'> " +
-                "                       <label><input type='radio' name='optradio'>Monitoria</label> "+
-                "                   </div> "+
-                "                    <div style='position: relative; left: 25px' class='radio'> " +
-                "                       <label><input type='radio' name='optradio'>Aula</label> "+
-                "                   </div> "+
-                "                    <div style='position: relative; left: 25px' class='radio'> " +
-                "                       <label><input type='radio' name='optradio'>Palestra</label> "+
-                "                   </div> "+
-                "                    <div style='position: relative; left: 25px' class='radio'> " +
-                "                       <label><input type='radio' name='optradio'>Sala de estudos</label> "+
-                "                   </div> "+
-                "                   <li style='max-width:150px;position: relative; left: 20px' class='divider' ></li>           "+
-                "                   <div style='position: relative; left: 25px' class='radio'> " +
-                "                       <label><input type='radio' name='optradio'>Outro:</label> "+
-                "                   </div> "+
-                "                   <input style='position:relative; left: 20px; max-width:145px; max-height: 200px;' placeholder='Seja breve' type='text' class='form-control' rows='2' >"+
-                "                   <li><button id="+id_str+':B'+ " style='position: relative; left: 60px; top:10px' class='btn btn-default bnt-solicitacao'>Enviar</button></li>                                    "+
+                "                       <div style='position: relative; left: 25px' class='radio'> " +
+                "                          <label><input type='radio' name='optradio'>Monitoria</label> "+
+                "                      </div> "+
+                "                       <div style='position: relative; left: 25px' class='radio'> " +
+                "                          <label><input type='radio' name='optradio'>Aula</label> "+
+                "                      </div> "+
+                "                       <div style='position: relative; left: 25px' class='radio'> " +
+                "                          <label><input type='radio' name='optradio'>Palestra</label> "+
+                "                      </div> "+
+                "                       <div style='position: relative; left: 25px' class='radio'> " +
+                "                          <label><input type='radio' name='optradio'>Sala de estudos</label> "+
+                "                      </div> "+
+                "                      <li style='max-width:150px;position: relative; left: 20px' class='divider' ></li>           "+
+                "                      <div style='position: relative; left: 25px' class='radio'> " +
+                "                          <label><input type='radio' name='optradio'>Outro:</label> "+
+                "                      </div> "+
+                "                      <input style='position:relative; left: 20px; max-width:145px; max-height: 200px;' placeholder='Seja breve' type='text' class='form-control' rows='2' >"+
+                "                      <li><button id="+id_str+':B'+ " style='position: relative; left: 60px; top:10px' class='btn btn-default bnt-solicitacao'>Enviar</button></li>                                    "+
                 "               </div>"+        
                 "           </ul>"+
                 "   </div>"+

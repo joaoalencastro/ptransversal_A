@@ -131,7 +131,6 @@
                 </div>
                 <div class="col-lg-4">
                     <input  type="textarea" name="" placeholder="Ex.: APR, AT-11 ou Monitoria de SD" class="form-control" id="barra-pesquisa">
-
                 </div>
                 <div class="col-lg-2">
                     <a type="submit" class="btn btn-default">Pesquisar</a>
@@ -367,9 +366,9 @@
                             </div>
                             <input class="form-control" type="text" placeholder="Nome *" name='nome' required>
                             <input class="form-control" type="text" placeholder="Matrícula *" name='matricula' required>
-                            <input class="form-control" type="text" placeholder="E-Mail *" name="email" required>   
-                            <input class="form-control" type="text" placeholder="RG *" name="rg" required>     
-                            <input class="form-control" type="text" placeholder="Data de nascimento: Ex:. DD/MM/AAAA *" name="idade" required>     
+                            <input style="margin-top: 10px;" class="form-control" type="email" placeholder="E-Mail *" name="email" required>   
+                            <input class="form-control" type="text" placeholder="RG *" name="rg" required>
+                            <input style="margin-top: 10px;"  onfocus="(this.type='date')" class="form-control" type="text" placeholder="Data de nascimento: Ex:. DD/MM/AAAA *" name="idade" id="date" required>     
                             <input class="form-control" type="password" placeholder="Digite sua senha *" name="senhatxt" required>
                             <input class="form-control" type="password" placeholder="Confirme sua senha *" name="senha2txt" required>
                         </div>
@@ -387,7 +386,6 @@
                     
                 </div>
                 <!-- End # DIV Form -->
-                
             </div>
         </div>
     </div>
