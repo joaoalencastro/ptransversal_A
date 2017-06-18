@@ -143,12 +143,13 @@ function Status(status) //ATUALIZA O STATUS
                 var id_str = nomeSala[i] + ":" + j;
                 if(status[k] == 0)
                 {
-                    document.getElementById(id_str).onclick = function() {clickSolic(id_str);};
+                   
+                    document.getElementById(id_str + ':B').onclick = function() {clickSolic(id_str);};
                     document.getElementById(id_str).style.background = "green";
                 }
                 else if(status[k] == 1)
                 {
-                    document.getElementById(id_str).onclick = function() {clickSolic(id_str);};
+                    document.getElementById(id_str + ':B').onclick = function() {clickSolic(id_str);};
                     document.getElementById(id_str).style.background = "#F0F03E";
 
                 }
@@ -218,7 +219,13 @@ function setdate(x)
 }
 function clickSolic(id_str)
 {
-    id_str = "#" + id_str + ":F";
+    console.log(id_str);
+    var dia = document.getElementById("Title").innerHTML;
+    var arr = dia.split(" ");
+    id_str = id_str.split(':');
+    //  idstr[0] é o nome da sala; idstr[1] é o horário e arr[1] o dia 
+    alert("Você requisitou a sala "+ id_str[0] + ", no dia "+ arr[1]+ " às " + id_str[1]+":00 hrs");
+
 }
 function init()
 {
@@ -239,7 +246,7 @@ function init()
                 var html = " " +
                 "<td class='botao-agenda' id="+ id_str +"> " +
                 "   <div class='oi dropdown'>" +
-                "        <button style='opacity:0;' id="+id_str+':F'+" class='dropdown-toggle' data-toggle='dropdown'>Ñ click</button> "+ 
+                "        <button style='opacity:0;' id="+id_str+':F'+" class='dropdown-toggle' data-toggle='dropdown'>click</button> "+ 
                 "           <ul class='nodrop dropdown-menu dropdown-user'  style='height: 280px;'>" +
                 "               <div class='row' style='color:black'>" +
                 "                   <h5 style='font-size:11px; position:relative; left: 22px;'>Motivo da Solicitação </h5> " +
@@ -260,7 +267,7 @@ function init()
                 "                       <label><input type='radio' name='optradio'>Outro:</label> "+
                 "                   </div> "+
                 "                   <input style='position:relative; left: 20px; max-width:145px; max-height: 200px;' placeholder='Seja breve' type='text' class='form-control' rows='2' >"+
-                "                   <li><button style='position: relative; left: 60px; top:10px' class='btn btn-default'>Enviar</button></li>                                    "+
+                "                   <li><button id="+id_str+':B'+ " style='position: relative; left: 60px; top:10px' class='btn btn-default bnt-solicitacao'>Enviar</button></li>                                    "+
                 "               </div>"+        
                 "           </ul>"+
                 "   </div>"+

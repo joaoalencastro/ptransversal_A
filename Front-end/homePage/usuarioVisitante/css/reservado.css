@@ -1,11 +1,8 @@
- /*!
+/*!
  * Start Bootstrap - Freelancer v3.3.7+1 (http://startbootstrap.com/template-overviews/freelancer)
  * Copyright 2013-2016 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
-
-
-
 body {
   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   overflow-x: hidden;
@@ -112,10 +109,9 @@ header .intro-text .skills {
   font-weight: 700;
   border: none;
 }
-.custom .navbar-brand {
+.navbar-custom .navbar-brand {
   color: white;
 }
-
 .navbar-custom .navbar-brand:hover,
 .navbar-custom .navbar-brand:focus,
 .navbar-custom .navbar-brand:active,
@@ -143,7 +139,7 @@ header .intro-text .skills {
 .navbar-custom .navbar-nav li.active a:focus,
 .navbar-custom .navbar-nav li.active a:active {
   color: white;
-  background: #20B2AA;
+  background: #008B8B;
 }
 .navbar-custom .navbar-toggle {
   color: white;
@@ -176,7 +172,6 @@ header .intro-text .skills {
   .navbar-custom.affix .navbar-brand {
     font-size: 1.5em;
   }
-  
 }
 section {
   padding: 100px 0;
@@ -251,7 +246,19 @@ section.success {
   padding-bottom: 0.5em;
   border-bottom: 1px solid #eeeeee;
 }
-
+.floating-label-form-group input,
+.floating-label-form-group textarea {
+  z-index: 1;
+  position: relative;
+  padding-right: 0;
+  padding-left: 0;
+  border: none;
+  border-radius: 0;
+  font-size: 1.5em;
+  background: none;
+  box-shadow: none !important;
+  resize: none;
+}
 .floating-label-form-group label {
   display: block;
   z-index: 0;
@@ -277,7 +284,7 @@ section.success {
   opacity: 1;
 }
 .floating-label-form-group-with-focus label {
-  color: #18BC9C;
+  color: white;
 }
 form .row:first-child .floating-label-form-group {
   border-top: 1px solid #eeeeee;
@@ -297,7 +304,7 @@ footer .footer-col {
 }
 footer .footer-below {
   padding: 25px 0;
-  background-color: #696969;
+  background-color: #233140;
 }
 .btn-outline {
   color: white;
@@ -372,7 +379,7 @@ fieldset[disabled] .btn-primary.active {
   background-color: #128f76;
   border-color: #11866f;
 }
-.btn-success:active,asdasdasdada
+.btn-success:active,
 .btn-success.active,
 .open .dropdown-toggle.btn-success {
   background-image: none;
@@ -507,88 +514,6 @@ fieldset[disabled] .btn-success.active {
 div#maincontent {
   outline: none;
 }
-}
-#sections_bnt_holder
-{
-  float: left;
-  width: 160px;
-  height: 30px;
-  margin: 8px 0px 0px 30px;
-  font-size: 36px;
-  color: #999;
-  padding-left: 100%;
-  padding-bottom: 10%;
-}
-#sections_bnt_holder > button
-{
-  position: relative;
-  bottom: 4px;
-  border-style: none;
-  left: 80px;
-  padding: 15px 20px 15px 20px;
-  background:  #003554;
-  border-radius: 8px 8px 8px 8px;
-}
-#sections_bnt_holder > button:hover
-{
-  border-radius: 8px 8px 8px 8px;
-  border: none;
-  background: #03263B;
-  cursor: pointer;
-}
-
-#sections_panel
-{
-  position: absolute; 
-  height: 10px;
-  width: 320px;
-  background: #00;
-  top: 60px;
-  left: -100px;  
-  overflow: hidden;
-  z-index: 10000;
-  transition: height 0.1s linear 0s;  
-}
-#sections_panel > div
-{
-  padding: 20px;
-  height: 500px;
-  width: 500px;
-  margin: 10px;
-  color: #FC0;
-}
-
-.forgot {
-  margin-top: -20px;
-  text-align: right;
-}
-#labelLogin
-{
-  padding-bottom: 15%;
-}
-#inputLogin
-{
-  padding-right: 195%;
-}
-.nomes-turma
-{
-  position: absolute;
-  top: 180px;
-  left: 285px;
-  font-size: 92%;
-  line-height: 155%;
-
-}
-.indice
-{
-  position: absolute;
-  top: 160px;
-  left: 370px;
-}
-#c11:hover
-{
-    background-color:red;
-}
 .coluna-agenda
 {
   background: #008B8B;
@@ -621,38 +546,40 @@ div#maincontent {
 {
   background: #008B8B;
   cursor: pointer;
-}
-#agenda
-{
-    bottom: 300px;
-    position: relative;
-    left: 300px;
-}
+} 
 #datapicker
 {
   background: #2C3E50;
-  position: relative;
-  top: 55px;
   border-style: solid; 
   border-width: 1px;
-  width: 130px;
+  width: 100px;
   border-radius: 5%;
   box-shadow: 2px 2px 4px gray;
 }
-#barra-pesquisa
+
+#space
 {
-  width: 500px;
+  padding-top: 25px;
+  padding-bottom: 190px;
 }
-#inputPesquisa
-{
-  position: relative;
-  left: 25%;
-  margin-top: 5%;
-  margin-bottom: 10%;
+@media (min-width: 768px) {
+  #datapicker
+  {
+    position: relative;
+    top: 50px;
+  }
+  #agenda
+  {
+    position: relative;
+    bottom: 50px;
+  }
 }
-#map {
-  height: 250px;
-  width: 100%;
+@media (max-width: 768px) {
+  #datapicker
+  {
+    position: relative;
+    left: 50px;
+  }
 }
 #login-modal .modal-dialog {
     width: 350px;

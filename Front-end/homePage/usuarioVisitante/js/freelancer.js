@@ -131,9 +131,12 @@ $(function() {
     }
 });
 
-function date()
-{
-    var now = new Date;
+function date(x)     //RETORNA O DIA ATUAL + 1
+{   
+    var aux = new Date();
+    var now = new Date();
+    now.setDate(aux.getDate() + 1); 
+
     var day = now.getDate();
     var month = now.getMonth();
     var year = now.getFullYear();
@@ -148,9 +151,31 @@ function date()
         var zero = '0';
         month = zero.concat(month);
     }
-    var d = new Date();
-     days = ["Domingo","Segunda-feira","Terça-feira","Quarta-feira","Quinta-feira","Sexta-feira","Sábado"];
-    return days[d.getDay()] + ', ' + day + '/' + month + '/'+ year;
+    days = ["Domingo","Segunda-feira","Terça-feira","Quarta-feira","Quinta-feira","Sexta-feira","Sábado"];
+    if(x != 'inicio')
+        return day + '/' + month + '/'+ year;
+    else
+        return days[now.getDay()] + ', ' + day + '/' + month + '/'+ year;
+    
+}
+
+function requestStatus(stateReq)
+{
+    if(stateReq != 'inicio')
+    {
+        return statusChar;
+    }
+    else  //REQUISIÇÃO DE DADOS É FEITA AQUI   OBS: FAZER DE UM JEITO QUE EU POSSA  REQUISITAR SEMPRE, SEM TER QUE FAZER CONEXÃO COM O SERVIDOR
+    {
+        var status = [0,2,1,2,2,2,2,0,0,2,2,1,0,2,1,2,1,2,2,1,2,1,2,2,0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
+                2,2,2,2,0,0,2,0,2,0,2,2,2,2,2,2,2,0,2,0,2,2,2,2,0,0,0,0,2,2,2,1,2,2,2,2,0,0,1,0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
+                2,2,2,2,2,2,0,2,0,2,2,0,2,2,2,1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,1,1,2,2,2,2,0,1,1]; 
+        var status1  = [0,2,1,2,2,2,2,0,0,2,2,1,0,2,1,2,1,2,2,1,2,1,2,2,0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
+                2,2,2,2,0,0,2,0,2,0,2,2,2,2,2,2,2,0,2,0,2,0,2,2,0,0,0,0,2,2,2,1,0,2,2,2,0,0,1,0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
+                2,2,2,2,2,2,0,0,0,2,2,0,2,2,2,1,1,2,2,0,2,2,2,2,2,2,2,2,2,2,1,1,0,2,2,2,1,0,0]; 
+        var statusChar = [status,status1,status,status,status,status1,status,status,status,status,status,status,status,status,status1];
+        return statusChar;
+    }
 }   
 function Status(status) 
 {
@@ -186,34 +211,30 @@ function setDate(x)
             var dia = teste.getDay();
             if(x == 'inicio')
             {
-                document.getElementById("Title").innerHTML = date();
-                //requisita CHAR de status da tabela do dia atual
-
-
-
-                var status = [0,2,1,2,2,2,2,0,0,2,2,1,0,2,1,2,1,2,2,1,2,1,2,2,0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
-                2,2,2,2,0,0,2,0,2,0,2,2,2,2,2,2,2,0,2,0,2,2,2,2,0,0,0,0,2,2,2,1,2,2,2,2,0,0,1,0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
-                2,2,2,2,2,2,0,2,0,2,2,0,2,2,2,1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,1,1,2,2,2,2,0,2,1];
-                Status(status);
+                document.getElementById("Title").innerHTML = date('inicio');
+                var statusChar = requestStatus('inicio');
+                Status(statusChar[0]);
             }
             else
             {
                 document.getElementById("Title").innerHTML = semana[dia] + ', ' + data;
-                //requisita CHAR de status da tabela
-                var status = [1,2,1,2,2,2,2,0,0,2,2,1,0,2,1,2,1,2,2,1,2,1,2,2,0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
-                2,2,2,2,0,0,2,0,2,0,2,2,2,2,2,2,2,0,2,0,2,2,2,2,0,0,0,0,2,2,2,1,2,2,2,2,0,0,1,0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
-                2,2,2,2,2,2,0,2,0,2,2,0,2,2,2,1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,1,1,2,2,2,2,0,2,1];
+                var statusChar = requestStatus('inicio');
+                var aux = date('0');
+                var arr1 = aux.split("/").reverse();
+  
+                var newDate = (arr[1]) +'/' + arr[2] + '/' + arr[0]; 
+                var oldDate = (arr1[1]) +'/' + arr1[2] + '/' + arr1[0]; 
+                var date1 = new Date(oldDate);
+                var date2 = new Date(newDate);
+                var timeDiff = Math.abs(date2.getTime() - date1.getTime());
+                var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));                 
+                var status = statusChar[diffDays];
                 Status(status);
             }
             
 }
 function init()
 {
-
-
-
-
-
         /*              CRIANDO TABELAS           */
            //REQUISITA CHAR COM OS NOMES DAS SALAS
         var nomeSala = ["AT-11","BT-16/15","AT-13","BT-25/15","AT-15","AT-19","Lab-Redes","LCCC","SG-11","Auditório"];
@@ -238,14 +259,13 @@ function init()
         }    
         setDate('inicio'); 
 
-
         /*              CALENDARIO              */
         $('#datapicker').datepicker({
             format: "dd/mm/yyyy",
             language: "pt-BR",
+            startDate: '+1d',
+            endDate : '+15d',
             daysOfWeekDisabled: [0]
-            //endDate: '+15d',
-            //startDate: '+2d'
 
         }).on('changeDate', function (e) {
         setDate();
