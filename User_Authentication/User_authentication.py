@@ -18,17 +18,21 @@ data = urllib.urlencode({'nome': nome, 'matricula': matricula, 'identidade': rg,
 results = urllib2.urlopen(url, data)
 conteudo_html = str(results.read())
 
-email_unb = re.search(r'<b>E-mail:</b> (.*)</label>', conteudo_html).group(1)
-email_alternativo = re.search(r'E-mail alternativo:</b>(.*)</label>', conteudo_html).group(1)
-
-email = " " + email
 
 
-if (email == email_alternativo):
-	print ("Gravado 1!")
-	tabela.Inserir(email, rg, nome, matricula, data1, 1)
-	tabela.ApagaTabela_transitoria()
+if (not("Acesso negado! Verifique se os dados foram digitados corretamente" in conteudo_html)):
+	
+	if(matricula in conteudo_html):
+		email_unb = re.search(r'<b>E-mail:</b> (.*)</label>', conteudo_html).group(1)
+		email_alternativo = re.search(r'E-mail alternativo:</b>(.*)</label>', conteudo_html).group(1)
+
+	email = " " + email
+
+
+	if (email == email_alternativo):
+		print ("Consegui!")
+		tabela.Inserir(email, rg, nome, matricula, data1, 1)
+		tabela.ApagaTabela_transitoria()
 else:
-  print ("Gravado 0!")
 	tabela.Inserir(email, rg, nome, matricula, data1, 0)
 	tabela.ApagaTabela_transitoria()
