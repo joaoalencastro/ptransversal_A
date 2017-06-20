@@ -179,10 +179,11 @@ function requestStatus(stateReq)
 }   
 function Status(status) 
 {
-    for(var i = 0; i < 150;i++)
+    for(let i = 0; i < 150;i++)
     {
-        var id_str = "q";
+        let id_str = "q";
         id_str = id_str.concat(100+i);
+        console.log(id_str);
         if(status[i] == 1)
         {       
                 document.getElementById(id_str).onclick = function(){$("#login-modal").modal("show");};
@@ -195,6 +196,7 @@ function Status(status)
         {
             document.getElementById(id_str).style.background = "#E03A3A";
             document.getElementById(id_str).style.cursor = "auto";
+            document.getElementById(id_str).onclick = function(){$("#login-modal").modal("show");};
         }
     }
 }
@@ -320,4 +322,12 @@ function pesquisa() {
                       name: 'states',
                       source: substringMatcher(states)
                     });
+}
+
+function fecharmodal() {
+    $('#portfolioModal2').on('hide.bs.modal', function(){
+        
+    })
+
+
 }
