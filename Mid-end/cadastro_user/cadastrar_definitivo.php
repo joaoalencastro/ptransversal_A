@@ -40,7 +40,7 @@ $autenticado = $ln['autenticado'];
   if (!$autenticado) {
       echo"<script>alert('Dados Inválidos. Tente novamente.');</script>";
   } else {
-    	$sql = "INSERT INTO usuario(nome, email, matricula, data_nascimento, tipo, rg, senha)
+    	$sql = "INSERT INTO usuario(nome, email, matricula, datanascimento, tipo, rg, senha)
     	VALUES('$nome', '$email', '$matricula', '$datanascimento', '$tipo', '$rg', '$senha')";
     	$result = mysqli_query($conexao,$sql);
 
