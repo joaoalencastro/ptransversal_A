@@ -145,9 +145,8 @@
                 <div class="col-lg-4">
                     
                 </div>
-                <div class="col-lg-4">
-                    <input  type="textarea" name="" placeholder="Ex.: APR, AT-11 ou Monitoria de SD" class="form-control" id="barra-pesquisa">
-
+                <div class="col-lg-4" id="the-basics">
+                  <input class="typeahead" type="text" placeholder="Ex.: Algoritmo e Estrutura de Dados ou AT-11" id="barra-pesquisa">
                 </div>
                 <div class="col-lg-2">
                     <a type="submit" class="btn btn-default">Pesquisar</a>
@@ -482,6 +481,7 @@
 
     <script type="text/javascript">
         init();
+        pesquisa();
     </script>
 
 </body>
