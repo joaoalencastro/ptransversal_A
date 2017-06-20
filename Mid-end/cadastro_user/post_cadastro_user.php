@@ -5,11 +5,11 @@
 	<script type='text/javascript'>
 
 		function chama_cadastrar(){
-			setTimeout("window.location='cadastrar_definitivo.php'");
+			setTimeout("window.location='cadastrar_definitivo.php'",0003);
 		}
 
 		function index(){
-				setTimeout("window.location='cadastro_user.html'",0003);
+				setTimeout("window.location='cadastro_user.html'",0001);
 		}
 
 		</script>
