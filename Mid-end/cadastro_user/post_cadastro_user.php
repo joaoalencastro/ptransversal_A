@@ -5,11 +5,11 @@
 	<script type='text/javascript'>
 
 		function chama_cadastrar(){
-			setTimeout("window.location='cadastrar_definitivo.php'",0003);
+			setTimeout("window.location='cadastrar_definitivo.php'",3000);
 		}
 
 		function index(){
-				setTimeout("window.location='cadastro_user.html'",0001);
+				setTimeout("window.location='cadastro_user.html'",3000);
 		}
 
 		</script>
@@ -19,7 +19,7 @@
 
 <?php
 
-require('../conexao/conexao.php');
+require('conexao.php');
 $nome=$_POST['nome'];
 $matricula=$_POST['matricula'];
 $email=$_POST['email'];
