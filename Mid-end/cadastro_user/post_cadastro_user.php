@@ -9,7 +9,7 @@
 		}
 
 		function index(){
-				setTimeout("window.location='login.html'",0001);
+				setTimeout("window.location='cadastro_user.html'",0003);
 		}
 
 		</script>
