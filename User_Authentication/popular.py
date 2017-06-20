@@ -6,23 +6,24 @@ sys.setdefaultencoding("utf-8")
 
 class Banco(object):
 	def __init__(self):
-		self.con  = MySQLdb.connect(host='localhost', user='root', passwd='senha_do_BD',db='nome_da_tabela')
+		self.con  = MySQLdb.connect(host='localhost', user='root', passwd='',db='sistemareservadodb')
 		self.c = self.con.cursor()
 		
 
 		
 	def PegaEmailDigitado(self):
-		self.c.execute("SELECT * FROM EMAIL_AUTENTICA;")
+		self.c.execute("SELECT * FROM usuario_transitorio;")
 		self.con.commit()
 		resposta = self.c.fetchall()
 		return resposta
 	
-	def Inserir(self, email, rg, nome, matricula, data, valor):
+	def Inserir(self, nome, email, senha, data1, matricula, rg, valor):
 		
-		self.c.execute("INSERT INTO EMAIL_AUTENTICADO VALUES ('%s','%s','%s','%s','%s','%d'); "%(email, rg, nome, matricula, data, valor))
+		self.c.execute("INSERT INTO usuariodef VALUES ('%s','%s','%s','%s','%s','%d'); "%( nome, email, senha, data1, matricula, rg, valor))
 		self.con.commit()
 	
 	def ApagaTabela_transitoria(self):
-		self.c.execute("TRUNCATE TABLE EMAIL_AUTENTICA;")
+		self.c.execute("TRUNCATE TABLE usuario_transitorio;")
 		self.con.commit()
+
 
