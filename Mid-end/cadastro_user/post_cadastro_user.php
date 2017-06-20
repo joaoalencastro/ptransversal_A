@@ -32,8 +32,8 @@ $senha=sha1($senha);
 $senha2=sha1($senha2);
 
 if($senha===$senha2){
-	$sql = "INSERT INTO usuario_transitorio(datanascimento, nome, matricula, email, rg, senha)
-	VALUES('$datanascimento', '$nome', '$matricula', '$email', '$rg', '$senha')";
+	$sql = "INSERT INTO usuario_transitorio(nome, email, senha, datanascimento, matricula, rg)
+	VALUES( '$nome', '$email', '$senha', '$datanascimento', '$matricula', '$rg')";
 	$result = mysqli_query($conexao,$sql);
 
 	if (!$result) {
