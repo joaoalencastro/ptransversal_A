@@ -5,7 +5,7 @@
 	<script type='text/javascript'>
 
 		function index(){
-				setTimeout("window.location='index.html'",0003);
+				setTimeout("window.location='cadastro_user.html'",0003);
 		}
 
 		</script>
