@@ -5,7 +5,7 @@
 	<script type='text/javascript'>
 
 		function index(){
-				setTimeout("window.location='cadastro_user.html'",3000);
+				setTimeout("window.location='../index.html'",3000);
 		}
 
 		</script>
@@ -16,7 +16,7 @@
 
 session_start();
 
-require('conexao.php');
+require('../conexao/conexao.php');
 
 $matricula=$_SESSION['matricula'];
 
