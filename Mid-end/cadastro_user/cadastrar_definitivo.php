@@ -48,7 +48,7 @@ $autenticado = $ln['autenticado'];
     		die('Algo deu errado. Erro: ' . mysqli_error($conexao));
     	}
 
-    	echo "<center><h1>Usuaŕio cadastrado com sucesso!</h1></center>";
+    	echo"<script>alert('Usuário Cadastrado com sucesso!');</script>";
       session_destroy();
     	echo "<script>index()</script>";
     }
