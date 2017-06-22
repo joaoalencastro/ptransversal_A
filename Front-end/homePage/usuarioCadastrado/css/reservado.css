@@ -712,3 +712,6 @@ div#maincontent {
 .form-control {
   border-radius: 0px;
 }
+#over {
+  overflow-x: auto; 
+}

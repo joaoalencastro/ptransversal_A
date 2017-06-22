@@ -352,3 +352,7 @@ function pesquisa() {
                       source: substringMatcher(states)
                     });
 }
+function fecharmodal() {
+    $('#portfolioModal2').modal('hide');
+        window.location.href = "#about";
+}
