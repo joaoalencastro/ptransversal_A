@@ -27,10 +27,11 @@ while True:
 			data = urllib.urlencode({'nome': nome, 'matricula': matricula, 'identidade': rg,'data_nascimento': data1})
 			results = urllib2.urlopen(url, data)
 			conteudo_html = str(results.read())
+			email_alter = matricula + "@aluno.unb.br"
 			
-
+	
 			
-			if ((not("Acesso negado! Verifique se os dados foram digitados corretamente" in conteudo_html)) or (not("class='tipo_erro'" in conteudo_html )) ):
+			if (email_alter in conteudo_html ):
 				
 				print ("Consegui!")
 				tabela.Inserir(nome, email, senha, data1, matricula, rg, 1)
