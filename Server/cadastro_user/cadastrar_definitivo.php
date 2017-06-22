@@ -5,7 +5,7 @@
 	<script type='text/javascript'>
 
 		function index(){
-				setTimeout("window.location='cadastro_user.html'",3000);
+				setTimeout("window.location='../index.html'",2000);
 		}
 
 		</script>
@@ -40,6 +40,7 @@ $autenticado = $ln['autenticado'];
 }
 if (!$autenticado) {
     echo"<script>alert('Dados Inválidos. Tente novamente.');</script>";
+    echo "<script>index()</script>";
 } else {
   	$sql = "INSERT INTO usuario(nome, email, matricula, datanascimento, tipo, rg, senha)
   	VALUES('$nome', '$email', '$matricula', '$datanascimento', '$tipo', '$rg', '$senha')";
