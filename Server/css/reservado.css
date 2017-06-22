@@ -713,5 +713,5 @@ div#maincontent {
   border-radius: 0px;
 }
 #over {
-  overflow-x: scroll; 
+  overflow-x: auto; 
 }
