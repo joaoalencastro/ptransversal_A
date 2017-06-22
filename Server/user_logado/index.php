@@ -1,3 +1,17 @@
+<?php
+  require('../conexao/conexao.php');
+  session_start();
+  if(!isset($_SESSION['email']) || !isset($_SESSION['senha'])){
+    header("Location: login.php");
+    exit;
+  } else {
+    $nome  =  $_SESSION['nome'];
+    $email =  $_SESSION['email'];
+    $senha =  $_SESSION['senha'];
+  }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -70,7 +84,7 @@
                             <li class="dropdown">
 
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                   <i class="fa fa-user fa-fw"></i> Bruno Putinho <i class="fa fa-caret-down"></i>
+                                   <i class="fa fa-user fa-fw"></i> <?php $nome ?> <i class="fa fa-caret-down"></i>
                                 </a>
                                 <ul class="dropdown-menu dropdown-user">
                                     <li>
@@ -78,7 +92,7 @@
                                     </li>
                                     <li class="divider"></li>
                                     <li>
-                                        <a style="color: black;" href="../php/logout.php"><i class="fa fa-sign-out fa-fw"></i>Sair</a>
+                                        <a style="color: black;" href="../login/logout.php"><i class="fa fa-sign-out fa-fw"></i>Sair</a>
                                     </li>
                                 </ul>
                             </li>
