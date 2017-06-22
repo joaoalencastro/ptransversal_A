@@ -17,7 +17,7 @@
 
 	function login_falhou() {
 		// tempo ate que a pagina redirecione em ms
-		setTimeout("window.location='login.php'", 2000);
+		setTimeout("window.location='../index.html'", 2000);
 	}
 
 </script>
