@@ -6,7 +6,7 @@ sys.setdefaultencoding("utf-8")
 
 class Banco(object):
 	def __init__(self):
-		self.con  = MySQLdb.connect(host='localhost', user='root', passwd='***',db='sistemareservadodb')
+		self.con  = MySQLdb.connect(host='localhost', user='root', passwd='grupoass123',db='sistemareservadodb')
 		self.c = self.con.cursor()
 		
 
