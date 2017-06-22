@@ -5,7 +5,7 @@
 	<script type='text/javascript'>
 
 		function index(){
-				setTimeout("window.location='../index.html'",3000);
+				setTimeout("window.location='cadastro_user.html'",3000);
 		}
 
 		</script>
@@ -37,23 +37,24 @@ $tipo = 1;
 $rg        = $ln['rg'];
 $senha     = $ln['senha'];
 $autenticado = $ln['autenticado'];
-  if (!$autenticado) {
-      echo"<script>alert('Dados Inválidos. Tente novamente.');</script>";
-  } else {
-    	$sql = "INSERT INTO usuario(nome, email, matricula, data_nascimento, tipo, rg, senha)
-    	VALUES('$nome', '$email', '$matricula', '$datanascimento', '$tipo', '$rg', '$senha')";
-    	$result = mysqli_query($conexao,$sql);
-
-      if (!$result) {
-    		die('Algo deu errado. Erro: ' . mysqli_error($conexao));
-    	}
-
-    	echo"<script>alert('Usuário Cadastrado com sucesso!');</script>";
-      session_destroy();
-    	echo "<script>index()</script>";
-    }
 }
+if (!$autenticado) {
+    echo"<script>alert('Dados Inválidos. Tente novamente.');</script>";
+} else {
+  	$sql = "INSERT INTO usuario(nome, email, matricula, datanascimento, tipo, rg, senha)
+  	VALUES('$nome', '$email', '$matricula', '$datanascimento', '$tipo', '$rg', '$senha')";
+  	$result = mysqli_query($conexao,$sql);
+
+    if (!$result) {
+  		die('Algo deu errado. Erro: ' . mysqli_error($conexao));
+  	}
+
+  	echo "<center><h1>Usuaŕio cadastrado com sucesso!</h1></center>";
+    session_destroy();
+  	echo "<script>index()</script>";
+  }
 
 ?>
+
 </body>
 </html>
