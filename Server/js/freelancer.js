@@ -287,5 +287,5 @@ function pesquisa() {
 
 function fecharmodal() {
     $('#portfolioModal2').modal('hide');
-        window.location.href = "index.html#about";
+        window.location.href = "http://homol.redes.unb.br/ptr012017-B-grupoA/index.html#about";
 }
