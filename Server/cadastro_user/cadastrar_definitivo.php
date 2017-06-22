@@ -37,7 +37,7 @@ $tipo = 1;
 $rg        = $ln['rg'];
 $senha     = $ln['senha'];
 $autenticado = $ln['autenticado'];
-  if (!$autenticado) {
+  if ($autenticado==0) {
       echo"<script>alert('Dados Inválidos. Tente novamente.');</script>";
   } else {
     	$sql = "INSERT INTO usuario(nome, email, matricula, data_nascimento, tipo, rg, senha)
