@@ -43,55 +43,65 @@
 
 })(jQuery); // End of use strict
 
-//LOGIN
-$(function() {
-    
-    var $formLogin = $('#login-form');
-    var $formLost = $('#lost-form');
-    var $formRegister = $('#register-form');
-    var $divForms = $('#div-forms');
-    var $modalAnimateTime = 300;
-    var $msgAnimateTime = 150;
-    var $msgShowTime = 2000; 
-    $('#login_register_btn').click( function () { modalAnimate($formLogin, $formRegister) });
-    $('#register_login_btn').click( function () { modalAnimate($formRegister, $formLogin); });
-    $('#login_lost_btn').click( function () { modalAnimate($formLogin, $formLost); });
-    $('#lost_login_btn').click( function () { modalAnimate($formLost, $formLogin); });
-    $('#lost_register_btn').click( function () { modalAnimate($formLost, $formRegister); });
-    $('#register_lost_btn').click( function () { modalAnimate($formRegister, $formLost); });
-    
-    function modalAnimate ($oldForm, $newForm) {
-        var $oldH = $oldForm.height();
-        var $newH = $newForm.height();
-        $divForms.css("height",$oldH);
-        $oldForm.fadeToggle($modalAnimateTime, function(){
-            $divForms.animate({height: $newH}, $modalAnimateTime, function(){
-                $newForm.fadeToggle($modalAnimateTime);
-            });
-        });
+/*                                  LOGIN                       */
+function toggleNavPanel(x)
+{
+    var panel = document.getElementById(x), navarrow = document.getElementById("navarrow"), maxH="600px";
+    if(panel.style.height == maxH){
+        panel.style.height = "0px";
+        navarrow.innerHTML = "&#9662;";
+        document.getElementById('logBar').style.background = "#2C3E50";
+    }else{
+        panel.style.height = maxH;
+        navarrow.innerHTML = "&#9652;";
+        document.getElementById('logBar').style.background = "#18BC9C";
+        document.getElementById('logBar').style.color = 'white';
     }
-    
-    function msgFade ($msgId, $msgText) {
-        $msgId.fadeOut($msgAnimateTime, function() {
-            $(this).text($msgText).fadeIn($msgAnimateTime);
-        });
+}
+/*                          MODULO DE LOGIN                                 */
+$('.form').find('input, textarea').on('keyup blur focus', function (e) {
+  
+  var $this = $(this),
+      label = $this.prev('label');
+
+      if (e.type === 'keyup') {
+            if ($this.val() === '') {
+          label.removeClass('active highlight');
+        } else {
+          label.addClass('active highlight');
+        }
+    } else if (e.type === 'blur') {
+        if( $this.val() === '' ) {
+            label.removeClass('active highlight'); 
+            } else {
+            label.removeClass('highlight');   
+            }   
+    } else if (e.type === 'focus') {
+      
+      if( $this.val() === '' ) {
+            label.removeClass('highlight'); 
+            } 
+      else if( $this.val() !== '' ) {
+            label.addClass('highlight');
+            }
     }
-    
-    function msgChange($divTag, $iconTag, $textTag, $divClass, $iconClass, $msgText) {
-        var $msgOld = $divTag.text();
-        msgFade($textTag, $msgText);
-        $divTag.addClass($divClass);
-        $iconTag.removeClass("glyphicon-chevron-right");
-        $iconTag.addClass($iconClass + " " + $divClass);
-        setTimeout(function() {
-            msgFade($textTag, $msgOld);
-            $divTag.removeClass($divClass);
-            $iconTag.addClass("glyphicon-chevron-right");
-            $iconTag.removeClass($iconClass + " " + $divClass);
-        }, $msgShowTime);
-    }
+
 });
 
+$('.tab a').on('click', function (e) {
+  
+  e.preventDefault();
+  
+  $(this).parent().addClass('active');
+  $(this).parent().siblings().removeClass('active');
+  
+  target = $(this).attr('href');
+
+  $('.tab-content > div').not(target).hide();
+  
+  $(target).fadeIn(600);
+  
+});
 function date(x)     //RETORNA O DIA ATUAL + 1
 {   
     var aux = new Date();
@@ -120,6 +130,41 @@ function date(x)     //RETORNA O DIA ATUAL + 1
     
 }
 
+function Status(status) //ATUALIZA O STATUS
+{
+    //REQUISITA CHAR COM OS NOMES DAS SALAS
+    var nomeSala = ["AT-11","BT-16/15","AT-13","BT-25/15","AT-15","AT-19","Lab-Redes","LCCC","SG-11","Auditório"];
+    //
+    var k = 0;
+    for(var i = 0; i < nomeSala.length;i++)
+    {
+            for(var j = 8; j < 22;j++)
+            {
+                var id_str = nomeSala[i] + ":" + j;
+                let iD = id_str;
+                if(status[k] == 0)
+                {
+                   
+                    document.getElementById(id_str + ':B').onclick = function() {clickSolic(iD);};
+                    document.getElementById(id_str).style.background = "green";
+                }
+                else if(status[k] == 1)
+                {
+
+                    document.getElementById(id_str).style.background = "#F0F03E";
+
+                }
+                else if(status[k] == 2)
+                {
+                    document.getElementById(id_str).style.background = "#E03A3A";
+                    document.getElementById(id_str).style.cursor = "auto";
+                    document.getElementById(id_str + ":F").disabled = true;
+                }
+                k++;
+            }
+    }
+
+}
 function requestStatus(stateReq)
 {
     if(stateReq != 'inicio')
@@ -137,31 +182,8 @@ function requestStatus(stateReq)
         var statusChar = [status,status1,status,status,status,status1,status,status,status,status,status,status,status,status,status1];
         return statusChar;
     }
-}   
-function Status(status) 
-{
-    for(let i = 0; i < 150;i++)
-    {
-        let id_str = "q";
-        id_str = id_str.concat(100+i);
-        console.log(id_str);
-        if(status[i] == 1)
-        {       
-                document.getElementById(id_str).onclick = function(){$("#login-modal").modal("show");};
-                document.getElementById(id_str).style.background = "#F0F03E";
-                document.getElementById(id_str).style.cursor = "cursor";
-                $("#"+id_str).hover(function(){ $(this).css("background-color", "#008B8B");}, function(){
-                $(this).css("background-color", "#F0F03E");});
-        }
-        else if(status[i] == 2)
-        {
-            document.getElementById(id_str).style.background = "#E03A3A";
-            document.getElementById(id_str).style.cursor = "auto";
-            document.getElementById(id_str).onclick = function(){$("#login-modal").modal("show");};
-        }
-    }
 }
-function setDate(x)
+function setdate(x)
 {
             $('#datepicker').on('changeDate', function() {
                 $('#my_hidden_input').val($('#datepicker').datepicker('getFormattedDate'));
@@ -196,9 +218,42 @@ function setDate(x)
             }
             
 }
+function clickSolic(id_str)
+{
+    let nameRoom = id_str;
+    let motivo;
+    var dia = document.getElementById("Title").innerHTML;
+    var arr = dia.split(" ");
+    id_str = id_str.split(':');
+
+    //  idstr[0] é o nome da sala; idstr[1] é o horário e arr[1] o dia 
+    if(document.getElementById(nameRoom+':Moni').checked)
+        motivo = 'Monitoria';
+    else if(document.getElementById(nameRoom+':Aula').checked)
+        motivo = 'Aula';
+    else if(document.getElementById(nameRoom+':Pale').checked)
+        motivo = 'Palestra';
+    else if(document.getElementById(nameRoom+':Estu').checked)
+        motivo = 'Sala de Estudos';
+    else if(document.getElementById(nameRoom+':Outr').checked)
+    {
+        if(document.getElementById(nameRoom+':text').value != '')
+            motivo = document.getElementById(nameRoom+':text').value;
+        else
+        {    
+            alert("Preencha o motivo");
+            return;
+        }
+    }
+    else
+        alert("Prencha as informações");
+    let nomeSala = id_str[0];
+    let horario = 
+
+}
 function init()
-{  
-        /*              CRIANDO TABELAS           */
+{
+ /*              CRIANDO TABELAS           */
            //REQUISITA CHAR COM OS NOMES DAS SALAS
         var nomeSala = ["AT-11","BT-16/15","AT-13","BT-25/15","AT-15","AT-19","Lab-Redes","LCCC","SG-11","Auditório"];
            //
@@ -207,20 +262,60 @@ function init()
         {
 
             $("#tabela-agenda").append(" <tr style='background: green;'> ");
-            $("#tabela-agenda").append(" <td class='coluna-agenda'>" + nomeSala[i] + "<a href='#myModal' data-toggle='modal' data-target='#myModal' <i class='fa fa-info-circle'></i></a></td> ");
+            $("#tabela-agenda").append(" <td class='coluna-agenda'>" + nomeSala[i] + "&nbsp;<i class='fa fa-info-circle'></i>&nbsp;&nbsp;</td> ");
   
-            for(var j = 0; j < 14;j++)
+            for(var j = 8; j < 22;j++)
             {
-                cont++;
-                var id_str = "q";
-                id_str = id_str.concat(cont);
-                $("#tabela-agenda").append("<td class='botao-agenda' id='"+ id_str + "'></td> ");
+                var id_str = nomeSala[i] + ":" + j;
+                var html = " " +
+                "<td class='botao-agenda' id="+ id_str +"> " +
+                "   <div class='oi dropdown'>" +
+                "        <button style='opacity:0;' id="+id_str+':F'+" class='dropdown-toggle' data-toggle='dropdown'>click</button> "+ 
+                "           <ul class='nodrop dropdown-menu dropdown-user'  style='height: 280px;'>" +
+                "               <div class='row' style='color:black'>" +
+                "               <form>                                      "+
+                "                   <h5 style='font-size:11px; position:relative; left: 22px;'>Motivo da Solicitação </h5> " +
+                "                       <div style='position: relative; left: 25px' class='radio'> " +
+                "                          <label><input id='"+ id_str+':Moni' +"' type='radio' name='optradio'>Monitoria</label> "+
+                "                      </div> "+
+                "                       <div style='position: relative; left: 25px' class='radio'> " +
+                "                          <label><input id='"+id_str+ ':Aula'+"' type='radio' name='optradio'>Aula</label> "+
+                "                      </div> "+
+                "                       <div style='position: relative; left: 25px' class='radio'> " +
+                "                          <label><input id='"+id_str+ ':Pale' + "' type='radio' name='optradio'>Palestra</label> "+
+                "                      </div> "+
+                "                       <div style='position: relative; left: 25px' class='radio'> " +
+                "                          <label><input  id='"+id_str+ ':Estu' + "' type='radio' name='optradio'>Sala de estudos</label> "+
+                "                      </div> "+
+                "                      <li style='max-width:150px;position: relative; left: 20px' class='divider' ></li>           "+
+                "                      <div style='position: relative; left: 25px' class='radio'> " +
+                "                          <label><input  id='"+id_str+ ':Outr' + "' type='radio' name='optradio'>Outro:</label> "+
+                "                      </div> "+
+                "                      <input  id='"+id_str+ ':text' + "' style='position:relative; left: 20px; max-width:145px; max-height: 200px;' placeholder='Observação' type='text' class='form-control' rows='2' >"+
+                "                      <li><button id="+id_str+':B'+ " style='position: relative; left: 60px; top:10px' class='btn btn-default bnt-solicitacao'>Enviar</button></li>                                    "+
+                "               </form>"+
+                "               </div>"+        
+                "           </ul>"+
+                "   </div>"+
+                "</td>";
+                $("#tabela-agenda").append(html);
+                $('.table-responsive').on('show.bs.dropdown', function () {
+                $('.table-responsive').css( "overflow", "inherit" );});
+                $('.table-responsive').on('hide.bs.dropdown', function () {
+                $('.table-responsive').css( "overflow", "auto" );})
+
+                $('.nodrop').click(function(e) {
+                    e.stopPropagation();
+                });
 
 
+                /*$('.oi').on('hide.bs.dropdown', function () {
+                    return false;
+                });*/
             }
             $("#tabela-agenda").append(" </tr> ");
-        }    
-        setDate('inicio'); 
+        }       
+        setdate('inicio');
 
         /*              CALENDARIO              */
         $('#datapicker').datepicker({
@@ -229,12 +324,10 @@ function init()
             startDate: '+1d',
             endDate : '+15d',
             daysOfWeekDisabled: [0]
-
         }).on('changeDate', function (e) {
-        setDate();
+            setdate();
         });
 
-      
 }
 function initMap() {
         var uluru = {lng: -47.872535, lat: -15.763555};
@@ -283,12 +376,4 @@ function pesquisa() {
                       name: 'states',
                       source: substringMatcher(states)
                     });
-}
-
-function fecharmodal() {
-    $('#portfolioModal2').on('hide.bs.modal', function(){
-        
-    })
-
-
 }
