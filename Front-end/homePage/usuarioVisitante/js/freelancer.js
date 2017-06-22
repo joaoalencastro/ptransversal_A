@@ -326,5 +326,5 @@ function pesquisa() {
 
 function fecharmodal() {
     $('#portfolioModal2').modal('hide');
-        window.location.href = "#about";
+        window.location.href = "index.html#about";
 }
