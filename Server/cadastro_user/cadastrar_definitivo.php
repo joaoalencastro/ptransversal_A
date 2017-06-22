@@ -55,8 +55,5 @@ $autenticado = $ln['autenticado'];
 }
 
 ?>
-
-<a href="javascript:window.history.go(-1)">Voltar</a>
-
 </body>
 </html>
