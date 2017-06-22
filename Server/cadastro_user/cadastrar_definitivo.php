@@ -5,7 +5,7 @@
 	<script type='text/javascript'>
 
 		function index(){
-				setTimeout("window.location='../index.html'",3000);
+				setTimeout("window.location='../index.html'",100);
 		}
 
 		</script>
