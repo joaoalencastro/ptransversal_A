@@ -7,12 +7,12 @@
 
 	function login_sucesso_user_tipo1() {
 		// tempo ate que a pagina redirecione em ms
-		setTimeout("window.location='user_logado.php'", 2000);
+		setTimeout("window.location='../user_logado/index.php'", 2000);
 	}
 
 	function login_sucesso_user_tipo2() {
 		// tempo ate que a pagina redirecione em ms
-		setTimeout("window.location='user_logado.php'", 2000);
+		setTimeout("window.location='../prof_logado/index.php'", 2000);
 	}
 
 	function login_falhou() {
