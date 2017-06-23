@@ -330,8 +330,8 @@
                                 <button type="submit" class="btn btn-primary btn-lg btn-block">Entrar</button>
                             </div>
                             <div>
-                                <a href="recuperar/esqueceu_senha.html" title="recuperando senha de acesso"> Esqueceu a senha ? </a>
-                           <!-- <button id="login_lost_btn" type="button" class="btn btn-link">Esqueceu a senha?</button>-->
+                          <!--  <a href="recuperar/esqueceu_senha.html" title="recuperando senha de acesso"> Esqueceu a senha ? </a> -->
+                                <button id="login_lost_btn" type="button" class="btn btn-link">Esqueceu a senha?</button>
                                 <button id="login_register_btn" type="button" class="btn btn-link">Increva-se</button>
                             </div>
                         </div>
@@ -339,13 +339,16 @@
                     <!-- End # Login Form -->
                     
                     <!-- Begin | Lost Password Form -->
-                    <form id="lost-form" style="display:none;">
+                    <form id="lost-form" style="display:none;" action="recuperar/esqueceu_senha.php">
                         <div class="modal-body">
                             <div id="div-lost-msg">
                                 <div id="icon-lost-msg" class="glyphicon glyphicon-chevron-right"></div>
                                 <span id="text-lost-msg">Digite o seu e-mail de cadastro</span>
                             </div>
-                            <input id="lost_email" class="form-control" type="text" placeholder="E-Mail" required>
+                            <input type="email"  name="emailRecupera" autocomplete="off" class="form-control" placeholder="E-mail" required/>
+                            <input type="hidden" name="acao" value="recuperar" />
+                            <input type="submit" value="Recuperar Senha" />
+                           <!-- <input id="lost_email" class="form-control" type="text" placeholder="E-Mail" required>-->
                         </div>
                         <div class="modal-footer">
                             <div>
