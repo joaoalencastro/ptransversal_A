@@ -1,80 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<title>Autenticação Usuário</title>
+<?php
+	require('../conexao/conexao.php');
+	$email=$_POST['email'];
+	$senha=$_POST['senha'];
+	$senha=sha1($senha);
 
-<script type="text/javascript">
-	//funcões para redirecionar o usuario caso for autenticado
+//seleciona no banco de dados a tabela usuarios e confere se a senha digitada é a mesma do banco de dados
+	$sql = "SELECT * FROM usuario WHERE email = '$email' and senha = '$senha'";
 
-	function login_sucesso_user_tipo1() {
-		// tempo ate que a pagina redirecione em ms
-		setTimeout("window.location='../user_logado/index.php'", 0001);
+	$result = mysqli_query($conexao,$sql);
+	if (!$result) {
+	  die('Algo deu errado na conexão. Erro: ' . mysqli_error($conexao));
 	}
 
-	function login_sucesso_user_tipo2() {
-		// tempo ate que a pagina redirecione em ms
-		setTimeout("window.location='../prof_logado/index.php'", 0001);
-	}
+//conta quantas linhas tem no banco de dados com as informações passadas
+	$row = mysqli_num_rows($result);
 
-	function login_falhou() {
-		// tempo ate que a pagina redirecione em ms
-		setTimeout("window.location='../index.html'", 0001);
-	}
+	if($row == 1) {
+		while ($busca = mysqli_fetch_array($result)) {
 
-</script>
-</head>
+			$nome = $busca['nome'];
+			$email= $busca['email'];
+			$senha= $busca['senha'];
+			$tipo = $busca['tipo'];
+			$id_usuario = $busca['id'];
 
-<body>
-	<?php
-		require('../conexao/conexao.php');
-		$email=$_POST['email'];
-		$senha=$_POST['senha'];
-		$senha=sha1($senha);
+			if($tipo == "COMUM"){
+				session_start();
+				$_SESSION['nome']= $nome;
+				$_SESSION['email']= $email;
+				$_SESSION['senha']= $senha;
+				$_SESSION['id']= $id_usuario;
 
-	//seleciona no banco de dados a tabela usuarios e confere se a senha digitada é a mesma do banco de dados
-		$sql = "SELECT * FROM usuario WHERE email = '$email' and senha = '$senha'";
+				header('Location: ../user_logado/index.php');
 
-		$result = mysqli_query($conexao,$sql);
-		if (!$result) {
-		  die('Algo deu errado na conexão. Erro: ' . mysqli_error($conexao));
+			} else {
+				session_start();
+				$_SESSION['nome']= $nome;
+				$_SESSION['email']= $email;
+				$_SESSION['senha']= $senha;
+				$_SESSION['id']= $id_usuario;
+
+				header('Location: ../prof_logado/index.php');
+			}
 		}
-
- 	//conta quantas linhas tem no banco de dados com as informações passadas
-		$row = mysqli_num_rows($result);
-
-		if($row == 1) {
-			while ($busca = mysqli_fetch_array($result)) {
-
-				$nome = $busca['nome'];
-				$email= $busca['email'];
-				$senha= $busca['senha'];
-				$tipo = $busca['tipo'];
-				$id_usuario = $busca['id'];
-
-				if($tipo == "COMUM"){
-					session_start();
-					$_SESSION['nome']= $nome;
-					$_SESSION['email']= $email;
-					$_SESSION['senha']= $senha;
-					$_SESSION['id']= $id_usuario;
-				//echo "<center>Aluno você foi autenticado com sucesso! Aguarde um instante.</center>";
-					echo "<script>login_sucesso_user_tipo1()</script>";
-
-				} else {
-					session_start();
-					$_SESSION['nome']= $nome;
-					$_SESSION['email']= $email;
-					$_SESSION['senha']= $senha;
-					$_SESSION['id']= $id_usuario;
-				//echo "<center>Professor você foi autenticado com sucesso! Aguarde um instante.</center>";
-					echo "<script>login_sucesso_user_tipo2()</script>";
-				}
-		 	}
-		} else {
+	} else {
 	// caso o numero de linha no db seja zero, ou seja não nexistem registros
-			echo "<script>alert('Nome de Usuário ou senha inválido!');</script>";
-			echo "<script>login_falhou()</script>";
-		}
-	?>
-</body>
-</html>
+		echo "<script>alert('Nome de Usuário ou senha inválido!');</script>";
+		header('Location: ../index.html');
+	}
+?>
+
