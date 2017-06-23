@@ -7,7 +7,7 @@
 
       function index()
       {
-          setTimeout("window.location='login.html'",0001);
+          setTimeout("window.location='../index.html'",0002);
       }
 
       </script>
