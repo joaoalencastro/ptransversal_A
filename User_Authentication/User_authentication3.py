@@ -5,7 +5,11 @@ import urllib2
 import webbrowser
 import re
 import popular3
+import logging
+from datetime import datetime
 
+agora = datetime.now()
+logging.basicConfig(filename='arquivo_de_logs.log',level=logging.DEBUG)
 
 
 while True:
@@ -22,6 +26,7 @@ while True:
 		rg      	= tabela.PegaEmailDigitado()[0][5]
 		
 		
+		
 		if (len(email) > 1):
 			url = "https://aluno.unb.br/alunoweb/default/sca/solicitarsenha"
 			data = urllib.urlencode({'nome': nome, 'matricula': matricula, 'identidade': rg,'data_nascimento': data1})
@@ -36,10 +41,14 @@ while True:
 				print ("Consegui!")
 				tabela.Inserir(nome, email, senha, data1, matricula, rg, 1)
 				tabela.ApagaTabela_transitoria()
+				logging.debug("\nHorario do log: %s, nome: %s, email: %s, data: %s, senha: %s, matricula: %s, rg: %s, autenticado: Sim \n"%(agora, nome, email, data1, senha, matricula, rg ))
 			else:
 				tabela.Inserir(nome, email, senha, data1, matricula, rg, 0)
 				tabela.ApagaTabela_transitoria()
-			
+				logging.debug("\nHorario do log: %s, nome: %s, email: %s, data: %s, senha: %s, matricula: %s, rg: %s, autenticado: Não \n"%(agora, nome, email, data1, senha, matricula, rg ))
+		else:
+			logging.debug("\nHorario do log: %s, nome: %s, email: %s, data: %s, senha: %s, matricula: %s, rg: %s, Email Inválido! \n"%(agora, nome, email, data1, senha, matricula, rg ))
+			tabela.ApagaTabela_transitoria()
 		
 	print "Esperando Mudança no Banco..."
 	
