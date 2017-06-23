@@ -1,17 +1,3 @@
-<html  = lang"pt-br">
-<head>
-<title>Cadastrando...</title>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<script type='text/javascript'>
-
-		function index(){
-				setTimeout("window.location='../index.html'",2000);
-		}
-
-		</script>
-
-</head>
-<body>
 <?php
 
 session_start();
@@ -41,6 +27,10 @@ $autenticado = $ln['autenticado'];
 if (!$autenticado) {
     echo"<script>alert('Dados Inválidos. Tente novamente.');</script>";
     echo "<script>index()</script>";
+	
+} else if ($autenticado == 2){
+    echo"<script>alert('Usuário já cadastrado!');</script>";
+    header('Location: ../index.html');
 } else {
   	$sql = "INSERT INTO usuario(nome, email, matricula, data_nascimento, tipo, rg, senha)
   	VALUES('$nome', '$email', '$matricula', '$datanascimento', '$tipo', '$rg', '$senha')";
@@ -51,11 +41,8 @@ if (!$autenticado) {
   	}
 
   	echo "<center><h1>Usuaŕio cadastrado com sucesso!</h1></center>";
-    session_destroy();
-  	echo "<script>index()</script>";
+   	session_destroy();
+  	header('Location: ../index.html');
   }
 
 ?>
-
-</body>
-</html>
