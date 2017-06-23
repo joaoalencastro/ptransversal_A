@@ -339,20 +339,20 @@
                     <!-- End # Login Form -->
                     
                     <!-- Begin | Lost Password Form -->
-                    <form id="lost-form" style="display:none;" action="recuperar/esqueceu_senha.php">
+                    <form id="lost-form" style="display:none;" action="recuperar/esqueceu_senha.php" method="post" autocomplete="off" style="display:none;">
                         <div class="modal-body">
                             <div id="div-lost-msg">
                                 <div id="icon-lost-msg" class="glyphicon glyphicon-chevron-right"></div>
                                 <span id="text-lost-msg">Digite o seu e-mail de cadastro</span>
                             </div>
                             <input type="email"  name="emailRecupera" autocomplete="off" class="form-control" placeholder="E-mail" required/>
-                            <input type="hidden" name="acao" value="recuperar" />
-                            <input type="submit" value="Recuperar Senha" />
                            <!-- <input id="lost_email" class="form-control" type="text" placeholder="E-Mail" required>-->
                         </div>
                         <div class="modal-footer">
                             <div>
-                                <button type="submit" class="btn btn-primary btn-lg btn-block">Enviar</button>
+                              <input type="hidden" name="acao" value="recuperar" />
+                              <input type="submit" value="Recuperar Senha" />
+                              <!--  <button type="submit" class="btn btn-primary btn-lg btn-block">Enviar</button>-->
                             </div>
                             <div>
                                 <button id="lost_login_btn" type="button" class="btn btn-link">Entrar</button>
