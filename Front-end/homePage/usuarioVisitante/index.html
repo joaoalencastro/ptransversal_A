@@ -130,10 +130,11 @@
                     
                 </div>
                 <div class="col-lg-4" id="the-basics">
-                  <input class="typeahead" type="text" placeholder="Ex.: Algoritmo e Estrutura de Dados ou AT" id="barra-pesquisa">
-                </div>
-                <div class="col-lg-2">
-                    <a type="submit" class="btn btn-default">Pesquisar</a>
+                    <form id="formulario">
+                        <input class="typeahead" type="text" placeholder="Ex.: Algoritmo e Estrutura de Dados ou AT-11" id="barra-pesquisa" style="width: 400px">
+                        <input  id="resultado"  type="submit" class="btn btn-default" value="Pesquisar" data-toggle="modal" data-target="#modalResultado">
+                    </form>
+                  
                 </div>
             </div>
         </div>
@@ -393,7 +394,7 @@
 
     <!-- Modal de Informação -->
     <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
+    <div class="modal-dialog" id="tamanho">
     
       <!-- Modal content-->
               <div class="modal-content">
@@ -402,11 +403,38 @@
                   <h4 class="modal-title">Informação</h4>
                 </div>
                 <div class="modal-body">
-                  <ul>
-                      <li>Local com capacidade de 50 pessoas</li>
-                      <li>Contém 1 projetor</li>
-                      <li>Contém 2 ar-condicionados</li>
-                  </ul>
+                <h5 class="salai" style="text-align: center; font-size: 20px;">Salas: </h5>
+                  <table style="width:100%; padding: 15px 0px;">
+                      <tr>
+                        <th>AT's</th>
+                        <th>BT's</th> 
+                        <th>Lab-Redes</th>
+                        <th>Auditório e SG-11</th>
+                      </tr>
+                      <tr>
+                        <td>Capacidade: 50 pessoas;</td>
+                        <td>Capacidade: 45 pessoas;</td>
+                        <td>Capacidade: 40 pessoas, mas possui computadores;</td>
+                        <td>Capacidade: 50(SG-11) e 80(Auditório) pessoas;</td>
+                      </tr>
+                      <tr>
+                        <td>Projetor:1</td>
+                        <td>Projetor:1</td>
+                        <td>Projetor:2</td>
+                        <td>Projetor:1</td>
+                      </tr>
+                      <tr>
+                        <td>Ar-condicionado:2</td>
+                        <td>Ar-condicionado:2</td>
+                        <td>Ar-condicionado:2</td>
+                        <td>Ar-condicionado:1(SG-11)</td>
+                      </tr>
+                    </table>
+                </div>
+                <div>
+                    <p>Imagem das salas na FT</p>
+                    <img src="img/mapaFT.png" style="width: 20%; padding: 5px; " title="Salas AT's" >
+                    <img src="img/mapaFT.png" style="width: 20%; padding: 5px;" title="Salas BT's">
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -415,6 +443,38 @@
               
             </div>
           </div>
+
+
+          <!-- Modal de Resultado da pesquisa-->
+            <div class="modal fade" id="modalResultado" role="dialog">
+            <div class="modal-dialog  modal-sm">
+    
+      <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Resultado</h4>
+                </div>
+                <div class="modal-body">
+                <h4 class="principal" style="text-align: center;"></h4>
+                <h5 class="codigo" style="text-align: center;"></h5>
+                <ul>
+                    <li class="prof"></li>
+                    <li class="dias"></li>
+                    <li class="horario"></li>
+                    <li class="vagas"></li>
+                    <li class="local"></li>
+                </ul>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+
+
 
 
 
@@ -505,9 +565,12 @@
     <script src="js/bootstrap-datepicker.pt-BR.min.js"></script>
 
 
+
+
     <script type="text/javascript">
         init();
         pesquisa();
+        resgatevalor();
     </script>
 </body>
 

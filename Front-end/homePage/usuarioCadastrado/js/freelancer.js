@@ -230,6 +230,34 @@ function clickSolic(id_str)
 }
 function init()
 {
+    /*         Modal Informação      */
+       var modal= "" +
+        "<div class='modal fade' id='myModal' role='dialog'>" +
+        "<div class='modal-dialog'>" +
+    
+      /*     Modal content     */
+              "<div class='modal-content'>" +
+                "<div class='modal-header'>" +
+                  "<button type='button' class='close' data-dismiss='modal'>&times;</button>" +
+                  "<h4 class='modal-title'>Informação</h4>" +
+                "</div>" +
+                "<div class='modal-body'>" +
+                  "<ul>"
+                      "<li>Local com capacidade de 50 pessoas</li>" +
+                      "<li>Contém 1 projetor</li>" +
+                      "<li>Contém 2 ar-condicionados</li>" +
+                  "</ul>" +
+                "</div>" +
+                "<div class='modal-footer'>" +
+                  "<button type='button' class='btn btn-default' data-dismiss='modal'>Close</button>" +
+                "</div>" +
+              "</div>" +
+              
+            "</div>" +
+          "</div>";
+         $("#tabela-agenda").append(modal);
+
+
  /*              CRIANDO TABELAS           */
            //REQUISITA CHAR COM OS NOMES DAS SALAS
         var nomeSala = ["AT-11","BT-16/15","AT-13","BT-25/15","AT-15","AT-19","Lab-Redes","LCCC","SG-11","Auditório"];
@@ -237,9 +265,10 @@ function init()
         var cont = 100;
         for(var i = 0; i < nomeSala.length;i++)
         {
-
+              
+            var modali = nomeSala[i] + ":i";  
             $("#tabela-agenda").append(" <tr style='background: green;'> ");
-            $("#tabela-agenda").append(" <td class='coluna-agenda'>" + nomeSala[i] + "&nbsp;<i class='fa fa-info-circle'></i>&nbsp;&nbsp;</td> ");
+            $("#tabela-agenda").append(" <td class='coluna-agenda'>" + nomeSala[i] + "<a href='#myModal' data-toggle='modal' data-target='#myModal' <i id='"+modali+"'  class='fa fa-info-circle'></i></a></td> ");
   
             for(var j = 8; j < 22;j++)
             {

@@ -183,7 +183,6 @@ function Status(status)
     {
         let id_str = "q";
         id_str = id_str.concat(100+i);
-        console.log(id_str);
         if(status[i] == 1)
         {       
                 document.getElementById(id_str).onclick = function(){$("#login-modal").modal("show");};
@@ -240,14 +239,19 @@ function init()
         /*              CRIANDO TABELAS           */
            //REQUISITA CHAR COM OS NOMES DAS SALAS
         var nomeSala = ["AT-11","BT-16/15","AT-13","BT-25/15","AT-15","AT-19","Lab-Redes","LCCC","SG-11","Auditório"];
+        var modali = [10,11,12,13,14,15,16,17,18,19] ;
            //
         var cont = 100;
         for(var i = 0; i < nomeSala.length;i++)
         {
-
+            var salai = nomeSala[i];
+            var inf = modali[i];
             $("#tabela-agenda").append(" <tr style='background: green;'> ");
-            $("#tabela-agenda").append(" <td class='coluna-agenda'>" + nomeSala[i] + "<a href='#myModal' data-toggle='modal' data-target='#myModal' <i class='fa fa-info-circle'></i></a></td> ");
-  
+            $("#tabela-agenda").append(" <td class='coluna-agenda'>" + nomeSala[i] + " <a href='#myModal' data-toggle='modal' data-target='#myModal'id='"+modali[i]+"' <i  class='fa fa-info-circle'></i></a>  </td> ");
+
+            
+
+
             for(var j = 0; j < 14;j++)
             {
                 cont++;
@@ -260,6 +264,9 @@ function init()
             $("#tabela-agenda").append(" </tr> ");
         }    
         setDate('inicio'); 
+
+        
+
 
         /*              CALENDARIO              */
         $('#datapicker').datepicker({
@@ -310,7 +317,7 @@ function pesquisa() {
                       };
                     };
 
-                    var states = ['Algoritmos e Estrutura de Dados', 'Fundamentos de Redes', 'Circuitos Elétricos', 'Sinais e Sistemas de Tempo Contínuo'
+                    var materias = ['Algoritmos e Estrutura de Dados', 'Fundamentos de Redes', 'Circuitos Elétricos', 'Sinais e Sistemas de Tempo Contínuo'
                     ];
 
                     $('#the-basics .typeahead').typeahead({
@@ -319,12 +326,38 @@ function pesquisa() {
                       minLength: 1
                     },
                     {
-                      name: 'states',
-                      source: substringMatcher(states)
+                      name: 'materias',
+                      source: substringMatcher(materias)
                     });
 }
 
 function fecharmodal() {
     $('#portfolioModal2').modal('hide');
-        window.location.href = "index.html#about";
+        window.location.href = "http://homol.redes.unb.br/ptr012017-B-grupoA/index.html#about";
+}
+function resgatevalor() {
+    var form = document.getElementById('formulario');
+
+    form.addEventListener('submit', function(e) {
+        // alerta o valor do campo
+        var codigo = "Código- ";
+        var prof = "Professor: ";
+        var dias = "Dias: ";
+        var horario = "Horario: ";
+        var vagas = "Vagas: ";
+        var local = "Local: ";
+        var campo = document.getElementById('barra-pesquisa').value;
+        $('#modalResultado').modal('show');
+        $('#modalResultado').find('.principal').text(campo + " :");
+        $('#modalResultado').find('.codigo').text(codigo);
+        $('#modalResultado').find('.prof').text(prof);
+        $('#modalResultado').find('.dias').text(dias);
+        $('#modalResultado').find('.horario').text(horario);
+        $('#modalResultado').find('.vagas').text(vagas);
+        $('#modalResultado').find('.local').text(local);
+
+    
+    e.preventDefault();
+    
+    });
 }
