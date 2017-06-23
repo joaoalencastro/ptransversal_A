@@ -26,8 +26,6 @@
 
 <body>
 	<?php
-	echo "Bruno Bicha";
-	/*
 		require('../conexao/conexao.php');
 		$email=$_POST['email'];
 		$senha=$_POST['senha'];
@@ -77,6 +75,6 @@
 			echo "<center><h1>Nome de Usuário ou senha inválido! Aguarde um instante para tentar novamente.</h1></center>";
 			echo "<script>login_falhou()</script>";
 		}
-	*/?>
+	?>
 </body>
 </html>
