@@ -715,3 +715,6 @@ div#maincontent {
 #over {
   overflow-x: auto; 
 }
+#tamanho {
+  width: 90%;
+}
