@@ -8,17 +8,17 @@
 
 	function login_sucesso_user_tipo1() {
 		// tempo ate que a pagina redirecione em ms
-		setTimeout("window.location='../user_logado/index.php'", 2000);
+		setTimeout("window.location='../user_logado/index.php'", 0001);
 	}
 
 	function login_sucesso_user_tipo2() {
 		// tempo ate que a pagina redirecione em ms
-		setTimeout("window.location='../prof_logado/index.php'", 2000);
+		setTimeout("window.location='../prof_logado/index.php'", 0001);
 	}
 
 	function login_falhou() {
 		// tempo ate que a pagina redirecione em ms
-		setTimeout("window.location='../index.html'", 2000);
+		setTimeout("window.location='../index.html'", 0001);
 	}
 
 </script>
@@ -72,7 +72,7 @@
 		 	}
 		} else {
 	// caso o numero de linha no db seja zero, ou seja não nexistem registros
-			echo "<center><h1>Nome de Usuário ou senha inválido! Aguarde um instante para tentar novamente.</h1></center>";
+			echo "<script>alert('Nome de Usuário ou senha inválido!');</script>";
 			echo "<script>login_falhou()</script>";
 		}
 	?>
