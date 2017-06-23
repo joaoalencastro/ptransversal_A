@@ -44,8 +44,6 @@
 })(jQuery); // End of use strict
 
 //LOGIN
-$(function() {
-    
     var $formLogin = $('#login-form');
     var $formLost = $('#lost-form');
     var $formRegister = $('#register-form');
@@ -90,7 +88,6 @@ $(function() {
             $iconTag.removeClass($iconClass + " " + $divClass);
         }, $msgShowTime);
     }
-});
 
 function date(x)     //RETORNA O DIA ATUAL + 1
 {   
