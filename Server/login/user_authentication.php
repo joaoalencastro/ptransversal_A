@@ -51,7 +51,7 @@
 				$tipo = $busca['tipo'];
 				$id_usuario = $busca['id'];
 
-				if($tipo == "comum"){
+				if($tipo == "COMUM"){
 					session_start();
 					$_SESSION['nome']= $nome;
 					$_SESSION['email']= $email;
