@@ -5,8 +5,7 @@ Repositório do projeto destinado a disciplina projeto transversal 1 - Turma B -
 
 Para acessar o nosso site clique [aqui!](http://homol.redes.unb.br/ptr012017-B-grupoA/) :point_left: :thumbsup:
 
-## Aplicação web destinada a alunos, monitores, professores e funcionários do departamento de Engenharia Elétrica (ENE) e,
-## possivelmente, de outros departamentos.
+## Aplicação web destinada a alunos, monitores, professores e funcionários do departamento de Engenharia Elétrica (ENE) e, possivelmente, de outros departamentos.
 
 ### Descrição da Demanda (Ementa)
 
@@ -18,3 +17,6 @@ Para acessar o nosso site clique [aqui!](http://homol.redes.unb.br/ptr012017-B-g
 
 
 ![Hierarquia de tarefas](/Docs/Hierarquia_de_tarefas.jpg)
+
+
+## Desenvolvedores:
