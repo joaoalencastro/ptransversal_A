@@ -57,7 +57,7 @@
 					$_SESSION['email']= $email;
 					$_SESSION['senha']= $senha;
 					$_SESSION['id']= $id_usuario;
-					echo "<center>Aluno você foi autenticado com sucesso! Aguarde um instante.</center>";
+				//echo "<center>Aluno você foi autenticado com sucesso! Aguarde um instante.</center>";
 					echo "<script>login_sucesso_user_tipo1()</script>";
 
 				} else {
@@ -66,7 +66,7 @@
 					$_SESSION['email']= $email;
 					$_SESSION['senha']= $senha;
 					$_SESSION['id']= $id_usuario;
-					echo "<center>Professor você foi autenticado com sucesso! Aguarde um instante.</center>";
+				//echo "<center>Professor você foi autenticado com sucesso! Aguarde um instante.</center>";
 					echo "<script>login_sucesso_user_tipo2()</script>";
 				}
 		 	}
