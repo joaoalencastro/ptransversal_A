@@ -1,10 +1,3 @@
-<script type='text/javascript'>
-
-		function erro_login(){
-			setTimeout("window.location='../log_error/index.php?ERROR=3'",10);
-		}
-		
-</script>
 <?php
 	require('../conexao/conexao.php');
 	$email=$_POST['email'];
@@ -47,13 +40,11 @@
 				$_SESSION['senha']= $senha;
 				$_SESSION['id']= $id_usuario;
 
-				header('Location: ../prof_logado/index.php?prof');
+				header('Location: ../user_logado/index.php?prof');
 			}
 		}
 	} else {
 	// caso o numero de linha no db seja zero, ou seja não nexistem registros
-
-		echo "<script>erro_login()</script>";
-		header('Location: ../index.html');
+		header('Location: ../log_error/index.php?ERROR=3');
 	}
 ?>
