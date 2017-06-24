@@ -224,13 +224,50 @@ function setdate(x)
 }
 function clickSolic(id_str)
 {
-    console.log(id_str);
+    let id_radio = id_str;
+    let motivo;
     var dia = document.getElementById("Title").innerHTML;
     var arr = dia.split(" ");
     id_str = id_str.split(':');
-    //  idstr[0] é o nome da sala; idstr[1] é o horário e arr[1] o dia 
-    alert("Você requisitou a sala "+ id_str[0] + ", no dia "+ arr[1]+ " às " + id_str[1]+":00 hrs");
+    if(document.getElementById(id_radio+':Moni').checked == true)
+    {
+        motivo = "Monitoria";
+    }
+    else if(document.getElementById(id_radio+':Aula').checked)
+    {
+        motivo = "Aula";
+    }
+    else if(document.getElementById(id_radio+':Pale').checked)
+    {
+        motivo = "Palestra";
+    }
+    else if(document.getElementById(id_radio+':Sala').checked)
+    {
+        motivo = "Sala de Estudos";
+    }
+    else if(document.getElementById(id_radio+':Outro').checked)
+    {
 
+       if(document.getElementById(id_radio+":text").value != "")
+       {
+            motivo = document.getElementById(id_radio+":text").value;
+       }    
+       else
+        {     
+            alert("Preencha o campo");
+            return;
+        }
+    }
+    var dados_solicitacao;
+    dados_solicitacao[0] = arr[1]+ ", " +id_str[1];
+    dados_solicitacao[1] = motivo;
+    dados_solicitacao[2] = id_str[0];
+
+    $.ajax({
+        type: "POST",
+        url: "post_solicitacao.php",
+        data: "dados="+ dados_solicitacao
+    });
 }
 function init()
 {
@@ -256,22 +293,22 @@ function init()
                 "               <div class='row' style='color:black'>" +
                 "                   <h5 style='font-size:11px; position:relative; left: 22px;'>Motivo da Solicitação </h5> " +
                 "                       <div style='position: relative; left: 25px' class='radio'> " +
-                "                          <label><input type='radio' name='optradio'>Monitoria</label> "+
+                "                          <label><input id='"+id_str+":Moni' type='radio' name='optradio'>Monitoria</label> "+
                 "                      </div> "+
                 "                       <div style='position: relative; left: 25px' class='radio'> " +
-                "                          <label><input type='radio' name='optradio'>Aula</label> "+
+                "                          <label><input id='"+id_str+":Aula' type='radio' name='optradio'>Aula</label> "+
                 "                      </div> "+
                 "                       <div style='position: relative; left: 25px' class='radio'> " +
-                "                          <label><input type='radio' name='optradio'>Palestra</label> "+
+                "                          <label><input id='"+id_str+":Pale' type='radio' name='optradio'>Palestra</label> "+
                 "                      </div> "+
                 "                       <div style='position: relative; left: 25px' class='radio'> " +
-                "                          <label><input type='radio' name='optradio'>Sala de estudos</label> "+
+                "                          <label><input id='"+id_str+":Sala' type='radio' name='optradio'>Sala de estudos</label> "+
                 "                      </div> "+
                 "                      <li style='max-width:150px;position: relative; left: 20px' class='divider' ></li>           "+
                 "                      <div style='position: relative; left: 25px' class='radio'> " +
-                "                          <label><input type='radio' name='optradio'>Outro:</label> "+
+                "                          <label><input id='"+id_str+":Outro'type='radio' name='optradio'>Outro:</label> "+
                 "                      </div> "+
-                "                      <input style='position:relative; left: 20px; max-width:145px; max-height: 200px;' placeholder='Seja breve' type='text' class='form-control' rows='2' >"+
+                "                      <input id='"+id_str+":text' style='position:relative; left: 20px; max-width:145px; max-height: 200px;' placeholder='Observação' type='text' class='form-control' rows='2' >"+
                 "                      <li><button id="+id_str+':B'+ " style='position: relative; left: 60px; top:10px' class='btn btn-default bnt-solicitacao'>Enviar</button></li>                                    "+
                 "               </div>"+        
                 "           </ul>"+
