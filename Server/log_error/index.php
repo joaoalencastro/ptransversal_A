@@ -491,7 +491,7 @@
         }
         else if(arr[1] == "ERROR=3")
         {
-            msgChange($('#div-login-msg'), $('#icon-login-msg'), $('#text-login-msg'), "error", "glyphicon-ok", "Nome de Usuário ou senha inválido!");
+            msgChange($('#div-login-msg'), $('#icon-login-msg'), $('#text-login-msg'), "error", "glyphicon-remove", "Nome de Usuário ou senha inválido!");
         }
         else if(arr[1] == "ERROR=4")
         {
@@ -511,7 +511,7 @@
         else if(arr[1] == "SUCESS=2")
         {
             modalAnimate($formLogin, $formLost);
-            msgChange($('#div-lost-msg'), $('#icon-lost-msg'), $('#text-lost-msg'), "success", "glyphicon-remove", "Verifique seu e-mail para obter nova senha!");
+            msgChange($('#div-lost-msg'), $('#icon-lost-msg'), $('#text-lost-msg'), "success", "glyphicon-ok", "Verifique seu e-mail para obter nova senha!");
         }
         else if(arr[1] == "SUCESS=3")
         {
