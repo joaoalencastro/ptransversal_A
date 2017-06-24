@@ -1,5 +1,5 @@
 <?php
-require('../conexao/conexao.php');
+require('../../conexao/conexao.php');
 $nome=$_POST['nome'];
 $matricula=$_POST['matricula'];
 $email=$_POST['email'];
