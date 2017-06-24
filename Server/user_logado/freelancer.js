@@ -136,7 +136,7 @@ function Status(status) //ATUALIZA O STATUS
     var nomeSala = ["AT-11","BT-16/15","AT-13","BT-25/15","AT-15","AT-19","Lab-Redes","LCCC","SG-11","Auditório"];
     //
     var url_atual = window.location.href
-    var arr = url_atual.split("?").reverse();
+    var arr = url_atual.split("?");
     var k = 0;
     for(var i = 0; i < nomeSala.length;i++)
     {
