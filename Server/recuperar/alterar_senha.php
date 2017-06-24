@@ -1,20 +1,3 @@
-<html>
-
-<head>
-  <title>Recuperar senha</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <script type='text/javascript'>
-
-      function index()
-      {
-          setTimeout("window.location='../index.html'",0001);
-      }
-
-  </script>
-</head>
-
-<body>
-
 <?php
 include('../conexao/conexao.php');
 
@@ -35,7 +18,7 @@ include('../conexao/conexao.php');
     if ($sql_query) {
       $delete_sql = "DELETE FROM codigos WHERE codigo = '$codigo'";
       $mudar = mysqli_query($conexao,$delete_sql);
-      header('Location: ../log_error/index.php?SUCESS=3');
+      header('Location: ../log_error/index.php?SUCESS=3'); // senha alterada com sucesso
     }
   }
 ?>

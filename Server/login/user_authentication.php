@@ -31,7 +31,7 @@
 				$_SESSION['senha']= $senha;
 				$_SESSION['id']= $id_usuario;
 
-				header('Location: ../user_logado/index.php?user');
+				header('Location: ../user_logado/index.php?user'); //redireciona para a página de usuário
 
 			} else {
 				session_start();
@@ -40,11 +40,11 @@
 				$_SESSION['senha']= $senha;
 				$_SESSION['id']= $id_usuario;
 
-				header('Location: ../user_logado/index.php?prof');
+				header('Location: ../user_logado/index.php?prof'); //redireciona para a pagina de professor
 			}
 		}
 	} else {
 	// caso o numero de linha no db seja zero, ou seja não nexistem registros
-		header('Location: ../log_error/index.php?ERROR=3');
+		header('Location: ../log_error/index.php?ERROR=3'); // Nome de Usuário ou senha inválido!
 	}
 ?>
