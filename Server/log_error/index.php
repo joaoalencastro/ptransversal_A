@@ -296,6 +296,7 @@
                           <!--  <a href="recuperar/esqueceu_senha.html" title="recuperando senha de acesso"> Esqueceu a senha ? </a> -->
                                 <button id="login_lost_btn" type="button" class="btn btn-link">Esqueceu a senha?</button>
                                 <button id="login_register_btn" type="button" class="btn btn-link">Increva-se</button>
+				<a id="" href="../func/login.php" type="button" class="btn btn-link">Login Funcionário</a>
                             </div>
                         </div>
                     </form>
@@ -320,6 +321,7 @@
                             <div>
                                 <button id="lost_login_btn" type="button" class="btn btn-link">Entrar</button>
                                 <button id="lost_register_btn" type="button" class="btn btn-link">Registrar</button>
+				<a id="" href="../func/login.php" type="button" class="btn btn-link">Login Funcionário</a>
                             </div>
                         </div>
                     </form>
@@ -347,6 +349,7 @@
                             <div>
                                 <button id="register_login_btn" type="button" class="btn btn-link">Entrar</button>
                             	<button id="register_lost_btn" type="button" class="btn btn-link">Esqueceu a senha?</button>
+				<a id="" href="../func/login.php" type="button" class="btn btn-link">Login Funcionário</a>
                             </div>
                         </div>
                     </form>
