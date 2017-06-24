@@ -356,3 +356,34 @@ function pesquisa() {
                       source: substringMatcher(states)
                     });
 }
+
+function fecharmodal() {
+    $('#portfolioModal2').modal('hide');
+        window.location.href = "http://homol.redes.unb.br/ptr012017-B-grupoA/index.html#about";
+}
+function resgatevalor() {
+    var form = document.getElementById('formulario');
+
+    form.addEventListener('submit', function(e) {
+        // alerta o valor do campo
+        var codigo = "Código- ";
+        var prof = "Professor: ";
+        var dias = "Dias: ";
+        var horario = "Horario: ";
+        var vagas = "Vagas: ";
+        var local = "Local: ";
+        var campo = document.getElementById('barra-pesquisa').value;
+        $('#modalResultado').modal('show');
+        $('#modalResultado').find('.principal').text(campo + " :");
+        $('#modalResultado').find('.codigo').text(codigo);
+        $('#modalResultado').find('.prof').text(prof);
+        $('#modalResultado').find('.dias').text(dias);
+        $('#modalResultado').find('.horario').text(horario);
+        $('#modalResultado').find('.vagas').text(vagas);
+        $('#modalResultado').find('.local').text(local);
+
+    
+    e.preventDefault();
+    
+    });
+}
