@@ -45,7 +45,7 @@
 		}
 	} else {
 	// caso o numero de linha no db seja zero, ou seja não nexistem registros
-		echo "<script>alert('Nome de Usuário ou senha inválido!');</script>";
+		echo"<script>alert('Nome de Usuário ou senha inválido!');</script>";
 		header('Location: ../index.html');
 	}
 ?>
