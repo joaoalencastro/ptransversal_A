@@ -253,9 +253,10 @@ function Getmateriasfromserver(callback){
     return $.ajax({
         url: '././materiasphp/materias.php',
         data: "",
-        dataType: 'json',
         success: function(data)
         {
+            console.log("1=");
+            console.log(data);
             status_aux = data;
             callback(status_aux);
         },
@@ -307,8 +308,10 @@ function Getmateriasfromserver(callback){
     };
     Getmateriasfromserver(function(a)    {
         var geral = a;
+            console.log("2=");
+            console.log(geral);
         var materias = geral[0];
-
+    
 
         $('#the-basics .typeahead').typeahead({
                 hint: true,
