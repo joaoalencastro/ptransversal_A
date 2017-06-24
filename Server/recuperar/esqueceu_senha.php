@@ -1,20 +1,3 @@
-<html>
-
-<head>
-  <title>Recuperar senha</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <script type='text/javascript'>
-
-      function index()
-      {
-          setTimeout("window.location='../index.html'",0002);
-      }
-
-      </script>
-</head>
-
-<body>
-
 <?php
 
   include('../conexao/conexao.php');
@@ -54,17 +37,12 @@
 
       if($inserir) {
         if(mail("$email","$assunto","$mensagem", $headers, "-f$email_remetente")){
-          echo"<script>alert('Enviamos um link para a recuperação de senha, para o endereço de e-mail indicado !');</script>";
-          echo"<script>index()</script>";
+          header('Location: ../log_error/index.php?SUCESS=2');
 
         }
       }
     } else {
-      echo"<script>alert('O E-mail digitado não está cadastrado. Por favor, tente novamente com um E-mail cadastrado.');</script>";
-      echo"<script>index()</script>";
+      header('Location: ../log_error/index.php?ERROR=6');
     }
   }
 ?>
-
-</body>
-</html>

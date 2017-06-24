@@ -35,8 +35,7 @@ include('../conexao/conexao.php');
     if ($sql_query) {
       $delete_sql = "DELETE FROM codigos WHERE codigo = '$codigo'";
       $mudar = mysqli_query($conexao,$delete_sql);
-      echo"<script>alert('Senha alterada com sucesso! Faça o Login novamente.');</script>";
-      echo"<script>index()</script>";
+      header('Location: ../log_error/index.php?SUCESS=3');
     }
   }
 ?>

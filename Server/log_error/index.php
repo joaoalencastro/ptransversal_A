@@ -174,7 +174,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-4 col-lg-offset-2">
-                    <p>Reservado é uma aplicação desenvolvida pela turma 2017/1 da disciplina de Projeto Transversal 1, ofertada pelo departamento de Engenharia Elétrica, onde o objetivo foi um sistema funcional que simplifique o processo de reserva do departamento, complementando o processo atual. </p>
+                    <p>Aplicação web destinada a alunos, monitores, professores e funcionários do departamento de Engenharia Elétrica (ENE) e, possivelmente, de outros departamentos. A aplicação permite ao usuário cadastrado fazer solicitações de reserva de salas, gerenciar o uso das mesmas e, a todos os usuários, o sistema permite que sejam visualizados os mapas de sala.</p>
                 </div>
                 <div class="col-lg-4">
                     <p>Para informações de como utilizar à aplicação acesse os <a href="">termos de uso</a>. Ou se deseja adquirir o sistema, o projeto está disponibilizado neste <a href="https://github.com/joaoalencastro/ptransversal_A">link</a>.</p>
@@ -195,49 +195,12 @@
                     <h2>Contato</h2>
                     <hr  class="star-light">
                 </div>
+            </div>  
+            <div class="row" align="center">
+                <p class="col-lg-12" style="position: relative;top: 70px;">Para entrar em contato envie um e-mail para:</p>
             </div>
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
-                    <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
-                    <form name="sentMessage" id="contactForm" novalidate>
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label for="name">Nome</label>
-                                <input type="text" class="form-control" placeholder="Nome" id="name" required data-validation-required-message="Por favor digite o seu nome">
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label for="email">Email</label>
-                                <input type="email" class="form-control" placeholder="Email" id="email" required data-validation-required-message="Digite o seu endereço de email">
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label for="phone">Número de Telefone</label>
-                                <input type="tel" class="form-control" placeholder="Número de Telefone" id="phone" required data-validation-required-message="Digite o seu número">
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label for="message">Mensagem</label>
-                                <textarea rows="5" class="form-control" placeholder="Mensagem" id="message" required data-validation-required-message="Digite sua mensagem."></textarea>
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                        <br>
-                        <div id="success"></div>
-                        <div class="row">
-                            <div class="form-group col-xs-12">
-                                <button type="submit" class="btn btn-success btn-lg">Enviar</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+            <div class="row" align="center">
+                <div class="col-lg-4 glyphicon glyphicon-envelope" style="font-size: 3em; padding-top: 70px; position: relative; left: 15%; top: 10px"></div><p class="col-lg-4" style="font-size: 2.5em; padding-top: 70px;padding-bottom: 100px">reservado.ene@gmail.com</p>
             </div>
         </div>
     </section>
@@ -540,7 +503,20 @@
             modalAnimate($formLogin, $formRegister);
             msgChange($('#div-register-msg'), $('#icon-register-msg'), $('#text-register-msg'), "error", "glyphicon-remove", "Usuário já cadastrado");
         }
-        
+        else if(arr[1] == "ERROR=6")
+        {
+            modalAnimate($formLogin, $formLost);
+            msgChange($('#div-lost-msg'), $('#icon-lost-msg'), $('#text-lost-msg'), "error", "glyphicon-remove", "O E-mail digitado não está cadastrado.");
+        }
+        else if(arr[1] == "SUCESS=2")
+        {
+            modalAnimate($formLogin, $formLost);
+            msgChange($('#div-lost-msg'), $('#icon-lost-msg'), $('#text-lost-msg'), "success", "glyphicon-remove", "Verifique seu e-mail para obter nova senha!");
+        }
+        else if(arr[1] == "SUCESS=3")
+        {
+            msgChange($('#div-login-msg'), $('#icon-login-msg'), $('#text-login-msg'), "success", "glyphicon-ok", "Senha alterada com sucesso!");
+        }
     </script>
 </body>
 

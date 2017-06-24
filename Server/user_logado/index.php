@@ -26,13 +26,13 @@
     <title>Reservado | Sistema de Reserva</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Theme CSS -->
-    <link href="css/reservado.css" rel="stylesheet">
+    <link href="../css/reservado.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <!--            Bootstrap Calendário     -->
@@ -203,7 +203,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-4 col-lg-offset-2">
-                    <p>Reservado é uma aplicação desenvolvida pela turma 2017/1 da disciplina de Projeto Transversal 1, ofertada pelo departamento de Engenharia Elétrica, onde o objetivo foi um sistema funcional que simplifique o processo de reserva do departamento, complementando o processo atual. </p>
+                    <p>Aplicação web destinada a alunos, monitores, professores e funcionários do departamento de Engenharia Elétrica (ENE) e, possivelmente, de outros departamentos. A aplicação permite ao usuário cadastrado fazer solicitações de reserva de salas, gerenciar o uso das mesmas e, a todos os usuários, o sistema permite que sejam visualizados os mapas de sala.</p>
                 </div>
                 <div class="col-lg-4">
                     <p>Para informações de como utilizar à aplicação acesse os <a href="">termos de uso</a>. Ou se deseja adquirir o sistema, o projeto está disponibilizado neste <a href="https://github.com/joaoalencastro/ptransversal_A">link</a>.</p>
@@ -224,49 +224,12 @@
                     <h2>Contato</h2>
                     <hr  class="star-light">
                 </div>
+            </div>  
+            <div class="row" align="center">
+                <p class="col-lg-12" style="position: relative;top: 70px;">Para entrar em contato envie um e-mail para:</p>
             </div>
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
-                    <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
-                    <form name="sentMessage" id="contactForm" novalidate>
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label for="name">Nome</label>
-                                <input type="text" class="form-control" placeholder="Nome" id="name" required data-validation-required-message="Por favor digite o seu nome">
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label for="email">Email</label>
-                                <input type="email" class="form-control" placeholder="Email" id="email" required data-validation-required-message="Digite o seu endereço de email">
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label for="phone">Número de Telefone</label>
-                                <input type="tel" class="form-control" placeholder="Número de Telefone" id="phone" required data-validation-required-message="Digite o seu número">
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label for="message">Mensagem</label>
-                                <textarea rows="5" class="form-control" placeholder="Mensagem" id="message" required data-validation-required-message="Digite sua mensagem."></textarea>
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                        <br>
-                        <div id="success"></div>
-                        <div class="row">
-                            <div class="form-group col-xs-12">
-                                <button type="submit" class="btn btn-success btn-lg">Enviar</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+            <div class="row" align="center">
+                <div class="col-lg-4 glyphicon glyphicon-envelope" style="font-size: 3em; padding-top: 70px; position: relative; left: 15%; top: 10px"></div><p class="col-lg-4" style="font-size: 2.5em; padding-top: 70px;padding-bottom: 100px">reservado.ene@gmail.com</p>
             </div>
         </div>
     </section>
@@ -325,107 +288,6 @@
             <i class="fa fa-chevron-up"></i>
         </a>
     </div>
-    <!-- Modal Login -->
-    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header" align="center">
-                    <img class="img-circle" id="img_logo" src="http://bootsnipp.com/img/logo.jpg">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                    </button>
-                </div>
-                
-                <!-- Begin # DIV Form -->
-                <div id="div-forms">
-                
-                    <!-- Begin # Login Form -->
-                    <form action="../php/user_authentication.php" method="post" autocomplete="off" id="login-form">
-                        <div class="modal-body">
-                            <div id="div-login-msg">
-                                <div id="icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
-                                <span id="text-login-msg">Digite seu nome de usuário e senha.</span>
-                            </div>
-                            <input id="login_username" class="form-control" type="text" name="email" placeholder="E-mail" required>
-                            <input id="login_password" class="form-control" type="password" name="senha" placeholder="Senha" autocomplete="off" required>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox"> Lembre-me
-                                </label>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <div>
-                                <button type="submit" class="btn btn-primary btn-lg btn-block">Entrar</button>
-                            </div>
-                            <div>
-                                <button id="login_lost_btn" type="button" class="btn btn-link">Esqueceu a senha?</button>
-                                <button id="login_register_btn" type="button" class="btn btn-link">Increva-se</button>
-                            </div>
-                        </div>
-                    </form>
-                    <!-- End # Login Form -->
-                    
-                    <!-- Begin | Lost Password Form -->
-                    <form id="lost-form" style="display:none;">
-                        <div class="modal-body">
-                            <div id="div-lost-msg">
-                                <div id="icon-lost-msg" class="glyphicon glyphicon-chevron-right"></div>
-                                <span id="text-lost-msg">Digite o seu e-mail de cadastro</span>
-                            </div>
-                            <input id="lost_email" class="form-control" type="text" placeholder="E-Mail" required>
-                        </div>
-                        <div class="modal-footer">
-                            <div>
-                                <button type="submit" class="btn btn-primary btn-lg btn-block">Enviar</button>
-                            </div>
-                            <div>
-                                <button id="lost_login_btn" type="button" class="btn btn-link">Entrar</button>
-                                <button id="lost_register_btn" type="button" class="btn btn-link">Registrar</button>
-                            </div>
-                        </div>
-                    </form>
-                    <!-- End | Lost Password Form -->
-                    
-                    <!-- Begin | Register Form -->
-                    <form id="register-form" action="../php/post_cadastro_user.php" method="post" autocomplete="off" style="display:none;">
-                        <div class="modal-body">
-                            <div id="div-register-msg">
-                                <div id="icon-register-msg" class="glyphicon glyphicon-chevron-right"></div>
-                                <span id="text-register-msg">Registre sua conta</span>
-                            </div>
-                            <input class="form-control" type="text" placeholder="Nome *" name='nome' required>
-                            <input class="form-control" type="text" placeholder="Matrícula *" name='matricula' required>
-                            <input class="form-control" type="text" placeholder="E-Mail *" name="email" required>   
-                            <input class="form-control" type="text" placeholder="RG *" name="rg" required>     
-                            <input class="form-control" type="text" placeholder="Data de nascimento: Ex:. DD/MM/AAAA *" name="idade" required>     
-                            <input class="form-control" type="password" placeholder="Digite sua senha *" name="senhatxt" required>
-                            <input class="form-control" type="password" placeholder="Confirme sua senha *" name="senha2txt" required>
-                        </div>
-                        <div class="modal-footer">
-                            <div>
-                                <button type="submit" class="btn btn-primary btn-lg btn-block" name="register">Registrar</button>
-                            </div>
-                            <div>
-                                <button id="register_login_btn" type="button" class="btn btn-link">Entrar</button>
-                                <button id="register_lost_btn" type="button" class="btn btn-link">Esqueceu a senha?</button>
-                            </div>
-                        </div>
-                    </form>
-                    <!-- End | Register Form -->
-                    
-                </div>
-                <!-- End # DIV Form -->
-                
-            </div>
-        </div>
-    </div>
-    <!-- END # MODAL LOGIN -->
-
-
-
-
-
      <!-- Portfolio Modals -->
     <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
@@ -484,24 +346,24 @@
         </div>
     </div>
     <!-- jQuery -->
-    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/jquery/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
 
     <!-- Plugin JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
     <!-- Contact Form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
+    <script src="../js/jqBootstrapValidation.js"></script>
+    <script src="../js/contact_me.js"></script>
 
     <!-- Theme JavaScript -->
-    <script src="js/freelancer.js"></script>
+    <script src="freelancer.js"></script>
 
     <!-- CALENDÁRIO     -->
-    <script src="js/bootstrap-datepicker.min.js"></script>
-    <script src="js/bootstrap-datepicker.pt-BR.min.js"></script>
+    <script src="../js/bootstrap-datepicker.min.js"></script>
+    <script src="../js/bootstrap-datepicker.pt-BR.min.js"></script>
 
 
     <script type="text/javascript">
