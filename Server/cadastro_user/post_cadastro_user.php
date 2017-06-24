@@ -1,18 +1,3 @@
-<script type='text/javascript'>
-
-		function chama_cadastrar(){
-			setTimeout("window.location='cadastrar_definitivo.php'",10);
-		}
-		function senha_incompativel()
-		{
-			setTimeout("window.location='../log_error/index.php?ERROR=1'",10);
-		}
-		
-</script>
-
-
-
-
 <?php
 
 require('../conexao/conexao.php');
@@ -37,10 +22,10 @@ if($senha===$senha2){
 	} else {
 		session_start();
 		$_SESSION['matricula']=$_POST['matricula'];
-		echo "<script>chama_cadastrar()</script>";
+		header('Location: cadastrar_definitivo.php');	
 	}
 
 } else {
-	echo"<script>senha_incompativel()</script>";
+	header('Location: ../log_error/index.php?ERROR=1');
 }
 ?>
