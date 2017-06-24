@@ -135,6 +135,8 @@ function Status(status) //ATUALIZA O STATUS
     //REQUISITA CHAR COM OS NOMES DAS SALAS
     var nomeSala = ["AT-11","BT-16/15","AT-13","BT-25/15","AT-15","AT-19","Lab-Redes","LCCC","SG-11","Auditório"];
     //
+    var url_atual = window.location.href
+    var arr = url_atual.split("?").reverse();
     var k = 0;
     for(var i = 0; i < nomeSala.length;i++)
     {
@@ -152,7 +154,8 @@ function Status(status) //ATUALIZA O STATUS
                 {
                     document.getElementById(id_str + ':B').onclick = function() {clickSolic(iD);};
                     document.getElementById(id_str).style.background = "#F0F03E";
-                    document.getElementById(id_str + ":F").disabled = true;
+                    if(arr[1] != 'prof')
+                        document.getElementById(id_str + ":F").disabled = true;
 
                 }
                 else if(status[k] == 2)

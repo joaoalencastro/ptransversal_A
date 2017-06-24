@@ -1,21 +1,17 @@
-<html  = lang"pt-br">
-<head>
-<title>Cadastrando...</title>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<script type='text/javascript'>
+<script type='text/javascript'>
 
 		function chama_cadastrar(){
-			setTimeout("window.location='cadastrar_definitivo.php'",3000);
+			setTimeout("window.location='cadastrar_definitivo.php'",10);
 		}
-
-		function index(){
-				setTimeout("window.location='../index.html'",3000);
+		function senha_incompativel()
+		{
+			setTimeout("window.location='../log_error/index.php?ERROR=1'",10);
 		}
+		
+</script>
 
-		</script>
 
-</head>
-<body>
+
 
 <?php
 
@@ -41,15 +37,10 @@ if($senha===$senha2){
 	} else {
 		session_start();
 		$_SESSION['matricula']=$_POST['matricula'];
-		echo "<center><h1>Autenticando...</h1></center>";
 		echo "<script>chama_cadastrar()</script>";
 	}
 
 } else {
-	echo"<script>alert('Senhas incompatíveis!');</script>";
-	echo"<script>index()</script>";
+	echo"<script>senha_incompativel()</script>";
 }
 ?>
-
-</body>
-</html>
