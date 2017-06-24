@@ -1,3 +1,16 @@
+<script type='text/javascript'>
+
+		function dado_invalido(){
+			setTimeout("window.location='../log_error/index.php?ERROR=4'",10);
+		}
+		function ja_existe(){
+			setTimeout("window.location='../log_error/index.php?ERROR=5'",10);
+		}
+		function cadastrado(){
+			setTimeout("window.location='../log_error/index.php?SUCESS=1'",10);
+		}
+		
+</script>
 <?php
 
 session_start();
@@ -25,12 +38,11 @@ $senha     = $ln['senha'];
 $autenticado = $ln['autenticado'];
 }
 if (!$autenticado) {
-    echo"<script>alert('Dados Inválidos. Tente novamente.');</script>";
-    echo "<script>index()</script>";
+    echo "<script>dado_invalido();</script>";
 	
 } else if ($autenticado == 2){
-    echo"<script>alert('Usuário já cadastrado!');</script>";
-    header('Location: ../index.html');
+    echo"<script>ja_existe()</script>";
+
 } else {
   	$sql = "INSERT INTO usuario(nome, email, matricula, data_nascimento, tipo, rg, senha)
   	VALUES('$nome', '$email', '$matricula', '$datanascimento', '$tipo', '$rg', '$senha')";
@@ -39,10 +51,9 @@ if (!$autenticado) {
     if (!$result) {
   		die('Algo deu errado. Erro: ' . mysqli_error($conexao));
   	}
-
-  	echo "<center><h1>Usuaŕio cadastrado com sucesso!</h1></center>";
-   	session_destroy();
-  	header('Location: ../index.html');
+	session_destroy();
+  	echo "<script>cadastrado()</script>";
+   
   }
 
 ?>

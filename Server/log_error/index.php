@@ -516,20 +516,29 @@
         pesquisa();
         $('#bnt-acessar').click();
         var url_atual = window.location.href
-        alert(url_atual);
         var arr = url_atual.split("?").reverse();
-        if(arr[1] == 1)
+        if(arr[1] == "ERROR=1")
         {   
             modalAnimate($formLogin, $formRegister);
             msgChange($('#div-register-msg'), $('#icon-register-msg'), $('#text-register-msg'), "error", "glyphicon-remove", "Senhas incompatíveis!");
         }
-        else if(arr[1] == 2)
+        else if(arr[1] == "SUCESS=1")
         {
             msgChange($('#div-login-msg'), $('#icon-login-msg'), $('#text-login-msg'), "success", "glyphicon-ok", "Confirme seu email, cadastro realizado!");
         }
-        else if(arr[1] == 3)
+        else if(arr[1] == "ERROR=3")
         {
             msgChange($('#div-login-msg'), $('#icon-login-msg'), $('#text-login-msg'), "error", "glyphicon-ok", "Nome de Usuário ou senha inválido!");
+        }
+        else if(arr[1] == "ERROR=4")
+        {
+            modalAnimate($formLogin, $formRegister);
+            msgChange($('#div-register-msg'), $('#icon-register-msg'), $('#text-register-msg'), "error", "glyphicon-remove", "Dados inválidos");
+        }
+        else if(arr[1] == "ERROR=5")
+        {
+            modalAnimate($formLogin, $formRegister);
+            msgChange($('#div-register-msg'), $('#icon-register-msg'), $('#text-register-msg'), "error", "glyphicon-remove", "Usuário já cadastrado");
         }
         
     </script>
