@@ -22,10 +22,10 @@ if($senha===$senha2){
 	} else {
 		session_start();
 		$_SESSION['matricula']=$_POST['matricula'];
-		header('Location: cadastrar_definitivo.php');	
+		header('Location: cadastrar_definitivo.php'); //cadastra usuário
 	}
 
 } else {
-	header('Location: ../log_error/index.php?ERROR=1');
+	header('Location: ../log_error/index.php?ERROR=1'); //Senhas incompátiveis, retorna index
 }
 ?>
