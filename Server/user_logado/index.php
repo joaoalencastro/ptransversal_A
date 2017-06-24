@@ -160,11 +160,11 @@
                     
                 </div>
                 <div class="col-lg-4" id="the-basics">
-                  <input class="typeahead" type="text" placeholder="Ex.: Algoritmo e Estrutura de Dados ou AT-11" id="barra-pesquisa">
-                </div>
-                <div class="col-lg-2">
-                    <a type="submit" class="btn btn-default">Pesquisar</a>
-                </div>
+                  <form id="formulario">
+                        <input class="typeahead" type="text" placeholder="Ex.: Algoritmo e Estrutura de Dados ou AT-11" id="barra-pesquisa" style="width: 400px">
+                        <input  id="resultado"  type="submit" class="btn btn-default" value="Pesquisar" data-toggle="modal" data-target="#modalResultado">
+                    </form>
+                  
             </div>
         </div>
     </section>
@@ -288,33 +288,91 @@
             <i class="fa fa-chevron-up"></i>
         </a>
     </div>
+      
+      <!-- Modal de Informação -->
+    <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog" id="tamanho">
+    
+      <!-- Modal conteudo estatico-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Informação</h4>
+                </div>
+                <div class="modal-body">
+                <h5 class="salai" style="text-align: center; font-size: 20px;">Salas: </h5>
+                  <table style="width:100%; padding: 15px 0px;">
+                      <tr>
+                        <th>AT's</th>
+                        <th>BT's</th> 
+                        <th>Lab-Redes</th>
+                        <th>Auditório e SG-11</th>
+                      </tr>
+                      <tr>
+                        <td>Capacidade: 50 pessoas;</td>
+                        <td>Capacidade: 45 pessoas;</td>
+                        <td>Capacidade: 40 pessoas, mas possui computadores;</td>
+                        <td>Capacidade: 50(SG-11) e 80(Auditório) pessoas;</td>
+                      </tr>
+                      <tr>
+                        <td>Projetor:1</td>
+                        <td>Projetor:1</td>
+                        <td>Projetor:2</td>
+                        <td>Projetor:1</td>
+                      </tr>
+                      <tr>
+                        <td>Ar-condicionado:2</td>
+                        <td>Ar-condicionado:2</td>
+                        <td>Ar-condicionado:2</td>
+                        <td>Ar-condicionado:1(SG-11)</td>
+                      </tr>
+                    </table>
+                </div>
+                <div>
+                    <p>Imagem das salas na FT</p>
+                    <img src="img/mapaFT.png" style="width: 20%; padding: 5px; " title="Salas AT's" >
+                    <img src="img/mapaFT.png" style="width: 20%; padding: 5px;" title="Salas BT's">
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+      
+      <!-- Modal de Resultado da pesquisa-->
+            <div class="modal fade" id="modalResultado" role="dialog">
+            <div class="modal-dialog  modal-sm">
+    
+      <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Resultado</h4>
+                </div>
+                <div class="modal-body">
+                <h4 class="principal" style="text-align: center;"></h4>
+                <h5 class="codigo" style="text-align: center;"></h5>
+                <ul>
+                    <li class="prof"></li>
+                    <li class="dias"></li>
+                    <li class="horario"></li>
+                    <li class="vagas"></li>
+                    <li class="local"></li>
+                </ul>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+      
+      
+      
      <!-- Portfolio Modals -->
-    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2 style="padding-bottom: 40px;">SG</h2>
-                            <img src="img/mapaSG.png" style="width: 900px; height: 650px" alt="" usemap="#sgmap">
-                            <map name="sgmap">
-                                <area target="_blank" alt="Auditório SG-11" title="Auditório SG-11" href="#Pesquisa" 
-                                 coords="487,283,553,327" shape="rect">   
-                            </map>
-                            <p>Clique em alguma sala para ver o seu itinerário.</p>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Fechar</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
@@ -327,16 +385,46 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2 style="padding-bottom: 40px;">Faculdade de Tecnologia</h2>
-                            <img src="img/mapaFT.png" style="width: 900px; height: 650px" alt="" usemap="#mymap">
-                            <map name="mymap">
-                                <area shape="rect" coords="535,510,579,537" target="_self" href="index.html">
-                                <area shape="rect" coords="491,510,534,539" target="_self" href="index.html">
-                                <area shape="rect" coords="448,511,487,538" target="_self" href="index.html">
-                                <area shape="rect" coords="402,508,444,538" target="_self" href="index.html">
-                                <area shape="rect" coords="340,496,396,554" target="_self" href="index.html">
-                                <area shape="rect" coords="207,411,251,435" target="_self" href="index.html">
+                            <h2 style="padding-bottom: 40px;">SG</h2>
+                            <div id="over" >
+                            <img src="img/mapaSG.png" style="width: 900px; height: 650px" alt="" usemap="#sgmap"  border="0">
+                            <map name="sgmap">
+                                <area target="_blank" alt="Auditório SG-11" onclick="fecharmodal()" 
+                                 coords="487,283,553,327" shape="rect">   
                             </map>
+                            </div>
+                            <p>Clique em alguma sala para ver o seu itinerário.</p>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2 style="padding-bottom: 40px;">Faculdade de Tecnologia</h2>
+                            <div id="over" >
+                            <img src="img/mapaFT.png" style="width: 900px; height: 650px" alt="" usemap="#mymap"  border="0" >
+                            <map name="mymap">
+                                <area shape="rect" coords="535,510,579,537" onclick="fecharmodal()">
+                                <area shape="rect" coords="491,510,534,539" onclick="fecharmodal()">
+                                <area shape="rect" coords="448,511,487,538" onclick="fecharmodal()">
+                                <area shape="rect" coords="402,508,444,538" onclick="fecharmodal()">
+                                <area shape="rect" coords="340,496,396,554" onclick="fecharmodal()">
+                                <area shape="rect" coords="207,411,251,435" onclick="fecharmodal()">
+                            </map>
+                            </div>
                             <p>Clique em alguma sala para ver o seu itinerário.</p>
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Fechar</button>
                         </div>
