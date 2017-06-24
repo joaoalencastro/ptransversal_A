@@ -356,8 +356,6 @@ function pesquisa() {
                       source: substringMatcher(states)
                     });
 }
-<<<<<<< HEAD
-
 function fecharmodal() {
     $('#portfolioModal2').modal('hide');
         window.location.href = "http://homol.redes.unb.br/ptr012017-B-grupoA/index.html#about";
@@ -388,5 +386,3 @@ function resgatevalor() {
     
     });
 }
-=======
->>>>>>> 40649b94a460cf5c5f628c258cd9deb16205b33d
