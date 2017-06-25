@@ -26,7 +26,7 @@ $autenticado = $ln['autenticado'];
 
 if ($autenticado == 1) {
 
-	$sql = "INSERT INTO usuario(nome, email, matricula, datanascimento, tipo, rg, senha)
+	$sql = "INSERT INTO usuario(nome, email, matricula, data_nascimento, tipo, rg, senha)
 	VALUES('$nome', '$email', '$matricula', '$datanascimento', '$tipo', '$rg', '$senha')";
 
 	$result1 = mysqli_query($conexao,$sql);
