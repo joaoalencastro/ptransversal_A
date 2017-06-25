@@ -256,7 +256,6 @@ function Getmateriasfromserver(callback){
         dataType: 'json',
         success: function(data)
         {
-            console.log("1=");
             console.log(data);
             status_aux = data;
             callback(status_aux);
