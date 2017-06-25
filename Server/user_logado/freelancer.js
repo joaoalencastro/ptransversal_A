@@ -280,7 +280,7 @@ function init()
         {
 
             $("#tabela-agenda").append(" <tr style='background: green;'> ");
-            $("#tabela-agenda").append(" <td class='coluna-agenda'>" + nomeSala[i] + " <a href='#myModal' data-toggle='modal' data-target='#myModal'id='"+modali[i]+"' <i  class='fa fa-info-circle'></i></a>  </td> ");
+            $("#tabela-agenda").append(" <td class='coluna-agenda'>" + nomeSala[i] + " <a href='#myModal' data-toggle='modal' data-target='#myModal'><i  class='fa fa-info-circle'></i></a>  </td> ");
   
             for(var j = 8; j < 22;j++)
             {
