@@ -262,7 +262,7 @@ function clickSolic(id_str)
     dados_solicitacao[0] = arr[1]+ ", " +id_str[1];
     dados_solicitacao[1] = motivo;
     dados_solicitacao[2] = id_str[0];
-    
+    alert('Pensei que ia dar certo');
     $.ajax({
         type: "POST",
         url: "././solicitacao/post_solicitacao.php",
