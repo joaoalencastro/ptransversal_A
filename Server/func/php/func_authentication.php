@@ -14,6 +14,7 @@
 
 	//conta quantas linhas tem no banco de dados com as informações passadas
 	$row = mysqli_num_rows($result);
+	echo"$row";
 
 	if($row == 1) {
 		while ($busca = mysqli_fetch_array($result)) {
