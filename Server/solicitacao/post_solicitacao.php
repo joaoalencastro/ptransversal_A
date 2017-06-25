@@ -1,3 +1,17 @@
+<html>
+<head>
+ <script type="text/javascript">
+    function getArray()
+    {
+        var url_atual = window.location.href
+        var arr = url_atual.split("?");
+        var array = arr[1].split("#");
+        return array;
+    } 
+ </script>
+</head>
+<body>
+
 <?php
 
 require('../conexao/conexao.php');
@@ -5,7 +19,7 @@ session_start();
 
 date_default_timezone_get("America/Sao_Paulo");
 
-$dados_solicitacao=$_POST['dados'];
+$dados_solicitacao= "<script>getArray()</script>";
 $horario_da_reserva=dados_solicitacao[0];
 $motivo=dados_solicitacao[1];
 $nomesala=dados_solicitacao[2];
