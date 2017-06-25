@@ -33,14 +33,14 @@ if ($autenticado == 0) {
 } else if ($autenticado == 1) {
   	$sql = "INSERT INTO usuario(nome, email, matricula, data_nascimento, tipo, rg, senha)
   	VALUES('$nome', '$email', '$matricula', '$datanascimento', '$tipo', '$rg', '$senha')";
-  	$result = mysqli_query($conexao,$sql);
+  	$result1 = mysqli_query($conexao,$sql);
 
-    if (!$result) {
+    if (!$result1) {
   		die('Algo deu errado. Erro: ' . mysqli_error($conexao));
-  	}
+  	} else {
 	session_destroy();
-	
 	echo"Cadastrado!";
+        }
 }	
 
 ?>
