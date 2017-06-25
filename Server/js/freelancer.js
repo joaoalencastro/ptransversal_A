@@ -141,7 +141,6 @@ function Status(status)
     {
         let id_str = "q";
         id_str = id_str.concat(100+i);
-        console.log(id_str);
         if(status[i] == 0)
         {
             $('#'+ id_str).click(function(){$("#login-modal").modal("show");});
@@ -251,11 +250,10 @@ function Getmateriasfromserver(callback){
     var status_aux;
     //Requisição HTTP, por dados provindos do url dado. Caso os dados recebidos sejam os esperados, entra no caso do SUCCESS
     return $.ajax({
-        url: '././materiasphp/materias.php',
+        url: '../materiasphp/materias.php',
         data: "",
         success: function(data)
         {
-            console.log("1=");
             console.log(data);
             status_aux = data;
             callback(status_aux);
