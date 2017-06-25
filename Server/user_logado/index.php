@@ -36,7 +36,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <!--            Bootstrap Calendário     -->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap-datepicker.min.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -180,13 +180,13 @@
             <div class="row" style="padding-top: 20px;">
                 <div class="col-sm-6 portfolio-item">
                     <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
-                        <img src="img/mapaFT.png" class="img-responsive" alt="FT">
+                        <img src="../img/mapaFT.png" class="img-responsive" alt="FT">
                     </a>
                    <h3 align="center">Mapa FT</h3>
                 </div>
                 <div class="col-sm-6 portfolio-item">
                     <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
-                        <img src="img/mapaSG.png" class="img-responsive" alt="Slice of cake">
+                        <img src="../img/mapaSG.png" class="img-responsive" alt="Slice of cake">
                     </a>
                     <h3 align="center">Mapa SG</h3>
                 </div>
