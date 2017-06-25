@@ -55,6 +55,6 @@ if($row == 1){
 	    	echo"Usuário já cadastrado!";
 
 	} else {
-				echo"Tente cadastrar novamente!";
+		echo"Tente cadastrar novamente!";
 }
 ?>
