@@ -4,8 +4,6 @@ require('../conexao/conexao.php');
 
 $matricula=$_SESSION['matricula'];
 
-echo"$matricula";
-
 $sql = "SELECT * FROM usuariodef WHERE matricula='$matricula'";
 
 $result = mysqli_query($conexao,$sql);
@@ -14,9 +12,6 @@ if (!$result) {
   die('Algo deu errado na conexão. Erro: ' . mysqli_error($conexao));
 }
 $row = mysqli_num_rows($result);
-
-echo"linhas="."$row";
-
 
 while ($ln = mysqli_fetch_array($result)){
 $nome      = $ln['nome'];
