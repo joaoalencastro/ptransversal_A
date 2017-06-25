@@ -36,22 +36,22 @@ if ($autenticado == 1) {
 
 		} else {
 		session_destroy();
-		echo"Cadastrado!";
 		$sql_delete = "TRUNCATE usuariodef";
 		$result_delete = mysqli_query($conexao,$sql_delete);
+		 header('Location: ../log_error/index.php?SUCESS=1'); //Cadastrado
 		}
 
 } else if ($autenticado == 2) {
 	session_destroy();
-	echo"Usuario ja cadastrado!";
 	$sql_delete = "TRUNCATE usuariodef";
 	$result_delete = mysqli_query($conexao,$sql_delete);
+	header('Location: ../log_error/index.php?ERROR=5'); // Já cadastrado
 
 } else if ($autenticado == 0) {
-  session_destroy();
-	echo"Dados inválidos!";
+  	session_destroy();
 	$sql_delete = "TRUNCATE usuariodef";
 	$result_delete = mysqli_query($conexao,$sql_delete);
+	header('Location: ../log_error/index.php?ERROR=4'); // Dados inválidos
 }
 
 ?>
