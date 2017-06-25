@@ -29,7 +29,7 @@
 			$_SESSION['email']= $email;
 			$_SESSION['senha']= $senha;
 			$_SESSION['id']= $id_usuario;
-			header('Location: ../index.php');
+			header('Location: ../history.html');
 
 	 	}
 	} else {
