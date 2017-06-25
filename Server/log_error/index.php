@@ -547,7 +547,7 @@
         }
         else if(arr[1] == "SUCESS=1")
         {
-            msgChange($('#div-login-msg'), $('#icon-login-msg'), $('#text-login-msg'), "success", "glyphicon-ok", "Confirme seu email, cadastro realizado!");
+            msgChange($('#div-login-msg'), $('#icon-login-msg'), $('#text-login-msg'), "success", "glyphicon-ok", "Cadastro realizado!");
         }
         else if(arr[1] == "ERROR=3")
         {
