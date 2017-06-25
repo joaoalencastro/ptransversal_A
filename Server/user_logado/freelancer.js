@@ -262,7 +262,8 @@ function clickSolic(id_str)
     dados_solicitacao[0] = arr[1]+ ", " +id_str[1];
     dados_solicitacao[1] = motivo;
     dados_solicitacao[2] = id_str[0];
-    alert("Passando em baixo do Ajax");
+    
+    /*alert("Passando em baixo do Ajax");
     $.ajax({
         type: "POST",
         url: "././solicitacao/post_solicitacao.php",
@@ -286,7 +287,8 @@ function clickSolic(id_str)
             }
             console.log(msg);
         }
-    });
+    });*/
+    window.location.replace("../solicitacao/post_solicitacao.php?"+dados_solicitacao[0]+"#"+dados_solicitacao[1]+"#"+dados_solicitacao[2]);
 }
 function init()
 {
