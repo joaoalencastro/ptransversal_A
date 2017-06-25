@@ -22,6 +22,7 @@ if($senha===$senha2){
 	} else {
 		session_start();
 		$_SESSION['matricula']=$matricula;
+		sleep(1);
 		header('Location: cadastrar_definitivo.php'); //cadastra usuário
 	}
 
