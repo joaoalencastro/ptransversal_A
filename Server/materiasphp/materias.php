@@ -1,7 +1,8 @@
 <?php
 require('../conexao/conexao.php');
-$result = mysqli_query($conexao, "select * from materias");
-while ($r = mysqli_fetch_assoc($result)) {
+$sql = "SELECT * FROM materias";
+$result = mysqli_query($conexao, $sql);
+while ($r = mysqli_fetch_array($result)) {
     $nome[] = $r['nome'];
     $vagas[] = $r['vagas'];
     $professor[] = $r['professor'];
