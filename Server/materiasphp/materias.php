@@ -1,4 +1,7 @@
 <?php
+$test = "jhoa";
+echo $test;
+/*
 require('../conexao/conexao.php');
 $result = mysqli_query($conexao, "select * from materias");
 while ($r = mysqli_fetch_assoc($result)) {
@@ -19,4 +22,5 @@ $json[4] = $dias;
 $json[5] = $local;
 $json[6] = $horario;
 echo json_encode($json);
+*/
 ?>
