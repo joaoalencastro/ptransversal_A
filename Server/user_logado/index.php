@@ -458,6 +458,7 @@
     <script type="text/javascript">
         init();
         pesquisa();
+        resgatevalor();
     </script>
 
 </body>
