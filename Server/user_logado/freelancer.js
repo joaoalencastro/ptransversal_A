@@ -266,7 +266,7 @@ function clickSolic(id_str)
     $.ajax({
         type: "POST",
         url: "../solicitacao/post_solicitacao.php",
-        data: "dados="+ dados_solicitacao
+        data: "dados="+ dados_solicitacao,
     });
 }
 function init()
