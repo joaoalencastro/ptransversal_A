@@ -528,7 +528,7 @@
     <script src="http://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"></script>
 
     <!-- Theme JavaScript -->
-    <script src="freelancer.js"></script>
+    <script src="../js/freelancer.js"></script>
 
     <!-- CALENDÁRIO     -->
     <script src="../js/bootstrap-datepicker.min.js"></script>
