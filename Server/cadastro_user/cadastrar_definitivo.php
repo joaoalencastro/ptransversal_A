@@ -25,9 +25,11 @@ $senha     = $ln['senha'];
 $autenticado = $ln['autenticado'];
 }
 if (!$autenticado) {
-	header('Location: ../log_error/index.php?ERROR=4'); // Dados inválidos, retorna para o index e aprenseta a mensagem
+	echo"Dados invalidos!";
+	
 } else if ($autenticado == 2){
-   	header('Location: ../log_error/index.php?ERROR=5');	//Usuário já cadastrado, retorna para o index e apresenta a mensagem
+   	
+	echo"Já cadastrado!";
 } else {
   	$sql = "INSERT INTO usuario(nome, email, matricula, data_nascimento, tipo, rg, senha)
   	VALUES('$nome', '$email', '$matricula', '$datanascimento', '$tipo', '$rg', '$senha')";
@@ -37,7 +39,8 @@ if (!$autenticado) {
   		die('Algo deu errado. Erro: ' . mysqli_error($conexao));
   	}
 	session_destroy();
-	header('Location: ../log_error/index.php?SUCESS=1'); //Usuário cadastrado com sucesso, retorna para o index e apresenta a mensagem
+	
+	echo"Cadastrado!";
 }	
 
 ?>
