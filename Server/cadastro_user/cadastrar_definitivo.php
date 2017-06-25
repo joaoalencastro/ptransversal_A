@@ -38,15 +38,13 @@ if($row == 1){
 	VALUES('$nome', '$email', '$matricula', '$datanascimento', '$tipo', '$rg', '$senha')";
 	$result1 = mysqli_query($conexao,$sql);
 
-		if (!$result1) {
-			die('Algo deu errado. Erro: ' . mysqli_error($conexao));
+	      if (!$result1) {
+		die('Algo deu errado. Erro: ' . mysqli_error($conexao));
 		} else {
 		session_destroy();
 		echo"Cadastrado!";
 		}	
-} else {
-    echo"Dados invalidos!";
-}
-}	
-
+	} else {
+	    	echo"Dados invalidos!";
+	}
 ?>
