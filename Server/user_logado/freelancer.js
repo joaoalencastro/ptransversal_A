@@ -288,7 +288,8 @@ function clickSolic(id_str)
             console.log(msg);
         }
     });*/
-    window.location.replace("../solicitacao/post_solicitacao.php?"+dados_solicitacao[0]+"#"+dados_solicitacao[1]+"#"+dados_solicitacao[2]);
+    alert('oi');
+    location.href = "../solicitacao/post_solicitacao.php?"+dados_solicitacao[0]+"#"+dados_solicitacao[1]+"#"+dados_solicitacao[2];
 }
 function init()
 {
