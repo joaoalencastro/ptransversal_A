@@ -259,7 +259,11 @@ function clickSolic(id_str)
         }
     }
     else
+    {
+        alert("Preencha um motivo");
         return;
+    }
+       
 
     var dados_solicitacao = [0,0,0];
     dados_solicitacao[0] = arr[1]+ ", " +id_str[1];
