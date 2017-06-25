@@ -24,13 +24,13 @@ $rg        = $ln['rg'];
 $senha     = $ln['senha'];
 $autenticado = $ln['autenticado'];
 }
-if (!$autenticado) {
+if ($autenticado == 0) {
 	echo"Dados invalidos!";
 	
 } else if ($autenticado == 2){
-   	
 	echo"Já cadastrado!";
-} else {
+	
+} else if ($autenticado == 1) {
   	$sql = "INSERT INTO usuario(nome, email, matricula, data_nascimento, tipo, rg, senha)
   	VALUES('$nome', '$email', '$matricula', '$datanascimento', '$tipo', '$rg', '$senha')";
   	$result = mysqli_query($conexao,$sql);
