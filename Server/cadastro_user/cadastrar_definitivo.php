@@ -5,6 +5,7 @@ session_start();
 require('../conexao/conexao.php');
 
 $matricula=$_SESSION['matricula'];
+echo"$matricula";
 
 $sql = "SELECT * FROM usuariodef WHERE matricula='$matricula'";	
 
@@ -14,6 +15,7 @@ if (!$result) {
 }
 
 $row = mysqli_num_rows($result);
+echo"$row";
 
 if($row == 1){ 
 	while ($ln = mysqli_fetch_array($result)){
