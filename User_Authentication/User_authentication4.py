@@ -15,7 +15,7 @@ logging.basicConfig(filename='arquivo_de_logs.log',level=logging.DEBUG)
 while True:
 
 	
-	tabela    = popular3.Banco()
+	tabela    = popular4.Banco()
 	if (tabela.PegaEmailDigitado() != tuple()):	
 		
 		nome     	= tabela.PegaEmailDigitado()[0][0]
