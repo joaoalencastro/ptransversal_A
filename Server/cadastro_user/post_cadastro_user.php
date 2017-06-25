@@ -21,7 +21,7 @@ if($senha===$senha2){
 		die('Algo deu errado. Erro: ' . mysqli_error($conexao));
 	} else {
 		session_start();
-		$_SESSION['matricula']=$_POST['matricula'];
+		$_SESSION['matricula']=$matricula;
 		header('Location: cadastrar_definitivo.php'); //cadastra usuário
 	}
 
