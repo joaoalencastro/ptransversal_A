@@ -4,8 +4,6 @@ require('../conexao/conexao.php');
 
 $matricula=$_SESSION['matricula'];
 
-echo"$matricula";
-
 $sql = "SELECT * FROM usuariodef WHERE matricula='$matricula'";
 
 $result = mysqli_query($conexao,$sql);
@@ -15,7 +13,6 @@ if (!$result) {
 }
 $row = mysqli_num_rows($result);
 
-echo"linhas="."$row";
 
 if($row == 1){
 
@@ -32,7 +29,7 @@ if($row == 1){
 
 	if ($autenticado == 1) {
 
-		$sql = "INSERT INTO usuario(nome, email, matricula, datanascimento, tipo, rg, senha)
+		$sql = "INSERT INTO usuario(nome, email, matricula, data_nascimento, tipo, rg, senha)
 		VALUES('$nome', '$email', '$matricula', '$datanascimento', '$tipo', '$rg', '$senha')";
 
 		$result1 = mysqli_query($conexao,$sql);
