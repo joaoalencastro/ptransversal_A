@@ -141,7 +141,6 @@ function Status(status)
     {
         let id_str = "q";
         id_str = id_str.concat(100+i);
-        console.log(id_str);
         if(status[i] == 0)
         {
             $('#'+ id_str).click(function(){$("#login-modal").modal("show");});
