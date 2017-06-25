@@ -28,8 +28,8 @@ if (!$autenticado) {
    	header('Location: ../log_error/index.php?ERROR=4'); // Dados inválidos, retorna para o index e aprenseta a mensagem
 	
 } else if ($autenticado == 2){
-    header('Location: ../log_error/index.php?ERROR=5');	//Usuário já cadastrado, retorna para o index e apresenta a mensagem
-
+   // header('Location: ../log_error/index.php?ERROR=5');	//Usuário já cadastrado, retorna para o index e apresenta a mensagem
+	echo"Bruno Bicha!. Você já está cadastrdo!";
 } else {
   	$sql = "INSERT INTO usuario(nome, email, matricula, data_nascimento, tipo, rg, senha)
   	VALUES('$nome', '$email', '$matricula', '$datanascimento', '$tipo', '$rg', '$senha')";
