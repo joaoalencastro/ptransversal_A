@@ -1,5 +1,5 @@
 <?php
-include('../conexao/conexao.php');
+require('../conexao/conexao.php');
 $result = mysqli_query($conexao, "select * from materias");
 while ($r = mysqli_fetch_assoc($result)) {
     $nome[] = $r['nome'];
