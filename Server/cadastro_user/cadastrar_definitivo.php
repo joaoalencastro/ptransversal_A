@@ -4,6 +4,8 @@ require('../conexao/conexao.php');
 
 $matricula=$_SESSION['matricula'];
 
+echo"$matricula";
+
 $sql = "SELECT * FROM usuariodef WHERE matricula='$matricula'";
 
 $result = mysqli_query($conexao,$sql);
@@ -13,45 +15,48 @@ if (!$result) {
 }
 $row = mysqli_num_rows($result);
 
+echo"linhas="."$row";
 
-if($row == 1){
 
-	while ($ln = mysqli_fetch_array($result)){
-	$nome      = $ln['nome'];
-	$email     = $ln['email'];
-	$matricula = $ln['matricula'];
-	$datanascimento = $ln['datanascimento'];
-	$tipo = 1;
-	$rg        = $ln['rg'];
-	$senha     = $ln['senha'];
-	$autenticado = $ln['autenticado'];
-	}
+while ($ln = mysqli_fetch_array($result)){
+$nome      = $ln['nome'];
+$email     = $ln['email'];
+$matricula = $ln['matricula'];
+$datanascimento = $ln['datanascimento'];
+$tipo = 1;
+$rg        = $ln['rg'];
+$senha     = $ln['senha'];
+$autenticado = $ln['autenticado'];
+}
 
-	if ($autenticado == 1) {
+if ($autenticado == 1) {
 
-		$sql = "INSERT INTO usuario(nome, email, matricula, data_nascimento, tipo, rg, senha)
-		VALUES('$nome', '$email', '$matricula', '$datanascimento', '$tipo', '$rg', '$senha')";
+	$sql = "INSERT INTO usuario(nome, email, matricula, datanascimento, tipo, rg, senha)
+	VALUES('$nome', '$email', '$matricula', '$datanascimento', '$tipo', '$rg', '$senha')";
 
-		$result1 = mysqli_query($conexao,$sql);
+	$result1 = mysqli_query($conexao,$sql);
 
-		  if (!$result1) {
-			die('Algo deu errado. Erro: ' . mysqli_error($conexao));
+	  if (!$result1) {
+		die('Algo deu errado. Erro: ' . mysqli_error($conexao));
 
-			} else {
-			session_destroy();
-			echo"Cadastrado!";
-
-			$sql_delete = "TRUNCATE usuariodef";
-			$result_delete = mysqli_query($conexao,$sql_delete);
-			}
 		} else {
-			 echo"Dados inválidos!";
+		session_destroy();
+		echo"Cadastrado!";
+		$sql_delete = "TRUNCATE usuariodef";
+		$result_delete = mysqli_query($conexao,$sql_delete);
 		}
 
-	}else if($row > 1) {
-	    	echo"Usuário já cadastrado!";
+} else if ($autenticado == 2) {
+	session_destroy();
+	echo"Usuario ja cadastrado!";
+	$sql_delete = "TRUNCATE usuariodef";
+	$result_delete = mysqli_query($conexao,$sql_delete);
 
-	} else {
-		echo"Tente cadastrar novamente!";
+} else if ($autenticado == 0) {
+  session_destroy();
+	echo"Dados inválidos!";
+	$sql_delete = "TRUNCATE usuariodef";
+	$result_delete = mysqli_query($conexao,$sql_delete);
 }
+
 ?>
