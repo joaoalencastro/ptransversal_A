@@ -12,17 +12,17 @@
     <title>Reservado | Sistema de Reserva</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Theme CSS -->
-    <link href="../css/reservado.css" rel="stylesheet">
+    <link href="css/reservado.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <!--            Bootstrap Calendário     -->
-    <link rel="stylesheet" type="text/css" href="../css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-datepicker.min.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -33,7 +33,7 @@
 
 </head>
 
-<bod  id="page-top" class="index" waid71fa0d88-5390-4b5b-a2f4-e45fa93d85e2="SA password protect entry checker">
+<body id="page-top" class="index" waid71fa0d88-5390-4b5b-a2f4-e45fa93d85e2="SA password protect entry checker">
     <a href="teste.html" title="teste"> Clique Aqui </a>
 <div id="skipnav"><a href="#maincontent">Skip to main content</a></div>
 
@@ -131,11 +131,12 @@
                     
                 </div>
                 <div class="col-lg-4" id="the-basics">
-                  <input class="typeahead" type="text" placeholder="Ex.: Algoritmo e Estrutura de Dados ou AT" id="barra-pesquisa">
+                  <form id="formulario">
+                        <input class="typeahead" type="text" placeholder="Ex.: Algoritmo e Estrutura de Dados ou AT-11" id="barra-pesquisa" style="width: 300px; padding: 5px; border: 1px solid #ccc;">
+                        <input  id="resultado"  type="submit" class="btn btn-default" value="Pesquisar" data-toggle="modal" data-target="#modalResultado" style="padding: 5px; margin-top: 10px;">
+                    </form>
                 </div>
-                <div class="col-lg-2">
-                    <a type="submit" class="btn btn-default">Pesquisar</a>
-                </div>
+        
             </div>
         </div>
     </section>
@@ -151,13 +152,13 @@
             <div class="row" style="padding-top: 20px;">
                 <div class="col-sm-6 portfolio-item">
                     <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
-                        <img src="../img/mapaFT.png" class="img-responsive" alt="FT">
+                        <img src="img/mapaFT.png" class="img-responsive" alt="FT">
                     </a>
                    <h3 align="center">Mapa FT</h3>
                 </div>
                 <div class="col-sm-6 portfolio-item">
                     <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
-                        <img src="../img/mapaSG.png" class="img-responsive" alt="Slice of cake">
+                        <img src="img/mapaSG.png" class="img-responsive" alt="Slice of cake">
                     </a>
                     <h3 align="center">Mapa SG</h3>
                 </div>
@@ -274,7 +275,7 @@
                 <div id="div-forms">
                 
                     <!-- Begin # Login Form -->
-                    <form action="../login/user_authentication.php" method="post" autocomplete="off" id="login-form">
+                    <form action="login/user_authentication.php" method="post" autocomplete="off" id="login-form">
                         <div class="modal-body">
                             <div id="div-login-msg">
                                 <div id="icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
@@ -296,39 +297,39 @@
                           <!--  <a href="recuperar/esqueceu_senha.html" title="recuperando senha de acesso"> Esqueceu a senha ? </a> -->
                                 <button id="login_lost_btn" type="button" class="btn btn-link">Esqueceu a senha?</button>
                                 <button id="login_register_btn" type="button" class="btn btn-link">Increva-se</button>
-				<a id="" href="../func/login.php" type="button" class="btn btn-link">Login Funcionário</a>
+                                <a id="" href="func/login.html" type="button" class="btn btn-link">Login Funcionário</a>
                             </div>
                         </div>
                     </form>
                     <!-- End # Login Form -->
                     
                     <!-- Begin | Lost Password Form -->
-                    <form id="lost-form" style="display:none;" action="../recuperar/esqueceu_senha.php" method="post" autocomplete="off" style="display:none;">
+                    <form id="lost-form" style="display:none;" action="recuperar/esqueceu_senha.php" method="post" autocomplete="off" style="display:none;">
                         <div class="modal-body">
                             <div id="div-lost-msg">
                                 <div id="icon-lost-msg" class="glyphicon glyphicon-chevron-right"></div>
                                 <span id="text-lost-msg">Digite o seu e-mail de cadastro</span>
                             </div>
-                            <input type="email" style='margin-top:20px;'  name="emailRecupera" autocomplete="off" class="form-control" placeholder="E-mail" required/>
-  
+                            <input type="email" style="margin-top:  20px;" name="emailRecupera" autocomplete="off" class="form-control" placeholder="E-mail" required/>
+                           <!-- <input id="lost_email" class="form-control" type="text" placeholder="E-Mail" required>-->
                         </div>
                         <div class="modal-footer">
                             <div>
                               <input type="hidden" name="acao" value="recuperar" />
-                              <input class="btn btn-primary btn-lg btn-block" type="submit" value="Recuperar Senha" />
+                              <input type="submit" class="btn btn-primary btn-lg btn-block" value="Recuperar Senha" />
                               <!--  <button type="submit" class="btn btn-primary btn-lg btn-block">Enviar</button>-->
                             </div>
                             <div>
                                 <button id="lost_login_btn" type="button" class="btn btn-link">Entrar</button>
                                 <button id="lost_register_btn" type="button" class="btn btn-link">Registrar</button>
-				<a id="" href="../func/login.php" type="button" class="btn btn-link">Login Funcionário</a>
+                                <a id="" href="func/login.html" type="button" class="btn btn-link">Login Funcionário</a>
                             </div>
                         </div>
                     </form>
                     <!-- End | Lost Password Form -->
                     
                     <!-- Begin | Register Form -->
-                    <form id="register-form" action="../cadastro_user/post_cadastro_user.php" method="post" autocomplete="off" style="display:none;">
+                    <form id="register-form" action="cadastro_user/post_cadastro_user.php" method="post" autocomplete="off" style="display:none;">
                         <div class="modal-body">
                             <div id="div-register-msg">
                                 <div id="icon-register-msg" class="glyphicon glyphicon-chevron-right"></div>
@@ -348,8 +349,8 @@
                             </div>
                             <div>
                                 <button id="register_login_btn" type="button" class="btn btn-link">Entrar</button>
-                            	<button id="register_lost_btn" type="button" class="btn btn-link">Esqueceu a senha?</button>
-				<a id="" href="../func/login.php" type="button" class="btn btn-link">Login Funcionário</a>
+                                <button id="register_lost_btn" type="button" class="btn btn-link">Esqueceu a senha?</button>
+                                <a id="" href="func/login.html" type="button" class="btn btn-link">Login Funcionário</a>
                             </div>
                         </div>
                     </form>
@@ -362,10 +363,9 @@
     </div>
     <!-- END # MODAL LOGIN -->
 
-
     <!-- Modal de Informação -->
     <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
+    <div class="modal-dialog" id="tamanho">
     
       <!-- Modal content-->
               <div class="modal-content">
@@ -374,11 +374,69 @@
                   <h4 class="modal-title">Informação</h4>
                 </div>
                 <div class="modal-body">
-                  <ul>
-                      <li>Local com capacidade de 50 pessoas</li>
-                      <li>Contém 1 projetor</li>
-                      <li>Contém 2 ar-condicionados</li>
-                  </ul>
+                 <h5 class="salai" style="text-align: center; font-size: 20px;">Salas: </h5>
+                  <table style="width:100%; padding: 15px 0px;">
+                      <tr>
+                        <th>AT's</th>
+                        <th>BT's</th> 
+                        <th>Lab-Redes</th>
+                        <th>Auditório e SG-11</th>
+                      </tr>
+                      <tr>
+                        <td>Capacidade: 50 pessoas;</td>
+                        <td>Capacidade: 45 pessoas;</td>
+                        <td>Capacidade: 40 pessoas, mas possui computadores;</td>
+                        <td>Capacidade: 50(SG-11) e 80(Auditório) pessoas;</td>
+                      </tr>
+                      <tr>
+                        <td>Projetor: 1;</td>
+                        <td>Projetor: 1;</td>
+                        <td>Projetor: 2;</td>
+                        <td>Projetor: 1;</td>
+                      </tr>
+                      <tr>
+                        <td>Ar-condicionado: 2.</td>
+                        <td>Ar-condicionado: 2.</td>
+                        <td>Ar-condicionado: 2.</td>
+                        <td>Ar-condicionado: 1(SG-11).</td>
+                      </tr>
+                    </table>
+                </div>
+                <div>
+                    <p style="padding: 5px">Imagem das salas na FT</p>
+                    <img src="img/mapaFT.png" style="width: 20%; padding: 5px; " title="Salas AT's" >
+                    <img src="img/mapaFT.png" style="width: 20%; padding: 5px;" title="Salas BT's">
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+
+
+          <!-- Modal de Resultado da pesquisa-->
+            <div class="modal fade" id="modalResultado" role="dialog">
+            <div class="modal-dialog  modal-sm">
+    
+      <!-- Modal conteudo-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Resultado</h4>
+                </div>
+                <div class="modal-body">
+                <!-- Estrutura previamente definida e será alterada somente aqui -->
+                <h4 class="principal" style="text-align: center;"></h4>
+                <h5 class="codigo" style="text-align: center;"></h5>
+                <ul>
+                    <li class="prof"></li>
+                    <li class="dias"></li>
+                    <li class="horario"></li>
+                    <li class="vagas"></li>
+                    <li class="local"></li>
+                </ul>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -406,7 +464,7 @@
                             <h2>SG</h2>
                             <hr class="star-primary">
                             <div id="over" >
-                            <img src="../img/mapaSG.png" style="width: 900px; height: 650px" alt="" usemap="#sgmap"  border="0">
+                            <img src="img/mapaSG.png" style="width: 900px; height: 650px" alt="" usemap="#sgmap"  border="0">
                             <map name="sgmap">
                                 <area target="_blank" alt="Auditório SG-11" onclick="fecharmodal()" 
                                  coords="487,283,553,327" shape="rect">   
@@ -435,7 +493,7 @@
                             <h2>Faculdade de Tecnologia</h2>
                             <hr class="star-primary">
                             <div id="over" >
-                            <img src="../img/mapaFT.png" style="width: 900px; height: 650px" alt="" usemap="#mymap"  border="0" >
+                            <img src="img/mapaFT.png" style="width: 900px; height: 650px" alt="" usemap="#mymap"  border="0" >
                             <map name="mymap">
                                 <area shape="rect" coords="535,510,579,537" onclick="fecharmodal()">
                                 <area shape="rect" coords="491,510,534,539" onclick="fecharmodal()">
@@ -454,28 +512,27 @@
         </div>
     </div>
     <!-- jQuery -->
-    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/jquery/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
     <!-- Plugin JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
     <!-- Contact Form JavaScript -->
-    <script src="../js/jqBootstrapValidation.js"></script>
-    <script src="../js/contact_me.js"></script>
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
     
     <!-- Pesquisa -->
     <script src="http://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"></script>
 
     <!-- Theme JavaScript -->
-    <script src="../js/freelancer.js"></script>
+    <script src="js/freelancer.js"></script>
 
     <!-- CALENDÁRIO     -->
-    <script src="../js/bootstrap-datepicker.min.js"></script>
-    <script src="../js/bootstrap-datepicker.pt-BR.min.js"></script>
-
+    <script src="js/bootstrap-datepicker.min.js"></script>
+    <script src="js/bootstrap-datepicker.pt-BR.min.js"></script>
 
     <script type="text/javascript">
         init();
@@ -494,7 +551,7 @@
         }
         else if(arr[1] == "ERROR=3")
         {
-            msgChange($('#div-login-msg'), $('#icon-login-msg'), $('#text-login-msg'), "error", "glyphicon-remove", "Nome de Usuário ou senha inválido!");
+            msgChange($('#div-login-msg'), $('#icon-login-msg'), $('#text-login-msg'), "error", "glyphicon-ok", "Nome de Usuário ou senha inválido!");
         }
         else if(arr[1] == "ERROR=4")
         {
@@ -514,7 +571,7 @@
         else if(arr[1] == "SUCESS=2")
         {
             modalAnimate($formLogin, $formLost);
-            msgChange($('#div-lost-msg'), $('#icon-lost-msg'), $('#text-lost-msg'), "success", "glyphicon-ok", "Verifique seu e-mail para obter nova senha!");
+            msgChange($('#div-lost-msg'), $('#icon-lost-msg'), $('#text-lost-msg'), "success", "glyphicon-remove", "Verifique seu e-mail para obter nova senha!");
         }
         else if(arr[1] == "SUCESS=3")
         {
