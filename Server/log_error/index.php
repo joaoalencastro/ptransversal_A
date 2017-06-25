@@ -12,17 +12,17 @@
     <title>Reservado | Sistema de Reserva</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Theme CSS -->
-    <link href="css/reservado.css" rel="stylesheet">
+    <link href="../css/reservado.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <!--            Bootstrap Calendário     -->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap-datepicker.min.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -275,7 +275,7 @@
                 <div id="div-forms">
                 
                     <!-- Begin # Login Form -->
-                    <form action="login/user_authentication.php" method="post" autocomplete="off" id="login-form">
+                    <form action="../login/user_authentication.php" method="post" autocomplete="off" id="login-form">
                         <div class="modal-body">
                             <div id="div-login-msg">
                                 <div id="icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
@@ -297,14 +297,14 @@
                           <!--  <a href="recuperar/esqueceu_senha.html" title="recuperando senha de acesso"> Esqueceu a senha ? </a> -->
                                 <button id="login_lost_btn" type="button" class="btn btn-link">Esqueceu a senha?</button>
                                 <button id="login_register_btn" type="button" class="btn btn-link">Increva-se</button>
-                                <a id="" href="func/login.html" type="button" class="btn btn-link">Login Funcionário</a>
+                                <a id="" href="../func/login.html" type="button" class="btn btn-link">Login Funcionário</a>
                             </div>
                         </div>
                     </form>
                     <!-- End # Login Form -->
                     
                     <!-- Begin | Lost Password Form -->
-                    <form id="lost-form" style="display:none;" action="recuperar/esqueceu_senha.php" method="post" autocomplete="off" style="display:none;">
+                    <form id="lost-form" style="display:none;" action="../recuperar/esqueceu_senha.php" method="post" autocomplete="off" style="display:none;">
                         <div class="modal-body">
                             <div id="div-lost-msg">
                                 <div id="icon-lost-msg" class="glyphicon glyphicon-chevron-right"></div>
@@ -322,14 +322,14 @@
                             <div>
                                 <button id="lost_login_btn" type="button" class="btn btn-link">Entrar</button>
                                 <button id="lost_register_btn" type="button" class="btn btn-link">Registrar</button>
-                                <a id="" href="func/login.html" type="button" class="btn btn-link">Login Funcionário</a>
+                                <a id="" href="../func/login.html" type="button" class="btn btn-link">Login Funcionário</a>
                             </div>
                         </div>
                     </form>
                     <!-- End | Lost Password Form -->
                     
                     <!-- Begin | Register Form -->
-                    <form id="register-form" action="cadastro_user/post_cadastro_user.php" method="post" autocomplete="off" style="display:none;">
+                    <form id="register-form" action="../cadastro_user/post_cadastro_user.php" method="post" autocomplete="off" style="display:none;">
                         <div class="modal-body">
                             <div id="div-register-msg">
                                 <div id="icon-register-msg" class="glyphicon glyphicon-chevron-right"></div>
@@ -350,7 +350,7 @@
                             <div>
                                 <button id="register_login_btn" type="button" class="btn btn-link">Entrar</button>
                                 <button id="register_lost_btn" type="button" class="btn btn-link">Esqueceu a senha?</button>
-                                <a id="" href="func/login.html" type="button" class="btn btn-link">Login Funcionário</a>
+                                <a id="" href="../func/login.html" type="button" class="btn btn-link">Login Funcionário</a>
                             </div>
                         </div>
                     </form>
@@ -404,8 +404,8 @@
                 </div>
                 <div>
                     <p style="padding: 5px">Imagem das salas na FT</p>
-                    <img src="img/mapaFT.png" style="width: 20%; padding: 5px; " title="Salas AT's" >
-                    <img src="img/mapaFT.png" style="width: 20%; padding: 5px;" title="Salas BT's">
+                    <img src="../img/mapaFT.png" style="width: 20%; padding: 5px; " title="Salas AT's" >
+                    <img src="../img/mapaFT.png" style="width: 20%; padding: 5px;" title="Salas BT's">
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -464,7 +464,7 @@
                             <h2>SG</h2>
                             <hr class="star-primary">
                             <div id="over" >
-                            <img src="img/mapaSG.png" style="width: 900px; height: 650px" alt="" usemap="#sgmap"  border="0">
+                            <img src="../img/mapaSG.png" style="width: 900px; height: 650px" alt="" usemap="#sgmap"  border="0">
                             <map name="sgmap">
                                 <area target="_blank" alt="Auditório SG-11" onclick="fecharmodal()" 
                                  coords="487,283,553,327" shape="rect">   
@@ -493,7 +493,7 @@
                             <h2>Faculdade de Tecnologia</h2>
                             <hr class="star-primary">
                             <div id="over" >
-                            <img src="img/mapaFT.png" style="width: 900px; height: 650px" alt="" usemap="#mymap"  border="0" >
+                            <img src="../img/mapaFT.png" style="width: 900px; height: 650px" alt="" usemap="#mymap"  border="0" >
                             <map name="mymap">
                                 <area shape="rect" coords="535,510,579,537" onclick="fecharmodal()">
                                 <area shape="rect" coords="491,510,534,539" onclick="fecharmodal()">
@@ -512,27 +512,27 @@
         </div>
     </div>
     <!-- jQuery -->
-    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/jquery/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
 
     <!-- Plugin JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
     <!-- Contact Form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
+    <script src="../js/jqBootstrapValidation.js"></script>
+    <script src="../js/contact_me.js"></script>
     
     <!-- Pesquisa -->
     <script src="http://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"></script>
 
     <!-- Theme JavaScript -->
-    <script src="js/freelancer.js"></script>
+    <script src="freelancer.js"></script>
 
     <!-- CALENDÁRIO     -->
-    <script src="js/bootstrap-datepicker.min.js"></script>
-    <script src="js/bootstrap-datepicker.pt-BR.min.js"></script>
+    <script src="../js/bootstrap-datepicker.min.js"></script>
+    <script src="../js/bootstrap-datepicker.pt-BR.min.js"></script>
 
     <script type="text/javascript">
         init();
