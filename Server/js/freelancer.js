@@ -253,7 +253,6 @@ function Getmateriasfromserver(callback){
     return $.ajax({
         url: '././materiasphp/materias.php',
         data: "",
-        dataType: 'json',
         success: function(data)
         {
             console.log(data);
