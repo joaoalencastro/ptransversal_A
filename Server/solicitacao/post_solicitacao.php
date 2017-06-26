@@ -50,7 +50,7 @@ if ($row_sala == 1) {
       die('Algo deu errado na conexão para upar a solicitação. Erro: ' . mysqli_error($conexao));
 
     }
-  header("location:javascript:alert(\"Solicitacao enviada com sucesso!\");location.href=\"../user_logado/index.php\";");
+   echo "<script type=\"text/javascript\">alert('bla bla bla fiuza gay');</script>"; 
 
 } else {
   echo"ID não encontrado na tabela fluxo_de_dados_sala";
