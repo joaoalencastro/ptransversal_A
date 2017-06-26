@@ -414,30 +414,35 @@ function fecharmodal() {
 
     $('#portfolioModal2').modal('hide');
     window.location.href = "http://homol.redes.unb.br/ptr012017-B-grupoA/index.html#about";
-}
-function resgatevalor() {
+}function resgatevalor() {
     var form = document.getElementById('formulario');
 
     form.addEventListener('submit', function(e) {
-        // alerta o valor do campo
-        var codigo = "Código- ";
-        var prof = "Professor: ";
-        var dias = "Dias: ";
-        var horario = "Horario: ";
-        var vagas = "Vagas: ";
-        var local = "Local: ";
-        var campo = document.getElementById('barra-pesquisa').value;
-        $('#modalResultado').modal('show');
-        $('#modalResultado').find('.principal').text(campo + " :");
-        $('#modalResultado').find('.codigo').text(codigo);
-        $('#modalResultado').find('.prof').text(prof);
-        $('#modalResultado').find('.dias').text(dias);
-        $('#modalResultado').find('.horario').text(horario);
-        $('#modalResultado').find('.vagas').text(vagas);
-        $('#modalResultado').find('.local').text(local);
+        Getmateriasfromserver(function(a)    {
 
-    
-    e.preventDefault();
-    
+            var geral = a;
+
+
+            // alerta o valor do campo
+            var codigo = geral[3];
+            var prof = geral[2];
+            var dias = geral[4];
+            var horario = geral[6];
+            var vagas = geral[1];
+            var local = geral[5];
+            var campo = document.getElementById('barra-pesquisa').value;
+            $('#modalResultado').modal('show');
+            $('#modalResultado').find('.principal').text(campo + " :");
+            $('#modalResultado').find('.codigo').text(codigo);
+            $('#modalResultado').find('.prof').text(prof);
+            $('#modalResultado').find('.dias').text(dias);
+            $('#modalResultado').find('.horario').text(horario);
+            $('#modalResultado').find('.vagas').text(vagas);
+            $('#modalResultado').find('.local').text(local);
+
+
+            e.preventDefault();
+
+        });
     });
 }
