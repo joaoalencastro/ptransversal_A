@@ -347,7 +347,8 @@ function Getmateriasfromserver(callback){
             status_aux = data;
             callback(status_aux);
 	    var test = JSON.stringify(data);
-		console.log(test[0]);
+		console.log(data);
+		console.log(test[1]);
         },
         error: function (jqXHR, exception) {
             var msg = '';
