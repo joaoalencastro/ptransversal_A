@@ -1,5 +1,5 @@
 <?php
- /* require('../../conexao/conexao.php');
+  require('../conexao/conexao.php');
   session_start();
   if(!isset($_SESSION['email']) || !isset($_SESSION['senha'])){
     header("Location: login.html");
@@ -9,7 +9,7 @@
     $email =  $_SESSION['email'];
     echo"$nome";
     echo"$email";
-  }*/
+  }
 ?>
 
 <!DOCTYPE html>
