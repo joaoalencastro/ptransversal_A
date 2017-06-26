@@ -2,10 +2,9 @@
 require('../conexao/conexao.php');
 $sql = "SELECT * FROM materias";
 $result = mysqli_query($conexao, $sql);
-$r = mysqli_fetch_array($result);
-    $nome = $r['nome'];
-    echo $nome;
-    /*
+while($r = mysqli_fetch_array($result))
+{
+    $nome[] = $r['nome']; 
     $vagas[] = $r['vagas'];
     $professor[] = $r['professor'];
     $codigo[] = $r['codigo'];
@@ -22,4 +21,4 @@ $json[4] = $dias;
 $json[5] = $local;
 $json[6] = $horario;
 echo json_encode($json);
-*/?>    
+?>    
