@@ -452,6 +452,9 @@
 
     <!-- Theme JavaScript -->
     <script src="freelancer.js"></script>
+    
+    <!-- Pesquisa -->
+    <script src="http://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"></script>
 
     <!-- CALENDÁRIO     -->
     <script src="../js/bootstrap-datepicker.min.js"></script>
