@@ -297,17 +297,31 @@ function clickSolic(id_str)
 }
 function init()
 {
- /*              CRIANDO TABELAS           */
+
+        /*              CRIANDO TABELAS           */
            //REQUISITA CHAR COM OS NOMES DAS SALAS
-        var nomeSala = ["AT-11","BT-16/15","AT-13","BT-25/15","AT-15","AT-19","Lab-Redes","LCCC","SG-11","Auditório"];
-           //
+        var nomeSala = ["BT-16/15","BT-25/15","BT-34/15","BT-52/15","Lab-Redes","SG-11","Auditório"];
+        //
+        var newSala = [1,1];
+        for(var i = 0; i < nomeSala.length;i++)
+        {
+            var temp = nomeSala[i];
+            var sala = temp.split("/");
+            if(sala[1] != undefined)
+                newSala[i] = sala[0] + '_' + sala[1];
+            else
+                newSala[i] = nomeSala[i];
+        }
         var cont = 100;
         for(var i = 0; i < nomeSala.length;i++)
         {
 
+            let caminho = "#" + newSala[i] + "Q";
             $("#tabela-agenda").append(" <tr style='background: green;'> ");
-            $("#tabela-agenda").append(" <td class='coluna-agenda'>" + nomeSala[i] + " <a href='#myModal' data-toggle='modal' data-target='#myModal'><i  class='fa fa-info-circle'></i></a>  </td> ");
-  
+            $("#tabela-agenda").append(" <td class='coluna-agenda'>" + nomeSala[i] + "<a href='#"+ newSala[i]+"M' data-toggle='modal' > <i  class='fa fa-info-circle'></i></a></td> ");
+            
+
+
             for(var j = 8; j < 22;j++)
             {
                 var id_str = nomeSala[i] + ":" + j;
@@ -369,6 +383,76 @@ function init()
         }).on('changeDate', function (e) {
             setdate();
         });
+        for(var i = 0; i < nomeSala.length;i++)
+        {
+                var html =  '<div class="portfolio-modal modal" id="'+newSala[i]+'M" tabindex="-1" role="dialog" aria-hidden="true">'+
+                                '<div class="modal-content">'+
+                                    '<div class="close-modal" data-dismiss="modal">'+
+                                        '<div class="lr">'+
+                                            '<div class="rl">'+
+                                            '</div>'+
+                                        '</div>'+
+                                    '</div>'+
+                                    '<div class="container">'+
+                                        '<h4>'+nomeSala[i]+'</h4>'+
+                                        '<div class="row">'+
+                                            '<div class="col-md-12">'+
+                                                '<table class="table table-striped">'+
+                                                    '<thead>'+
+                                                      '<tr>'+
+                                                        '<th></th>'+
+                                                        '<th>Segunda-Feira</th>'+
+                                                        '<th>Terça-Feira</th>'+
+                                                        '<th>Quarta-Feira</th>'+
+                                                        '<th>Quinta-Feira</th>'+
+                                                        '<th>Sexta-Feira</th>'+
+                                                        '<th>Sábado</th>'+
+                                                        '<th>Domingo</th>'+
+                                                      '</tr>'+
+                                                    '</thead>'+
+                                                    '<tbody>'+
+                                                      '<tr >'+
+                                                        '<td>08:00</th>'+
+                                                      '</tr>'+
+                                                      '<tr>'+
+                                                        '<td>10:00</th>'+
+                                                      '</tr>'+
+                                                      '<tr>'+
+                                                        '<td>12:00</th>'+
+                                                      '</tr>'+
+                                                      '<tr>'+
+                                                        '<td>14:00</th>'+
+                                                      '</tr>'+
+                                                      '<tr>'+
+                                                        '<td>16:00</th>'+
+                                                      '</tr>'+
+                                                      '<tr>'+
+                                                        '<td>18:00</th>'+
+                                                      '</tr>'+
+                                                      '<tr>'+
+                                                        '<td>20:00</th>'+
+                                                      '</tr>'+
+                                                    '</tbody>'+
+                                                  '</table>'+
+                                            '</div>'+
+                                        '</div>'+
+                                        '<div class="row">'+
+                                            '<div class="col-md-6">'+
+                                                '<img style="padding-top:70px;" src="../img/room/'+newSala[i]+'.jpeg" class="img-responsive" alt'+newSala[i]+'>'+
+                                            '</div  class="col-md-6">'+
+                                            '<div style="position:relative;top:57px">'+
+                                                '<h4 style="text-align: left; padding-left: 30px">Número de Cadeiras:</h4>  '+
+                                                '<h4 style="text-align: left; padding-left: 30px">Projetor:</h4>  '+
+                                                '<h4 style="text-align: left; padding-left: 30px">Ar-condicionado:</h4>  '+
+                                                '<h4 style="text-align: left; padding-left: 30px">Projetor:</h4>  '+
+                                                '<h4 style="text-align: left; padding-left: 30px">Laboratório:</h4>  '+
+                                            '</div>'+
+                                        '</div>'+
+                                    '</div>'+
+                                '</div>'+
+                            '</div>';
+                    $("#generic").append(html);
+       }
 
 }
 function initMap() {
