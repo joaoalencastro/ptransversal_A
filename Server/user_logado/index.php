@@ -152,7 +152,7 @@
             </div>
             <div class="row">
                     <div class="col-lg-12 text-center">
-                        <h3 align="center">Faça a sua pesquisa por disciplina ou  sala.</h3>
+                        <h3 align="center">Faça a sua pesquisa por disciplina.</h3>
                     </div>
             </div>
             <div class="row" id="space">
@@ -161,8 +161,8 @@
                 </div>
                 <div class="col-lg-4" id="the-basics">
                   <form id="formulario">
-                        <input class="typeahead" type="text" placeholder="Ex.: Algoritmo e Estrutura de Dados ou AT-11" id="barra-pesquisa" style="width: 400px">
-                        <input  id="resultado"  type="submit" class="btn btn-default" value="Pesquisar" data-toggle="modal" data-target="#modalResultado">
+                        <input class="typeahead" type="text" placeholder="Ex.: Algoritmo e Estrutura de Dados" id="barra-pesquisa" style="width: 300px; padding: 5px; border: 1px solid #ccc;">
+                        <input  id="resultado"  type="submit" class="btn btn-default" value="Pesquisar" data-toggle="modal" data-target="#modalResultado" style="padding: 5px; margin-top: 10px;">
                     </form>
                   
             </div>
