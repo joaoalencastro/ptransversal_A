@@ -466,70 +466,126 @@ function initMap() {
           map: map
     });
 }
+function Getmateriasfromserver(callback){
+    var status_aux;
+    //Requisição HTTP, por dados provindos do url dado. Caso os dados recebidos sejam os esperados, entra no caso do SUCCESS
+    return $.ajax({
+        url: 'materiasphp/materias.php',
+	dateType: 'json',
+        success: function(data)
+        {
+           status_aux = JSON.parse(data);
+            callback(status_aux);
+        },
+        error: function (jqXHR, exception) {
+            var msg = '';
+            if (jqXHR.status === 0) {
+                msg = 'Not connect.\n Verify Network.';
+            } else if (jqXHR.status == 404) {
+                msg = 'Requested page not found. [404]';
+            } else if (jqXHR.status == 500) {
+                msg = 'Internal Server Error [500].';
+            } else if (exception === 'parsererror') {
+                msg = 'Requested JSON parse failed.';
+            } else if (exception === 'timeout') {
+                msg = 'Time out error.';
+            } else if (exception === 'abort') {
+                msg = 'Ajax request aborted.';
+            } else {
+                msg = 'Uncaught Error.\n' + jqXHR.responseText;
+            }
+            //alert(msg+"Alert FDP")
+	}
+    });
 
-function pesquisa() {
-     var substringMatcher = function(strs) {
-                      return function findMatches(q, cb) {
-                        var matches, substringRegex;
 
-                        // an array that will be populated with substring matches
-                        matches = [];
 
-                        // regex used to determine if a string contains the substring `q`
-                        substrRegex = new RegExp(q, 'i');
 
-                        // iterate through the pool of strings and for any string that
-                        // contains the substring `q`, add it to the `matches` array
-                        $.each(strs, function(i, str) {
-                          if (substrRegex.test(str)) {
-                            matches.push(str);
-                          }
-                        });
+}function pesquisa() {
 
-                        cb(matches);
-                      };
-                    };
+    var substringMatcher = function (strs) {
+        return function findMatches(q, cb) {
+            var matches, substringRegex;
 
-                    var states = ['Algoritmos e Estrutura de Dados', 'Fundamentos de Redes', 'Circuitos Elétricos', 'Sinais e Sistemas de Tempo Contínuo'
-                    ];
+            // an array that will be populated with substring matches
+            matches = [];
 
-                    $('#the-basics .typeahead').typeahead({
-                      hint: true,
-                      highlight: true,
-                      minLength: 1
-                    },
-                    {
-                      name: 'states',
-                      source: substringMatcher(states)
-                    });
+            // regex used to determine if a string contains the substring `q`
+            substrRegex = new RegExp(q, 'i');
+
+            // iterate through the pool of strings and for any string that
+            // contains the substring `q`, add it to the `matches` array
+            $.each(strs, function (i, str) {
+                if (substrRegex.test(str)) {
+                    matches.push(str);
+                }
+            });
+
+            cb(matches);
+        };
+    };
+    Getmateriasfromserver(function(a)    {
+        var geral = a;
+        var materias = geral[0];
+    	console.log(materias);
+
+        $('#the-basics .typeahead').typeahead({
+                hint: true,
+                highlight: true,
+                minLength: 1
+            },
+            {
+                name: 'materias',
+                source: substringMatcher(materias)
+            });
+    });
 }
 function fecharmodal() {
+
     $('#portfolioModal2').modal('hide');
-        window.location.href = "http://homol.redes.unb.br/ptr012017-B-grupoA/user_logado/index.php?user";
+    window.location.href = "http://homol.redes.unb.br/ptr012017-B-grupoA/index.html#about";
+}
+function fecharmodal() {
+
+    $('#portfolioModal2').modal('hide');
+    window.location.href = "http://homol.redes.unb.br/ptr012017-B-grupoA/index.html#about";
 }
 function resgatevalor() {
+    Getmateriasfromserver(function(a)    {
     var form = document.getElementById('formulario');
 
     form.addEventListener('submit', function(e) {
-        // alerta o valor do campo
-        var codigo = "Código- ";
-        var prof = "Professor: ";
-        var dias = "Dias: ";
-        var horario = "Horario: ";
-        var vagas = "Vagas: ";
-        var local = "Local: ";
-        var campo = document.getElementById('barra-pesquisa').value;
-        $('#modalResultado').modal('show');
-        $('#modalResultado').find('.principal').text(campo + " :");
-        $('#modalResultado').find('.codigo').text(codigo);
-        $('#modalResultado').find('.prof').text(prof);
-        $('#modalResultado').find('.dias').text(dias);
-        $('#modalResultado').find('.horario').text(horario);
-        $('#modalResultado').find('.vagas').text(vagas);
-        $('#modalResultado').find('.local').text(local);
+    var i_aux;
 
-    
-    e.preventDefault();
-    
+            var campo = document.getElementById('barra-pesquisa').value;
+            var geral = a;
+            var nome_aux = geral[0];
+            for(var i=0;i<nome_aux.length;i++){
+                if(campo === nome_aux[i])
+                {
+                    i_aux = i;
+                }
+            }
+            // alerta o valor do campo
+            var codigo = geral[3];
+            var prof = geral[2];
+            var dias = geral[4];
+            var horario = geral[6];
+            var vagas = geral[1];
+            var local = geral[5];
+
+            $('#modalResultado').modal('show');
+            $('#modalResultado').find('.principal').text(campo + " :");
+            $('#modalResultado').find('.codigo').text(codigo[i_aux]);
+            $('#modalResultado').find('.prof').text(prof[i_aux]);
+            $('#modalResultado').find('.dias').text(dias[i_aux]);
+            $('#modalResultado').find('.horario').text(horario[i_aux]);
+            $('#modalResultado').find('.vagas').text(vagas[i_aux]);
+            $('#modalResultado').find('.local').text(local[i_aux]);
+
+
+            e.preventDefault();
+
+        });
     });
 }
