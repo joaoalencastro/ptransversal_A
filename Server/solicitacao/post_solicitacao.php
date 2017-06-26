@@ -17,7 +17,7 @@ $email = $_SESSION['email'];
 $senha = $_SESSION['senha'];
 $id_usuario = $_SESSION['id'];
 
-$sql_achar_sala = "SELECT * FROM salas2 WHERE nome=$nomesala";
+$sql_achar_sala = "SELECT * FROM salas2 WHERE nome='$nomesala'";
 
 $result = mysqli_query($conexao,$sql_achar_sala);
 if (!$result) {
