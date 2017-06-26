@@ -367,7 +367,7 @@ function Getmateriasfromserver(callback){
             } else {
                 msg = 'Uncaught Error.\n' + jqXHR.responseText;
             }
-            alert(msg+"Alert FDP")
+            //alert(msg+"Alert FDP")
 	}
     });
 
