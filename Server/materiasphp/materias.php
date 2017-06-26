@@ -6,5 +6,5 @@ $result = mysqli_query($conexao, $sql);
 while($r = mysqli_fetch_array($result)){
     $nome[] = $r['nome']; 
 }
-echo echo json_encode(utf8ize($nome));
+echo json_encode(utf8ize($nome));
 ?>    
