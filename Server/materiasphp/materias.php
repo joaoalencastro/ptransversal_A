@@ -26,5 +26,5 @@ echo json_encode($json);
 $r = mysqli_fetch_array($result);
     $test[0]= $r['nome']; 
     $test[1] = $r['vagas'];
-    echo json_encode($test);   
+    echo function_exists ('json_encode');   
 ?>    
