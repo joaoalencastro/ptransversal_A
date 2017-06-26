@@ -344,7 +344,6 @@ function Getmateriasfromserver(callback){
 	dateType: 'json',
         success: function(data)
         {
-            console.log(data);
             status_aux = data;
             callback(status_aux);
         },
@@ -397,8 +396,6 @@ function Getmateriasfromserver(callback){
     };
     Getmateriasfromserver(function(a)    {
         var geral = a;
-            console.log("2=");
-            console.log(geral);
         var materias = geral[0];
     
 
