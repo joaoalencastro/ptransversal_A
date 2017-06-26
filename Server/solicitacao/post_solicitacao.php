@@ -50,7 +50,16 @@ if ($row_sala == 1) {
       die('Algo deu errado na conexão para upar a solicitação. Erro: ' . mysqli_error($conexao));
 
     }
-    echo"<script type="text/javascript">alert('Solicitação enviada à secretaria com sucesso!');</script>";
+    echo '<!DOCTYPE html>';
+    echo '<html xmlns="http://www.w3.org/1999/xhtml">';
+   echo '<head>';
+   echo '<meta http-equiv="refresh" content="10; url=../user_logado/index.php">';
+   echo '</head>';
+   echo '<body>';
+   echo '<p>Seu email foi enviado com sucesso.</p>';
+   echo '<a href="../user_logado/index.php">Prosseguir</a>';
+   echo '</body>';
+   echo '</html>';
     header('Location: ../user_logado/index.php');
 
 } else {
