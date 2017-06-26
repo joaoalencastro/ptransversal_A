@@ -344,11 +344,8 @@ function Getmateriasfromserver(callback){
 	dateType: 'json',
         success: function(data)
         {
-            status_aux = data;
+           status_aux = JSON.parse(data);
             callback(status_aux);
-	    var test = JSON.parse(data);
-		console.log(data);
-		console.log(test[1]);
         },
         error: function (jqXHR, exception) {
             var msg = '';
