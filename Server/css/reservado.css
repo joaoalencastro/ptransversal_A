@@ -406,7 +406,6 @@ fieldset[disabled] .btn-success.active {
   color: #18BC9C;
   background-color: white;
 }
-.btn-social {
   display: inline-block;
   height: 50px;
   width: 50px;
@@ -555,6 +554,7 @@ div#maincontent {
   width: 100px;
   border-radius: 5%;
   box-shadow: 2px 2px 4px gray;
+  margin-bottom: 100px;
 }
 
 #space
