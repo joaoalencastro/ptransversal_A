@@ -251,7 +251,6 @@ function Getmateriasfromserver(callback){
     //Requisição HTTP, por dados provindos do url dado. Caso os dados recebidos sejam os esperados, entra no caso do SUCCESS
     return $.ajax({
         url: 'materiasphp/materias.php',
-	dataType: 'json',
         success: function(data)
         {
             console.log(data);
