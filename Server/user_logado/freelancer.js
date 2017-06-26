@@ -293,7 +293,7 @@ function clickSolic(id_str)
             console.log(msg);
         }
     });*/
-    location.href = "../solicitacao/post_solicitacao.php?"+dados_solicitacao[0]+"#"+dados_solicitacao[1]+"#"+dados_solicitacao[2];
+    location.href = "../solicitacao/post_solicitacao.php?horario_da_reserva="+dados_solicitacao[0]+"&motivo="+dados_solicitacao[1]+"&nomesala="+dados_solicitacao[2];
 }
 function init()
 {
