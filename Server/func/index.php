@@ -7,8 +7,7 @@
   } else {
     $nome  =  $_SESSION['nome'];
     $email =  $_SESSION['email'];
-    echo"$nome";
-    echo"$email";
+    $senha =  $_SESSION['senha'];
   }
 ?>
 
