@@ -17,7 +17,7 @@ $email = $_SESSION['email'];
 $senha = $_SESSION['senha'];
 $id_usuario = $_SESSION['id'];
 
-$sql_achar_sala = "SELECT * FROM salas WHERE nome=$nomesala";
+$sql_achar_sala = "SELECT * FROM salas2 WHERE nome=$nomesala";
 
 $result = mysqli_query($conexao,$sql_achar_sala);
 if (!$result) {
@@ -28,7 +28,7 @@ while ($ln = mysqli_fetch_array($result)){
   $id_sala = $ln['id'];
 }
 
-$sql_inserir_sol =  "INSERT INTO solicitacao(solicitante, horario_da_reserva, horario_solicitacao, id_usuario, motivo, nomesala)
+$sql_inserir_sol =  "INSERT INTO solicitacao(nomesala, solicitante, horario_da_reserva, horario_solicitacao, id_usuario, motivo)
 VALUES('$solicitante', '$horario_da_reserva', '$horario_solicitacao', '$id_usuario', '$motivo', '$nomesala')";
 
 $upload_solicitacao = mysqli_query($conexao,$sql_inserir_sol);
@@ -37,12 +37,12 @@ if (!$upload_solicitacao) {
   die('Algo deu errado na conexão para upar a solicitação. Erro: ' . mysqli_error($conexao));
 }
 
-$sql_status = "UPDATE fluxo_de_dados_sala set status='pendente' where id=$id_sala";
+$sql_status = "UPDATE fluxo_sala SET status_sala='pendente' where id='$id_sala'";
 
 $upload_solicitacao = mysqli_query($conexao,$sql_status);
 if (!$upload_solicitacao) {
   die('Algo deu errado na conexão para mudar o status. Erro: ' . mysqli_error($conexao));
 } else {
-  echo"Solicitação Enviada à secertária com sucesso!";
+  echo"Solicitação Enviada à secretária com sucesso!";
 }
 ?>
