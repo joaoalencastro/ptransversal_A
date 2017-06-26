@@ -511,6 +511,9 @@
             </div>
         </div>
     </div>
+    <div id="generic">
+	    
+    </div>
     <!-- jQuery -->
     <script src="../vendor/jquery/jquery.min.js"></script>
 
