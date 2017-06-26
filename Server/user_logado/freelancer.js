@@ -545,11 +545,7 @@ function fecharmodal() {
     $('#portfolioModal2').modal('hide');
     window.location.href = "http://homol.redes.unb.br/ptr012017-B-grupoA/index.html#about";
 }
-function fecharmodal() {
 
-    $('#portfolioModal2').modal('hide');
-    window.location.href = "http://homol.redes.unb.br/ptr012017-B-grupoA/index.html#about";
-}
 function resgatevalor() {
     Getmateriasfromserver(function(a)    {
     var form = document.getElementById('formulario');
