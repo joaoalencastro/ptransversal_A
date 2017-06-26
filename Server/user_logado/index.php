@@ -388,7 +388,7 @@
                         <div class="modal-body">
                             <h2 style="padding-bottom: 40px;">SG</h2>
                             <div id="over" >
-                            <img src="img/mapaSG.png" style="width: 900px; height: 650px" alt="" usemap="#sgmap"  border="0">
+                            <img src="../img/mapaSG.png" style="width: 900px; height: 650px" alt="" usemap="#sgmap"  border="0">
                             <map name="sgmap">
                                 <area target="_blank" alt="Auditório SG-11" onclick="fecharmodal()" 
                                  coords="487,283,553,327" shape="rect">   
@@ -416,7 +416,7 @@
                         <div class="modal-body">
                             <h2 style="padding-bottom: 40px;">Faculdade de Tecnologia</h2>
                             <div id="over" >
-                            <img src="img/mapaFT.png" style="width: 900px; height: 650px" alt="" usemap="#mymap"  border="0" >
+                            <img src="../img/mapaFT.png" style="width: 900px; height: 650px" alt="" usemap="#mymap"  border="0" >
                             <map name="mymap">
                                 <area shape="rect" coords="535,510,579,537" onclick="fecharmodal()">
                                 <area shape="rect" coords="491,510,534,539" onclick="fecharmodal()">
