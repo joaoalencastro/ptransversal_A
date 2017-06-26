@@ -323,7 +323,6 @@ function init()
                             '</div>';
                     $("#generic").append(html);
        }
-}
       
 }
 function initMap() {
