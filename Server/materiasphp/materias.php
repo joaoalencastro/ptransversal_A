@@ -1,4 +1,5 @@
-<?php/*
+<?php
+/*
 require('../conexao/conexao.php');
 $sql = "SELECT * FROM materias";
 $result = mysqli_query($conexao, $sql);
