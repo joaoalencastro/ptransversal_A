@@ -50,7 +50,9 @@ if ($row_sala == 1) {
       die('Algo deu errado na conexão para upar a solicitação. Erro: ' . mysqli_error($conexao));
 
     }
-    echo"Solicitação Enviada à secretária com sucesso!";
+    echo"Solicitação Enviada à secretária com sucesso! Aguarde para ser redirecionado!";
+    sleep(4);
+	 header('Location: ../index.php');
 
 } else {
   echo"ID não encontrado na tabela fluxo_de_dados_sala";
