@@ -1,13 +1,3 @@
-<html>
-<head>
- <script type="text/javascript">
-     var url_atual = window.location.href
-     var arr = url_atual.split("?");
-     var array = arr[1].split("#");
- </script>
-</head>
-<body>
-
 <?php
 
 require('../conexao/conexao.php');
@@ -15,10 +5,11 @@ session_start();
 
 date_default_timezone_get("America/Sao_Paulo");
 
-$dados_solicitacao= "<script>document.write(array)</script>";
-$horario_da_reserva=dados_solicitacao[0];
-$motivo=dados_solicitacao[1];
-$nomesala=dados_solicitacao[2];
+/*$dados_solicitacao= "<script>document.write(array)</script>";*/
+$horario_da_reserva= $_GET['horario_da_reserva'];
+$motivo=$_GET['motivo'];
+$nomesala=$_GET['$nomesala'];
+     
 $horario_solicitacao_eua = date('Y-m-d H:i:s');
 $horario_solicitacao = date('d/m/Y H:i:s',  strtotime($horario_solicitacao_eua));
 $solicitante = $_SESSION['nome'];
