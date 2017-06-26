@@ -576,12 +576,12 @@ function resgatevalor() {
 
             $('#modalResultado').modal('show');
             $('#modalResultado').find('.principal').text(campo + " :");
-            $('#modalResultado').find('.codigo').text(codigo[i_aux]);
-            $('#modalResultado').find('.prof').text(prof[i_aux]);
-            $('#modalResultado').find('.dias').text(dias[i_aux]);
-            $('#modalResultado').find('.horario').text(horario[i_aux]);
-            $('#modalResultado').find('.vagas').text(vagas[i_aux]);
-            $('#modalResultado').find('.local').text(local[i_aux]);
+            $('#modalResultado').find('.codigo').text("Código- " + codigo[i_aux]);
+            $('#modalResultado').find('.prof').text("Professor: " + prof[i_aux]);
+            $('#modalResultado').find('.dias').text("Dias: " + dias[i_aux]);
+            $('#modalResultado').find('.horario').text("Horário: " + horario[i_aux]);
+            $('#modalResultado').find('.vagas').text("Vagas: " + vagas[i_aux]);
+            $('#modalResultado').find('.local').text("Local: " + local[i_aux]);
 
 
             e.preventDefault();
