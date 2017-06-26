@@ -414,15 +414,28 @@ function fecharmodal() {
 
     $('#portfolioModal2').modal('hide');
     window.location.href = "http://homol.redes.unb.br/ptr012017-B-grupoA/index.html#about";
-}function resgatevalor() {
+}
+function fecharmodal() {
+
+    $('#portfolioModal2').modal('hide');
+    window.location.href = "http://homol.redes.unb.br/ptr012017-B-grupoA/index.html#about";
+}
+function resgatevalor() {
+    Getmateriasfromserver(function(a)    {
     var form = document.getElementById('formulario');
 
     form.addEventListener('submit', function(e) {
-        Getmateriasfromserver(function(a)    {
+    var i_aux;
 
+            var campo = document.getElementById('barra-pesquisa').value;
             var geral = a;
-
-
+            var nome_aux = geral[0];
+            for(var i=0;i<nome_aux.length;i++){
+                if(campo === nome_aux[i])
+                {
+                    i_aux = i;
+                }
+            }
             // alerta o valor do campo
             var codigo = geral[3];
             var prof = geral[2];
@@ -430,15 +443,15 @@ function fecharmodal() {
             var horario = geral[6];
             var vagas = geral[1];
             var local = geral[5];
-            var campo = document.getElementById('barra-pesquisa').value;
+
             $('#modalResultado').modal('show');
             $('#modalResultado').find('.principal').text(campo + " :");
-            $('#modalResultado').find('.codigo').text(codigo);
-            $('#modalResultado').find('.prof').text(prof);
-            $('#modalResultado').find('.dias').text(dias);
-            $('#modalResultado').find('.horario').text(horario);
-            $('#modalResultado').find('.vagas').text(vagas);
-            $('#modalResultado').find('.local').text(local);
+            $('#modalResultado').find('.codigo').text(codigo[i_aux]);
+            $('#modalResultado').find('.prof').text(prof[i_aux]);
+            $('#modalResultado').find('.dias').text(dias[i_aux]);
+            $('#modalResultado').find('.horario').text(horario[i_aux]);
+            $('#modalResultado').find('.vagas').text(vagas[i_aux]);
+            $('#modalResultado').find('.local').text(local[i_aux]);
 
 
             e.preventDefault();
