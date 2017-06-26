@@ -55,6 +55,7 @@ if ($row_sala == 1) {
 
 } else {
   echo"ID não encontrado na tabela fluxo_de_dados_sala";
+  echo"$id_sala";
 }
 
 ?>
