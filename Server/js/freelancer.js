@@ -126,11 +126,12 @@ function requestStatus(stateReq)
     else  //REQUISIÇÃO DE DADOS É FEITA AQUI   OBS: FAZER DE UM JEITO QUE EU POSSA  REQUISITAR SEMPRE, SEM TER QUE FAZER CONEXÃO COM O SERVIDOR
     {
         var status = [0,2,1,2,2,2,2,0,0,2,2,1,0,2,1,2,1,2,2,1,2,1,2,2,0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
-                2,2,2,2,0,0,2,0,2,0,2,2,2,2,2,2,2,0,2,0,2,2,2,2,0,0,0,0,2,2,2,1,2,2,2,2,0,0,1,0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
-                2,2,2,2,2,2,0,2,0,2,2,0,2,2,2,1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,1,1,2,2,2,2,0,1,1]; 
+                2,2,2,2,0,0,2,0,2,0,2,2,2,2,2,2,2,0,2,0,2,2,2,2,0,0,0,0,2,2,2,1,2,2,2,2,0,0,1,0,2,2,2,2,2,2,2,2,0,1,2,1];
+
         var status1  = [0,2,1,2,2,2,2,0,0,2,2,1,0,2,1,2,1,2,2,1,2,1,2,2,0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
-                2,2,2,2,0,0,2,0,2,0,2,2,2,2,2,2,2,0,2,0,2,0,2,2,0,0,0,0,2,2,2,1,0,2,2,2,0,0,1,0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
-                2,2,2,2,2,2,0,0,0,2,2,0,2,2,2,1,1,2,2,0,2,2,2,2,2,2,2,2,2,2,1,1,0,2,2,2,1,0,0]; 
+                2,2,2,2,0,0,2,0,2,0,2,2,2,2,2,2,2,0,2,0,2,0,2,2,0,0,0,0,2,2,2,1,0,2,2,2,0,0,1,0,2,2,2,2,2,2,2,2,2,2,2,1];
+        var statusChar = [status,status1,status,status,status,status1,status,status,status,status,status,status,status,status,status1];
+        return statusChar;
         var statusChar = [status,status1,status,status,status,status1,status,status,status,status,status,status,status,status,status1];
         return statusChar;
     }
@@ -197,17 +198,35 @@ function setDate(x)
 }
 function init()
 {  
-        /*              CRIANDO TABELAS           */
+                /*              CRIANDO TABELAS           */
            //REQUISITA CHAR COM OS NOMES DAS SALAS
-        var nomeSala = ["AT-11","BT-16/15","AT-13","BT-25/15","AT-15","AT-19","Lab-Redes","LCCC","SG-11","Auditório"];
-           //
-        var cont = 100;
+        var nomeSala = ["BT-16/15","BT-25/15","BT-34/15","BT-52/15","Lab-Redes","SG-11","Auditório"];
+        //
+
+
+
+
+
+        var newSala = [1,1];
         for(var i = 0; i < nomeSala.length;i++)
         {
+            var temp = nomeSala[i];
+            var sala = temp.split("/");
+            if(sala[1] != undefined)
+                newSala[i] = sala[0] + '_' + sala[1];
+            else
+                newSala[i] = nomeSala[i];
+        }
+        var cont = 100;
 
+        for(var i = 0; i < nomeSala.length;i++)
+        {
+            let caminho = "#" + newSala[i] + "Q";
             $("#tabela-agenda").append(" <tr style='background: green;'> ");
-            $("#tabela-agenda").append(" <td class='coluna-agenda'>" + nomeSala[i] + " <a href='#myModal' data-toggle='modal' data-target='#myModal' <i class='fa fa-info-circle'></i></a>  </td> ");
-  
+            $("#tabela-agenda").append(" <td class='coluna-agenda'>" + nomeSala[i] + "<a href='#"+ newSala[i]+"M' data-toggle='modal' > <i  class='fa fa-info-circle'></i></a></td> ");
+            
+
+
             for(var j = 0; j < 14;j++)
             {
                 cont++;
@@ -218,6 +237,7 @@ function init()
 
             }
             $("#tabela-agenda").append(" </tr> ");
+
         }    
         setDate('inicio'); 
 
@@ -233,6 +253,77 @@ function init()
         setDate();
         });
 
+        for(var i = 0; i < nomeSala.length;i++)
+        {
+                var html =  '<div class="portfolio-modal modal" id="'+newSala[i]+'M" tabindex="-1" role="dialog" aria-hidden="true">'+
+                                '<div class="modal-content">'+
+                                    '<div class="close-modal" data-dismiss="modal">'+
+                                        '<div class="lr">'+
+                                            '<div class="rl">'+
+                                            '</div>'+
+                                        '</div>'+
+                                    '</div>'+
+                                    '<div class="container">'+
+                                        '<h4>'+nomeSala[i]+'</h4>'+
+                                        '<div class="row">'+
+                                            '<div class="col-md-12">'+
+                                                '<table class="table table-striped">'+
+                                                    '<thead>'+
+                                                      '<tr>'+
+                                                        '<th></th>'+
+                                                        '<th>Segunda-Feira</th>'+
+                                                        '<th>Terça-Feira</th>'+
+                                                        '<th>Quarta-Feira</th>'+
+                                                        '<th>Quinta-Feira</th>'+
+                                                        '<th>Sexta-Feira</th>'+
+                                                        '<th>Sábado</th>'+
+                                                        '<th>Domingo</th>'+
+                                                      '</tr>'+
+                                                    '</thead>'+
+                                                    '<tbody>'+
+                                                      '<tr >'+
+                                                        '<td>08:00</th>'+
+                                                      '</tr>'+
+                                                      '<tr>'+
+                                                        '<td>10:00</th>'+
+                                                      '</tr>'+
+                                                      '<tr>'+
+                                                        '<td>12:00</th>'+
+                                                      '</tr>'+
+                                                      '<tr>'+
+                                                        '<td>14:00</th>'+
+                                                      '</tr>'+
+                                                      '<tr>'+
+                                                        '<td>16:00</th>'+
+                                                      '</tr>'+
+                                                      '<tr>'+
+                                                        '<td>18:00</th>'+
+                                                      '</tr>'+
+                                                      '<tr>'+
+                                                        '<td>20:00</th>'+
+                                                      '</tr>'+
+                                                    '</tbody>'+
+                                                  '</table>'+
+                                            '</div>'+
+                                        '</div>'+
+                                        '<div class="row">'+
+                                            '<div class="col-md-6">'+
+                                                '<img style="padding-top:70px;" src="img/room/'+newSala[i]+'.jpeg" class="img-responsive" alt'+newSala[i]+'>'+
+                                            '</div  class="col-md-6">'+
+                                            '<div style="position:relative;top:57px">'+
+                                                '<h4 style="text-align: left; padding-left: 30px">Número de Cadeiras:</h4>  '+
+                                                '<h4 style="text-align: left; padding-left: 30px">Projetor:</h4>  '+
+                                                '<h4 style="text-align: left; padding-left: 30px">Ar-condicionado:</h4>  '+
+                                                '<h4 style="text-align: left; padding-left: 30px">Projetor:</h4>  '+
+                                                '<h4 style="text-align: left; padding-left: 30px">Laboratório:</h4>  '+
+                                            '</div>'+
+                                        '</div>'+
+                                    '</div>'+
+                                '</div>'+
+                            '</div>';
+                    $("#generic").append(html);
+       }
+}
       
 }
 function initMap() {
@@ -327,43 +418,4 @@ function fecharmodal() {
 
     $('#portfolioModal2').modal('hide');
     window.location.href = "http://homol.redes.unb.br/ptr012017-B-grupoA/index.html#about";
-}
-function resgatevalor() {
-    Getmateriasfromserver(function(a)    {
-    var form = document.getElementById('formulario');
-
-    form.addEventListener('submit', function(e) {
-    var i_aux;
-
-            var campo = document.getElementById('barra-pesquisa').value;
-            var geral = a;
-            var nome_aux = geral[0];
-            for(var i=0;i<nome_aux.length;i++){
-                if(campo === nome_aux[i])
-                {
-                    i_aux = i;
-                }
-            }
-            // alerta o valor do campo
-            var codigo = geral[3];
-            var prof = geral[2];
-            var dias = geral[4];
-            var horario = geral[6];
-            var vagas = geral[1];
-            var local = geral[5];
-
-            $('#modalResultado').modal('show');
-            $('#modalResultado').find('.principal').text(campo + " :");
-            $('#modalResultado').find('.codigo').text(codigo[i_aux]);
-            $('#modalResultado').find('.prof').text(prof[i_aux]);
-            $('#modalResultado').find('.dias').text(dias[i_aux]);
-            $('#modalResultado').find('.horario').text(horario[i_aux]);
-            $('#modalResultado').find('.vagas').text(vagas[i_aux]);
-            $('#modalResultado').find('.local').text(local[i_aux]);
-
-
-            e.preventDefault();
-
-        });
-    });
 }
