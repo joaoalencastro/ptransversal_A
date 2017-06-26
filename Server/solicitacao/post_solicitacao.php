@@ -8,7 +8,7 @@ date_default_timezone_get("America/Sao_Paulo");
 /*$dados_solicitacao= "<script>document.write(array)</script>";*/
 $horario_da_reserva= $_GET['horario_da_reserva'];
 $motivo=$_GET['motivo'];
-$nomesala=$_GET['$nomesala'];
+$nomesala=$_GET['nomesala'];
 echo $nomesala;
 echo $motivo;
      
