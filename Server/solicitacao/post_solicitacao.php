@@ -29,7 +29,7 @@ while ($ln = mysqli_fetch_array($result)){
 }
 
 $sql_inserir_sol =  "INSERT INTO solicitacao(nomesala, solicitante, horario_da_reserva, horario_solicitacao, id_usuario, motivo)
-VALUES('$solicitante', '$horario_da_reserva', '$horario_solicitacao', '$id_usuario', '$motivo', '$nomesala')";
+VALUES('$nomesala', '$solicitante', '$horario_da_reserva', '$horario_solicitacao', '$id_usuario', '$motivo')";
 
 $upload_solicitacao = mysqli_query($conexao,$sql_inserir_sol);
 
