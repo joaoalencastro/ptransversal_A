@@ -24,11 +24,7 @@ $json[6] = $horario;
 echo json_encode($json);
 */
 $r = mysqli_fetch_array($result);
-    $nome= $r['nome']; 
-    $vagas = $r['vagas'];
-    $professor = $r['professor'];
-    $codigo = $r['codigo'];
-    $dias = $r['dias'];
-    $local = $r['locais'];
-    $horario = $r['horario'];
+    $test[0]= $r['nome']; 
+    $test[1] = $r['vagas'];
+    echo $test;   
 ?>    
