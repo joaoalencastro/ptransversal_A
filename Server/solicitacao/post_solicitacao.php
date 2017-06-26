@@ -50,7 +50,7 @@ if ($row_sala == 1) {
       die('Algo deu errado na conexão para upar a solicitação. Erro: ' . mysqli_error($conexao));
 
     }
-    echo"<script>alert('Solicitação enviada à secretaria com sucesso!');</script>";
+    echo"<script type="text/javascript">alert('Solicitação enviada à secretaria com sucesso!');</script>";
     header('Location: ../user_logado/index.php');
 
 } else {
