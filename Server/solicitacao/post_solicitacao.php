@@ -20,29 +20,41 @@ $id_usuario = $_SESSION['id'];
 $sql_achar_sala = "SELECT * FROM salas2 WHERE nome='$nomesala'";
 
 $result = mysqli_query($conexao,$sql_achar_sala);
+
 if (!$result) {
   die('Algo deu errado na conexão para encontrar sala. Erro: ' . mysqli_error($conexao));
 }
 
-while ($ln = mysqli_fetch_array($result)){
-  $id_sala = $ln['id'];
+while ($busca = mysqli_fetch_array($result)){
+    $id_sala = $busca['id'];
 }
 
-$sql_inserir_sol =  "INSERT INTO solicitacao(nomesala, solicitante, horario_da_reserva, horario_solicitacao, id_usuario, motivo)
-VALUES('$nomesala', '$solicitante', '$horario_da_reserva', '$horario_solicitacao', '$id_usuario', '$motivo')";
+$sql_achar_sala_fluxo = "SELECT * FROM fluxo_sala WHERE id='$id_sala'";
 
-$upload_solicitacao = mysqli_query($conexao,$sql_inserir_sol);
+$result_achar_sala = mysqli_query($conexao,$sql_achar_sala_fluxo);
 
-if (!$upload_solicitacao) {
-  die('Algo deu errado na conexão para upar a solicitação. Erro: ' . mysqli_error($conexao));
-}
+$row_sala = mysqli_num_rows($result_achar_sala);
 
-$sql_status = "UPDATE fluxo_sala SET status_sala='pendente' where id='$id_sala'";
+if ($row_sala == 1) {
+  
+    $sql_status = "UPDATE fluxo_sala SET status_sala='pendente' WHERE id='$id_sala'";
+    $upload_status_fluxo = mysqli_query($conexao,$sql_status);
+    if (!$upload_status_fluxo) {
+      die('Algo deu errado na conexão para alterar o status. Erro: ' . mysqli_error($conexao));
+    }
 
-$upload_solicitacao = mysqli_query($conexao,$sql_status);
-if (!$upload_solicitacao) {
-  die('Algo deu errado na conexão para mudar o status. Erro: ' . mysqli_error($conexao));
+    $sql_inserir_sol =  "INSERT INTO solicitacao(nomesala, solicitante, horario_da_reserva, horario_solicitacao, id_usuario, motivo)
+    VALUES('$nomesala', '$solicitante', '$horario_da_reserva', '$horario_solicitacao', '$id_usuario', '$motivo')";
+
+    $upload_solicitacao = mysqli_query($conexao,$sql_inserir_sol);
+    if (!$upload_solicitacao) {
+      die('Algo deu errado na conexão para upar a solicitação. Erro: ' . mysqli_error($conexao));
+
+    }
+    echo"Solicitação enviada à secretária com sucesso!";
+
 } else {
-  echo"Solicitação Enviada à secretária com sucesso!";
+  echo"ID não encontrado na tabela fluxo_de_dados_sala";
 }
+
 ?>
