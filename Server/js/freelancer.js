@@ -346,7 +346,7 @@ function Getmateriasfromserver(callback){
         {
             status_aux = data;
             callback(status_aux);
-	    var test = JSON.stringify(data);
+	    var test = JSON.parse(data);
 		console.log(data);
 		console.log(test[1]);
         },
