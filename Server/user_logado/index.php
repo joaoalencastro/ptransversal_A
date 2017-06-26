@@ -162,7 +162,7 @@
                 <div class="col-lg-4" id="the-basics">
                   <form id="formulario">
                         <input class="typeahead" type="text" placeholder="Ex.: Algoritmo e Estrutura de Dados" id="barra-pesquisa" style="width: 300px; padding: 5px; border: 1px solid #ccc;">
-                        <input  id="resultado"  type="submit" class="btn btn-default" value="Pesquisar" data-toggle="modal" data-target="#modalResultado" style="padding: 5px;">
+                        <input  id="resultado"  type="submit" class="btn btn-default" value="Pesquisar" data-toggle="modal" data-target="#modalResultado" style="padding: 5px; margin-top: 10px;">
                     </form>
                   
             </div>
