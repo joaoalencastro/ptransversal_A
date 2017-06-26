@@ -5,13 +5,10 @@ session_start();
 
 date_default_timezone_get("America/Sao_Paulo");
 
-/*$dados_solicitacao= "<script>document.write(array)</script>";*/
 $horario_da_reserva= $_GET['horario_da_reserva'];
 $motivo=$_GET['motivo'];
 $nomesala=$_GET['nomesala'];
-echo $nomesala;
-echo $motivo;
-     
+   
 $horario_solicitacao_eua = date('Y-m-d H:i:s');
 $horario_solicitacao = date('d/m/Y H:i:s',  strtotime($horario_solicitacao_eua));
 $solicitante = $_SESSION['nome'];
@@ -20,7 +17,7 @@ $senha = $_SESSION['senha'];
 $id_usuario = $_SESSION['id'];
 
 $sql_achar_sala = "SELECT * FROM salas2 WHERE nome='$nomesala'";
-echo $sql_achar_sala;
+
 $result = mysqli_query($conexao,$sql_achar_sala);
 
 if (!$result) {
@@ -30,13 +27,13 @@ if (!$result) {
 while ($busca = mysqli_fetch_array($result)){
     $id_sala = $busca['id'];
 }
-echo $id_sala;
+
 $sql_achar_sala_fluxo = "SELECT * FROM fluxo_sala WHERE id='$id_sala'";
-echo $sql_achar_sala_fluxo;
+
 $result_achar_sala = mysqli_query($conexao,$sql_achar_sala_fluxo);
 
 $row_sala = mysqli_num_rows($result_achar_sala);
-echo $row_sala;
+
 if ($row_sala == 1) {
 
     $sql_status = "UPDATE fluxo_sala SET status_sala='pendente' WHERE id='$id_sala'";
