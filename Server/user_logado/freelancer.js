@@ -133,7 +133,7 @@ function date(x)     //RETORNA O DIA ATUAL + 1
 function Status(status) //ATUALIZA O STATUS
 {
     //REQUISITA CHAR COM OS NOMES DAS SALAS
-    var nomeSala = ["AT-11","BT-16/15","AT-13","BT-25/15","AT-15","AT-19","Lab-Redes","LCCC","SG-11","Auditório"];
+    var nomeSala = ["BT-16/15","BT-25/15","BT-34/15","BT-52/15","Lab-Redes","SG-11","Auditório"];
     //
     var url_atual = window.location.href
     var arr = url_atual.split("?");
