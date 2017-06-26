@@ -6,6 +6,7 @@
         var url_atual = window.location.href
         var arr = url_atual.split("?");
         var array = arr[1].split("#");
+        console.log(array);
         return array;
     } 
  </script>
