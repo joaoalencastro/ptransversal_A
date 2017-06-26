@@ -385,7 +385,7 @@ function Getmateriasfromserver(callback){
 
             // iterate through the pool of strings and for any string that
             // contains the substring `q`, add it to the `matches` array
-            $.each(strs, function (i, str) {
+            $.each(JSON.parse(strs), function (i, str) {
                 if (substrRegex.test(str)) {
                     matches.push(str);
                 }
@@ -397,7 +397,7 @@ function Getmateriasfromserver(callback){
     Getmateriasfromserver(function(a)    {
         var geral = a;
         var materias = geral[0];
-    
+    	console.log(materias);
 
         $('#the-basics .typeahead').typeahead({
                 hint: true,
