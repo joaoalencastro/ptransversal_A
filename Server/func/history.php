@@ -77,11 +77,12 @@
                             <a href="history.php"><i class="fa fa-bar-chart-o fa-fw"></i> Histórico</a>
                         </li>
                         <li>
-                            <a href="configuration.php"><i class="glyphicon glyphicon-cog"></i> Configurações</a>
+                            <a href="estatistic.php"><i class="glyphicon glyphicon-stats"></i> Estatísticas</a>
                         </li>
                         <li>
-                            <a href="estatistic.php"><i class="glyphicon glyphicon-cog"></i> Estatísticas</a>
+                            <a href="configuration.php"><i class="glyphicon glyphicon-cog"></i> Configurações</a>
                         </li>
+
                     </ul>
                     <!-- /#side-menu -->
                 </div>
