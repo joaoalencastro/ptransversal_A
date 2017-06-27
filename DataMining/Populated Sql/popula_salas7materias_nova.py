@@ -41,7 +41,7 @@ horarios = '''10:00-11:50,
 8:00-9:50,
 8:00-9:50,
 14:00-15:50,
-18:00-19:50,
+v18:00-19:50,
 16:00-17:50,
 16:00-17:50,
 8:00-9:50,
@@ -550,14 +550,14 @@ terça/quinta,
 horarios = horarios.split(',')
 Locais = Locais.split(',')
 dias = dias.split(',')
-con  = MySQLdb.connect(host='localhost', user='root', passwd='45166batata',db='sistemareservadodb')
+con  = MySQLdb.connect(host='localhost', user='root', passwd='grupoass123',db='sistemareservadodb')
 c = con.cursor()
 bufferH = ''
 bufferd = ''
 dados = []
 
 
-salas = ['BT-16/15', 'BT-25/15', 'BT-34/15', 'BT-52/15','Lab-Redes', 'SG-11', 'Auditorio']
+salas = ['BT-16/15', 'BT-25/15', 'BT-34/15', 'BT-52/15','LabRedes', 'SG11', 'Auditorio']
 
 print (horarios)
 print (dias)
@@ -573,14 +573,13 @@ for i in salas:
 	bufferH =''
 	bufferd =''
 
-horarios [ ['8:00-9:50','10:00-11:50','12:00-13:50','14-16  
-','16-18','18-20',]
+
 a = 1
 b = 0
 print ()
 for i in salas:
 	print (i)
-	c.execute("INSERT INTO fluxo VALUES('%d','%s', '%s', '%s', '%s')"%(a, 'indisponivel', i, dados[b].decode('UTF-8'), dados[b+1].decode('UTF-8') ))
+	c.execute("INSERT INTO fluxo_sala VALUES('%d','%s', '%s', '%s', '%s')"%(a, 'indisponivel', i, dados[b].decode('UTF-8'), dados[b+1].decode('UTF-8') ))
 	con.commit()
 	a+=1
 	b+=2

@@ -550,7 +550,7 @@ terça/quinta,
 horarios = horarios.split(',')
 Locais = Locais.split(',')
 dias = dias.split(',')
-con  = MySQLdb.connect(host='localhost', user='root', passwd='12123',db='curioso_rapá')
+con  = MySQLdb.connect(host='localhost', user='root', passwd='grupoass123',db='sistemareservadodb')
 c = con.cursor()
 bufferH = ''
 bufferd = ''
@@ -575,7 +575,7 @@ for i in salas:
 a = 1
 b = 0
 for i in salas:
-	c.execute("INSERT INTO fluxo VALUES('%d','%s', '%s', '%s', '%s')"%(a, 'indisponivel', i, dados[b].decode('UTF-8'), dados[b+1].decode('UTF-8') ))
+	c.execute("INSERT INTO fluxo_sala VALUES('%d','%s', '%s', '%s', '%s')"%(a, 'indisponivel', i, dados[b].decode('UTF-8'), dados[b+1].decode('UTF-8') ))
 	con.commit()
 	a+=1
 	b+=2

@@ -187,7 +187,7 @@ BT-43/15,
 
 
 Locais = Locais.split(',')
-con  = MySQLdb.connect(host='localhost', user='root', passwd='fiuza_gay',db='**')
+con  = MySQLdb.connect(host='localhost', user='root', passwd='grupoass123',db='sistemareservadodb')
 c = con.cursor()
 
 
