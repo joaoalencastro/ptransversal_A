@@ -39,6 +39,6 @@ if($senha===$senha2){
 	}
 
 } else {
-	header('Location: ../log_error/index.php?ERROR=1'); //Senhas incompátiveis, retorna index
+	header('Location: ../index.html?ERROR=1'); //Senhas incompátiveis, retorna index
 }
 ?>
