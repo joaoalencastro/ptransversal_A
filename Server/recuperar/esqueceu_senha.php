@@ -37,12 +37,12 @@
 
       if($inserir) {
         if(mail("$email","$assunto","$mensagem", $headers, "-f$email_remetente")){
-          header('Location: ../log_error/index.php?SUCESS=2'); //Verifique seu e-mail para obter nova senha!
+          header('Location: ../index.html?SUCESS=2'); //Verifique seu e-mail para obter nova senha!
 
         }
       }
     } else {
-      header('Location: ../log_error/index.php?ERROR=6'); //  E-mail digitado não está cadastrado.
+      header('Location: ../index.html?ERROR=6'); //  E-mail digitado não está cadastrado.
     }
   }
 ?>
