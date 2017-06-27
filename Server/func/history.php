@@ -79,6 +79,9 @@
                         <li>
                             <a href="configuration.php"><i class="glyphicon glyphicon-cog"></i> Configurações</a>
                         </li>
+                        <li>
+                            <a href="estatistic.php"><i class="glyphicon glyphicon-cog"></i> Estatísticas</a>
+                        </li>
                     </ul>
                     <!-- /#side-menu -->
                 </div>
