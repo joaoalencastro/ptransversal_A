@@ -71,13 +71,16 @@
                 <div class="sidebar-collapse">
                     <ul class="nav" id="side-menu">
                         <li>
-                            <a href="index.html"><i class="fa fa-table fa-fw"></i> Pendências</a>
+                            <a href="index.php"><i class="fa fa-table fa-fw"></i> Pendências</a>
                         </li>
                         <li>
-                            <a href="history.html"><i class="fa fa-bar-chart-o fa-fw"></i> Histórico</a>
+                            <a href="history.php"><i class="fa fa-bar-chart-o fa-fw"></i> Histórico</a>
                         </li>
                         <li>
-                            <a href="addRoom.html"><i class="glyphicon glyphicon-cog"></i> Configurações</a>
+                            <a href="configuration.php"><i class="glyphicon glyphicon-cog"></i> Configurações</a>
+                        </li>
+                        <li>
+                            <a href="estatistic.php"><i class="glyphicon glyphicon-cog"></i> Estatísticas</a>
                         </li>
                     </ul>
                     <!-- /#side-menu -->
