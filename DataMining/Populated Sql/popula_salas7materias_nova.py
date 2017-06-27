@@ -550,7 +550,7 @@ terça/quinta,
 horarios = horarios.split(',')
 Locais = Locais.split(',')
 dias = dias.split(',')
-con  = MySQLdb.connect(host='localhost', user='root', passwd='45166batata',db='sistemareservadodb')
+con  = MySQLdb.connect(host='localhost', user='root', passwd='fiuzaGay',db='12345')
 c = con.cursor()
 bufferH = ''
 bufferd = ''
