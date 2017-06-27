@@ -18,7 +18,7 @@ include('../conexao/conexao.php');
     if ($sql_query) {
       $delete_sql = "DELETE FROM codigos WHERE codigo = '$codigo'";
       $mudar = mysqli_query($conexao,$delete_sql);
-      header('Location: ../log_error/index.php?SUCESS=3'); // senha alterada com sucesso
+      header('Location: ../index.html?SUCESS=3'); // senha alterada com sucesso
     }
   }
 ?>
