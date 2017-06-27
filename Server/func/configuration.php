@@ -45,7 +45,7 @@
                     <li><a href="#"><i class="fa fa-gear fa-fw"></i> Configurações</a>
                     </li>
                     <li class="divider"></li>
-                    <li><a href="php/logout.pgp"><i class="fa fa-sign-out fa-fw"></i> Sair</a>
+                    <li><a href="php/logout.php"><i class="fa fa-sign-out fa-fw"></i> Sair</a>
                     </li>
                 </ul>
                 <!-- /.dropdown-user -->
@@ -124,8 +124,6 @@
                     </form>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
-
-
                     </div>
                     <!-- /.panel-body -->
                 </div>
@@ -140,34 +138,34 @@
                     <div class="panel-heading">
                         Adicionar Professor
                     </div>
-                    <form>
+                    <form action="php/post_cadastro_func.php" method="post">
                         <div class="col-md-2">
                             <h4 style="margin: 15px;">Nome</h4>
-                            <input style="margin: 15px;" type="text"  class="form-control" placeholder="Digite o nome">
+                            <input style="margin: 15px;" type="text" name='nome' class="form-control" placeholder="Digite o nome">
                         </div>
                         <div class="col-md-3">
                             <h4 style="margin: 15px; white-space: nowrap;">Matrícula</h4>
-                            <input style="margin: 15px;" type="text"  class="form-control" placeholder="Digite a matrícula">
+                            <input style="margin: 15px;" type="text" name='matricula' class="form-control" placeholder="Digite a matrícula">
                         </div>
                         <div class="col-md-3">
                             <h4 style="margin: 15px; white-space: nowrap;">Email</h4>
-                            <input style="margin: 15px;" type="email"  class="form-control" placeholder="Digite o emal">
+                            <input style="margin: 15px;" type="email" name='email' class="form-control" placeholder="Digite o emal">
                         </div>
                         <div class="col-md-3">
                             <h4 style="margin: 15px; white-space: nowrap;">RG</h4>
-                            <input style="margin: 15px;" type="text"  class="form-control" placeholder="Digite o RG">
+                            <input style="margin: 15px;" type="text" name='rg' class="form-control" placeholder="Digite o RG">
                         </div>
                         <div class="col-md-3">
                             <h4 style="margin: 15px; white-space: nowrap;">Data de Nascimento</h4>
-                            <input style="margin: 15px;" type="date"  class="form-control">
+                            <input style="margin: 15px;" type="date" name='datanascimento'  class="form-control">
                         </div>
                         <div class="col-md-3">
                             <h4 style="margin: 15px; white-space: nowrap;">Senha</h4>
-                            <input style="margin: 15px;" type="password"  class="form-control" placeholder="Digite sua senha">
+                            <input style="margin: 15px;" type="password" name='senhatxt'  class="form-control" placeholder="Digite sua senha">
                         </div>
                         <div class="col-md-3">
                             <h4 style="margin: 15px; white-space: nowrap;">Confirme sua senha</h4>
-                            <input style="margin: 15px;" type="password"  class="form-control" placeholder="Confirme sua senha">
+                            <input style="margin: 15px;" type="password" name='senhatxt2' class="form-control" placeholder="Confirme sua senha">
                         </div>
                         <div class="col-md-1" style="margin: 20px; margin-top: 5%;">
                             <input type="submit" class="bnt btn-success" value="Enviar">
@@ -189,30 +187,30 @@
                     <div class="panel-heading">
                         Adicionar Funcionário   
                     </div>
-                    <form>
+                    <form action="php/post_cadastro_func.php" method="post">
                         <div class="col-md-2">
                             <h4 style="margin: 15px;">Nome</h4>
-                            <input style="margin: 15px;" type="text"  class="form-control" placeholder="Digite o nome">
+                            <input style="margin: 15px;" type="text" name='nome'  class="form-control" placeholder="Digite o nome">
                         </div>
                         <div class="col-md-3">
                             <h4 style="margin: 15px; white-space: nowrap;">Matrícula</h4>
-                            <input style="margin: 15px;" type="text"  class="form-control" placeholder="Digite a matrícula">
+                            <input style="margin: 15px;" type="text"  name='matricula' class="form-control" placeholder="Digite a matrícula">
                         </div>
                         <div class="col-md-3">
                             <h4 style="margin: 15px; white-space: nowrap;">Email</h4>
-                            <input style="margin: 15px;" type="email"  class="form-control" placeholder="Digite o email">
+                            <input style="margin: 15px;" type="email" name='email' class="form-control" placeholder="Digite o email">
                         </div>
                         <div class="col-md-3">
                             <h4 style="margin: 15px; white-space: nowrap;">RG</h4>
-                            <input style="margin: 15px;" type="number" placeholder="Digite o RG" class="form-control">
+                            <input style="margin: 15px;" name='rg' type="number" placeholder="Digite o RG" class="form-control">
                         </div>
                         <div class="col-md-3">
                             <h4 style="margin: 15px; white-space: nowrap;">Senha</h4>
-                            <input style="margin: 15px;" type="password"  class="form-control" placeholder="Digite sua senha">
+                            <input style="margin: 15px;" type="password" name='senhatxt2' class="form-control" placeholder="Digite sua senha">
                         </div>
                         <div class="col-md-3">
                             <h4 style="margin: 15px; white-space: nowrap;">Confirme sua senha</h4>
-                            <input style="margin: 15px;" type="password"  class="form-control" placeholder="Confirme sua senha">
+                            <input style="margin: 15px;" type="password" name='senhatxt2'  class="form-control" placeholder="Confirme sua senha">
                         </div>
                         <div class="col-md-1" style="margin: 20px; margin-top: 5%;">
                             <input type="submit" class="bnt btn-success" value="Enviar">
