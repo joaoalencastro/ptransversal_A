@@ -543,6 +543,53 @@
         init();
         pesquisa();
         resgatevalor();
+        var url_atual = window.location.href
+        var arr = url_atual.split("?");   
+	    if(arr[1] == "ERROR=1")
+        {   
+            $('#bnt-acessar').click();
+            modalAnimate($formLogin, $formRegister);
+            msgChange($('#div-register-msg'), $('#icon-register-msg'), $('#text-register-msg'), "error", "glyphicon-remove", "Senhas incompatíveis!");
+        }
+        else if(arr[1] == "SUCESS=1")
+        {
+            $('#bnt-acessar').click();
+            msgChange($('#div-login-msg'), $('#icon-login-msg'), $('#text-login-msg'), "success", "glyphicon-ok", "Cadastro realizado!");
+        }
+        else if(arr[1] == "ERROR=3")
+        {
+            $('#bnt-acessar').click();
+            msgChange($('#div-login-msg'), $('#icon-login-msg'), $('#text-login-msg'), "error", "glyphicon-ok", "Nome de Usuário ou senha inválido!");
+        }
+        else if(arr[1] == "ERROR=4")
+        {
+            $('#bnt-acessar').click();
+            modalAnimate($formLogin, $formRegister);
+            msgChange($('#div-register-msg'), $('#icon-register-msg'), $('#text-register-msg'), "error", "glyphicon-remove", "Dados inválidos");
+        }
+        else if(arr[1] == "ERROR=5")
+        {
+            $('#bnt-acessar').click();
+            modalAnimate($formLogin, $formRegister);
+            msgChange($('#div-register-msg'), $('#icon-register-msg'), $('#text-register-msg'), "error", "glyphicon-remove", "Usuário já cadastrado");
+        }
+        else if(arr[1] == "ERROR=6")
+        {
+            $('#bnt-acessar').click();
+            modalAnimate($formLogin, $formLost);
+            msgChange($('#div-lost-msg'), $('#icon-lost-msg'), $('#text-lost-msg'), "error", "glyphicon-remove", "O E-mail digitado não está cadastrado.");
+        }
+        else if(arr[1] == "SUCESS=2")
+        {
+            $('#bnt-acessar').click();
+            modalAnimate($formLogin, $formLost);
+            msgChange($('#div-lost-msg'), $('#icon-lost-msg'), $('#text-lost-msg'), "success", "glyphicon-remove", "Verifique seu e-mail para obter nova senha!");
+        }
+        else if(arr[1] == "SUCESS=3")
+        {
+            $('#bnt-acessar').click();
+            msgChange($('#div-login-msg'), $('#icon-login-msg'), $('#text-login-msg'), "success", "glyphicon-ok", "Senha alterada com sucesso!");
+        }
     </script>
 </body>
 
