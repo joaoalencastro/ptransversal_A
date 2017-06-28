@@ -1,5 +1,5 @@
 <?php
-include('conexao.php');
+require('../../conexao/conexao.php');
 session_start();
 
 $resposta = $_POST['resposta'];
