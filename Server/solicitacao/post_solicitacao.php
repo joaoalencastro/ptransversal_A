@@ -3,9 +3,9 @@
 require('../conexao/conexao.php');
 session_start();
 
-$horario_da_reserva="12:00-13:00";
-$motivo="monitoria";
-$nomesala="SG";
+$horario_da_reserva= $_GET['horario_da_reserva'];
+$motivo=$_GET['motivo'];
+$nomesala=$_GET['nomesala'];
 $dias="terca";
 
 
