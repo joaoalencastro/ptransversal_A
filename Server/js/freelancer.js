@@ -416,15 +416,14 @@ function Getmateriasfromserver(callback){
 }
 function fecharmodal() {
 
-    var nomeSala = ["BT-16/15","BT-25/15","BT-34/15","BT-52/15","Lab-Redes","SG-11","Auditório"];
-    $('#portfolioModal2').modal('hide');
-    document.getElementById(nomeSala[0]).onclick = function(){$("#BT-16/15M").modal("show");};
-    document.getElementById(nomeSala[1]).onclick = function(){$("#BT-25/15M").modal("show");};
-    document.getElementById(nomeSala[2]).onclick = function(){$("#BT-34/15M").modal("show");};
-    document.getElementById(nomeSala[3]).onclick = function(){$("#BT-52/15M").modal("show");};
-    document.getElementById(nomeSala[4]).onclick = function(){$("#Lab-RedesM").modal("show");};
-    document.getElementById(nomeSala[5]).onclick = function(){$("#SG-11M").modal("show");};
-    document.getElementById(nomeSala[6]).onclick = function(){$("#AuditórioM").modal("show");};
+    $('#portfolioModal2').on('hide.bs.dropdown', function () {
+        var value = document.getElementById(id).value;
+        $("#"+value+ "M").modal('show');
+    });
+	$('#portfolioModal1').on('hide.bs.dropdown', function () {
+        var value = document.getElementById(id).value;
+        $("#"+value+ "M").modal('show');
+    });
 }
 function resgatevalor() {
     Getmateriasfromserver(function(a)    {
@@ -465,14 +464,3 @@ function resgatevalor() {
         });
     });
 }
-      function initMap() {
-        var uluru = {lat: -25.363, lng: 131.044};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
-          center: uluru
-        });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });
-      }
