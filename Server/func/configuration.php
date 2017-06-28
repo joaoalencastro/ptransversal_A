@@ -90,7 +90,7 @@
                     <div class="panel-heading">
                         Adicionar salas
                     </div>
-                    <form action="../php/addRoom.php" method="post">
+                    <form action="../tarefas_funcionario/addRoom.php" method="post">
                         <div class="col-md-2">
                             <h4 style="margin: 15px;">Nome</h4>
                             <input style="margin: 15px;" type="text" name="nome"  class="form-control" placeholder="Ex.: AT-11">
@@ -154,10 +154,6 @@
                         <div class="col-md-3">
                             <h4 style="margin: 15px; white-space: nowrap;">RG</h4>
                             <input style="margin: 15px;" type="text" name='rg' class="form-control" placeholder="Digite o RG">
-                        </div>
-                        <div class="col-md-3">
-                            <h4 style="margin: 15px; white-space: nowrap;">Data de Nascimento</h4>
-                            <input style="margin: 15px;" type="date" name='datanascimento'  class="form-control">
                         </div>
                         <div class="col-md-3">
                             <h4 style="margin: 15px; white-space: nowrap;">Senha</h4>
