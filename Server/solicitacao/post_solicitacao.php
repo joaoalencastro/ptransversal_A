@@ -15,7 +15,7 @@ $id_usuario = $_SESSION['id'];
 $status ="pendente";
 
 $sql_status = "INSERT INTO fluxo_sala(status_sala, nome, data, dias)
-VALUES( '$status', '$nomesala', '$horario_da_reserva', '$dias')";
+VALUES('$status', '$nomesala', '$horario_da_reserva', '$dias')";
 
 $upload_status_fluxo = mysqli_query($conexao,$sql_status);
 
