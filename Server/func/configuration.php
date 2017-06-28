@@ -138,7 +138,7 @@
                     <div class="panel-heading">
                         Adicionar Professor
                     </div>
-                    <form action="php/post_cadastro_func.php" method="post">
+                    <form action="php/post_cadastro_prof.php" method="post">
                         <div class="col-md-2">
                             <h4 style="margin: 15px;">Nome</h4>
                             <input style="margin: 15px;" type="text" name='nome' class="form-control" placeholder="Digite o nome">
@@ -183,7 +183,7 @@
                     <div class="panel-heading">
                         Adicionar Funcionário   
                     </div>
-                    <form action="php/post_cadastro_prof.php" method="post">
+                    <form action="php/post_cadastro_func.php" method="post">
                         <div class="col-md-2">
                             <h4 style="margin: 15px;">Nome</h4>
                             <input style="margin: 15px;" type="text" name='nome'  class="form-control" placeholder="Digite o nome">
