@@ -25,7 +25,7 @@ function Getinfofromserver(callback) {
         data: "",
         dataType: 'json',
         success: function (data) {
-
+            console.log(data);
             var info = data;
             callback(info);
             }

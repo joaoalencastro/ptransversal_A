@@ -2,16 +2,17 @@
 
 require('../conexao/conexao.php');
 session_start();
-
+date_default_timezone_get("America/Sao_Paulo");
 $horario_da_reserva= $_GET['horario_da_reserva'];
 $motivo=$_GET['motivo'];
 $nomesala=$_GET['nomesala'];
 $dias=$_GET['dia'];
-
 $solicitante = $_SESSION['nome'];
 $email = $_SESSION['email'];
 $senha = $_SESSION['senha'];
 $id_usuario = $_SESSION['id'];
+$horario_solicitacao_eua = date('Y-m-d H:i:s');
+$horario_solicitacao = date('d/m/Y H:i:s', strtotime($horario_solicitacao_eua));
 $status ="pendente";
 
 $sql_status = "INSERT INTO fluxo_sala(status_sala, nome, data, dias)
