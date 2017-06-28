@@ -202,7 +202,7 @@
                         </div>
                         <div class="col-md-3">
                             <h4 style="margin: 15px; white-space: nowrap;">Senha</h4>
-                            <input style="margin: 15px;" type="password" name='senhatxt2' class="form-control" placeholder="Digite sua senha">
+                            <input style="margin: 15px;" type="password" name='senhatxt' class="form-control" placeholder="Digite sua senha">
                         </div>
                         <div class="col-md-3">
                             <h4 style="margin: 15px; white-space: nowrap;">Confirme sua senha</h4>
