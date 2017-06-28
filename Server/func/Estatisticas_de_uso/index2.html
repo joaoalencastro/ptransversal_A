@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Reservado | Administrador</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    
+    <meta property="og:image" content="http://palloi.github.io/responsive-header-only-css/assets/images/image-shared-2.png" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body align='center' style="text-align: center!important; margin: 0 auto;">
+    <header align='center' style="text-align: center!important; margin: 0 auto; justify-content: center;">
+      <h1 style="text-align: center; justify-content: center;">
+        <p align='center' style="text-align: center!important; margin: 0 auto; justify-content: center;" >Estatísticas do Sistema</p>
+      </h1>
+      
+      <input type="checkbox" id="control-nav" />
+      <label for="control-nav" class="control-nav"></label>
+      <label for="control-nav" class="control-nav-close"></label>
+  
+    </header>
+	
+    <section id="Chaves" align='center' style="text-align: center!important;">
+		<br/><br/><br/> <br/>
+      <div class="highlights" align='center' style="text-align: center!important;">
+        <input type="radio" id="radio-img1" name="highlights" checked="checked" />
+        <div class="highlights-item" align='center' style="text-align: center!important;">
+          <img src="grafico.php" />
+          <p>Estatísticas de Usuários</p>
+          <label class="highlights-button" for="modal_chaves">Aumentar</label>
+        </div>
+        
+        <input type="radio" id="radio-img1" name="highlights" checked="checked" />
+        <div class="highlights-item">
+          <img src="grafico1.php" />
+          <p>Estatísticas de Solicitações</p>
+          <label class="highlights-button" for="modal_chaves2">Aumentar</label>
+        </div>
+		<input type="radio" id="radio-img1" name="highlights" checked="checked" />
+        <div class="highlights-item">
+          <img src="grafico3.php" />
+          <p>Estatísticas de Salas</p>
+          <label class="highlights-button" for="modal_chaves3">Aumentar</label>
+        </div>
+        
+ 
+
+        <div class="highlights-buttons">
+          <label for="radio-img1">Image 1</label>
+          <label for="radio-img2">Image 2</label>
+          <label for="radio-img3">Image 3</label>
+        </div>
+      </div>
+
+      <input type="checkbox" id="modal_chaves" />
+      <div class="modal">
+        <div class="modal-content">
+          
+          <img src="grafico.php" />
+		  
+        </div>
+        <label class="modal-close" for="modal_chaves"></label>
+      </div>
+
+      <input type="checkbox" id="modal_chaves2" />
+      <div class="modal">
+        <div class="modal-content">
+          
+          <img src="grafico1.php" />
+         
+        </div>
+        <label class="modal-close" for="modal_chaves2"></label>
+      </div>
+	  <input type="checkbox" id="modal_chaves3" />
+      <div class="modal">
+        <div class="modal-content">
+          
+          <img src="grafico3.php" />
+         
+        </div>
+        <label class="modal-close" for="modal_chaves3"></label>
+      </div>
+    </section>
+    
+  </body>
+</html>
