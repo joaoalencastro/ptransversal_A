@@ -2,7 +2,7 @@
 
 require('../conexao/conexao.php');
 session_start();
-date_default_timezone_get("America/Sao_Paulo");
+//date_default_timezone_get("America/Sao_Paulo");
 $horario_da_reserva= $_GET['horario_da_reserva'];
 $motivo=$_GET['motivo'];
 $nomesala=$_GET['nomesala'];
