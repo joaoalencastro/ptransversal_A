@@ -1,6 +1,6 @@
 <?php
 session_start();
-require('conexao.php');
+require('../../conexao/conexao.php');
 
 
       $id = $_SESSION['aux'];
