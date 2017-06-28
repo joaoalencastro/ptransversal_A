@@ -536,7 +536,7 @@ function Getmateriasfromserver(callback){
             });
     });
 }
-function fecharmodal() {
+function fecharmodal(id) {
 
    $('#portfolioModal2').on('hide.bs.dropdown', function () {
         var value = document.getElementById(id).value;
