@@ -77,7 +77,7 @@
                             <a href="history.php"><i class="fa fa-bar-chart-o fa-fw"></i> Histórico</a>
                         </li>
                         <li>
-                            <a href="Estatisticas_de_uso/index2.php"><i class="glyphicon glyphicon-stats"></i> Estatísticas</a>
+                            <a href="Estatisticas_de_uso/index2.html"><i class="glyphicon glyphicon-stats"></i> Estatísticas</a>
                         </li>
                         <li>
                             <a href="configuration.php"><i class="glyphicon glyphicon-cog"></i> Configurações</a>
