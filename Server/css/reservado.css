@@ -758,3 +758,8 @@ div#maincontent {
 .tt-suggestion p {
   margin: 0;
 }
+#map 
+{
+  height: 200px;
+  width: 100%;
+}
