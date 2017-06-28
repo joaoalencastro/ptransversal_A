@@ -11,7 +11,7 @@ $grafico->SetTitle("Dados Interessantes");
 //Dados para gerar o gráfico
 
 
-$sql3 = "SELECT * FROM fluxo WHERE status = 'indisponivel';";
+$sql3 = "SELECT * FROM fluxo_sala WHERE status = 'indisponivel';";
 $result3 = mysqli_query($conexao,$sql3);
 if (!$result3) {
 	die('Algo deu errado na conexão. Erro: ' . mysqli_error($conexao));
@@ -22,7 +22,7 @@ while ($ln3 = mysqli_fetch_array($result3)){
 	
 	$i3 = $i3 + 1;
 }
-$sql = "SELECT * FROM fluxo WHERE status = 'pendente';";
+$sql = "SELECT * FROM fluxo_sala WHERE status = 'pendente';";
 $result = mysqli_query($conexao,$sql);
 if (!$result) {
 	die('Algo deu errado na conexão. Erro: ' . mysqli_error($conexao));
@@ -34,7 +34,7 @@ while ($ln= mysqli_fetch_array($result)){
 	$i = $i + 1;
 }
 
-$sql4 = "SELECT * FROM fluxo;";
+$sql4 = "SELECT * FROM fluxo_sala;";
 $result4 = mysqli_query($conexao,$sql4);
 if (!$result4) {
 	die('Algo deu errado na conexão. Erro: ' . mysqli_error($conexao));
