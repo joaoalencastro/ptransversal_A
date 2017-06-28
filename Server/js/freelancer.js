@@ -262,7 +262,7 @@ function init()
             language: "pt-BR",
             startDate: '+1d',
             endDate : '+15d',
-            daysOfWeekDisabled: [0],
+            daysOfWeekDisabled: [0]
         }).on('changeDate', function (e) {
         setDate();
         });
