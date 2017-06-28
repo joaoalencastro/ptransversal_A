@@ -161,7 +161,7 @@
                         </div>
                         <div class="col-md-3">
                             <h4 style="margin: 15px; white-space: nowrap;">Confirme sua senha</h4>
-                            <input style="margin: 15px;" type="password" name='senhatxt2' class="form-control" placeholder="Confirme sua senha">
+                            <input style="margin: 15px;" type="password" name='senha2txt' class="form-control" placeholder="Confirme sua senha">
                         </div>
                         <div class="col-md-1" style="margin: 20px; margin-top: 5%;">
                             <input type="submit" class="bnt btn-success" value="Enviar">
