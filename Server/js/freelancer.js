@@ -143,7 +143,7 @@ function Status(status)
         let id_str = "q";
         id_str = id_str.concat(100+i);
 	console.log(id_str);
-        /*if(status[i] == 0)
+        if(status[i] == 0)
         {
             $('#'+ id_str).click(function(){$("#login-modal").modal("show");});
         }
@@ -159,7 +159,7 @@ function Status(status)
         {
             document.getElementById(id_str).style.background = "#E03A3A";
             document.getElementById(id_str).style.cursor = "auto";
-        }*/
+        }
     }
 }
 function setDate(x)
@@ -254,7 +254,7 @@ function init()
             $("#tabela-agenda").append(" </tr> ");
 
         }    
-});
+
 	setDate('inicio'); 
 
         /*              CALENDARIO              */
@@ -338,7 +338,7 @@ function init()
                             '</div>';
                     $("#generic").append(html);
        }
-      
+      });
 }
 function Getmateriasfromserver(callback){
     var status_aux;
