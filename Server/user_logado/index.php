@@ -83,14 +83,10 @@
                         <ul class="nav navbar-top-links navbar-right">
                             <li class="dropdown">
 
-                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                   <i class="fa fa-user fa-fw"></i> <?php echo $nome; ?> <i class="fa fa-caret-down"></i>
+                                <a id='NomeT' class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                   <i class="fa fa-user fa-fw"></i>Nome<i class="fa fa-caret-down"></i>
                                 </a>
                                 <ul class="dropdown-menu dropdown-user">
-                                    <li>
-                                        <a style="color: black;" href="#"><i class="fa fa-user fa-fw"></i> Perfil do Usuário</a>
-                                    </li>
-                                    <li class="divider"></li>
                                     <li>
                                         <a style="color: black;" href="../login/logout.php"><i class="fa fa-sign-out fa-fw"></i>Sair</a>
                                     </li>
@@ -385,6 +381,12 @@
     <div id="generic">
       
     </div>
+    <div id="dom-target" style="display: none;">
+          <?php echo htmlspecialchars($nome);?>
+    </div>
+      
+      
+      
     <!-- jQuery -->
     <script src="../vendor/jquery/jquery.min.js"></script>
 
@@ -409,10 +411,15 @@
     <script src="../js/bootstrap-datepicker.pt-BR.min.js"></script>
 
 
+
     <script type="text/javascript">
         init();
         pesquisa();
         resgatevalor();
+        var div = document.getElementById("dom-target");
+        var myData = div.textContent;
+        var arr = myData.split(" ");
+        document.getElementById("NomeT").innerHTML = arr[0] +' '+arr[1] ; 
     </script>
 
 </body>
