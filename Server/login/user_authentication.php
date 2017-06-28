@@ -45,6 +45,6 @@
 		}
 	} else {
 	// caso o numero de linha no db seja zero, ou seja não nexistem registros
-		header('Location: ../log_error/index.php?ERROR=3'); // Nome de Usuário ou senha inválido!
+		header('Location: ../index.html?ERROR=3'); // Nome de Usuário ou senha inválido!
 	}
 ?>
