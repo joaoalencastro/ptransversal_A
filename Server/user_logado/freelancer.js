@@ -227,7 +227,9 @@ function clickSolic(id_str)
     let id_radio = id_str;
     let motivo;
     var dia = document.getElementById("Title").innerHTML;
-    var arr = dia.split(" ");
+    var arr = dia.split(",");
+    if(arr[0] == "Terça-Feira")
+        arr[0] = 'Terca-Feira';
     id_str = id_str.split(':');
     if(document.getElementById(id_radio+':Moni').checked == true)
     {
@@ -269,6 +271,8 @@ function clickSolic(id_str)
     dados_solicitacao[0] = arr[1]+ ", " +id_str[1]+ ":00 hrs";
     dados_solicitacao[1] = motivo;
     dados_solicitacao[2] = id_str[0];
+    var temp = id_str[1] + 1;
+    let hora = id_str[1]+ ":00 - " + temp + ":00"; 
     /*$.ajax({
         type: "POST",
         url: "././solicitacao/post_solicitacao.php",
@@ -293,7 +297,7 @@ function clickSolic(id_str)
             console.log(msg);
         }
     });*/
-    location.href = "../solicitacao/post_solicitacao.php?horario_da_reserva="+dados_solicitacao[0]+"&motivo="+dados_solicitacao[1]+"&nomesala="+dados_solicitacao[2];
+    location.href = "../solicitacao/post_solicitacao.php?horario_da_reserva="+arr[0]+' '+ arr[1] + hora +"&motivo="+dados_solicitacao[1]+"&nomesala="+dados_solicitacao[2];
 }
 function init()
 {
