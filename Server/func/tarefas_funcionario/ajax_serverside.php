@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('conexao.php');
+require('../../conexao/conexao.php');
 $i = 0;
 
 
