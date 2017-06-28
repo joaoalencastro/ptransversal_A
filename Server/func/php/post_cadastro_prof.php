@@ -19,8 +19,8 @@ if($senha===$senha2){
 
 	if (!$result) {
 		die('Algo deu errado. Erro: ' . mysqli_error($conexao));
-	}
-	echo"Cadastro efetuado com sucesso!";
+	} 
+	else echo"Cadastro efetuado com sucesso!";
 } else {
 	echo"Senhas incompatíveis!";
 }
