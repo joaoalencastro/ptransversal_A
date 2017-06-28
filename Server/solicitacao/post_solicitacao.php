@@ -6,9 +6,7 @@ session_start();
 $horario_da_reserva= $_GET['horario_da_reserva'];
 $motivo=$_GET['motivo'];
 $nomesala=$_GET['nomesala'];
-$dias="terca";
-
-
+$dias=$_GET['dia'];
 
 $solicitante = $_SESSION['nome'];
 $email = $_SESSION['email'];
