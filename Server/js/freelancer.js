@@ -204,6 +204,7 @@ function getroomfromserver(callback){
         dataType: 'json',
         success: function(data)
         {
+	    console.log(data);	
             status_aux = data;
             callback(status_aux);
         }
