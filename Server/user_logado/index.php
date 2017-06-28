@@ -58,7 +58,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="#page-top">Reservado</a>
+                <a class="navbar-brand" href="#page-top"><img style="max-width: 250px;" src="img/logoBar.png"></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -288,59 +288,7 @@
             <i class="fa fa-chevron-up"></i>
         </a>
     </div>
-      
-      <!-- Modal de Informação -->
-    <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog" id="tamanho">
     
-      <!-- Modal conteudo estatico-->
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal">&times;</button>
-                  <h4 class="modal-title">Informação</h4>
-                </div>
-                <div class="modal-body">
-                <h5 class="salai" style="text-align: center; font-size: 20px;">Salas: </h5>
-                  <table style="width:100%; padding: 15px 0px;">
-                      <tr>
-                        <th>AT's</th>
-                        <th>BT's</th> 
-                        <th>Lab-Redes</th>
-                        <th>Auditório e SG-11</th>
-                      </tr>
-                      <tr>
-                        <td>Capacidade: 50 pessoas;</td>
-                        <td>Capacidade: 45 pessoas;</td>
-                        <td>Capacidade: 40 pessoas, mas possui computadores;</td>
-                        <td>Capacidade: 50(SG-11) e 80(Auditório) pessoas;</td>
-                      </tr>
-                      <tr>
-                        <td>Projetor:1</td>
-                        <td>Projetor:1</td>
-                        <td>Projetor:2</td>
-                        <td>Projetor:1</td>
-                      </tr>
-                      <tr>
-                        <td>Ar-condicionado:2</td>
-                        <td>Ar-condicionado:2</td>
-                        <td>Ar-condicionado:2</td>
-                        <td>Ar-condicionado:1(SG-11)</td>
-                      </tr>
-                    </table>
-                </div>
-                <div>
-                    <p>Imagem das salas na FT</p>
-                     <img src="img/at-19.jpeg" style="width: 20%; padding: 5px; " title="Salas AT's" >
-                    <img src="img/bt-25-15.jpeg" style="width: 20%; padding: 5px;" title="Salas BT's">
-                    <img src="img/auditorio.jpeg" style="width: 20%; padding: 5px;" title="Auditório">
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-              </div>
-              
-            </div>
-          </div>
       
       <!-- Modal de Resultado da pesquisa-->
             <div class="modal fade" id="modalResultado" role="dialog">
