@@ -230,6 +230,9 @@ function clickSolic(id_str)
     var arr = dia.split(",");
     if(arr[0] == "Terça-Feira")
         arr[0] = 'Terca-Feira';
+    let teste = arr[0].split("-");
+    arr[0] = teste;	
+
     id_str = id_str.split(':');
     if(document.getElementById(id_radio+':Moni').checked == true)
     {
@@ -297,7 +300,7 @@ function clickSolic(id_str)
             console.log(msg);
         }
     });*/
-    location.href = "../solicitacao/post_solicitacao.php?horario_da_reserva="+arr[0]+' '+ arr[1] + hora +"&motivo="+dados_solicitacao[1]+"&nomesala="+dados_solicitacao[2];
+    location.href = "../solicitacao/post_solicitacao.php?dia="+arr[0]+"&horario_da_reserva="+ arr[1] + hora +"&motivo="+dados_solicitacao[1]+"&nomesala="+dados_solicitacao[2];
 }
 function init()
 {
