@@ -21,7 +21,7 @@ function Getinfofromserver(callback) {
 
     //Requisição HTTP, por dados provindos do url dado. Caso os dados recebidos sejam os esperados, entra no caso do SUCCESS
     return $.ajax({
-        url: '../php/ajax_serverside.php ',
+        url: 'tarefas_funcionario/ajax_serverside.php ',
         data: "",
         dataType: 'json',
         success: function (data) {
@@ -63,7 +63,7 @@ function init(x)
                         window.open('newTab.php','mywin','width=500,height=500');
                     $.ajax({
                         type: "POST",
-                        url: "../php/auxfile.php",
+                        url: "tarefas_funcionario/auxfile.php",
                         data: "aux= " + aux[buttonid]
                     });
                 };
@@ -85,7 +85,7 @@ function init(x)
 
             $.ajax({
                 type: "POST",
-                url: "../php/ajax2.php",
+                url: "tarefas_funcionario/ajax2.php",
                 dataType: 'json',
                 success: function (data) {
                     var geral = data;
@@ -101,7 +101,7 @@ function init(x)
                         var geral_aux = 'aceitar';
                         $.ajax({
                        type: "POST",
-                       url: "../php/altertable.php",
+                       url: "tarefas_funcionario/altertable.php",
                        data: "resposta= " + geral_aux,
                        success: function (data) {
                            alert("Solicitação Aceita");
@@ -113,7 +113,7 @@ function init(x)
                         var geral_aux = "recusar";
                         $.ajax({
                             type: "POST",
-                            url: "../php/altertable.php",
+                            url: "tarefas_funcionario/altertable.php",
                             data: "resposta= " + geral_aux,
                             success: function (data) {
                                 alert(data);
