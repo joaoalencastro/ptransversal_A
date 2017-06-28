@@ -1,5 +1,6 @@
 <?php
 require('conexao2.php');
+require('phplot.php');
 include('./PHPlot.php');
 
 $grafico = new PHPlot(1000,800); //cria um gráfico com tamanho 800x600 pixels
