@@ -12,7 +12,7 @@ $email = $_SESSION['email'];
 $senha = $_SESSION['senha'];
 $id_usuario = $_SESSION['id'];
 $horario_solicitacao_eua = date('Y-m-d H:i:s');
-$horario_solicitacao = date('d/m/Y H:i:s',  strtotime($horario_solicitacao_eua));
+$horario_solicitacao = date('d/m/Y H:i:s', strtotime($horario_solicitacao_eua));
 $status ="pendente";
 
 $sql_status = "INSERT INTO fluxo_sala(status_sala, nome, data, dias)
