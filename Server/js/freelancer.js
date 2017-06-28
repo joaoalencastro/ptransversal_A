@@ -426,13 +426,15 @@ function Getmateriasfromserver(callback){
 }
 function fecharmodal() {
 
+    var nomeSala = ["BT-16/15","BT-25/15","BT-34/15","BT-52/15","Lab-Redes","SG-11","Auditório"];
     $('#portfolioModal2').modal('hide');
-    window.location.href = "http://homol.redes.unb.br/ptr012017-B-grupoA/index.html#about";
-}
-function fecharmodal() {
-
-    $('#portfolioModal2').modal('hide');
-    window.location.href = "http://homol.redes.unb.br/ptr012017-B-grupoA/index.html#about";
+    document.getElementById(nomeSala[0]).onclick = function(){$("#BT-16/15M").modal("show");};
+    document.getElementById(nomeSala[1]).onclick = function(){$("#BT-25/15M").modal("show");};
+    document.getElementById(nomeSala[2]).onclick = function(){$("#BT-34/15M").modal("show");};
+    document.getElementById(nomeSala[3]).onclick = function(){$("#BT-52/15M").modal("show");};
+    document.getElementById(nomeSala[4]).onclick = function(){$("#Lab-RedesM").modal("show");};
+    document.getElementById(nomeSala[5]).onclick = function(){$("#SG-11M").modal("show");};
+    document.getElementById(nomeSala[6]).onclick = function(){$("#AuditórioM").modal("show");};
 }
 function resgatevalor() {
     Getmateriasfromserver(function(a)    {
