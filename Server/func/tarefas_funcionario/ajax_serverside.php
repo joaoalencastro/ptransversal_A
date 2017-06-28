@@ -6,7 +6,7 @@ $i = 0;
 
 $result = mysqli_query($conexao, "select * from solicitacao");
 while ($r = mysqli_fetch_assoc($result)) {
-    $nome[] = $r['nome'];
+    $nome[] = $r['nomesala'];
     $solicitante[] = $r['solicitante'];
     $horario_reserva[] = $r['horario_da_reserva'];
     $horario_solicitacao[] = $r['horario_solicitacao'];
