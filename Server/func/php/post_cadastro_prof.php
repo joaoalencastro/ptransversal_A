@@ -13,7 +13,7 @@ $senha=sha1($senha);
 $senha2=sha1($senha2);
 
 if($senha===$senha2){
-	$sql = "INSERT INTO usuario(nome, matricula, email, tipo, rg, senha, datanascimento)
+	$sql = "INSERT INTO usuario(nome, matricula, email, tipo, rg, senha, data_nascimento)
 	VALUES('$nome', '$matricula', '$email', '$tipo', '$rg', '$senha', '$datanascimento')";
 	$result = mysqli_query($conexao,$sql);
 
