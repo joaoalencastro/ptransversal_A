@@ -230,6 +230,9 @@ function clickSolic(id_str)
     var arr = dia.split(",");
     if(arr[0] == "Terça-Feira")
         arr[0] = 'Terca-Feira';
+    let teste = arr[0].split("-");
+    arr[0] = teste;	
+
     id_str = id_str.split(':');
     if(document.getElementById(id_radio+':Moni').checked == true)
     {
@@ -297,7 +300,7 @@ function clickSolic(id_str)
             console.log(msg);
         }
     });*/
-    location.href = "../solicitacao/post_solicitacao.php?horario_da_reserva="+arr[0]+' '+ arr[1] + hora +"&motivo="+dados_solicitacao[1]+"&nomesala="+dados_solicitacao[2];
+    location.href = "../solicitacao/post_solicitacao.php?dia="+arr[0]+"&horario_da_reserva="+ arr[1] + hora +"&motivo="+dados_solicitacao[1]+"&nomesala="+dados_solicitacao[2];
 }
 function init()
 {
@@ -546,15 +549,8 @@ function Getmateriasfromserver(callback){
 }
 function fecharmodal() {
 
-    var nomeSala = ["BT-16/15","BT-25/15","BT-34/15","BT-52/15","Lab-Redes","SG-11","Auditório"];
     $('#portfolioModal2').modal('hide');
-    document.getElementById(nomeSala[0]).onclick = function(){$("#BT-16/15M").modal("show");};
-    document.getElementById(nomeSala[1]).onclick = function(){$("#BT-25/15M").modal("show");};
-    document.getElementById(nomeSala[2]).onclick = function(){$("#BT-34/15M").modal("show");};
-    document.getElementById(nomeSala[3]).onclick = function(){$("#BT-52/15M").modal("show");};
-    document.getElementById(nomeSala[4]).onclick = function(){$("#Lab-RedesM").modal("show");};
-    document.getElementById(nomeSala[5]).onclick = function(){$("#SG-11M").modal("show");};
-    document.getElementById(nomeSala[6]).onclick = function(){$("#AuditórioM").modal("show");};
+    window.location.href = "http://homol.redes.unb.br/ptr012017-B-grupoA/user_logado/index.php";
 }
 
 function resgatevalor() {
