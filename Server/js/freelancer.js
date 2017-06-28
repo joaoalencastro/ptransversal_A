@@ -220,7 +220,7 @@ function init()
     //REQUISITA CHAR COM OS NOMES DAS SALAS
     var nomeSala = geral[0];
 
-
+	console.log(nomeSala);
         var newSala = [1,1];
         for(var i = 0; i < nomeSala.length;i++)
         {
@@ -262,7 +262,7 @@ function init()
             language: "pt-BR",
             startDate: '+1d',
             endDate : '+15d',
-            daysOfWeekDisabled: [0]
+            daysOfWeekDisabled: [0],
         }).on('changeDate', function (e) {
         setDate();
         });
