@@ -254,7 +254,7 @@ function init()
             $("#tabela-agenda").append(" </tr> ");
 
         }    
-});
+
 	setDate('inicio'); 
 
         /*              CALENDARIO              */
@@ -338,7 +338,7 @@ function init()
                             '</div>';
                     $("#generic").append(html);
        }
-      
+      });
 }
 function Getmateriasfromserver(callback){
     var status_aux;
