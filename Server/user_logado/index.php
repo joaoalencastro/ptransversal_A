@@ -239,9 +239,8 @@
             <div class="container">
                 <div class="row">
                     <div class="footer-col col-md-4">
-                        <h3>Location</h3>
-                        <p>3481 Melrose Place
-                            <br>Beverly Hills, CA 90210</p>
+                      <h3>Localização</h3>    
+                      <div id="map"></div>
                     </div>
                     <div class="footer-col col-md-4">
                         <h3>Around the Web</h3>
@@ -274,7 +273,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        Copyright &copy; Your Website 2016
+                        Copyright &copy; Latitude 2017
                     </div>
                 </div>
             </div>
@@ -288,90 +287,7 @@
         </a>
     </div>
       
-      <!-- Modal de Informação -->
-    <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog" id="tamanho">
-    
-      <!-- Modal conteudo estatico-->
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal">&times;</button>
-                  <h4 class="modal-title">Informação</h4>
-                </div>
-                <div class="modal-body">
-                <h5 class="salai" style="text-align: center; font-size: 20px;">Salas: </h5>
-                  <table style="width:100%; padding: 15px 0px;">
-                      <tr>
-                        <th>AT's</th>
-                        <th>BT's</th> 
-                        <th>Lab-Redes</th>
-                        <th>Auditório e SG-11</th>
-                      </tr>
-                      <tr>
-                        <td>Capacidade: 50 pessoas;</td>
-                        <td>Capacidade: 45 pessoas;</td>
-                        <td>Capacidade: 40 pessoas, mas possui computadores;</td>
-                        <td>Capacidade: 50(SG-11) e 80(Auditório) pessoas;</td>
-                      </tr>
-                      <tr>
-                        <td>Projetor:1</td>
-                        <td>Projetor:1</td>
-                        <td>Projetor:2</td>
-                        <td>Projetor:1</td>
-                      </tr>
-                      <tr>
-                        <td>Ar-condicionado:2</td>
-                        <td>Ar-condicionado:2</td>
-                        <td>Ar-condicionado:2</td>
-                        <td>Ar-condicionado:1(SG-11)</td>
-                      </tr>
-                    </table>
-                </div>
-                <div>
-                    <p>Imagem das salas na FT</p>
-                     <img src="img/at-19.jpeg" style="width: 20%; padding: 5px; " title="Salas AT's" >
-                    <img src="img/bt-25-15.jpeg" style="width: 20%; padding: 5px;" title="Salas BT's">
-                    <img src="img/auditorio.jpeg" style="width: 20%; padding: 5px;" title="Auditório">
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-              </div>
-              
-            </div>
-          </div>
-      
-      <!-- Modal de Resultado da pesquisa-->
-            <div class="modal fade" id="modalResultado" role="dialog">
-            <div class="modal-dialog  modal-sm">
-    
-      <!-- Modal content-->
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal">&times;</button>
-                  <h4 class="modal-title">Resultado</h4>
-                </div>
-                <div class="modal-body">
-                <h4 class="principal" style="text-align: center;"></h4>
-                <h5 class="codigo" style="text-align: center;"></h5>
-                <ul>
-                    <li class="prof"></li>
-                    <li class="dias"></li>
-                    <li class="horario"></li>
-                    <li class="vagas"></li>
-                    <li class="local"></li>
-                </ul>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-              </div>
-              
-            </div>
-          </div>
-      
-      
-      
+
      <!-- Portfolio Modals -->
     <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
@@ -459,6 +375,10 @@
     <script src="../js/bootstrap-datepicker.min.js"></script>
     <script src="../js/bootstrap-datepicker.pt-BR.min.js"></script>
 
+   <!-- 	GOOGLE MAPS	    -->
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAi_fHRVquIJPJNsj6c6lyRoCla1w9qEpI&callback=initMap">
+    </script>
 
     <script type="text/javascript">
         init();
