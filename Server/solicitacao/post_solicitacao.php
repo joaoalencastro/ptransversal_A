@@ -28,7 +28,7 @@ if (!$upload_status_fluxo) {
   $upload_solicitacao = mysqli_query($conexao,$sql_inserir_sol);
   if (!$upload_solicitacao) {
     die('Algo deu errado na conexão para upar a solicitação. Erro: ' . mysqli_error($conexao));
-  } else echo"Solicitação Enviada à secretária com sucesso!";
+  } else echo "<script type=\"text/javascript\">alert('Solicitacao enviada à secretaria com sucesso!');location.href=\"../user_logado/index.php\";</script>";
 
 }
 

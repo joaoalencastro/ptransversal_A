@@ -339,17 +339,6 @@ function init()
        }
       
 }
-function initMap() {
-        var uluru = {lng: -47.872535, lat: -15.763555};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 16,
-          center: uluru
-        });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-    });
-}
 function Getmateriasfromserver(callback){
     var status_aux;
     //Requisição HTTP, por dados provindos do url dado. Caso os dados recebidos sejam os esperados, entra no caso do SUCCESS

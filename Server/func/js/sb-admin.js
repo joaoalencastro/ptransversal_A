@@ -113,7 +113,7 @@ function init(x)
                         var geral_aux = "recusar";
                         $.ajax({
                             type: "POST",
-                            url: "tarefas_funcionario/altertable.php",
+                            url: "../tarefas_funcionario/altertable.php",
                             data: "resposta= " + geral_aux,
                             success: function (data) {
                                 alert(data);
