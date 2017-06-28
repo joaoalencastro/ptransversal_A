@@ -1,6 +1,6 @@
 <?php
 require('conexao2.php');
-include('./PHPlot.php');
+include('PHPlot.php');
 
 #Dados para o Grafico
 $sql = "SELECT * FROM usuario;";
