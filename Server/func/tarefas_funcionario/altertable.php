@@ -31,9 +31,15 @@ if($aux == "recusar"){
           $sql_upar_historico = "INSERT INTO historico(sala, nome_funcionario, nome_solicitante, tipo_solicitante, data_hora_solicitacao, data_hora_verificacao,status)
           VALUES( '$nomesala', '$nome_funcionario', '$nome_solicitante', '$tipo_solicitante', '$data_hora_', '$data_hora_verificacao')";
 
-          $result2 = mysqli_query($conexao, "DELETE FROM solicitacao WHERE ID like $id_solit");
+          $upar_hist = mysqli_query($conexao,$sql_upar_historico);
+          if (!$upar_hist) {
+            die('Algo deu errado na conexão para upar historico. Erro: ' . mysqli_error($conexao));
+          } else {
+            $result2 = mysqli_query($conexao, "DELETE FROM solicitacao WHERE ID like $id_solit");
+          }
     }
   } else if($aux == "aceitar") {
+
     $sql_alter = "UPDATE fluxo_sala SET status_sala='indisponivel' WHERE nome='$nomesala' AND data='$data_hora_reserva'";
     $result = mysqli_query($conexao,$sql_alter);
     if (!$result) {
@@ -43,7 +49,12 @@ if($aux == "recusar"){
           $sql_upar_historico = "INSERT INTO historico(sala, nome_funcionario, nome_solicitante, tipo_solicitante, data_hora_solicitacao, data_hora_verificacao,status)
           VALUES( '$nomesala', '$nome_funcionario', '$nome_solicitante', '$tipo_solicitante', '$data_hora_', '$data_hora_verificacao')";
 
-          $result2 = mysqli_query($conexao, "DELETE FROM solicitacao WHERE ID like $id_solit");
+          $upar_hist = mysqli_query($conexao,$sql_upar_historico);
+          if (!$upar_hist) {
+            die('Algo deu errado na conexão para upar historico. Erro: ' . mysqli_error($conexao));
+          } else {
+            $result2 = mysqli_query($conexao, "DELETE FROM solicitacao WHERE ID like $id_solit");
+          }
     }
 }
 ?>
