@@ -83,8 +83,8 @@
                         <ul class="nav navbar-top-links navbar-right">
                             <li class="dropdown">
 
-                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                   <i class="fa fa-user fa-fw"></i> <?php echo $nome; ?> <i class="fa fa-caret-down"></i>
+                                <a id='nomeD' class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                   <i class="fa fa-user fa-fw"></i>Nome<i class="fa fa-caret-down"></i>
                                 </a>
                                 <ul class="dropdown-menu dropdown-user">
                                     <li>
@@ -367,6 +367,11 @@
     </script>
 
     <script type="text/javascript">
+        var nome_d = <?=$nome?>;
+        var array = nome_d.split(" ");
+        for(var i = 0; array[i] != " " || array[i] == undefined;i++);
+        nome_d = array[0] + " " + array[i-1];
+        document.getElementById("nomeD").innerHTML = nome_d;
         init();
         pesquisa();
         resgatevalor();
