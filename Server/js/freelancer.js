@@ -340,12 +340,14 @@ function init()
       });
 	$('#portfolioModal2').on('hide.bs.dropdown', function () {
         var value = document.getElementById(id).value;
+	value += value + "M";
 	console.log(value);
-        $("#"+value+ "M").modal('show');
+        $("#" + value).modal('show');
     	});
 	$('#portfolioModal1').on('hide.bs.dropdown', function () {
         var value = document.getElementById(id).value;
-        $("#"+value+ "M").modal('show');
+	value += value + "M";
+        $("#" + value).modal('show');
     	});
 	
 }
