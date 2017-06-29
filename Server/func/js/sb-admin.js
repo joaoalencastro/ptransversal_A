@@ -89,7 +89,7 @@ function init(x)
                 dataType: 'json',
                 success: function (data) {
                     var geral = data;
-
+                    console.log(data);
                     var sala = geral[0];
                     var nome = geral[1];
                     var tipo = geral[4];
