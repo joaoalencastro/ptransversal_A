@@ -57,7 +57,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-               <a class="navbar-brand" href="http://homol.redes.unb.br/ptr012017-B-grupoA/"><img style="max-width: 250px;" src="../img/logoBar.png"></a>
+               <a class="navbar-brand" href="index.php"><img style="max-width: 250px;" src="../img/logoBar.png"></a>
             </div>
             </div>
 
@@ -367,7 +367,7 @@
     </script>
 
     <script type="text/javascript">
-        var nome_d = <?=$nome?>;
+        var nome_d = "<?php echo $nome; ?>"
         var array = nome_d.split(" ");
         document.getElementById("nomeD").innerHTML = array[0] + array[1];
         init();
