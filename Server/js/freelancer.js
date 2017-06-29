@@ -128,7 +128,7 @@ function getfromserver(callback){
             callback(status_aux);
         }
     });
-}
+}/*
 function requestStatus(dia)
 {    getfromserver(function(a)    {
 
@@ -904,7 +904,7 @@ if(dia === new Date()) {
 
 
 }
-
+*/
 function Status(status)
 {
     console.log(status);
