@@ -22,7 +22,7 @@ $aux = trim($resposta);
 
 if($aux == "recusar"){
 
-    $sql_alter = "UPDATE 'fluxo_sala' SET status_sala='disponivel' WHERE nome='$nomesala' AND data=$data_hora_reserva";
+    $sql_alter = "UPDATE 'fluxo_sala' SET status_sala='disponivel' WHERE nome='$nomesala' AND data='$data_hora_reserva'";
     $result = mysqli_query($conexao,$sql_alter);
     if (!$result) {
       die('Algo deu errado na conexão para encontrar sala na tabela. Erro: ' . mysqli_error($conexao));
@@ -34,13 +34,7 @@ if($aux == "recusar"){
           $result2 = mysqli_query($conexao, "DELETE FROM solicitacao WHERE ID like $id_solit");
     }
   } else if($aux == "aceitar") {
-
-  $sql_alter = "UPDATE 'fluxo_sala' SET status_sala='disponivel' WHERE nome='$nomesala' AND data=$data_hora_reserva";
-  $result = mysqli_query($conexao,$sql_alter);
-  if (!$result) {
-    die('Algo deu errado na conexão para encontrar sala na tabela. Erro: ' . mysqli_error($conexao));
-  } else {
-    $sql_alter = "UPDATE 'fluxo_sala' SET status_sala='disponivel' WHERE nome='$nomesala' AND data=$data_hora_reserva";
+    $sql_alter = "UPDATE 'fluxo_sala' SET status_sala='indisponivel' WHERE nome='$nomesala' AND data='$data_hora_reserva'";
     $result = mysqli_query($conexao,$sql_alter);
     if (!$result) {
       die('Algo deu errado na conexão para encontrar sala na tabela. Erro: ' . mysqli_error($conexao));
@@ -51,6 +45,5 @@ if($aux == "recusar"){
 
           $result2 = mysqli_query($conexao, "DELETE FROM solicitacao WHERE ID like $id_solit");
     }
-  }
 }
 ?>
