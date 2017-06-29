@@ -35,6 +35,7 @@ $plot->SetTitle("Cadastro de usuários no Site");
 #Legenda, nesse caso serao tres pq o array possui 3 valores que serao apresentados
 $plot->SetLegend(array("Usuários Cadastrados com Sucesso"));
 #Utilizados p/ marcar labels, necessario mas nao se aplica neste ex. (manual) :
+$plot->SetFileFormat("png");
 $plot->SetXTickLabelPos("none");
 $plot->SetXTickPos("none");
 #Gera o grafico na tela
