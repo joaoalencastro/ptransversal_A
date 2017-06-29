@@ -131,50 +131,50 @@ function getfromserver(callback){
 }
 function requestStatus(stateReq)		
  {		
-	 var status = [1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
-         var statusChar = [status,status,status,status,status,status,status,status,status,status,status,status,status,status,status];		
+     if(stateReq != 'inicio')		
+     {		
          return statusChar;		
-	      
+     }		
+     else  //REQUISIÇÃO DE DADOS É FEITA AQUI   OBS: FAZER DE UM JEITO QUE EU POSSA  REQUISITAR SEMPRE, SEM TER QUE FAZER CONEXÃO COM O SERVIDOR		
+     {		
+         var status = [0,2,1,2,2,2,2,0,0,2,2,1,0,2,1,2,1,2,2,1,2,1,2,2,0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,		
+                 2,2,2,2,0,0,2,0,2,0,2,2,2,2,2,2,2,0,2,0,2,2,2,2,0,0,0,0,2,2,2,1,2,2,2,2,0,0,1,0,2,2,2,2,2,2,2,2,0,1,2,1];		
+ 		
+         var status1  = [0,2,1,2,2,2,2,0,0,2,2,1,0,2,1,2,1,2,2,1,2,1,2,2,0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,		
+                 2,2,2,2,0,0,2,0,2,0,2,2,2,2,2,2,2,0,2,0,2,0,2,2,0,0,0,0,2,2,2,1,0,2,2,2,0,0,1,0,2,2,2,2,2,2,2,2,2,2,2,1];		
+         var statusChar = [status,status1,status,status,status,status1,status,status,status,status,status,status,status,status,status1];		
+         return statusChar;		
+         var statusChar = [status,status1,status,status,status,status1,status,status,status,status,status,status,status,status,status1];		
+         return statusChar;		
+      }		      
  }   		 
+
 function Status(status)
 {
 
-        getroomfromserver(function (a) {
-    	var geral =a;
+        for (var i = 0; i < 150; i++) {
+            var id_str = "q";
+            id_str = id_str.concat(100 + i);
+           if(status[i] == 0)		
+         {		
+             $('#'+ id_str).click(function(){$("#login-modal").modal("show");});
+         }
+            else if (status[i] == 1) {
+                document.getElementById(id_str).onclick = function(){$("#login-modal").modal("show");};
+                document.getElementById(id_str).style.background = "#F0F03E";
+                document.getElementById(id_str).style.cursor = "cursor";
+                $("#" + id_str).hover(function () {
+                    $(this).css("background-color", "#008B8B");
+                }, function () {
+                    $(this).css("background-color", "#F0F03E");
+                });
+            }
+            else if (status[i] == 2) {
+                document.getElementById(id_str).style.background = "#E03A3A";
+                document.getElementById(id_str).style.cursor = "auto";
+            }
+        }
 
-    /*              CRIANDO TABELAS           */
-    //REQUISITA CHAR COM OS NOMES DAS SALAS
-    var nomeSala = geral[0];
-
-    var url_atual = window.location.href
-    var arr = url_atual.split("?");
-    var k = 0;
-    for(var i = 0; i < nomeSala.length;i++)
-    {
-            for(var j = 8; j < 22;j++)
-            {
-                var id_str = nomeSala[i] + ":" + j;
-           		if(status[i] == 0)		
-				 {		
-				     $('#'+ id_str + ':B').click(function(){$("#login-modal").modal("show");});
-				 }
-				    else if (status[i] == 1) {
-					document.getElementById(id_str + ':B').onclick = function(){$("#login-modal").modal("show");};
-					document.getElementById(id_str).style.background = "#F0F03E";
-					document.getElementById(id_str).style.cursor = "cursor";
-					$('#'+ id_str + ':B').hover(function () {
-					    $(this).css("background-color", "#008B8B");
-					}, function () {
-					    $(this).css("background-color", "#F0F03E");
-					});
-				    }
-				    else if (status[i] == 2) {
-					document.getElementById(id_str).style.background = "#E03A3A";
-					document.getElementById(id_str).style.cursor = "auto";
-				    }
-       	 }
-    }
-});
 }
 
 function setDate(x)
@@ -256,9 +256,11 @@ function init()
             
 
 
-            for(var j = 8; j < 22;j++)
+            for(var j = 0; j < 14;j++)
             {
-                var id_str = nomeSala[i] + ":" + j;
+                cont++;
+                var id_str = "q";
+                id_str = id_str.concat(cont);
                 $("#tabela-agenda").append("<td class='botao-agenda' id='"+ id_str + "'></td> ");
 
 
@@ -280,7 +282,7 @@ function init()
         setDate();
         });
 
-        var BT1615 = [0,0,0,0,0,0,"Instalacoes Eletricas","Instalacoes Eletricas","Processamento de Sinais (Pos)","Processamento de Sinais (Pos)","Fundamentos de Redes 2","Fundamentos de Redes 2",0,0,"Top Eng: Caracterizacao de Semicondutores","Top Eng: Caracterizacao de Semicondutores","Top Sist Pot: Geracao Solar Fotovoltaica","Top Sist Pot: Geracao Solar Fotovoltaica",0,0,"Instalacoes Eletricas","Instalacoes Eletricas","Sinais e Sistemas em TD","Sinais e Sistemas em TD",0,0,0,0,"Redes Locais","Redes Locais","Comunicacoes Opticas (Opt)","Comunicacoes Opticas (Opt)",0,0,"Instalacoes Eletricas","Instalacoes Eletricas","Processamento de Sinais (Pos)","Processamento de Sinais (Pos)","Fundamentos de Redes 2","Fundamentos de Redes 2",0,0,"Top Eng: Caracterizacao de Semicondutores","Top Eng: Caracterizacao de Semicondutores","Top Sist Pot: Geracao Solar Fotovoltaica","Top Sist Pot: Geracao Solar Fotovoltaica",0,0,"Instalacoes Eletricas","Instalacoes Eletricas","Sinais e Sistemas em TD","Sinais e Sistemas em TD",0,0,0,0,"Redes Locais","Redes Locais","Comunicacoes Opticas (Opt)",0,0,0,0,0,0,0,0,0];
+        var BT1615 = [0,0,0,"Instalacoes Eletricas","Processamento de Sinais (Pos)","Fundamentos de Redes 2",0,"Top Eng: Caracterizacao de Semicondutores","Top Sist Pot: Geracao Solar Fotovoltaica",0,"Instalacoes Eletricas","Sinais e Sistemas em TD",0,0,"Redes Locais","Comunicacoes Opticas (Opt)",0,"Instalacoes Eletricas","Processamento de Sinais (Pos)","Fundamentos de Redes 2",0,"Top Eng: Caracterizacao de Semicondutores","Top Sist Pot: Geracao Solar Fotovoltaica",0,"Instalacoes Eletricas","Sinais e Sistemas em TD",0,0,"Redes Locais","Comunicacoes Opticas (Opt)",0,0,0,0,0,0,0,0,0];
         var profBT1615 = [0,0,0,"Alcides","Assis","substituto do G",0,"Stefan","Marco Aurelio",0,"Alcides","Eduardo Peixoto",0,0,"Giozza","Giozza",0,"Alcides","Assis","substituto do G",0,"Stefan","Marco Aurelio",0,"Alcides","Eduardo Peixoto",0,0,"Giozza","Giozza",0,0,0,0,0,0,0,0];
 
         var LabRedes = ["Arquitetura Protocolos Redes", "Sistemas Operacionais de Redes",0, "Projeto Transversal em Redes 1", "Seguranca de Redes", "Sistemas Inform Distrib (Opt)",0, "Aval Desemp Redes e Sistemas", "Algoritmos e Estrutura de Dados",0, "Gerencia de Redes e Sistemas", "Projeto Transversal em Redes 1",0,0,"Arquitetura Protocolos Redes", "Sistemas Operacionais de Redes",0, "Projeto Transversal em Redes 1", "Seguranca de Redes", "Sistemas Inform Distrib (Opt)",0,"Aval Desemp Redes e Sistemas", "Algoritmos e Estrutura de Dados",0, "Gerencia de Redes e Sistemas", "Projeto Transversal em Redes 1",0,0, "Lab Arquit e Prot de Redes", "Projeto Transversal em Redes 2",0,0,0,0,0,0,0,0,0,0,0,0,0];
@@ -559,4 +561,3 @@ function fecharmodal()
 	$('#portfolioModal1').modal('hide');
 	
 }
-
