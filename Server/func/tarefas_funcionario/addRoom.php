@@ -1,5 +1,5 @@
 <?php
-include('conexao.php');
+require('../../conexao/conexao.php');
 
 $nome = $_POST['nome'];
 $cadeiras = $_POST['cadeiras'];
