@@ -25,7 +25,7 @@ while ($ln2 = mysqli_fetch_array($result2)){
 }
 
 
-$sql3 = "SELECT * FROM fluxo_sala WHERE status = 'pendente';";
+$sql3 = "SELECT * FROM fluxo_sala WHERE status_sala = 'pendente';";
 $result3 = mysqli_query($conexao,$sql3);
 if (!$result3) {
 	die('Algo deu errado na conexão. Erro: ' . mysqli_error($conexao));
