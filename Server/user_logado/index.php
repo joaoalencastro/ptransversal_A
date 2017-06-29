@@ -285,7 +285,7 @@
                             <img src="../img/mapaSG.png" style="width: 900px; height: 650px" alt="" usemap="#sgmap"  border="0">
                             <map name="sgmap">
                                 <area alt="Auditório SG-11" onclick="fecharmodal()" 
-                                 coords="493,324,571,368" shape="rect" id="SG-11">    
+                                 coords="493,324,571,368" shape="rect" id="SG-11"  data-toggle="modal" href="#SG11M" >   
                             </map>
                             </div>
                             <p>Clique em alguma sala para ver o seu itinerário.</p>
