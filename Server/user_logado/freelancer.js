@@ -569,15 +569,16 @@ function Getmateriasfromserver(callback){
     });
 }
 function fecharmodal(id) {
-
-   $('#portfolioModal2').on('hide.bs.dropdown', function () {
+	
+	init();
+	
+	$('#portfolioModal2').modal('hide');
         var value = document.getElementById(id).value;
         $("#"+value+ "M").modal('show');
-    });
-	$('#portfolioModal1').on('hide.bs.dropdown', function () {
+   
+	$('#portfolioModal1').modal('hide');
         var value = document.getElementById(id).value;
         $("#"+value+ "M").modal('show');
-    });
 }
 
 function resgatevalor() {
