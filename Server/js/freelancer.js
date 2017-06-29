@@ -161,7 +161,7 @@ if(dia === new Date()) {
         var hs = horarios[i].split("\r\n");
         var ds = dias[i].split("\r\n");
 
-        for(var j = 0;j<hs.length;j++){
+        for(var j = 0;j<14;j++){
 	    var hs1 = hs[j].split("\n");
             var ds1 = ds[j].split("\n");
 	console.log(hs1[j+1]);
