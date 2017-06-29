@@ -1,35 +1,78 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-<head>
-  <title>Alterar Senha</title>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-</head>
-<style type="text/css">
-	body {
-  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  overflow-x: hidden;
+<style>
+input[type=text], select {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-left: 310px;
 }
+
+input[type=password], select {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-left: 310px;
+}
+
+input[type=submit] {
+    width: 50%;
+    background-color: #191970;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 310px;
+}
+
+input[type=submit]:hover {
+    background-color: #191970;
+}
+
+div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    left: 40%;
+}
+
+h1{
+  text-align: center;
+}
+*{
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
 </style>
 <body>
- 	<h1 align="center">Digite a senha nova</h1>
- 	<div align="center" >
-	 	<form action="php/esqueceu_senha_func.php" method="post" enctype="multpart/form/data" id="formpos">
-	 		<div class="form-group">	
-	 			 <label for="usr">E-mail:</label>
-	 			  <input required type="email" name="email" class="form-control" autocomplete="off" style="width:150px; height:32px" >
-	 		</div>
-	 		<div class="form-group">
-	 			<label for="usr">Senha:</label>
-	 			 <input required type="password" class="form-control" name="novasenha" autocomplete="off" style="width:150px; height:32px" />
-	 		</div>
-	 		<div class="form-group">
-	 			<label for="usr">Confirme sua senha:</label>
-	 			 <input required type="password" name="novasenha2" class="form-control" autocomplete="off" style="width:150px; height:32px" />
-	 		</div>
-	 		 <input type="hidden" name="acao" value="mudar" />
-	   		 <input type="submit" class="btn" value="Mudar Senha" />
-	 	</form>
+
+<h1>Alterar Senha</h1>
+
+<div>
+  <form action="php/esqueceu_senha_func.php" method="post">
+    <label for="nome"></label>
+    <input type="text" id="fname" name="email" placeholder="Seu E-mail.."><br>
+
+    <label for="novasenha"></label>
+    <input type="password" id="lname" name="novasenha" placeholder="Senha.."><br>
+
+    <label for="novasenha2"></label>
+    <input type="password" id="lname" name="novasenha2" placeholder="Confirme Senha.."><br>
+
+    <input type="hidden" name="acao" value="mudar" />
+    <input type="submit" value="Mudar Senha" />
+  </form>
+</div>
+
 </body>
 </html>
