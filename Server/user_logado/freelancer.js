@@ -479,7 +479,7 @@ var BT1615 = [0,0,0,"Instalacoes Eletricas","Processamento de Sinais (Pos)","Fun
                                         '</div>'+
                                         '<div class="row">'+
                                             '<div class="col-md-6">'+
-                                                '<img style="padding-top:70px;" src="img/room/'+newSala[i]+'.jpeg" class="img-responsive" alt'+newSala[i]+'>'+
+                                                '<img style="padding-top:70px;" src="../img/room/'+newSala[i]+'.jpeg" class="img-responsive" alt'+newSala[i]+'>'+
                                             '</div  class="col-md-6">'+
                                             '<div style="position:relative;top:57px">'+
                                                 '<h4 style="text-align: left; padding-left: 30px">Número de Cadeiras: 40</h4>  '+
