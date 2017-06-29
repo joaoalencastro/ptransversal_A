@@ -1,6 +1,6 @@
 <?php
 require('conexao2.php');
-require('phplot.php');
+require_once('phplot.php');
 #include('./PHPlot.php');
 
 $grafico = new PHPlot(1000,800); //cria um gráfico com tamanho 800x600 pixels
@@ -69,6 +69,7 @@ $plot->SetTitle("Estátistica de Salas");
 #Legenda, nesse caso serao tres pq o array possui 3 valores que serao apresentados
 $plot->SetLegend(array("Salas Indisponiveis","Salas Pendentes", "Salas Disponíveis"));
 #Utilizados p/ marcar labels, necessario mas nao se aplica neste ex. (manual) :
+$plot->SetFileFormat("png");
 $plot->SetXTickLabelPos("none");
 $plot->SetXTickPos("none");
 #Gera o grafico na tela
