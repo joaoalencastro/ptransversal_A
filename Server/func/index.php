@@ -32,7 +32,7 @@
     <link href="css/sb-admin.css" rel="stylesheet">
 
 </head>
-
+  <link rel="shortcut icon" type="image/png" href="../img/logoReservado.png"/>
 <body> 
     <div id="wrapper">
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
