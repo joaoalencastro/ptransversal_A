@@ -81,10 +81,11 @@
                     <li>
                         <ul class="nav navbar-top-links navbar-right">
                             <li class="dropdown">
-
+                                <i class="fa fa-user fa-fw"></i>
                                 <a id='nomeD' class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                   <i class="fa fa-user fa-fw"></i>Nome<i class="fa fa-caret-down"></i>
+                                   Nome
                                 </a>
+                                <i class="fa fa-caret-down"></i>
                                 <ul class="dropdown-menu dropdown-user">
                                     <li>
                                         <a style="color: black;" href="#"><i class="fa fa-user fa-fw"></i> Perfil do Usuário</a>
