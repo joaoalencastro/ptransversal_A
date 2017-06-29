@@ -156,9 +156,9 @@ function Status(status)
             var id_str = "q";
             id_str = id_str.concat(100 + i);
            if(status[i] == 0)		
- -        {		
- -            $('#'+ id_str).click(function(){$("#login-modal").modal("show");});
- -        }
+         {		
+             $('#'+ id_str).click(function(){$("#login-modal").modal("show");});
+         }
             else if (status[i] == 1) {
                 document.getElementById(id_str).onclick = function(){$("#login-modal").modal("show");};
                 document.getElementById(id_str).style.background = "#F0F03E";
