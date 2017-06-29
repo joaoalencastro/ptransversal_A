@@ -166,28 +166,28 @@ if(dia === new Date()) {
             var ds1 = ds[j].split("\n");
 	console.log(hs1);
 	console.log(ds1);
-            if(hs[j] === "8:00-9:50" || hs[j] === "10:00-11:50" || hs[j] === "12:00-13:50" || hs[j] === "14:00-15:50" || hs[j] === "16:00-17:50" || hs[j] === "18:00-19:50" || hs[j] === "20:00-21:50")
+            if(hs1[j] === "8:00-9:50" || hs1[j] === "10:00-11:50" || hs1[j] === "12:00-13:50" || hs1[j] === "14:00-15:50" || hs1[j] === "16:00-17:50" || hs1[j] === "18:00-19:50" || hs1[j] === "20:00-21:50")
             {
-                var dias1= ds[j].split('/')[0];
-                var dias2= ds[j].split('/')[1];
+                var dias1= ds1[j].split('/')[0];
+                var dias2= ds1[j].split('/')[1];
                 if(dias1 === "domingo") {
-                    if (hs[j] === "8:00-9:50") {
+                    if (hs1[j] === "8:00-9:50") {
                         domingo_aux[0] = status_aux[i];
                         domingo_aux[1] = status_aux[i];
                     }
-                    if (hs[j] === "10:00-11:50") {
+                    if (hs1[j] === "10:00-11:50") {
                         domingo_aux[2] = status_aux[i];
                         domingo_aux[3] = status_aux[i];
                     }
-                    if (hs[j] === "12:00-13:50") {
+                    if (hs1[j] === "12:00-13:50") {
                         domingo_aux[4] = status_aux[i];
                         domingo_aux[i][5] = status_aux[i];
                     }
-                    if (hs[j] === "14:00-15:50") {
+                    if (hs1[j] === "14:00-15:50") {
                         domingo_aux[6] = status_aux[i];
                         domingo_aux[7] = status_aux[i];
                     }
-                    if (hs[j] === "16:00-17:50") {
+                    if (hs1[j] === "16:00-17:50") {
                         domingo_aux[8] = status_aux[i];
                         domingo_aux[9] = status_aux[i];
                     }
@@ -195,68 +195,68 @@ if(dia === new Date()) {
                         domingo_aux[10] = status_aux[i];
                         domingo_aux[11] = status_aux[i];
                     }
-                    if (hs[j] === "20:00-21:50") {
+                    if (hs1[j] === "20:00-21:50") {
                         domingo_aux[12] = status_aux[i];
                         domingo_aux[13] = status_aux[i];
                     }
                 }
                 if(dias1 === "segunda") {
-                    if (hs[j] === "8:00-9:50") {
+                    if (hs1[j] === "8:00-9:50") {
                         segunda_aux[0] = status_aux[i];
                         segunda_aux[1] = status_aux[i];
                     }
-                    if (hs[j] === "10:00-11:50") {
+                    if (hs1[j] === "10:00-11:50") {
                         segunda_aux[2] = status_aux[i];
                         segunda_aux[3] = status_aux[i];
                     }
-                    if (hs[j] === "12:00-13:50") {
+                    if (hs1[j] === "12:00-13:50") {
                         segunda_aux[4] = status_aux[i];
                         segunda_aux[5] = status_aux[i];
                     }
-                    if (hs[j] === "14:00-15:50") {
+                    if (hs1[j] === "14:00-15:50") {
                         segunda_aux[6] = status_aux[i];
                         segunda_aux[7] = status_aux[i];
                     }
-                    if (hs[j] === "16:00-17:50") {
+                    if (hs1[j] === "16:00-17:50") {
                         segunda_aux[8] = status_aux[i];
                         segunda_aux[9] = status_aux[i];
                     }
-                    if (hs[j] === "18:00-19:50") {
+                    if (hs1[j] === "18:00-19:50") {
                         segunda_aux[10] = status_aux[i];
                         segunda_aux[11] = status_aux[i];
                     }
-                    if (hs[j] === "20:00-21:50") {
+                    if (hs1[j] === "20:00-21:50") {
                         segunda_aux[12] = status_aux[i];
                         segunda_aux[13] = status_aux[i];
                     }
                 }
                 if(dias1 === "terca") {
 
-                    if (hs[j] === "8:00-9:50") {
+                    if (hs1[j] === "8:00-9:50") {
                         terca_aux[0] = status_aux[i];
                         terca_aux[1] = status_aux[i];
                     }
-                    if (hs[j] === "10:00-11:50") {
+                    if (hs1[j] === "10:00-11:50") {
                         terca_aux[2] = status_aux[i];
                         terca_aux[3] = status_aux[i];
                     }
-                    if (hs[j] === "12:00-13:50") {
+                    if (hs1[j] === "12:00-13:50") {
                         terca_aux[4] = status_aux[i];
                         terca_aux[5] = status_aux[i];
                     }
-                    if (hs[j] === "14:00-15:50") {
+                    if (hs1[j] === "14:00-15:50") {
                         terca_aux[6] = status_aux[i];
                         terca_aux[7] = status_aux[i];
                     }
-                    if (hs[j] === "16:00-17:50") {
+                    if (hs1[j] === "16:00-17:50") {
                         terca_aux[8] = status_aux[i];
                         terca_aux[9] = status_aux[i];
                     }
-                    if (hs[j] === "18:00-19:50") {
+                    if (hs1[j] === "18:00-19:50") {
                         terca_aux[10] = status_aux[i];
                         terca_aux[11] = status_aux[i];
                     }
-                    if (hs[j] === "20:00-21:50") {
+                    if (hs1[j] === "20:00-21:50") {
                         terca_aux[12] = status_aux[i];
                         terca_aux[13] = status_aux[i];
                     }
