@@ -164,7 +164,7 @@ if(dia === new Date()) {
         for(var j = 0;j<hs.length;j++){
 	    var hs1 = hs[j].split("\n");
             var ds1 = ds[j].split("\n");
-
+	console.log(hs1);
             if(hs1[j] === "8:00-9:50" || hs1[j] === "10:00-11:50" || hs1[j] === "12:00-13:50" || hs1[j] === "14:00-15:50" || hs1[j] === "16:00-17:50" || hs1[j] === "18:00-19:50" || hs1[j] === "20:00-21:50")
             {
                 var dias1= ds1[j].split('/')[0];
