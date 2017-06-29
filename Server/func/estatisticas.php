@@ -118,8 +118,8 @@ while ($ln3 = mysqli_fetch_array($result3)){
 
 
     </script>
-
-</head>
+    <link rel="shortcut icon" type="image/png" href="../img/logoReservado.png"/>
+</head> 
 
 <body>
 <div id="wrapper">
