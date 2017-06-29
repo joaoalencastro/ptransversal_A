@@ -26,11 +26,9 @@ if (!$result0) {
   }
 }
 
-echo"$data_hora_reserva";
-/*
-
 if($aux == "recusar"){
-
+  echo"RECUSOU";
+/*
     $sql_alter = "UPDATE 'fluxo_sala' SET status_sala='disponivel' WHERE nome='$nomesala' AND data=$data_hora_reserva";
     $result = mysqli_query($conexao,$sql_alter);
     if (!$result) {
@@ -61,7 +59,7 @@ if($aux == "recusar"){
           }
         }
     }
-
+*/
   } else if($aux == "aceitar") {
   $sql_alter = "UPDATE 'fluxo_sala' SET status_sala='indisponivel' WHERE nome='$nomesala' AND data=$data_hora_reserva";
   $result = mysqli_query($conexao,$sql_alter);
@@ -94,5 +92,5 @@ if($aux == "recusar"){
       }
     }
 }
-*/
+
 ?>
