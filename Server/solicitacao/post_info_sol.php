@@ -25,12 +25,12 @@ while ($busca = mysqli_fetch_array($query2)) {
   $horario_da_reserva = $busca['horario_da_reserva'];
   $status             = "pendente";
 
-  $solicitacao_pendente[$i] = "$nomesala, " . "$horario_da_reserva, " . "$status";
+  $solicitacao_pendente[$j] = "$nomesala, " . "$horario_da_reserva, " . "$status";
 
 
-  ++$i;
+  ++$j;
 }
 $json[0] = $solicitacao_aprovada;
 $json[1] = $solicitacao_pendente;
-echo json_encode($json);
+echo json_encode($json[0]);
 ?>
