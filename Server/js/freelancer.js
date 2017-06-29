@@ -223,29 +223,42 @@ function requestStatus(stateReq)
 function Status(status)
 {
 
-        for (var i = 0; i < 150; i++) {
-            var id_str = "q";
-            id_str = id_str.concat(100 + i);
-           if(status[i] == 0)		
-         {		
-             $('#'+ id_str).click(function(){$("#login-modal").modal("show");});
-         }
-            else if (status[i] == 1) {
-                document.getElementById(id_str).onclick = function(){$("#login-modal").modal("show");};
-                document.getElementById(id_str).style.background = "#F0F03E";
-                document.getElementById(id_str).style.cursor = "cursor";
-                $("#" + id_str).hover(function () {
-                    $(this).css("background-color", "#008B8B");
-                }, function () {
-                    $(this).css("background-color", "#F0F03E");
-                });
-            }
-            else if (status[i] == 2) {
-                document.getElementById(id_str).style.background = "#E03A3A";
-                document.getElementById(id_str).style.cursor = "auto";
-            }
-        }
+        getroomfromserver(function (a) {
+    	var geral =a;
 
+    /*              CRIANDO TABELAS           */
+    //REQUISITA CHAR COM OS NOMES DAS SALAS
+    var nomeSala = geral[0];
+
+    var url_atual = window.location.href
+    var arr = url_atual.split("?");
+    var k = 0;
+    for(var i = 0; i < nomeSala.length;i++)
+    {
+            for(var j = 8; j < 22;j++)
+            {
+                var id_str = nomeSala[i] + ":" + j;
+           		if(status[i] == 0)		
+				 {		
+				     $('#'+ id_str + ':B').click(function(){$("#login-modal").modal("show");});
+				 }
+				    else if (status[i] == 1) {
+					document.getElementById(id_str + ':B').onclick = function(){$("#login-modal").modal("show");};
+					document.getElementById(id_str).style.background = "#F0F03E";
+					document.getElementById(id_str).style.cursor = "cursor";
+					$('#'+ id_str + ':B').hover(function () {
+					    $(this).css("background-color", "#008B8B");
+					}, function () {
+					    $(this).css("background-color", "#F0F03E");
+					});
+				    }
+				    else if (status[i] == 2) {
+					document.getElementById(id_str).style.background = "#E03A3A";
+					document.getElementById(id_str).style.cursor = "auto";
+				    }
+       	 }
+    }
+});
 }
 
 function setDate(x)
