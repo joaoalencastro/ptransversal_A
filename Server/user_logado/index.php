@@ -363,7 +363,7 @@
     <script type="text/javascript">
         var nome_d = "<?php echo $nome; ?>"
         var array = nome_d.split(" ");
-        let html = '<a  class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-user fa-fw"></i>'+array[0]+ ' ' + array[1]+'<i class="fa fa-caret-down"></i></a>';
+        let html = '<a  class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-user fa-fw"></i>'+array[0]+ ' ' + array[1]+' <i class="fa fa-caret-down"></i></a>';
         $("#dropNome").append(html);
       
         init();
