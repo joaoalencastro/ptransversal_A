@@ -226,12 +226,15 @@ function clickSolic(id_str)
 {
     let id_radio = id_str;
     let motivo;
+    let dia;
     var dia = document.getElementById("Title").innerHTML;
     var arr = dia.split(",");
     if(arr[0] == "Terça-Feira")
-        arr[0] = 'Terca-Feira';
-    let teste = arr[0].split("-");
-    arr[0] = teste;	
+        dia = 'Terca-Feira';
+    else
+	dia = arr[0];
+    let teste = dia.split("-");
+    dia = teste.toLowerCase();
 
     id_str = id_str.split(':');
     if(document.getElementById(id_radio+':Moni').checked == true)
@@ -277,8 +280,8 @@ function clickSolic(id_str)
     var temp =  parseInt(id_str[1]);
 	temp = temp + 1;
 	
-    let hora = id_str[1]+ ":00-" + temp + ":00"; 
-    location.href = "../solicitacao/post_solicitacao.php?dia="+arr[0]+"&horario_da_reserva="+ arr[1] + hora +"&motivo="+dados_solicitacao[1]+"&nomesala="+dados_solicitacao[2];
+    let hora = ", " + id_str[1]+ ":00-" + temp + ":00"; 
+    location.href = "../solicitacao/post_solicitacao.php?dia="+dia+"&horario_da_reserva="+ arr[1] + hora +"&motivo="+dados_solicitacao[1]+"&nomesala="+dados_solicitacao[2];
 }
 function init()
 {
