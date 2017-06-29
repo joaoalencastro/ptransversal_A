@@ -419,14 +419,13 @@ function fecharmodal(id) {
 	
 	init();
 	
-    $('#portfolioModal2').on('hide.bs.dropdown', function () {
+	$('#portfolioModal2').modal('hide');
         var value = document.getElementById(id).value;
         $("#"+value+ "M").modal('show');
-    });
-	$('#portfolioModal1').on('hide.bs.dropdown', function () {
+   
+	$('#portfolioModal1').modal('hide');
         var value = document.getElementById(id).value;
         $("#"+value+ "M").modal('show');
-    });
 }
 function resgatevalor() {
     Getmateriasfromserver(function(a)    {
