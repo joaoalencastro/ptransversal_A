@@ -3,7 +3,7 @@
 
    $sql = 'SELECT * FROM solicitacao';
    
-   $retval = mysql_query( $sql, $conn );
+   $retval = mysql_query( $sql, $conexao );
    
    if(! $retval ) {
       die('Could not get data: ' . mysql_error());
@@ -19,5 +19,5 @@
    
    echo "Fetched data successfully\n";
 
-$conn->close();
+$conexao->close();
 ?>
