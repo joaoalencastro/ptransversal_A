@@ -1,4 +1,4 @@
-<?
+<?php
 
 # Exemplo de gráfico de barras utilizando o PHPlot
 # Ubuntu para Iniciantes - 10/2012
@@ -27,9 +27,6 @@ $MeuGrafico->SetFileFormat("png");
 // define o tipo de grafico, nesse caso em barras
 $MeuGrafico->SetPlotType('bars');
 
-// Define a fonte Padrão, nesse caso o arquivo ttf está no mesmo diretório
-$MeuGrafico->SetDefaultTTFont('Arial.ttf'); 
-
 // define se as barras serão em 3D, valor 0 Imagem chamada
 $MeuGrafico->SetShading(1); 
 $MeuGrafico->SetDataType('text-data');
@@ -55,15 +52,6 @@ $MeuGrafico->SetDataValues($dados);
 // por questão da acentuação utilizar a função utf8_decode
 $titulo = utf8_decode('DEMONSTRAÇÃO DO RESULTADO DE VENDAS BIMENTRAL');
 
-// chamada do titulo definindo o tamanho da fonte
-//foi definido null no segundo parametro pois o tipo de fonte foi setado anteriormente 
-$MeuGrafico->SetFontTTF('title', null, 9); 
-
-// chamada das lefendas do eixo Y definindo o tamanho da fonte
-$MeuGrafico->SetFontTTF('y_label', null, 8);
-
-// chamada das lefendas do eixo X definindo o tamanho da fonte 
-$MeuGrafico->SetFontTTF('x_label', null, 8);
 
 // Setar o titulo definido na varieavel $titulo anteriomente
 $MeuGrafico->SetTitle($titulo);
