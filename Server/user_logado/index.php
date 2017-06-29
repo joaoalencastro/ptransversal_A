@@ -238,14 +238,13 @@
                       <div id="map"></div>
                     </div>
                     <div class="footer-col col-md-4">
+                    </div>
+                    <div class="footer-col col-md-4">
                         <h3>Patrocínio</h3>
                         <img src="../img/latitude.jpg" style="max-width: 100%; padding-bottom: 20px; padding-top: 20px;">
                         <img src="../img/logoft.jpeg" style="max-width: 100%;">
                     </div>
-                    <div class="footer-col col-md-4">
-                        <h3>About Freelancer</h3>
-                        <p>Freelance is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
-                    </div>
+
                 </div>
             </div>
         </div>
