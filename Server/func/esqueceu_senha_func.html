@@ -25,10 +25,17 @@
  		left: 57%;
  		top: -35px;
  	}
+	#formpos {
+		position:absolute;
+		left:50%;
+		top:50%;
+		margin-left:-110px;
+		margin-top:-40px;
+	}
 </style>
 <body>
   <h1>Digite a senha nova</h1>
-  <form action="php/esqueceu_senha_func.php" method="post" enctype="multpart/form/data">
+  <form action="php/esqueceu_senha_func.php" method="post" enctype="multpart/form/data" id="formpos">
     E-mail:         <input required type="email"    name="email"     autocomplete="off" style="width:150px; height:32px" />
     Senha:          <input required type="password" name="novasenha" autocomplete="off" style="width:150px; height:32px" />
     Confirme Senha: <input required type="password" name="novasenha2"autocomplete="off" style="width:150px; height:32px" />
