@@ -131,22 +131,94 @@ function getfromserver(callback){
 }
 function requestStatus(stateReq)		
  {		
-     if(stateReq != 'inicio')		
-     {		
+
+
+        var BT1615 = [0,0,0,"Instalacoes Eletricas","Processamento de Sinais (Pos)","Fundamentos de Redes 2",0,"Top Eng: Caracterizacao de Semicondutores","Top Sist Pot: Geracao Solar Fotovoltaica",0,"Instalacoes Eletricas","Sinais e Sistemas em TD",0,0,"Redes Locais","Comunicacoes Opticas (Opt)",0,"Instalacoes Eletricas","Processamento de Sinais (Pos)","Fundamentos de Redes 2",0,"Top Eng: Caracterizacao de Semicondutores","Top Sist Pot: Geracao Solar Fotovoltaica",0,"Instalacoes Eletricas","Sinais e Sistemas em TD",0,0,"Redes Locais","Comunicacoes Opticas (Opt)",0,0,0,0,0,0,0,0,0];
+        var LabRedes = ["Arquitetura Protocolos Redes", "Sistemas Operacionais de Redes",0, "Projeto Transversal em Redes 1", "Seguranca de Redes", "Sistemas Inform Distrib (Opt)",0, "Aval Desemp Redes e Sistemas", "Algoritmos e Estrutura de Dados",0, "Gerencia de Redes e Sistemas", "Projeto Transversal em Redes 1",0,0,"Arquitetura Protocolos Redes", "Sistemas Operacionais de Redes",0, "Projeto Transversal em Redes 1", "Seguranca de Redes", "Sistemas Inform Distrib (Opt)",0,"Aval Desemp Redes e Sistemas", "Algoritmos e Estrutura de Dados",0, "Gerencia de Redes e Sistemas", "Projeto Transversal em Redes 1",0,0, "Lab Arquit e Prot de Redes", "Projeto Transversal em Redes 2",0,0,0,0,0,0,0,0,0,0,0,0,0];
+        var BT2515 = [0,"Fundamentos de Redes 1",0,"Fundamentos de Redes 2","Analise de Sistemas de Potencia",0,0,"Controle Digital","Eletronica 2",0,"Teoria da Informacao","Eletromagnetismo 2",0,0,"Analise Dinamica Linear","Fundamentos de Redes 1",0,"Fundamentos de Redes 2","Analise de Sistemas de Potencia",0,0,"Controle Digital","Eletronica 2",0,"Teoria da Informacao","Eletromagnetismo 2",0,0,0,"Introducao Circuitos Eletricos",0,0,0,0,0,0,0,0,0,0,0,0,0];
+        var BT3415 = ["Controle de Processos","Transmissao de Energia Eletrica (Opt)",0,0,"Controle Dinamico",0,0,"Sistemas Microprocessados",0,0,"Conversao Eletromec Energia","Comunicacoes Digitais",0,0,"Controle de Processos","Transmissao de Energia Eletrica (Opt)",0,0,"Controle Dinamico",0,0,"Sistemas Microprocessados",0,0,"Conversao Eletromec Energia","Comunicacoes Digitais",0,0,0,"Introd a Engenharia Eletrica",0,0,0,0,0,0,0,0,0,0,0,0,0];
+        var BT5215 = [0,0,0,"Sistemas Digitais","Eletromagnetismo 1",0,0,"Principios de Comunicacao","Principios de Comunicacao",0,0,"Eletromagnetismo 1",0,0,0,"Controle para Automacao",0,"Sistemas Digitais","Eletromagnetismo 1",0,0,"Principios de Comunicacao","Principios de Comunicacao",0,0,"Eletromagnetismo 1",0,0,0,0,0,"Introducao a Eng de Redes",0,0,0,0,0,0,0,0]
+        var AudSG11 = ["Circuitos Eletricos","Eletronica",0,"Disposit e Circuitos Eletronicos","Analise Dinamica Linear",0,0,"Eletricidade Basica","Sinais e Sistemas em TC",0,"Sistemas Digitais","Sistemas Digitais","Maquinas Eletricas",0,"Circuitos Eletricos","Eletronica",0,"Disposit e Circuitos Eletronicos","Analise Dinamica Linear",0,0,"Eletricidade Basica","Sinais e Sistemas em TC",0,"Sistemas Digitais","Sistemas Digitais","Maquinas Eletricas",0,0,0,0,0,0,0,0,0];        var Auditorio = ["Sistemas Microprocessados","Materiais Eletricos e Mag",0,"Circuitos Eletricos 2","Circuitos Eletricos",0,0,"Circuitos Polifasicos","Circuitos Eletricos 2",0,"Conversao de Energia",0,"Eletricidade Basica",0,"Sistemas Microprocessados","Materiais Eletricos e Mag",0,"Circuitos Eletricos 2","Circuitos Eletricos",0,0,"Circuitos Polifasicos","Circuitos Eletricos 2",0,"Conversao de Energia",0,"Eletricidade Basica",0,0,0,0,0,0,0,0,0];
+        var Auditorio = ["Sistemas Microprocessados","Materiais Eletricos e Mag",0,"Circuitos Eletricos 2","Circuitos Eletricos",0,0,"Circuitos Polifasicos","Circuitos Eletricos 2",0,"Conversao de Energia",0,"Eletricidade Basica",0,"Sistemas Microprocessados","Materiais Eletricos e Mag",0,"Circuitos Eletricos 2","Circuitos Eletricos",0,0,"Circuitos Polifasicos","Circuitos Eletricos 2",0,"Conversao de Energia",0,"Eletricidade Basica",0,0,0,0,0,0,0,0,0];var Auditorio = ["Sistemas Microprocessados","Materiais Eletricos e Mag",0,"Circuitos Eletricos 2","Circuitos Eletricos",0,0,"Circuitos Polifasicos","Circuitos Eletricos 2",0,"Conversao de Energia",0,"Eletricidade Basica",0,"Sistemas Microprocessados","Materiais Eletricos e Mag",0,"Circuitos Eletricos 2","Circuitos Eletricos",0,0,"Circuitos Polifasicos","Circuitos Eletricos 2",0,"Conversao de Energia",0,"Eletricidade Basica",0,0,0,0,0,0,0,0,0];
+    
+        for(var i = 0; i < 34;i++)
+        {
+            if(BT1615[i] != 0)
+                BT1615[i] = 1;
+
+            if(LabRedes[i] != 0)
+                LabRedes[i] = 1;
+
+            if(BT2515[i] != 0)
+                BT2515[i] = 1;
+
+            if(BT3415[i] != 0)
+                BT3415[i] = 1;  
+
+            if(BT5215[i] != 0)
+                BT5215[i] = 1;
+
+            if(AudSG11[i] != 0)
+                AudSG11[i] = 1;
+
+            if(Auditorio[i] != 0)
+                Auditorio[i] = 1;
+        }
+        var segunda = [0,0,0,0];
+        for(var j = 0; j < 14; j++)
+        {   
+            if(!(j.isInteger()))
+                segunda[j] = [BT1615[j-1]];
+            else
+                segunda[j] = [BT1615[j]];
+        }
+        for(var j = 14; j < 28; j++)
+        {   
+            if(!(j.isInteger()))
+                segunda[j] = [BT2515[j-1]];
+            else
+                segunda[j] = [BT2515[j]];
+        }    
+        for(var j = 28; j < 56; j++)
+        {
+            if(!(j.isInteger()))
+                segunda[j] = [BT3415[j-1]];
+            else
+                segunda[j] = [BT3415[j]];
+        }   
+        for(var j = 56; j < 70; j++)
+        {
+            if(!(j.isInteger()))
+                segunda[j] = [BT5215[j-1]];
+            else
+                segunda[j] = [BT5215[j]];
+        }   
+        for(var j = 70; j < 84; j++)
+        {
+            if(!(j.isInteger()))
+                segunda[j] = [LabRedes[j-1]];
+            else
+                segunda[j] = [LabRedes[j]];
+        } 
+        for(var j = 84; j < 98; j++)
+        {
+            if(!(j.isInteger()))
+                segunda[j] = [AudSG11[j-1]];
+            else
+                segunda[j] = [AudSG11[j]];
+        }
+        for(var j = 98; j < 112; j++)
+        {
+            if(!(j.isInteger())) 
+                segunda[j] = [Auditorio[j-1]];
+            else
+                segunda[j] = [Auditorio[j]];
+        }  
+        
+
+         var statusChar = [segunda,segunda,segunda,segunda,segunda,segunda,segunda,segunda,segunda,segunda,segunda,segunda,segunda,segunda,segunda];		
          return statusChar;		
-     }		
-     else  //REQUISIÇÃO DE DADOS É FEITA AQUI   OBS: FAZER DE UM JEITO QUE EU POSSA  REQUISITAR SEMPRE, SEM TER QUE FAZER CONEXÃO COM O SERVIDOR		
-     {		
-         var status = [0,2,1,2,2,2,2,0,0,2,2,1,0,2,1,2,1,2,2,1,2,1,2,2,0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,		
-                 2,2,2,2,0,0,2,0,2,0,2,2,2,2,2,2,2,0,2,0,2,2,2,2,0,0,0,0,2,2,2,1,2,2,2,2,0,0,1,0,2,2,2,2,2,2,2,2,0,1,2,1];		
- 		
-         var status1  = [0,2,1,2,2,2,2,0,0,2,2,1,0,2,1,2,1,2,2,1,2,1,2,2,0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,		
-                 2,2,2,2,0,0,2,0,2,0,2,2,2,2,2,2,2,0,2,0,2,0,2,2,0,0,0,0,2,2,2,1,0,2,2,2,0,0,1,0,2,2,2,2,2,2,2,2,2,2,2,1];		
-         var statusChar = [status,status1,status,status,status,status1,status,status,status,status,status,status,status,status,status1];		
-         return statusChar;		
-         var statusChar = [status,status1,status,status,status,status1,status,status,status,status,status,status,status,status,status1];		
-         return statusChar;		
-      }		      
+	      
  }   		 
 
 function Status(status)
