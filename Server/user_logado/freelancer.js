@@ -42,52 +42,20 @@
     });
 
 })(jQuery); // End of use strict
-
-/*                                  LOGIN                       */
-function toggleNavPanel(x)
-{
-    var panel = document.getElementById(x), navarrow = document.getElementById("navarrow"), maxH="600px";
-    if(panel.style.height == maxH){
-        panel.style.height = "0px";
-        navarrow.innerHTML = "&#9662;";
-        document.getElementById('logBar').style.background = "#2C3E50";
-    }else{
-        panel.style.height = maxH;
-        navarrow.innerHTML = "&#9652;";
-        document.getElementById('logBar').style.background = "#18BC9C";
-        document.getElementById('logBar').style.color = 'white';
-    }
-}
-/*                          MODULO DE LOGIN                                 */
-$('.form').find('input, textarea').on('keyup blur focus', function (e) {
-  
-  var $this = $(this),
-      label = $this.prev('label');
-
-      if (e.type === 'keyup') {
-            if ($this.val() === '') {
-          label.removeClass('active highlight');
-        } else {
-          label.addClass('active highlight');
+function getroomfromserver(callback){
+    var status_aux;
+    //Requisição HTTP, por dados provindos do url dado. Caso os dados recebidos sejam os esperados, entra no caso do SUCCESS
+    return $.ajax({
+        url: '../materiasphp/salas.php',
+        dataType: 'json',
+        success: function(data)
+        {
+	    console.log(data);	
+            status_aux = data;
+            callback(status_aux);
         }
-    } else if (e.type === 'blur') {
-        if( $this.val() === '' ) {
-            label.removeClass('active highlight'); 
-            } else {
-            label.removeClass('highlight');   
-            }   
-    } else if (e.type === 'focus') {
-      
-      if( $this.val() === '' ) {
-            label.removeClass('highlight'); 
-            } 
-      else if( $this.val() !== '' ) {
-            label.addClass('highlight');
-            }
-    }
-
-});
-
+    });
+}
 $('.tab a').on('click', function (e) {
   
   e.preventDefault();
@@ -132,9 +100,13 @@ function date(x)     //RETORNA O DIA ATUAL + 1
 
 function Status(status) //ATUALIZA O STATUS
 {
+    getroomfromserver(function (a) {
+    var geral =a;
+
+    /*              CRIANDO TABELAS           */
     //REQUISITA CHAR COM OS NOMES DAS SALAS
-    var nomeSala = ["BT-16/15","BT-25/15","BT-34/15","BT-52/15","Lab-Redes","SG-11","Auditório"];
-    //
+    var nomeSala = geral[0];
+
     var url_atual = window.location.href
     var arr = url_atual.split("?");
     var k = 0;
@@ -167,7 +139,7 @@ function Status(status) //ATUALIZA O STATUS
                 k++;
             }
     }
-
+     });
 }
 function requestStatus(stateReq)
 {
@@ -285,10 +257,12 @@ function clickSolic(id_str)
 function init()
 {
 
-        /*              CRIANDO TABELAS           */
-           //REQUISITA CHAR COM OS NOMES DAS SALAS
-        var nomeSala = ["BT-16/15","BT-25/15","BT-34/15","BT-52/15","Lab-Redes","SG-11","Auditório"];
-        //
+    getroomfromserver(function (a) {
+    var geral =a;
+
+    /*              CRIANDO TABELAS           */
+    //REQUISITA CHAR COM OS NOMES DAS SALAS
+    var nomeSala = geral[0];
         var newSala = [1,1];
         for(var i = 0; i < nomeSala.length;i++)
         {
@@ -440,7 +414,7 @@ function init()
                             '</div>';
                     $("#generic").append(html);
        }
-
+ });
 }
 function Getmateriasfromserver(callback){
     var status_aux;
