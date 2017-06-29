@@ -313,8 +313,8 @@
                             <div id="over" >
                             <img src="../img/mapaFT.png" style="width: 900px; height: 650px" alt="" usemap="#mymap"  border="0" >
                             <map name="mymap">
-                                <area shape="rect" coords="654,453,696,409" onclick='$('#portifolioModal1').modal('hide');' data-toggle="modal" href="#BT-52_15M" id="BT-52/15">
-                                <area shape="rect" coords="609,475,645,427" onclick='$('#portifolioModal1').modal('hide');' data-toggle="modal" href="#BT-34_15M" id="BT-34/15">
+                                <area shape="rect" coords="654,453,696,409" onclick="fecharmodal()" data-toggle="modal" href="#BT-52_15M" id="BT-52/15">
+                                <area shape="rect" coords="609,475,645,427" onclick="$('#portifolioModal1').modal('hide');" data-toggle="modal" href="#BT-34_15M" id="BT-34/15">
                                 <area shape="rect" coords="548,447,600,484" onclick='$('#portifolioModal1').modal('hide');' data-toggle="modal" href="#BT-25_15M" id="BT-25/15">
                                 <area shape="rect" coords="500,469,553,498" onclick='$("Fechar").click()' data-toggle="modal" href="#BT-16_15M" id="BT-16/15">
                                 <area shape="rect" coords="432,488,502,540" onclick='$("Fechar").click()' data-toggle="modal" href="#AuditorioM" id="Auditório"> 
