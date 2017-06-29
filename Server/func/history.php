@@ -30,6 +30,7 @@
 
     <!-- SB Admin CSS - Include with every page -->
     <link href="css/sb-admin.css" rel="stylesheet">
+  <link rel="shortcut icon" type="image/png" href="../img/logoReservado.png"/>
 
 </head>
 
