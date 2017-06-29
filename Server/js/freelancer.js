@@ -965,7 +965,6 @@ function setDate(x)
         document.getElementById("Title").innerHTML = semana[dia] + ', ' + data;
         var aux = date('0');
         var newDate = (arr[1]) +'/' + arr[2] + '/' + arr[0];
-        console.log(newDate);
         requestStatus(newDate);
     }
 
@@ -995,7 +994,7 @@ function init()
     //REQUISITA CHAR COM OS NOMES DAS SALAS
     var nomeSala = geral[0];
 
-	console.log(nomeSala);
+
         var newSala = [1,1];
         for(var i = 0; i < nomeSala.length;i++)
         {
@@ -1253,7 +1252,6 @@ function Getmateriasfromserver(callback){
     Getmateriasfromserver(function(a)    {
         var geral = a;
         var materias = geral[0];
-    	console.log(materias);
 
         $('#the-basics .typeahead').typeahead({
                 hint: true,
