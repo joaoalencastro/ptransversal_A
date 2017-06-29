@@ -162,8 +162,8 @@ if(dia === new Date()) {
         var ds = dias[i].split("\r\n");
 
         for(var j = 0;j<hs.length;j++){
-	    var hs1 = horarios[i].split("\r\n");
-            var ds1 = dias[i].split("\r\n");
+	    var hs1 = hs.split("\r\n");
+            var ds1 = ds.split("\r\n");
 	console.log(hs1);
 	console.log(ds1);
             if(hs[j] === "8:00-9:50" || hs[j] === "10:00-11:50" || hs[j] === "12:00-13:50" || hs[j] === "14:00-15:50" || hs[j] === "16:00-17:50" || hs[j] === "18:00-19:50" || hs[j] === "20:00-21:50")
