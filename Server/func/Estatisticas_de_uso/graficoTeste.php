@@ -7,7 +7,7 @@
 # faceboock: http://www.facebook.com/iniciantes.doubuntu
 # Compartilhe Conhecimento
 
-require_once 'phplot.php';
+require_once "phplot.php";
 
 // nesse caso será utilizado uma estrutura de array
 // a situação é a mesma para dados vindo de uma consulta sql
@@ -20,7 +20,7 @@ array('Fevereiro', '12334', '8902'),
 // cria um objeto
 $MeuGrafico = new PHPlot(400, 200);
 
-$MeuGrafico->SetImageBorderType('plain');
+
 // define o formato do arquivo da imagem
 $MeuGrafico->SetFileFormat("png");
 
