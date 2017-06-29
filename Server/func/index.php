@@ -113,7 +113,6 @@
                                             <th>Nome</th>
                                                 <th>Tipo do usuário</th>
                                                 <th>Hora</th>
-                                            <th>Data</th>
                                             <th style="width: 13%;">Resposta</th>
                                         </tr>
                                     </thead>
