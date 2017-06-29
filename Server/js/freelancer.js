@@ -157,17 +157,21 @@ if(dia === new Date()) {
         var sabado_aux = ["disponivel","disponivel","disponivel","disponivel","disponivel","disponivel","disponivel","disponivel","disponivel","disponivel","disponivel","disponivel","disponivel","disponivel"];
         var quarta_aux = ["disponivel","disponivel","disponivel","disponivel","disponivel","disponivel","disponivel","disponivel","disponivel","disponivel","disponivel","disponivel","disponivel","disponivel"];
 
-
+//horario separado por quebra de linha
         var hs = horarios[i].split("\r\n");
+	    //dia separado por quebra de linha
         var ds = dias[i].split("\r\n");
 
         for(var j = 0;j<14;j++){
+		//horario separado por quebra de linha novamente
 	    var hs1 = hs[j].split("\n");
+		//dia separado por quebra de linha novamente
             var ds1 = ds[j].split("\n");
 	console.log(hs1[j+1]);
             if(hs1[j+1] === "8:00-9:50" || hs1[j+1] === "10:00-11:50" || hs1[j+1] === "12:00-13:50" || hs1[j+1] === "14:00-15:50" || hs1[j+1] === "16:00-17:50" || hs1[j+1] === "18:00-19:50" || hs1[j+1] === "20:00-21:50")
             {
 		console.log(ds1);
+		    //dia separado pela barra ficando "terca" de "terca/quinta"
                 var dias1= ds1[j+1].split('/')[0];
                 var dias2= ds1[j+1].split('/')[1];
 		console.log(dias1);
