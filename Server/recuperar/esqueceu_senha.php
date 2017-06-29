@@ -2,7 +2,7 @@
 
   include('../conexao/conexao.php');
 
-  date_default_timezone_get("America/Sao_Paulo");
+  date_default_timezone_set('America/Sao_Paulo');
   ini_set('smtp_port', '587');
 
   if(isset($_POST['acao']) && $_POST['acao'] == 'recuperar'){
