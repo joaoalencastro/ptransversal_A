@@ -568,17 +568,12 @@ function Getmateriasfromserver(callback){
             });
     });
 }
-function fecharmodal() {
-	
-	
-	
+function fecharmodal()
+{
 	$('#portfolioModal2').modal('hide');
-        
-   
 	$('#portfolioModal1').modal('hide');
-        
+	
 }
-
 function resgatevalor() {
     Getmateriasfromserver(function(a)    {
     var form = document.getElementById('formulario');
