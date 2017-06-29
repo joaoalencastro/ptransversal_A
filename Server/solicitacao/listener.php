@@ -1,5 +1,6 @@
 <?php
-	require ('../conexao/conexao.php');
+
+require('../conexao/conexao.php');
 
    $sql = 'SELECT * FROM solicitacao';
    
