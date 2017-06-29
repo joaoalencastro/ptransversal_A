@@ -322,27 +322,27 @@ if(dia === new Date()) {
                     }
                 }
                 if(dias1 === "sexta") {
-                    if (hs[j] === "8:00-9:50") {
+                    if (hs1[j] === "8:00-9:50") {
                         sexta_aux[0] = status_aux[i];
                         sexta_aux[1] = status_aux[i];
                     }
-                    if (hs[j] === "10:00-11:50") {
+                    if (hs1[j] === "10:00-11:50") {
                         sexta_aux[2] = status_aux[i];
                         sexta_aux[3] = status_aux[i];
                     }
-                    if (hs[j] === "12:00-13:50") {
+                    if (hs1[j] === "12:00-13:50") {
                         sexta_aux[4] = status_aux[i];
                         sexta_aux[5] = status_aux[i];
                     }
-                    if (hs[j] === "14:00-15:50") {
+                    if (hs1[j] === "14:00-15:50") {
                         sexta_aux[6] = status_aux[i];
                         sexta_aux[7] = status_aux[i];
                     }
-                    if (hs[j] === "16:00-17:50") {
+                    if (hs1[j] === "16:00-17:50") {
                         sexta_aux[8] = status_aux[i];
                         sexta_aux[9] = status_aux[i];
                     }
-                    if (hs[j] === "18:00-19:50") {
+                    if (hs1[j] === "18:00-19:50") {
                         sexta_aux[10] = status_aux[i];
                         sexta_aux[11] = status_aux[i];
                     }
