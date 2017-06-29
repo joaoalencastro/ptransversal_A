@@ -187,7 +187,7 @@ if(dia === new Date()) {
                     }
                     if (hs1[j] === "12:00-13:50") {
                         domingo_aux[4] = status_aux[i];
-                        domingo_aux[i][5] = status_aux[i];
+                        domingo_aux[5] = status_aux[i];
                     }
                     if (hs1[j] === "14:00-15:50") {
                         domingo_aux[6] = status_aux[i];
