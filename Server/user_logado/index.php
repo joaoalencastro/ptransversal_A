@@ -80,12 +80,10 @@
                     </li>
                     <li>
                         <ul class="nav navbar-top-links navbar-right">
-                            <li class="dropdown">
-                                <i class="fa fa-user fa-fw"></i>
-                                <a id='nomeD' class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                   Nome
-                                </a>
-                                <i class="fa fa-caret-down"></i>
+                            <li class="dropdown" id='dropNome'>
+                                
+
+        
                                 <ul class="dropdown-menu dropdown-user">
                                     <li>
                                         <a style="color: black;" href="../login/logout.php"><i class="fa fa-sign-out fa-fw"></i>Sair</a>
@@ -365,7 +363,9 @@
     <script type="text/javascript">
         var nome_d = "<?php echo $nome; ?>"
         var array = nome_d.split(" ");
-        document.getElementById("nomeD").innerHTML = array[0]+ " " + array[1];
+        let html = '<a id='nomeD' class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-user fa-fw"></i>'+array[0]+ " " + array[1]+'<i class="fa fa-caret-down"></i></a>';
+        $("#dropName").append(html);
+      
         init();
         pesquisa();
         resgatevalor();
