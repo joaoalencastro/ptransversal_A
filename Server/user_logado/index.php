@@ -88,10 +88,6 @@
                                 <i class="fa fa-caret-down"></i>
                                 <ul class="dropdown-menu dropdown-user">
                                     <li>
-                                        <a style="color: black;" href="#"><i class="fa fa-user fa-fw"></i> Perfil do Usuário</a>
-                                    </li>
-                                    <li class="divider"></li>
-                                    <li>
                                         <a style="color: black;" href="../login/logout.php"><i class="fa fa-sign-out fa-fw"></i>Sair</a>
                                     </li>
                                 </ul>
