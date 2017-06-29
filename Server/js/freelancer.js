@@ -167,49 +167,49 @@ function requestStatus(stateReq)
         var segunda = [0,0,0,0];
         for(var j = 0; j < 14; j++)
         {   
-            if(!(j.isInteger()))
+            if((isNaN(j)))
                 segunda[j] = [BT1615[j-1]];
             else
                 segunda[j] = [BT1615[j]];
         }
         for(var j = 14; j < 28; j++)
         {   
-            if(!(j.isInteger()))
+            if((isNaN(j)))
                 segunda[j] = [BT2515[j-1]];
             else
                 segunda[j] = [BT2515[j]];
         }    
         for(var j = 28; j < 56; j++)
         {
-            if(!(j.isInteger()))
+            if((isNaN(j)))
                 segunda[j] = [BT3415[j-1]];
             else
                 segunda[j] = [BT3415[j]];
         }   
         for(var j = 56; j < 70; j++)
         {
-            if(!(j.isInteger()))
+            if((isNaN(j)))
                 segunda[j] = [BT5215[j-1]];
             else
                 segunda[j] = [BT5215[j]];
         }   
         for(var j = 70; j < 84; j++)
         {
-            if(!(j.isInteger()))
+            if((isNaN(j)))
                 segunda[j] = [LabRedes[j-1]];
             else
                 segunda[j] = [LabRedes[j]];
         } 
         for(var j = 84; j < 98; j++)
         {
-            if(!(j.isInteger()))
+            if((isNaN(j)))
                 segunda[j] = [AudSG11[j-1]];
             else
                 segunda[j] = [AudSG11[j]];
         }
         for(var j = 98; j < 112; j++)
         {
-            if(!(j.isInteger())) 
+            if((isNaN(j))) 
                 segunda[j] = [Auditorio[j-1]];
             else
                 segunda[j] = [Auditorio[j]];
@@ -220,7 +220,6 @@ function requestStatus(stateReq)
          return statusChar;		
 	      
  }   		 
-
 function Status(status)
 {
 
