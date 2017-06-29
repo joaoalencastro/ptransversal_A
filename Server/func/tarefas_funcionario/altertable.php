@@ -25,7 +25,7 @@ if (!$result0) {
       $tipo_solicitante = $r['tipo'];
   }
 }
-
+/*
 
 if($aux == "recusar"){
 
@@ -92,5 +92,5 @@ if($aux == "recusar"){
       }
     }
 }
-
+*/
 ?>
