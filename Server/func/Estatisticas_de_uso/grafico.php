@@ -1,6 +1,6 @@
 <?php
 require('conexao2.php');
-require('phplot.php');
+require_once 'phplot.php';
 #include('./PHPlot.php');
 
 #Dados para o Grafico
