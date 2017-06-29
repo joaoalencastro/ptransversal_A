@@ -167,8 +167,9 @@ if(dia === new Date()) {
 	console.log(hs1[j+1]);
             if(hs1[j+1] === "8:00-9:50" || hs1[j+1] === "10:00-11:50" || hs1[j+1] === "12:00-13:50" || hs1[j+1] === "14:00-15:50" || hs1[j+1] === "16:00-17:50" || hs1[j+1] === "18:00-19:50" || hs1[j+1] === "20:00-21:50")
             {
-                var dias1= ds1[j].split('/')[0];
-                var dias2= ds1[j].split('/')[1];
+		console.log(ds1);
+                var dias1= ds1[j+1].split('/')[0];
+                var dias2= ds1[j+1].split('/')[1];
 		console.log(dias1);
 		console.log(dias2);
                 if(dias1 === "domingo") {
