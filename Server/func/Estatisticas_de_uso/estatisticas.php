@@ -3,7 +3,7 @@
 require('conexao2.php');
 
 
-$sql2 = "SELECT * FROM fluxo;";
+$sql2 = "SELECT * FROM fluxo_sala;";
 $result2 = mysqli_query($conexao,$sql2);
 if (!$result2) {
     die('Algo deu errado na conexão. Erro: ' . mysqli_error($conexao));
@@ -15,7 +15,7 @@ while ($ln2 = mysqli_fetch_array($result2)){
 }
 
 
-$sql = "SELECT * FROM fluxo where status='pendente';";
+$sql = "SELECT * FROM fluxo_sala where status_sala='pendente';";
 $result = mysqli_query($conexao,$sql);
 if (!$result) {
     die('Algo deu errado na conexão. Erro: ' . mysqli_error($conexao));
