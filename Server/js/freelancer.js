@@ -340,11 +340,9 @@ function init()
             
 
 
-            for(var j = 0; j < 14;j++)
+            for(var j = 8; j < 22;j++)
             {
-                cont++;
-                var id_str = "q";
-                id_str = id_str.concat(cont);
+                var id_str = nomeSala[i] + ":" + j;
                 $("#tabela-agenda").append("<td class='botao-agenda' id='"+ id_str + "'></td> ");
 
 
