@@ -271,37 +271,13 @@ function clickSolic(id_str)
        
 
     var dados_solicitacao = [0,0,0];
-    dados_solicitacao[0] = arr[1]+ ", " +id_str[1]+ ":00 hrs";
     dados_solicitacao[1] = motivo;
     dados_solicitacao[2] = id_str[0];
 	
     var temp =  parseInt(id_str[1]);
 	temp = temp + 1;
-    let hora = id_str[1]+ ":00 - " + temp + ":00"; 
-    /*$.ajax({
-        type: "POST",
-        url: "././solicitacao/post_solicitacao.php",
-        data: "dados=" + dados_solicitacao,
-        error: function (jqXHR, exception) {
-            var msg = '';
-            if (jqXHR.status === 0) {
-                msg = 'Not connect.\n Verify Network.';
-            } else if (jqXHR.status == 404) {
-                msg = 'Requested page not found. [404]';
-            } else if (jqXHR.status == 500) {
-                msg = 'Internal Server Error [500].';
-            } else if (exception === 'parsererror') {
-                msg = 'Requested JSON parse failed.';
-            } else if (exception === 'timeout') {
-                msg = 'Time out error.';
-            } else if (exception === 'abort') {
-                msg = 'Ajax request aborted.';
-            } else {
-                msg = 'Uncaught Error.\n' + jqXHR.responseText;
-            }
-            console.log(msg);
-        }
-    });*/
+	
+    let hora = id_str[1]+ ":00-" + temp + ":00"; 
     location.href = "../solicitacao/post_solicitacao.php?dia="+arr[0]+"&horario_da_reserva="+ arr[1] + hora +"&motivo="+dados_solicitacao[1]+"&nomesala="+dados_solicitacao[2];
 }
 function init()
