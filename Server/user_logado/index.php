@@ -285,7 +285,7 @@
                             <div id="over" >
                             <img src="../img/mapaSG.png" style="width: 900px; height: 650px" alt="" usemap="#sgmap"  border="0">
                             <map name="sgmap">
-                                <area alt="Auditório SG-11" onclick="fecharmodal(this.id)" 
+                                <area alt="Auditório SG-11" onclick="fecharmodal()" 
                                  coords="493,324,571,368" shape="rect" id="SG-11">    
                             </map>
                             </div>
@@ -314,11 +314,11 @@
                             <img src="../img/mapaFT.png" style="width: 900px; height: 650px" alt="" usemap="#mymap"  border="0" >
                             <map name="mymap">
                                 <area shape="rect" coords="654,453,696,409" onclick="fecharmodal()" data-toggle="modal" href="#BT-52_15M" id="BT-52/15">
-                                <area shape="rect" coords="609,475,645,427" onclick="$('#portifolioModal1').modal('hide');" data-toggle="modal" href="#BT-34_15M" id="BT-34/15">
-                                <area shape="rect" coords="548,447,600,484" onclick='$('#portifolioModal1').modal('hide');' data-toggle="modal" href="#BT-25_15M" id="BT-25/15">
-                                <area shape="rect" coords="500,469,553,498" onclick='$("Fechar").click()' data-toggle="modal" href="#BT-16_15M" id="BT-16/15">
-                                <area shape="rect" coords="432,488,502,540" onclick='$("Fechar").click()' data-toggle="modal" href="#AuditorioM" id="Auditório"> 
-                                <area shape="rect" coords="222,431,285,463" onclick='$("Fechar").click()' data-toggle="modal" href="#LabRedesM" id="Lab-Redes">	
+                                <area shape="rect" coords="609,475,645,427" onclick="fecharmodal()" data-toggle="modal" href="#BT-34_15M" id="BT-34/15">
+                                <area shape="rect" coords="548,447,600,484" onclick="fecharmodal()" data-toggle="modal" href="#BT-25_15M" id="BT-25/15">
+                                <area shape="rect" coords="500,469,553,498" onclick="fecharmodal()" data-toggle="modal" href="#BT-16_15M" id="BT-16/15">
+                                <area shape="rect" coords="432,488,502,540" onclick="fecharmodal()" data-toggle="modal" href="#AuditorioM" id="Auditório"> 
+                                <area shape="rect" coords="222,431,285,463" onclick="fecharmodal()" data-toggle="modal" href="#LabRedesM" id="Lab-Redes">	
                             </map>
                             </div>
                             <p>Clique em alguma sala para ver o seu itinerário.</p>
