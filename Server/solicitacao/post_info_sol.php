@@ -11,7 +11,7 @@ while ($busca = mysqli_fetch_array($query)) {
 
   $solicitacao_aprovada[$i] = "$nomesala, " . "$horario_da_reserva, " . "$status";
 
-  echo"$solicitacao_aprovada[$i]<br>";
+
 
   ++$i;
 }
@@ -27,9 +27,10 @@ while ($busca = mysqli_fetch_array($query2)) {
 
   $solicitacao_pendente[$i] = "$nomesala, " . "$horario_da_reserva, " . "$status";
 
-  echo"$solicitacao_pendente[$i]<br>";
 
   ++$i;
 }
-
+$json[0] = $solicitacao_aprovada;
+$json[1] = $solicitacao_pendente;
+echo json_encode($json);
 ?>
