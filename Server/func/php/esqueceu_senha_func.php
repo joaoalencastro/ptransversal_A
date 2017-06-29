@@ -1,5 +1,5 @@
 <?php
-require('../conexao/conexao.php');
+require('../../conexao/conexao.php');
 
   if(isset($_POST['acao']) && $_POST['acao'] == 'mudar'){
 
