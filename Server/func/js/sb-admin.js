@@ -60,7 +60,7 @@ function init(x)
 
                     document.getElementById(i).onclick = function () {
                         var buttonid = this.id;
-                        window.open('newTab.php','mywin','width=500,height=500');
+                        window.open('newTab.html','mywin','width=500,height=500');
                     $.ajax({
                         type: "POST",
                         url: "tarefas_funcionario/auxfile.php",
