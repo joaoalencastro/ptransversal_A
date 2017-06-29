@@ -4,7 +4,7 @@ session_start();
 
 date_default_timezone_set('America/Sao_Paulo');
 $data_hora_verificacao_eua = date('Y-m-d H:i:s');
-$data_hora_verificacao = date('d/m/Y H:i:s', strtotime($horario_solicitacao_eua));
+$data_hora_verificacao = date('d/m/Y H:i:s', strtotime($data_hora_verificacao_eua));
 
 $id_solit = $_SESSION['aux'];
 $nome_funcionario = $_SESSION['nome'];
@@ -14,7 +14,12 @@ $nomesala = $info[0];
 $nome_solicitante = $info[1];
 $data_hora_reserva = $info[2];
 $data_hora_solicitacao = $info[3];
-$tipo_solicitante = $info[4];
+//$tipo_solicitante = $info[4];
+
+$query1 = mysqli_query($conexao, "SELECT * FROM usuario WHERE nome='$nome_solicitante'");
+while ($busca = mysqli_fetch_array($result)) {
+  $tipo_solicitante = $busca['tipo'];
+}
 
 $resposta = $_POST['resposta'];
 
@@ -27,7 +32,7 @@ if($aux == "recusar"){
     if (!$result) {
       die('Algo deu errado na conexão para encontrar sala na tabela. Erro: ' . mysqli_error($conexao));
     } else {
-          $status = "Recusado";
+          $status = 'Recusado';
           $sql_upar_historico = "INSERT INTO historico(sala, nome_funcionario, nome_solicitante, tipo_solicitante, data_hora_solicitacao, data_hora_verificacao,status)
           VALUES( '$nomesala', '$nome_funcionario', '$nome_solicitante', '$tipo_solicitante', '$data_hora_', '$data_hora_verificacao', '$status')";
 
