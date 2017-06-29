@@ -369,9 +369,7 @@
     <script type="text/javascript">
         var nome_d = <?=$nome?>;
         var array = nome_d.split(" ");
-        for(var i = 0; array[i] != " " || array[i] == undefined;i++);
-        nome_d = array[0] + " " + array[i-1];
-        document.getElementById("nomeD").innerHTML = nome_d;
+        document.getElementById("nomeD").innerHTML = array[0] + array[1];
         init();
         pesquisa();
         resgatevalor();
