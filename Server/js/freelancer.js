@@ -267,8 +267,49 @@ function init()
         setDate();
         });
 
+        var BT1615 = [0,0,0,"Instalacoes Eletricas","Processamento de Sinais (Pos)","Fundamentos de Redes 2",0,"Top Eng: Caracterizacao de Semicondutores","Top Sist Pot: Geracao Solar Fotovoltaica",0,"Instalacoes Eletricas","Sinais e Sistemas em TD",0,0,"Redes Locais","Comunicacoes Opticas (Opt)",0,"Instalacoes Eletricas","Processamento de Sinais (Pos)","Fundamentos de Redes 2",0,"Top Eng: Caracterizacao de Semicondutores","Top Sist Pot: Geracao Solar Fotovoltaica",0,"Instalacoes Eletricas","Sinais e Sistemas em TD",0,0,"Redes Locais","Comunicacoes Opticas (Opt)",0,0,0,0,0,0,0,0,0];
+        var profBT1615 = [0,0,0,"Alcides","Assis","substituto do G",0,"Stefan","Marco Aurelio",0,"Alcides","Eduardo Peixoto",0,0,"Giozza","Giozza",0,"Alcides","Assis","substituto do G",0,"Stefan","Marco Aurelio",0,"Alcides","Eduardo Peixoto",0,0,"Giozza","Giozza",0,0,0,0,0,0,0,0];
+
+        var LabRedes = ["Arquitetura Protocolos Redes", "Sistemas Operacionais de Redes",0, "Projeto Transversal em Redes 1", "Seguranca de Redes", "Sistemas Inform Distrib (Opt)",0, "Aval Desemp Redes e Sistemas", "Algoritmos e Estrutura de Dados",0, "Gerencia de Redes e Sistemas", "Projeto Transversal em Redes 1",0,0,"Arquitetura Protocolos Redes", "Sistemas Operacionais de Redes",0, "Projeto Transversal em Redes 1", "Seguranca de Redes", "Sistemas Inform Distrib (Opt)",0,"Aval Desemp Redes e Sistemas", "Algoritmos e Estrutura de Dados",0, "Gerencia de Redes e Sistemas", "Projeto Transversal em Redes 1",0,0, "Lab Arquit e Prot de Redes", "Projeto Transversal em Redes 2",0,0,0,0,0,0,0,0,0,0,0,0,0];
+        var profLabRedes = ["Georges"," Beatriz",0,"Ugo"," Rafael Timoteo","Puttini",0,"Claudia","substituto do A",0,"Beatriz","Flavio",0,0,"Georges"," Beatriz",0,"Ugo"," Rafael Timoteo","Puttini",0,"Claudia","substituto do A",0,"Beatriz","Flavio",0,0,"Flavio ","Flavio ",0,0,0,0,0,0,0,0,0,0,0,0,0]
+
+
+        var BT2515 = [0,"Fundamentos de Redes 1",0,"Fundamentos de Redes 2","Analise de Sistemas de Potencia",0,0,"Controle Digital","Eletronica 2",0,"Teoria da Informacao","Eletromagnetismo 2",0,0,"Analise Dinamica Linear","Fundamentos de Redes 1",0,"Fundamentos de Redes 2","Analise de Sistemas de Potencia",0,0,"Controle Digital","Eletronica 2",0,"Teoria da Informacao","Eletromagnetismo 2",0,0,0,"Introducao Circuitos Eletricos",0,0,0,0,0,0,0,0,0,0,0,0,0];
+        var profBT2515 = [0,"Marcelo",0,"Beatriz","Analise de Sistemas de Potencia",0,0,"Henrique","Camargo",0,"Daniel Guerreiro","Leonardo",0,0,"Renato","Marcelo",0,"Beatriz","Analise de Sistemas de Potencia",0,0,"Henrique","Camargo",0,"Daniel Guerreiro","Leonardo",0,0,0,"Abdalla",0,0,0,0,0,0,0,0]
+
+
+        var BT3415 = ["Controle de Processos","Transmissao de Energia Eletrica (Opt)",0,0,"Controle Dinamico",0,0,"Sistemas Microprocessados",0,0,"Conversao Eletromec Energia","Comunicacoes Digitais",0,0,"Controle de Processos","Transmissao de Energia Eletrica (Opt)",0,0,"Controle Dinamico",0,0,"Sistemas Microprocessados",0,0,"Conversao Eletromec Energia","Comunicacoes Digitais",0,0,0,"Introd a Engenharia Eletrica",0,0,0,0,0,0,0,0,0,0,0,0,0];
+        var profBT3415 = ["Eduardo Stockle","Pablo",0,0,"Adolfo",0,0,"Daniel Cafe",0,0,"Shayani","Andre Noll",0,0,"Eduardo Stockle","Pablo",0,0,"Adolfo",0,0,"Daniel Cafe",0,0,"Shayani","Andre Noll",0,0,"Bermudez",0,0,0,0,0,0];
+        
+        var BT5215 = [0,0,0,"Sistemas Digitais","Eletromagnetismo 1",0,0,"Principios de Comunicacao","Principios de Comunicacao",0,0,"Eletromagnetismo 1",0,0,0,"Controle para Automacao",0,"Sistemas Digitais","Eletromagnetismo 1",0,0,"Principios de Comunicacao","Principios de Comunicacao",0,0,"Eletromagnetismo 1",0,0,0,0,0,"Introducao a Eng de Redes",0,0,0,0,0,0,0,0]
+        var profBT5215 = [0,0,0,"Romariz","Terada",0,0,"Joao Paulo Leite","Judson",0,0,"Terada",0,0,0,"Padilha",0,"Romariz","Terada",0,0,"Joao Paulo Leite","Judson",0,0,"Terada",0,0,0,0,0,"Georges",0,0,0,0,0]
+
+        var AudSG11 = ["Circuitos Eletricos","Eletronica",0,"Disposit e Circuitos Eletronicos","Analise Dinamica Linear",0,0,"Eletricidade Basica","Sinais e Sistemas em TC",0,"Sistemas Digitais","Sistemas Digitais","Maquinas Eletricas",0,"Circuitos Eletricos","Eletronica",0,"Disposit e Circuitos Eletronicos","Analise Dinamica Linear",0,0,"Eletricidade Basica","Sinais e Sistemas em TC",0,"Sistemas Digitais","Sistemas Digitais","Maquinas Eletricas",0,0,0,0,0,0,0,0,0];
+        var profAudSG11 = ["Franklin","Stefan",0,"Geovany","Egito",0,0,"Guillermo","Joao Luiz",0,"Mintsu","Mylene","Shayani",0,"Franklin","Stefan",0,"Geovany","Egito",0,0,"Guillermo","Joao Luiz",0,"Mintsu","Mylene","Shayani",0,0,0,0,0,0,0,0,0];     
+
+
+        var Auditorio = ["Sistemas Microprocessados","Materiais Eletricos e Mag",0,"Circuitos Eletricos 2","Circuitos Eletricos",0,0,"Circuitos Polifasicos","Circuitos Eletricos 2",0,"Conversao de Energia",0,"Eletricidade Basica",0,"Sistemas Microprocessados","Materiais Eletricos e Mag",0,"Circuitos Eletricos 2","Circuitos Eletricos",0,0,"Circuitos Polifasicos","Circuitos Eletricos 2",0,"Conversao de Energia",0,"Eletricidade Basica",0,0,0,0,0,0,0,0,0];
+        var profAuditorio = ["Zelenovsky","Artemis",0,"Assis","Abdalla",0,0,"Kleber","Abdalla/Leonardo",0,"Marco Aurelio",0,"Guillermo",0,"Zelenovsky","Artemis",0,"Assis","Abdalla",0,0,"Kleber","Abdalla/Leonardo",0,"Marco Aurelio",0,"Guillermo",0,0,0,0,0,0,0,0,0];
+
+        var dadoSalas = [BT1615,BT2515,BT3415,BT5215,LabRedes,AudSG11,Auditorio];
+        var profs = [profBT1615,profBT2515,profBT3415,profBT5215,profLabRedes,profAudSG11,profAuditorio];
+
         for(var i = 0; i < nomeSala.length;i++)
         {
+
+                var tempSala = dadoSalas[i];   
+                var tempProf =  profs[i];
+                for (var j =0; j < tempSala.length  ; j++) 
+                {
+                    if(tempSala[j] == 0 || tempSala[j] == undefined )
+                        tempSala[j] = " ";
+                }
+                for (var k =0; k < tempProf.length  ; k++) 
+                {
+                    if(tempProf[k] == 0 || tempProf[k] == undefined)
+                        tempProf[k] = " ";
+                }
+
                 var html =  '<div class="portfolio-modal modal" id="'+newSala[i]+'M" tabindex="-1" role="dialog" aria-hidden="true">'+
                                 '<div class="modal-content">'+
                                     '<div class="close-modal" data-dismiss="modal">'+
@@ -281,43 +322,82 @@ function init()
                                         '<h4>'+nomeSala[i]+'</h4>'+
                                         '<div class="row">'+
                                             '<div class="col-md-12">'+
-                                                '<table class="table table-striped">'+
+                                            '<div class="table-responsive">'+
+                                                '<table class="table table-striped" style="overflow-y: hidden">'+
                                                     '<thead>'+
-                                                      '<tr>'+
+                                                      '<tr ">'+
                                                         '<th></th>'+
-                                                        '<th>Segunda-Feira</th>'+
-                                                        '<th>Terça-Feira</th>'+
-                                                        '<th>Quarta-Feira</th>'+
-                                                        '<th>Quinta-Feira</th>'+
-                                                        '<th>Sexta-Feira</th>'+
-                                                        '<th>Sábado</th>'+
-                                                        '<th>Domingo</th>'+
+                                                        '<th style="text-align:center">Segunda-Feira</th>'+
+                                                        '<th style="text-align:center">Terça-Feira</th>'+
+                                                        '<th style="text-align:center">Quarta-Feira</th>'+
+                                                        '<th style="text-align:center">Quinta-Feira</th>'+
+                                                        '<th style="text-align:center">Sexta-Feira</th>'+
                                                       '</tr>'+
                                                     '</thead>'+
                                                     '<tbody>'+
                                                       '<tr >'+
-                                                        '<td>08:00</th>'+
+                                                        '<td>08:00</td>'+
+                                                        '<td>'+tempSala[0]+'<br>'+tempProf[0]+'</td>'+
+                                                        '<td>'+tempSala[7]+'<br>'+tempProf[7]+'</td>'+
+                                                        '<td>'+tempSala[14]+'<br>'+tempProf[14]+'</td>'+
+                                                        '<td>'+tempSala[21]+'<br>'+tempProf[21]+'</td>'+
+                                                        '<td>'+tempSala[28]+'<br>'+tempProf[28]+'</td>'+
+
                                                       '</tr>'+
                                                       '<tr>'+
                                                         '<td>10:00</th>'+
+                                                        '<td>'+tempSala[1]+'<br>'+tempProf[1]+'</td>'+
+                                                        '<td>'+tempSala[8]+'<br>'+tempProf[8]+'</td>'+
+                                                        '<td>'+tempSala[15]+'<br>'+tempProf[15]+'</td>'+
+                                                        '<td>'+tempSala[22]+'<br>'+tempProf[22]+'</td>'+
+                                                        '<td>'+tempSala[29]+'<br>'+tempProf[29]+'</td>'+
+                                        
                                                       '</tr>'+
                                                       '<tr>'+
                                                         '<td>12:00</th>'+
+                                                        '<td>'+tempSala[2]+'<br>'+tempProf[2]+'</td>'+
+                                                        '<td>'+tempSala[9]+'<br>'+tempProf[9]+'</td>'+
+                                                        '<td>'+tempSala[16]+'<br>'+tempProf[16]+'</td>'+
+                                                        '<td>'+tempSala[23]+'<br>'+tempProf[24]+'</td>'+
+                                                        '<td>'+tempSala[30]+'<br>'+tempProf[30]+'</td>'+
                                                       '</tr>'+
                                                       '<tr>'+
                                                         '<td>14:00</th>'+
+                                                        '<td>'+tempSala[3]+'<br>'+tempProf[3]+'</td>'+
+                                                        '<td>'+tempSala[10]+'<br>'+tempProf[10]+'</td>'+
+                                                        '<td>'+tempSala[17]+'<br>'+tempProf[17]+'</td>'+
+                                                        '<td>'+tempSala[24]+'<br>'+tempProf[24]+'</td>'+
+                                                        '<td>'+tempSala[31]+'<br>'+tempProf[31]+'</td>'+
                                                       '</tr>'+
                                                       '<tr>'+
                                                         '<td>16:00</th>'+
+                                                        '<td>'+tempSala[4]+'<br>'+tempProf[4]+'</td>'+
+                                                        '<td>'+tempSala[11]+'<br>'+tempProf[11]+'</td>'+
+                                                        '<td>'+tempSala[18]+'<br>'+tempProf[18]+'</td>'+
+                                                        '<td>'+tempSala[25]+'<br>'+tempProf[25]+'</td>'+
+                                                        '<td>'+tempSala[32]+'<br>'+tempProf[32]+'</td>'+
+
                                                       '</tr>'+
                                                       '<tr>'+
                                                         '<td>18:00</th>'+
+                                                        '<td>'+tempSala[5]+'<br>'+tempProf[5]+'</td>'+
+                                                        '<td>'+tempSala[12]+'<br>'+tempProf[12]+'</td>'+
+                                                        '<td>'+tempSala[19]+'<br>'+tempProf[19]+'</td>'+
+                                                        '<td>'+tempSala[26]+'<br>'+tempProf[26]+'</td>'+
+                                                        '<td>'+tempSala[33]+'<br>'+tempProf[33]+'</td>'+
+
                                                       '</tr>'+
                                                       '<tr>'+
                                                         '<td>20:00</th>'+
+                                                        '<td>'+tempSala[6]+'<br>'+tempProf[6]+'</td>'+
+                                                        '<td>'+tempSala[13]+'<br>'+tempProf[13]+'</td>'+
+                                                        '<td>'+tempSala[20]+'<br>'+tempProf[20]+'</td>'+
+                                                        '<td>'+tempSala[27]+'<br>'+tempProf[27]+'</td>'+
+                                                        '<td>'+tempSala[34]+'<br>'+tempProf[34]+'</td>'+
                                                       '</tr>'+
                                                     '</tbody>'+
                                                   '</table>'+
+                                                '</div>'+
                                             '</div>'+
                                         '</div>'+
                                         '<div class="row">'+
@@ -325,11 +405,9 @@ function init()
                                                 '<img style="padding-top:70px;" src="img/room/'+newSala[i]+'.jpeg" class="img-responsive" alt'+newSala[i]+'>'+
                                             '</div  class="col-md-6">'+
                                             '<div style="position:relative;top:57px">'+
-                                                '<h4 style="text-align: left; padding-left: 30px">Número de Cadeiras:</h4>  '+
-                                                '<h4 style="text-align: left; padding-left: 30px">Projetor:</h4>  '+
-                                                '<h4 style="text-align: left; padding-left: 30px">Ar-condicionado:</h4>  '+
-                                                '<h4 style="text-align: left; padding-left: 30px">Projetor:</h4>  '+
-                                                '<h4 style="text-align: left; padding-left: 30px">Laboratório:</h4>  '+
+                                                '<h4 style="text-align: left; padding-left: 30px">Número de Cadeiras: 40</h4>  '+
+                                                '<h4 style="text-align: left; padding-left: 30px">Projetor: Sim</h4>  '+
+                                                '<h4 style="text-align: left; padding-left: 30px">Ar-condicionado: Sim</h4>  '+
                                             '</div>'+
                                         '</div>'+
                                     '</div>'+
@@ -337,8 +415,6 @@ function init()
                             '</div>';
                     $("#generic").append(html);
 	       }
-	      });
-	
 	
 }
 function Getmateriasfromserver(callback){
