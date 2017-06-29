@@ -25,6 +25,8 @@ if (!$result0) {
       $tipo_solicitante = $r['tipo'];
   }
 }
+
+echo"$data_hora_reserva";
 /*
 
 if($aux == "recusar"){
