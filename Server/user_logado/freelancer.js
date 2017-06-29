@@ -226,15 +226,14 @@ function clickSolic(id_str)
 {
     let id_radio = id_str;
     let motivo;
-    let dia;
-    var dia = document.getElementById("Title").innerHTML;
+    let dia = document.getElementById("Title").innerHTML;
     var arr = dia.split(",");
     if(arr[0] == "Terça-Feira")
         dia = 'Terca-Feira';
     else
 	dia = arr[0];
     let teste = dia.split("-");
-    dia = teste.toLowerCase();
+    dia = teste[0].toLowerCase();
 
     id_str = id_str.split(':');
     if(document.getElementById(id_radio+':Moni').checked == true)
