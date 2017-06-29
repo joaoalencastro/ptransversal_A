@@ -338,6 +338,16 @@ function init()
                     $("#generic").append(html);
        }
       });
+	$('#portfolioModal2').on('hide.bs.dropdown', function () {
+        var value = document.getElementById(id).value;
+	console.log(value);
+        $("#"+value+ "M").modal('show');
+    	});
+	$('#portfolioModal1').on('hide.bs.dropdown', function () {
+        var value = document.getElementById(id).value;
+        $("#"+value+ "M").modal('show');
+    	});
+	
 }
 function Getmateriasfromserver(callback){
     var status_aux;
