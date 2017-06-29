@@ -36,6 +36,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <!--            Bootstrap Calendário     -->
     <link rel="stylesheet" type="text/css" href="../css/bootstrap-datepicker.min.css">
+  <link rel="shortcut icon" type="image/png" href="../img/logoReservado.png"/>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
