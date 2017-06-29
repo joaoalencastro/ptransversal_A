@@ -27,9 +27,9 @@ if($aux == "recusar"){
     if (!$result) {
       die('Algo deu errado na conexão para encontrar sala na tabela. Erro: ' . mysqli_error($conexao));
     } else {
-
+          $status = 'Recusado';
           $sql_upar_historico = "INSERT INTO historico(sala, nome_funcionario, nome_solicitante, tipo_solicitante, data_hora_solicitacao, data_hora_verificacao,status)
-          VALUES( '$nomesala', '$nome_funcionario', '$nome_solicitante', '$tipo_solicitante', '$data_hora_', '$data_hora_verificacao')";
+          VALUES( '$nomesala', '$nome_funcionario', '$nome_solicitante', '$tipo_solicitante', '$data_hora_', '$data_hora_verificacao', '$status')";
 
           $upar_hist = mysqli_query($conexao,$sql_upar_historico);
           if (!$upar_hist) {
@@ -45,9 +45,9 @@ if($aux == "recusar"){
     if (!$result) {
       die('Algo deu errado na conexão para encontrar sala na tabela. Erro: ' . mysqli_error($conexao));
     } else {
-
+          $status = "Aprovado";
           $sql_upar_historico = "INSERT INTO historico(sala, nome_funcionario, nome_solicitante, tipo_solicitante, data_hora_solicitacao, data_hora_verificacao,status)
-          VALUES( '$nomesala', '$nome_funcionario', '$nome_solicitante', '$tipo_solicitante', '$data_hora_', '$data_hora_verificacao')";
+          VALUES( '$nomesala', '$nome_funcionario', '$nome_solicitante', '$tipo_solicitante', '$data_hora_', '$data_hora_verificacao', '$status')";
 
           $upar_hist = mysqli_query($conexao,$sql_upar_historico);
           if (!$upar_hist) {
