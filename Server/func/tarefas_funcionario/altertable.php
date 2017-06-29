@@ -17,7 +17,7 @@ $data_hora_solicitacao = $info[3];
 //$tipo_solicitante = $info[4];
 
 $query1 = mysqli_query($conexao, "SELECT * FROM usuario WHERE nome='$nome_solicitante'");
-while ($busca = mysqli_fetch_array($result)) {
+while ($busca = mysqli_fetch_array($query1)) {
   $tipo_solicitante = $busca['tipo'];
 }
 
