@@ -537,3 +537,21 @@ function resgatevalor() {
           zoom: 8
         });
       }
+function clickMap(x)
+{
+	if(x == '1')
+		$('#BT-52_15BTN').click();
+	else if(x == '2')
+		$('#BT-34/15BTN').click();
+	else if(x== '3')
+		$('#BT-25/15BTN').click();
+	else if(x=='4')
+		$('#BT-16/15BTN').click();
+	else if(x == '5')
+		$('#AuditorioBTN').click();
+	else if(x== '6')
+		$('#Lab-RedesBTN').click();
+	else if(x=='7')
+		$('#SG-11BTN').click();
+}
+
