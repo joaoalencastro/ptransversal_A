@@ -1,5 +1,5 @@
 <?php
-require('../conexao/conexao.php');
+require('../../conexao/conexao.php');
 $sql = "SELECT * FROM historico";
 $result = mysqli_query($conexao, $sql);
 while($r = mysqli_fetch_array($result))
