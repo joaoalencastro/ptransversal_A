@@ -31,7 +31,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html">Administrador | Reservado</a>
+            <a class="navbar-brand" href="http://homol.redes.unb.br/ptr012017-B-grupoA/func/index.php">Administrador | Reservado</a>
         </div>
         <!-- /.navbar-header -->
         <ul class="nav navbar-top-links navbar-right">
