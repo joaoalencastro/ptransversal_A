@@ -86,7 +86,7 @@
                     <div class="panel-heading">
                         Adicionar salas
                     </div>
-                    <form action="../tarefas_funcionario/addRoom.php" method="post">
+                   <form action="/tarefas_funcionario/addRoom.php" enctype="multipart/form-data" method="post">
                         <div class="col-md-2">
                             <h4 style="margin: 15px;">Nome</h4>
                             <input style="margin: 15px;" type="text" name="nome"  class="form-control" placeholder="Ex.: AT-11">
@@ -112,7 +112,7 @@
                         </div>
                         <div class="col-md-3">
                             <h4>Anexar imagem da sala</h4>
-                            <button>anexo</button>
+                            <input name="file" type="file">
                         </div>
                         <div class="col-md-1" style="margin: 20px; margin-top: 10%;">
                             <input type="submit" class="bnt btn-success" value="Enviar">
