@@ -975,7 +975,7 @@ function getroomfromserver(callback){
     var status_aux;
     //Requisição HTTP, por dados provindos do url dado. Caso os dados recebidos sejam os esperados, entra no caso do SUCCESS
     return $.ajax({
-        url: 'materiasphp/nomesalas.php',
+        url: 'materiasphp/salas.php',
         dataType: 'json',
         success: function(data)
         {
