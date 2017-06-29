@@ -120,7 +120,7 @@ function init(x)
                                 //window.close();
                             }
                         })};
-                    $("#bodyTable").append("<tr><td>Identificador da Sasa</td><td>" + sala + "</td></tr>");
+                    $("#bodyTable").append("<tr><td>Identificador da Sala</td><td>" + sala + "</td></tr>");
                     $("#bodyTable").append("<tr><td>Nome do Solicitante</td><td>" + nome + "</td></tr>");
                     $("#bodyTable").append("<tr><td>Tipo de Solicitante</td><td>" + tipo + "</td></tr>");
                     $("#bodyTable").append("<tr><td>Horário de Reserva</td><td>" + hora + "</td></tr>");
