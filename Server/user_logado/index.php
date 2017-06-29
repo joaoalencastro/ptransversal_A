@@ -245,8 +245,8 @@
                     </div>
                     <div class="footer-col col-md-4">
                         <h3>Patrocínio</h3>
-                        <img src="img/latitude.jpg" style="max-width: 100%; padding-bottom: 20px; padding-top: 20px;">
-                        <img src="img/logoft.jpeg" style="max-width: 100%;">
+                        <img src="../img/latitude.jpg" style="max-width: 100%; padding-bottom: 20px; padding-top: 20px;">
+                        <img src="../img/logoft.jpeg" style="max-width: 100%;">
                     </div>
                     <div class="footer-col col-md-4">
                         <h3>About Freelancer</h3>
