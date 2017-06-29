@@ -31,6 +31,18 @@ function Getinfofromserver(callback) {
             }
     });
 }
+
+function gethistoryfromserver(callback)
+{
+    return $.ajax({
+        url: 'tarefas_funcionario/history.php ',
+        dataType: 'json',
+        success: function (data) {
+            var info = data;
+            callback(info);
+        }
+    });
+}
 function init(x)
 {
     //                      GERA TABELA
@@ -71,15 +83,20 @@ function init(x)
         });
     }
     else if (x === 1) {
-        //          A
-        var sala = ["AT-11", "jsakljslasjkl", "AT-13", "BT-25/15 ", "AT-15", "AT-19", "Lab-Redes", "LCCC", "SG-11", "Auditório"];
-        var nome = ["André", "Beatriz", "Carlos", "Daiana", "Ernandes", "Fábio", "Gabriela", "Iago", "Joesley", "Lampião"];
-        var tipo = ["Aluno", "gostoso", "nlknlkjkljl", "Monitor", "Aluno", "Aluno", "Professor", "Monitor", "Monitor", "Aluno"];
-        var hora = ["10:30", "10:32", "10:33", "10:34", "10:35", "10:36", "10:37", "10:38", "10:39", "10:40"];
-        var dia = ["23/05/17", "23/05/17", "23/05/17", "23/05/17", "23/05/17", "23/05/17", "23/05/17", "23/05/17", "23/05/17", "23/05/17"];
-        var status = "Aprovada";
-        var dia1 = "10/05/17";
-        for (var i = 0; i < sala.length; i++) $("#bodyTable").append("<tr style='margin-right= 20px' ><td>" + sala[i] + "</td><td>" + nome[i] + "</td><td>" + tipo[i] + "</td><td>" + hora[i] + "</td><td>" + dia[i] + "</td><td>" + dia1 + "</td><td align='center'>" + status + "</td></tr>");
+    gethistoryfromserver(function(a){
+        var geral = a;
+            //          A
+            var sala = geral[0];
+            var nomefunc = geral[1];
+            var nomesoli = geral[2];
+            var tipo = geral[3];
+            var hora = geral[4];
+            var dia = geral[5];
+            var status = geral[6];
+            for (var i = 0; i < sala.length; i++) $("#bodyTable").append("<tr style='margin-right= 20px' ><td>" + sala[i] + "</td><td>" + nomefunc[i] + "</td><td>" + nomesoli[i] + "</td><td>" + tipo[i] + "</td><td>" + hora[i] + "</td><td>" + dia[i] + "</td><td align='center'>" + status[i] + "</td></tr>");
+
+        });
+   
     }
     else if(x === 2) {
 
