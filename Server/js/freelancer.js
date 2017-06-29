@@ -530,13 +530,17 @@ function resgatevalor() {
         });
     });
 }
-     var map;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -34.397, lng: 150.644},
-          zoom: 8
+function initMap() {
+        var uluru = {lng: -47.872535, lat: -15.763555};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 16,
+          center: uluru
         });
-      }
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+    });
+}
 function fecharmodal()
 {
 	$('#portfolioModal2').modal('hide');
