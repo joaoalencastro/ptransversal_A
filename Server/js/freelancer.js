@@ -336,17 +336,6 @@ function init()
                                 '</div>'+
                             '</div>';
                     $("#generic").append(html);
-		$('#portfolioModal2').on('hide.bs.dropdown', function () {
-		var value = document.getElementById(id).value;
-		value += value + "M";
-		console.log(value);
-		$("#" + value).modal('show');
-		});
-		$('#portfolioModal1').on('hide.bs.dropdown', function () {
-		var value = document.getElementById(id).value;
-		value += value + "M";
-		$("#" + value).modal('show');
-		});
 	       }
 	      });
 	
@@ -427,7 +416,9 @@ function Getmateriasfromserver(callback){
     });
 }
 function fecharmodal(id) {
-
+	
+	init();
+	
     $('#portfolioModal2').on('hide.bs.dropdown', function () {
         var value = document.getElementById(id).value;
         $("#"+value+ "M").modal('show');
