@@ -17,6 +17,7 @@
 
     <!-- SB Admin CSS - Include with every page -->
     <link href="css/sb-admin.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="../img/logoReservado.png"/>
 
 </head>
 
@@ -40,11 +41,6 @@
                     <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
                 </a>
                 <ul class="dropdown-menu dropdown-user">
-                    <li><a href="#"><i class="fa fa-user fa-fw"></i> Perfil do Usuário</a>
-                    </li>
-                    <li><a href="#"><i class="fa fa-gear fa-fw"></i> Configurações</a>
-                    </li>
-                    <li class="divider"></li>
                     <li><a href="php/logout.php"><i class="fa fa-sign-out fa-fw"></i> Sair</a>
                     </li>
                 </ul>
