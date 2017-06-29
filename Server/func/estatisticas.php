@@ -103,7 +103,7 @@ $u1 = 10;
             ]);
 
             // Set options for Sarah's pie chart.
-            var options = {title:'Usuários Cadastrados',
+            var options = {title:'Solicitações Recebidas no Sistema',
                 width:800,
                 height:400};
 
