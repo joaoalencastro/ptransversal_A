@@ -415,7 +415,7 @@ function init()
                             '</div>';
                     $("#generic").append(html);
 	       }
-	
+	});
 }
 function Getmateriasfromserver(callback){
     var status_aux;
