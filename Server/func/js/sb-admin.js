@@ -121,10 +121,8 @@ function init(x)
                        url: "tarefas_funcionario/altertable.php",
                        data: "resposta= " + geral_aux,
                        success: function (data) {
-                           /*alert("Solicitação Aceita");
+                           alert("Solicitação Aceita");
                            window.close();
-                           init(0);
-                       */console.log(data);
                        }
                     })};
                     document.getElementById("recusar").onclick = function() {
@@ -134,8 +132,8 @@ function init(x)
                             url: "tarefas_funcionario/altertable.php",
                             data: "resposta= " + geral_aux,
                             success: function (data) {
-                                alert(data);
-                                //window.close();
+                           alert("Solicitação Recusada");
+                           window.close();
                             }
                         })};
                     $("#bodyTable").append("<tr><td>Identificador da Sala</td><td>" + sala + "</td></tr>");
