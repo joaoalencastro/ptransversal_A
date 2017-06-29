@@ -1,0 +1,16 @@
+<html>
+<head>
+  <title>Alterar Senha</title>
+  <meta charset="utf-8">
+</head>
+<body>
+  <h1>Digite a senha nova</h1>
+  <form action="esqueceu_senha_func.php" method="post" enctype="multpart/form/data">
+    E-mail:         <input required type="email"    name="email"     autocomplete="off" style="width:150px; height:32px" />
+    Senha:          <input required type="password" name="novasenha" autocomplete="off" style="width:150px; height:32px" />
+    Confirme Senha: <input required type="password" name="novasenha2"autocomplete="off" style="width:150px; height:32px" />
+    <input type="hidden" name="acao" value="mudar" />
+    <input type="submit" value="Mudar Senha" />
+  </form>
+</body>
+</html>
