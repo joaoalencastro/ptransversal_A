@@ -369,7 +369,7 @@
     <script type="text/javascript">
         var nome_d = "<?php echo $nome; ?>"
         var array = nome_d.split(" ");
-        document.getElementById("nomeD").innerHTML = array[0] + array[1];
+        document.getElementById("nomeD").innerHTML = array[0]+ " " + array[1];
         init();
         pesquisa();
         resgatevalor();
