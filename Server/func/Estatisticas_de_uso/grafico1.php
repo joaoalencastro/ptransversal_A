@@ -55,7 +55,7 @@ $plot->SetTitle("Estátistica de solicitações");
 #Legenda, nesse caso serao tres pq o array possui 3 valores que serao apresentados
 $plot->SetLegend(array("Solicitações Recebidas","Solicitações Pendentes"));
 #Utilizados p/ marcar labels, necessario mas nao se aplica neste ex. (manual) :
-$MeuGrafico->SetFileFormat("png");
+$plot->SetFileFormat("png");
 $plot->SetXTickLabelPos("none");
 $plot->SetXTickPos("none");
 #Gera o grafico na tela
